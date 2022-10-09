@@ -1,7 +1,7 @@
 import pymongo
 from pymongo import MongoClient
 client = MongoClient("mongodb://433-34.csse.rose-hulman.edu:27017")
-db = client['tutorial']
+db = client['pokemon_test']
 document = (
     {
         'Type': 'Book',
@@ -13,6 +13,8 @@ document = (
 )
 print(type(document))
 # result = db.media.insert_one(document)
-# cursor = db.media.find()
-# for data in cursor:
-# print(data)
+cursor = db.pokedex.find({'id_nb': '#897'})
+for data in cursor:
+    print(data)
+    print(data['name'])
+# print(cursor.)
