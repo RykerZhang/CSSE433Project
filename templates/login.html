@@ -11,14 +11,14 @@
     <h3>Log into an existent account</h3>
     <p>
       <label for="LoginUsername">Username:</label>
-      <input type="text" name="LoginUsername"/>
+      <input type="text" name='LoginUsername'/>
     </p>
     <p>
       <label for="LoginPassword">Password:</label>
-      <input type = "password" name="LoginPassword"></input>
+      <input type = "password" name='LoginPassword'></input>
     </p>
     
-    <p><input type="submit" name="submit_recipe"/></p>
+    <p><input type="submit" name="login" id = "login"></p>
   </form>
 
   <h2>If you don't have an account, please create an account here:</h2>
@@ -26,15 +26,21 @@
       <h3>Log into an existent account</h3>
       <p>
         <label for="NewUsername">Username:</label>
-        <input type="text" name="NewUsername"/>
+        <input type="text" name='NewUsername'/>
       </p>
       <p>
         <label for="NewPassword">Password:</label>
-        <input type = "password" name="NewPassword"></input>
+        <input type = "password" name='NewPassword'></input>
       </p>
       
-      <p><input type="submit" name="submit_recipe"/></p>
+      <p><input type="submit" name="createAccount" ></p>
     </form>
-</body>
 
+    <script type="text/javascript">
+      document.querySelector("#login").addEventListener("click",(event) => {
+      console.log("sss")
+		})
+    </script>
+
+</body>
 </html>
