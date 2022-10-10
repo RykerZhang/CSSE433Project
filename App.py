@@ -1,9 +1,17 @@
-from flask import Flask, render_template, request, redirect, url_for
-import pymongo
 from pymongo import MongoClient
+import pymongo
+from flask import Flask, render_template, request, redirect, url_for
+import os
 
 app = Flask(__name__)
 client = MongoClient("mongodb://433-34.csse.rose-hulman.edu:27017")
+
+IMAGE_FOLDER = os.path.join('static', 'images')
+CSS_FOLDER = os.path.join('static', 'styles')
+SCRIPT_FOLDER = os.path.join('static', 'scripts')
+app.config['IMAGE_FOLDER'] = IMAGE_FOLDER
+app.config['CSS_FOLDER'] = CSS_FOLDER
+app.config["SCRIPT_FOLDER"] = SCRIPT_FOLDER
 
 
 @app.route('/login', methods=["GET", "POST"])
@@ -20,8 +28,18 @@ def loginPage():
 
 
 @app.route('/', methods=["GET", "POST"])
-def home():
-    return 'Welcome to the Home Page'
+@app.route('/index', methods=["GET", "POST"])
+@app.route('/home', methods=["GET", "POST"])
+def indexPage():
+    elep = os.path.join(app.config['IMAGE_FOLDER'], 'elep.png')
+    css = os.path.join(app.config['CSS_FOLDER'], 'main.css')
+    js = os.path.join(app.config["SCRIPT_FOLDER"], 'main.js')
+    return render_template("index.html", logo=elep, style=css, script=js)
 
 
-app.run()
+# @app.route('/', methods=["GET", "POST"])
+# def home():
+#     return 'Welcome o the Home Page'
+
+if __name__ == "__main__":
+    app.run()
