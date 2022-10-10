@@ -3,11 +3,6 @@ body{
     border: 0px;
 }
 
-#indexImgContainer{
+#indexImgContainer, #loginButtonContainer, #indexPage{
     text-align: center;
-    size: 150%;
-}
-
-#loginButtonContainer{
-    align-items: center;
 }

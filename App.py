@@ -1,3 +1,4 @@
+from urllib import response
 from pymongo import MongoClient
 import pymongo
 from flask import Flask, render_template, request, redirect, url_for
@@ -44,9 +45,15 @@ def mainPage():
     js = os.path.join(app.config["SCRIPT_FOLDER"], 'main.js')
     return render_template("main.html", logo=elep, style=css, script=js)
 
+# It's implemented by default
 
-# @app.route('/', methods=["GET", "POST"])
-# def home():
-#     return 'Welcome o the Home Page'
+
+@app.route('/favicon.ico', methods=["GET"])
+def icon():
+    return ''
+
+    # @app.route('/', methods=["GET", "POST"])
+    # def home():
+    #     return 'Welcome o the Home Page'
 if __name__ == "__main__":
     app.run()
