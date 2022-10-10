@@ -1,11 +1,12 @@
 from pyignite import Client
-from pyignite.datatypes.cache_config import CacheMode
-from pyignite.datatypes.prop_codes import *
-from pyignite.exceptions import SocketError
+# from pyignite.datatypes.cache_config import CacheMode
+# from pyignite.datatypes.prop_codes import *
+# from pyignite.exceptions import SocketError
 
 client = Client()
 # client.connect('127.0.0.1', 10800)
-client.connect('433-34.csse.rose-hulman.edu', 10800)
+client.connect('433-35.csse.rose-hulman.edu', 10800)
+# client.connect('137.112.104.247', 47500)
 
 # Create cache
 my_cache = client.get_or_create_cache('my cache')

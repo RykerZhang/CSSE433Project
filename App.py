@@ -5,14 +5,16 @@ from pymongo import MongoClient
 app = Flask(__name__)
 client = MongoClient("mongodb://433-34.csse.rose-hulman.edu:27017")
 
+
 @app.route('/')
 def home():
     return 'Welcome to the Home Page'
 
 
-@app.route('/login', methods = ["GET", "POST"])
+@app.route('/login', methods=["GET", "POST"])
 def login():
-    return render_template("login.html")
+    return render_template("index.html")
+
 
 if __name__ == '__main__':
     app.run(debug=True)
