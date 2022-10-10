@@ -1,3 +1,13 @@
-.test{
-    color:red;
+body{
+    padding: 0px;
+    border: 0px;
+}
+
+#indexImgContainer{
+    text-align: center;
+    size: 150%;
+}
+
+#loginButtonContainer{
+    align-items: center;
 }

@@ -37,9 +37,16 @@ def indexPage():
     return render_template("index.html", logo=elep, style=css, script=js)
 
 
+@app.route('/main', methods=["GET", "POST"])
+def mainPage():
+    elep = os.path.join(app.config['IMAGE_FOLDER'], 'elep.png')
+    css = os.path.join(app.config['CSS_FOLDER'], 'main.css')
+    js = os.path.join(app.config["SCRIPT_FOLDER"], 'main.js')
+    return render_template("main.html", logo=elep, style=css, script=js)
+
+
 # @app.route('/', methods=["GET", "POST"])
 # def home():
 #     return 'Welcome o the Home Page'
-
 if __name__ == "__main__":
     app.run()
