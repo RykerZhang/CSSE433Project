@@ -44,10 +44,11 @@ def mainPage():
     return render_template("main.html", logo=elep, style=css, script=js)
 
 
-@app.route('/mInsert/<name>/<type_1>/<type_2>', methods=["GET", "POST"])
-def insertPokemon(name=None, type_1=None, type_2=None, link=None, species=None, height=0, weight=0, abilities=None, training_catch_rate=0, training_base_exp=0, training_growth_rate=0, breeding_gender_male=0, breeding_gender_female=0, stats_hp=0, stats_attack=0, stats_defense=0, stats_sp_atk=0, stats_sp_def=0, stats_speed=0, stats_total=0):
+@app.route('/mInsert/<id>/<name>/<type_1>/<type_2>', methods=["GET", "POST"])
+def insertPokemon(id=0, name=None, type_1=None, type_2=None, link=None, species=None, height=0, weight=0, abilities=None, training_catch_rate=0, training_base_exp=0, training_growth_rate=0, breeding_gender_male=0, breeding_gender_female=0, stats_hp=0, stats_attack=0, stats_defense=0, stats_sp_atk=0, stats_sp_def=0, stats_speed=0, stats_total=0):
     if request.method == "GET":
         data = {
+            'id_nb': "#"+id,
             'name': name,
             'type_1': type_1,
             'type_2': type_2,
@@ -69,13 +70,13 @@ def insertPokemon(name=None, type_1=None, type_2=None, link=None, species=None, 
             'stats_speed': stats_speed,
             'stats_total': stats_total
         }
-
-        tmp = db.pokedex.find({'name': name})
-        if len(list(tmp)) > 0:
+        i = db.pokedex.find({'id_nb': "#"+id})
+        n = db.pokedex.find({'name': name})
+        if len(list(n)) > 0 or len(list(i)):
             print('already exists')
             return 'Insert failed, name already exists'
+        db.pokedex.insert_one(data)
         cursor = db.pokedex.find({'name': name})
-        print(len(list(cursor)))
         x = {}
         for i in cursor:
             x.update(i)
@@ -85,15 +86,15 @@ def insertPokemon(name=None, type_1=None, type_2=None, link=None, species=None, 
         return ''
 
 
-@app.route('/mDelete/<name>', methods=["GET", "DELETE"])
+@app.route('/mDelete/<name>', methods=["DELETE"])
 def mDel(name='a'):
     if request.method == "DELETE":
-        print(name)
         if (name == None):
             return 'name can not be null'
         else:
             result = db.pokedex.delete_many({'name': name})
             if (result.deleted_count >= 1):
+                print(name+' deleted')
                 return 'deletion succeed'
             else:
                 return 'deletion failed'
