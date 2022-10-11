@@ -1,9 +1,13 @@
 import pymongo
 from pymongo import MongoClient
+from flask import Flask, render_template, request, redirect, url_for
+
 client = MongoClient("mongodb://433-34.csse.rose-hulman.edu:27017")
 db = client['pokemon_test']
+app = Flask(__name__)
 
 
+@app.route('/mInsert/<name>/<type_1>/<type_2>', methods=["GET", "POST"])
 def insertPokemon(name=None, type_1=None, type_2=None, link=None, species=None, height=0, weight=0, abilities=None, training_catch_rate=0, training_base_exp=0, training_growth_rate=0, breeding_gender_male=0, breeding_gender_female=0, stats_hp=0, stats_attack=0, stats_defense=0, stats_sp_atk=0, stats_sp_def=0, stats_speed=0, stats_total=0):
     data = {
         'name': name,
@@ -28,6 +32,4 @@ def insertPokemon(name=None, type_1=None, type_2=None, link=None, species=None, 
         'stats_total': stats_total,
     }
     print(data)
-
-
-insertPokemon(name="aa", type_1="2")
+    # db.pokedex.insert_one(data)

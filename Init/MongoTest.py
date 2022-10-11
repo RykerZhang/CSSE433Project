@@ -1,5 +1,6 @@
 import pymongo
 from pymongo import MongoClient
+
 client = MongoClient("mongodb://433-34.csse.rose-hulman.edu:27017")
 # client = MongoClient("mongodb://137.112.104.247:27017")
 
@@ -15,8 +16,10 @@ document = (
 )
 # print(type(document))
 # result = db.media.insert_one(document)
-cursor = db.pokedex.find()
+# cursor = db.pokedex.find()
+cursor = db.pokedex.find({'name': 'abbb'})
+# print(cursor.min)
 for data in cursor:
     print(data)
-    # print(data['name'])
+# print(data['name'])
 # print(cursor.)

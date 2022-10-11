@@ -10,10 +10,14 @@ pokemondb.indexPageController = class{
 			const inputUsername = document.querySelector("#inputName");
 			const inputPassword = document.querySelector("#inputPassword");
 			// this.login(inputUsername, inputPassword);
+            document.querySelector("#loginButton").onclick=(event)=>{
+
+            }
             this.login();
 		};
     }
     login(){
+        window.location.href="./main"
         fetch("login")
             .then(console.log("redirect"))
             .then(window.location.href = "./main")
