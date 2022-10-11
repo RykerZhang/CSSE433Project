@@ -1,5 +1,6 @@
 from urllib import response
 from pymongo import MongoClient
+import pymongo
 import json
 from bson import json_util
 from flask import Flask, render_template, request, redirect, url_for
@@ -68,9 +69,13 @@ def insertPokemon(name=None, type_1=None, type_2=None, link=None, species=None, 
             'stats_speed': stats_speed,
             'stats_total': stats_total
         }
-        # print(data)
-        db.pokedex.insert_one(data)
+
+        tmp = db.pokedex.find({'name': name})
+        if len(list(tmp)) > 0:
+            print('already exists')
+            return 'Insert failed, name already exists'
         cursor = db.pokedex.find({'name': name})
+        print(len(list(cursor)))
         x = {}
         for i in cursor:
             x.update(i)
