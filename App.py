@@ -12,14 +12,10 @@ app = Flask(__name__)
 client = MongoClient("mongodb://433-34.csse.rose-hulman.edu:27017")
 db = client['pokemon_test']
 
-IMAGE_FOLDER = os.path.join('static', 'images')
-CSS_FOLDER = os.path.join('static', 'styles')
-SCRIPT_FOLDER = os.path.join('static', 'scripts')
-app.config['IMAGE_FOLDER'] = IMAGE_FOLDER
-app.config['CSS_FOLDER'] = CSS_FOLDER
-app.config["SCRIPT_FOLDER"] = SCRIPT_FOLDER
 
-# not used
+app.config['IMAGE_FOLDER'] = os.path.join('static', 'images')
+app.config['CSS_FOLDER'] = os.path.join('static', 'styles')
+app.config["SCRIPT_FOLDER"] = os.path.join('static', 'scripts')
 
 
 @app.route('/favicon.ico', methods=["GET"])
@@ -36,7 +32,7 @@ def indexPage():
     return render_template("index.html", logo=elep, style=css, script=js)
 
 
-@app.route('/main', methods=["GET", "POST"])
+@app.route('/main', methods=["GET"])
 def mainPage():
     elep = os.path.join(app.config['IMAGE_FOLDER'], 'elep.png')
     css = os.path.join(app.config['CSS_FOLDER'], 'main.css')

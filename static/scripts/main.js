@@ -19,8 +19,8 @@ pokemondb.indexPageController = class{
     login(){
         window.location.href="./main"
         fetch("login")
-            .then(console.log("redirect"))
-            .then(window.location.href = "./main")
+            .then(console.log("redirecting..."))
+            .then(fetch('127.0.0.1/main'))
             .catch((err) => {
 				console.log(err);
 			});
