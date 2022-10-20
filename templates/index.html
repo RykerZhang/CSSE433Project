@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>Pokemon Encyclopedia</title>
@@ -12,30 +13,31 @@
 </head>
 
 
-<body >
+<body>
 
-    <div id = "indexPage">
+    <div id="indexPage">
 
-        <div id = "indexImgContainer">
+        <div id="indexImgContainer">
             <img src="{{logo}}" alt="Rose-hulman login">
         </div>
 
         <!-- login information form -->
         <form style="width:30%; text-align: center; margin-inline: auto;">
-            <div class="mb-3" >
+            <div class="mb-3">
                 <label for="username" class="form-label">Username</label>
-                <input type="text" class="form-control" id="username" name = "LoginUsername">
+                <input type="text" class="form-control" id="username" name="LoginUsername">
             </div>
             <div class="mb-3">
-                <label for="inputPassword" class="form-label">Password</label>
-                <input type="password" class="form-control" id="inputPassword", name = "LoginPassword">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" , name="LoginPassword">
             </div>
 
         </form>
         <div id="loginButtonContainer">
-        <!-- Button trigger modal -->
-            <button id="signUpButton" type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#signUp">Sign
-            up </button>
+            <!-- Button trigger modal -->
+            <button id="signUpButton" type="button" class="btn btn-light" data-bs-toggle="modal"
+                data-bs-target="#signUp">Sign
+                up </button>
             <button id="loginButton" type="button " class="btn btn-light">Login</button>
         </div>
 
@@ -49,10 +51,10 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        
+
                         <div class="mb-3">
                             <label for="newUsername" class="form-label">Username</label>
-                            <input type="text" class="form-control" id="username" >
+                            <input type="text" class="form-control" id="username">
                         </div>
                         <div class="mb-3">
                             <label for="newPassword" class="form-label">Password</label>
@@ -74,4 +76,5 @@
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
 </body>
+
 </html>

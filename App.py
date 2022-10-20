@@ -34,6 +34,53 @@ Ipokedex = Iclient.get_or_create_cache("Ipokedex")
 app.config['IMAGE_FOLDER'] = os.path.join('static', 'images')
 app.config['CSS_FOLDER'] = os.path.join('static', 'styles')
 app.config["SCRIPT_FOLDER"] = os.path.join('static', 'scripts')
+##### Web #####
+# not used, remove may cause waring in flask
+
+
+@app.route('/favicon.ico', methods=["GET"])
+def icon():
+    return ''
+
+# get the index page
+
+
+@app.route('/', methods=["GET"])
+@app.route('/index', methods=["GET"])
+def indexPage():
+    elep = os.path.join(app.config['IMAGE_FOLDER'], 'elep.png')
+    css = os.path.join(app.config['CSS_FOLDER'], 'main.css')
+    js = os.path.join(app.config["SCRIPT_FOLDER"], 'main.js')
+    return render_template("index.html", logo=elep, style=css, script=js)
+
+# get the main page
+
+
+@app.route('/main', methods=["GET", "POST"])
+def mainPage():
+    if request.method == "POST":
+        data = request.data
+        print(data)
+        # TODO: add authorization
+        return redirect("main")
+    else:
+        elep = os.path.join(app.config['IMAGE_FOLDER'], 'elep.png')
+        css = os.path.join(app.config['CSS_FOLDER'], 'main.css')
+        js = os.path.join(app.config["SCRIPT_FOLDER"], 'main.js')
+        return render_template("main.html", logo=elep, style=css, script=js)
+
+
+# get all pokemons
+
+
+@app.route('/getall', methods=["POST"])
+def allPokemon():
+    cursor = db.pokedex.find()
+    re = {}
+    for data in cursor:
+        data.pop("_id")
+        re[data['id_nb']] = data
+    return re
 
 # the update function for Ipokedex
 
@@ -47,29 +94,9 @@ def Iupdate(id=0, name=None, type_1=None, type_2=None, link=None, species=None, 
                      breeding_gender_male, breeding_gender_female, stats_hp, stats_attack, stats_defense, stats_sp_atk, stats_sp_def, stats_speed, stats_total, imageurl])
 
 
-@app.route('/favicon.ico', methods=["GET"])
-def icon():
-    return ''
-
-
-@app.route('/', methods=["GET"])
-@app.route('/index', methods=["GET"])
-def indexPage():
-    elep = os.path.join(app.config['IMAGE_FOLDER'], 'elep.png')
-    css = os.path.join(app.config['CSS_FOLDER'], 'main.css')
-    js = os.path.join(app.config["SCRIPT_FOLDER"], 'main.js')
-    return render_template("index.html", logo=elep, style=css, script=js)
-
-
-@app.route('/main', methods=["GET"])
-def mainPage():
-    elep = os.path.join(app.config['IMAGE_FOLDER'], 'elep.png')
-    css = os.path.join(app.config['CSS_FOLDER'], 'main.css')
-    js = os.path.join(app.config["SCRIPT_FOLDER"], 'main.js')
-    return render_template("main.html", logo=elep, style=css, script=js)
-
-
 # insert part of data to mongodb and all the data to ignite
+
+
 @app.route('/Insert/<id>/<name>/<type_1>/<type_2>', methods=["GET", "POST"])
 def insertPokemon(id=0, name=None, type_1=None, type_2=None, link=None, species=None, height=0, weight=0, abilities=None, training_catch_rate=0, training_base_exp=0, training_growth_rate=0, breeding_gender_male=0, breeding_gender_female=0, stats_hp=0, stats_attack=0, stats_defense=0, stats_sp_atk=0, stats_sp_def=0, stats_speed=0, stats_total=0, imageurl=""):
     if request.method == "GET":
