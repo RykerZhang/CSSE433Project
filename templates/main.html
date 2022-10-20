@@ -9,15 +9,46 @@
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-
 </head>
 
 
 <body id = "mainPage">
     <div> this is the main page of pokedex</div>
 
+<!-- Button trigger modal -->
+<div id="ButtonContainer">
+    <button id="searchButton" type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#search">
+        <i class="material-icons">search</i></button>
+    <button id="insertButton" type="button " class="btn btn-light"><i class="material-icons">add</i></button>
+</div>
 
+<!-- Modal -->
+<div class="modal fade" id="search" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Sign Up</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
 
+                <div class="mb-3">
+                    <label for="newUsername" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username">
+                </div>
+                <div class="mb-3">
+                    <label for="newPassword" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="inputPassword">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-light">Sign Up</button>
+            </div>
+        </div>
+    </div>
+</div>
 
     <script src="{{script}}"></script>
     <!-- JavaScript Bundle with Popper -->
