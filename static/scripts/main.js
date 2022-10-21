@@ -48,11 +48,15 @@ pokemondb.mainPageController = class {
     document.querySelector("#logOutButton").onclick = (event) => {
       this.logOut();
     };
+    document.querySelector("#deleteBtn").onclick = (event) => {
+      this.delete(document.querySelector("#deleteInput").value);
+    };
   }
   init() {
     fetch("/getall", { method: "GET" })
       .then((respnse) => respnse.json())
       .then((data) => {
+        pokemondb.db = data;
         for (var key in data) {
           var pokemon = data[key];
           var card = this.create_card(pokemon);
@@ -82,7 +86,7 @@ pokemondb.mainPageController = class {
         .then((respnse) => respnse.json())
         .then((data) => {
           if (Object.keys(data).length == 0) {
-            window.alert("No such result. Please search again");
+            window.alert("No such result.");
           } else {
             for (var key in data) {
               var pokemon = data[key];
@@ -91,6 +95,24 @@ pokemondb.mainPageController = class {
             }
           }
         });
+    }
+  }
+  delete(info) {
+    // console.log(pokemondb.db);
+    var finded = false;
+    for (var key in pokemondb.db) {
+      var pokemon = pokemondb.db[key];
+      if (pokemon["name-form"] == info) {
+        finded = true;
+      }
+    }
+    if (!finded) {
+      window.alert("Pokemon Not exits");
+    } else {
+      console.log("deleted");
+      fetch("/Delete/" + pokemon["id"], { method: "DELETE" }).then((data) => {
+        // console.log(data);
+      });
     }
   }
 };

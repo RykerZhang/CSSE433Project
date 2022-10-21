@@ -141,7 +141,7 @@ def detailPage(id):
     if (request.method == "GET"):
         output = Ipokedex.get(id)
         if (output != None):
-            return output
+            return {"re": output}
         else:
             return "None"
 
