@@ -129,16 +129,17 @@ def Search(InfoType, info):
 # detailPage return an array, in the sequence of ["id", "name", "type_1", "type_2", "link", "species", "height", "weight", "abilities", "training_catch_rate", "breeding_gender_male", "breeding_gender_male", "breeding_gender_female", "stats_hp", "stats_attack", "stats_defense", "stats_sp_atk", "stats_sp_def", "stats_speed", "stats_total", "iamgeurl"]
 
 
-@ app.route('/DetailSearch/<id>/<name>', methods=["GET"])
+@ app.route('/DetailSearch/<id>', methods=["GET"])
 def detailPage(id):
-    if (request.method == "GET"):
-        output = Ipokedex.get(id)
-        return output
+    # if (request.method == "GET"):
+    output = Ipokedex.get(id)
+    print(output)
+    # return output
 
 # mongodb and ignite update
 
 
-@app.route('/Update', methods=["GET", "POST"])
+@app.route('/Update', methods=["GET", "POST", "PATCH"])
 def Update(id=0, name=None, type_1="-", type_2="-", link=None, species=None, height=0, weight=0, abilities=None, training_catch_rate=0, training_base_exp=0, training_growth_rate=0, breeding_gender_male=0, breeding_gender_female=0, stats_hp=0, stats_attack=0, stats_defense=0, stats_sp_atk=0, stats_sp_def=0, stats_speed=0, stats_total=0, img=""):
     # Mongodb Update
     if (request.method == "POST"):

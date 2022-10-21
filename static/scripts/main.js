@@ -1,6 +1,7 @@
 var pokemondb = pokemondb || {};
 pokemondb.indexPageController = null;
 pokemondb.mainPageController = null;
+pokemondb.db = null;
 
 //From https://stackoverflow.com/questions/494143/creating-a-new-dom-element-from-an-html-string-using-built-in-dom-methods-or-pro/35385518#35385518
 function htmlToElement(html) {
