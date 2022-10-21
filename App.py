@@ -1,3 +1,4 @@
+from tabnanny import check
 from urllib import response
 from pymongo import MongoClient
 from pyignite import Client
@@ -22,7 +23,7 @@ db = mclient['pokemon_test']
 # create a attribute number map for storing the sequence of attributes. Key is the attribute name, value is No.
 attributeNo = Iclient.get_or_create_cache("attributeNo")
 # fill the attributeNo map.
-attributeArray = ["id_nb", "name", "type_1", "type_2", "link", "species", "height", "weight", "abilities", "training_catch_rate", "breeding_gender_male",
+attributeArray = ["id", "name", "type_1", "type_2", "link", "species", "height", "weight", "abilities", "training_catch_rate", "breeding_gender_male",
                   "breeding_gender_male", "breeding_gender_female", "stats_hp", "stats_attack", "stats_defense", "stats_sp_atk", "stats_sp_def", "stats_speed", "stats_total", "imageurl"]
 for i in range(len(attributeArray)):
     attributeNo.put(i, attributeArray[i])
@@ -32,16 +33,6 @@ Ipokedex = Iclient.get_or_create_cache("Ipokedex")
 app.config['IMAGE_FOLDER'] = os.path.join('static', 'images')
 app.config['CSS_FOLDER'] = os.path.join('static', 'styles')
 app.config["SCRIPT_FOLDER"] = os.path.join('static', 'scripts')
-
-#the update function for Ipokedex 
-def Iupdate(id=0, name=None, type_1=None, type_2=None, link=None, species=None, height=0, weight=0, abilities=None, training_catch_rate=0, training_base_exp=0, training_growth_rate=0, breeding_gender_male=0, breeding_gender_female=0, stats_hp=0, stats_attack=0, stats_defense=0, stats_sp_atk=0, stats_sp_def=0, stats_speed=0, stats_total=0, imageurl = ""):
-    checkoutput = Ipokedex.get(id)
-    if(checkoutput!=None):
-        return "id already exist"
-    else:
-        Ipokedex.put(id, [name, type_1, type_2, link, species, height, weight, abilities, training_catch_rate, training_base_exp, training_growth_rate, breeding_gender_male, breeding_gender_female, stats_hp, stats_attack, stats_defense, stats_sp_atk, stats_sp_def, stats_speed, stats_total, imageurl])
-
-
 
 @app.route('/favicon.ico', methods=["GET"])
 def icon():
@@ -71,20 +62,19 @@ def mainPage():
 def insertPokemon(id=0, name=None, type_1=None, type_2=None, link=None, species=None, height=0, weight=0, abilities=None, training_catch_rate=0, training_base_exp=0, training_growth_rate=0, breeding_gender_male=0, breeding_gender_female=0, stats_hp=0, stats_attack=0, stats_defense=0, stats_sp_atk=0, stats_sp_def=0, stats_speed=0, stats_total=0, imageurl = ""):
     if request.method == "GET":
         #Ignite insert
-        id_nb = "#"+id
-        checkoutput = Ipokedex.get(id_nb)
+        checkoutput = Ipokedex.get(id)
         if (checkoutput != None):
             return "id already exist."
-        Ipokedex.put(id_nb, [name, type_1, type_2, link, species, height, weight, abilities, training_catch_rate, training_base_exp, training_growth_rate, breeding_gender_male, breeding_gender_female, stats_hp, stats_attack, stats_defense, stats_sp_atk, stats_sp_def, stats_speed, stats_total, imageurl])
+        Ipokedex.put(id, [name, type_1, type_2, link, species, height, weight, abilities, training_catch_rate, training_base_exp, training_growth_rate, breeding_gender_male, breeding_gender_female, stats_hp, stats_attack, stats_defense, stats_sp_atk, stats_sp_def, stats_speed, stats_total, imageurl])
         #Mongodb insert
         data = {
-            'id_nb': "#"+id,
+            'id': id,
             'name': name,
             'type_1': type_1,
             'species': species,
             'imageurl': imageurl
         }
-        i = db.pokedex.find({'id_nb': "#"+id})
+        i = db.pokedex.find({'id': id})
         n = db.pokedex.find({'name': name})
         if len(list(n)) > 0 or len(list(i)):
             print('already exists')
@@ -100,7 +90,7 @@ def insertPokemon(id=0, name=None, type_1=None, type_2=None, link=None, species=
         return ''
 
 #search for the search page, use mongodb to search
-@app.route('/Search/<InfoType>/<info>', methods = ["GET"])
+@app.route('/HomeSearch/<InfoType>/<info>', methods = ["GET"])
 # if the result is not found, it will return "No such result". If the result is found, it will return the result of the find_one function.
 def Search(InfoType, info):
     output = db.pokedex.find({InfoType: info})
@@ -109,7 +99,7 @@ def Search(InfoType, info):
     else:
         pokeDict = dict()
         for i in output:
-            id = i.get("id_nb")
+            id = i.get("id")
             name = i.get("name")
             type_1 = i.get("type_1")
             species = i.get("species")
@@ -117,12 +107,11 @@ def Search(InfoType, info):
             pokeDict[i] = [id, name, type_1, species, imageurl]
         return pokeDict
  
- # detailPage return an array, in the sequence of ["id_nb", "name", "type_1", "type_2", "link", "species", "height", "weight", "abilities", "training_catch_rate", "breeding_gender_male", "breeding_gender_male", "breeding_gender_female", "stats_hp", "stats_attack", "stats_defense", "stats_sp_atk", "stats_sp_def", "stats_speed", "stats_total", "iamgeurl"]
-@app.route('/Detail/<id>/<name>', methods = ["GET"])
+# detailPage return an array, in the sequence of ["id", "name", "type_1", "type_2", "link", "species", "height", "weight", "abilities", "training_catch_rate", "breeding_gender_male", "breeding_gender_male", "breeding_gender_female", "stats_hp", "stats_attack", "stats_defense", "stats_sp_atk", "stats_sp_def", "stats_speed", "stats_total", "iamgeurl"]
+@app.route('/DetailSearch/<id>/<name>', methods = ["GET"])
 def detailPage(id):
-        id_nb = "#"+ id
         if(request.method == "GET"):
-            output = Ipokedex.get(id_nb)
+            output = Ipokedex.get(id)
             return output
 
 #mongodb and ignite update
@@ -131,19 +120,24 @@ def Update(id=0, name=None, type_1=None, type_2=None, link=None, species=None, h
     #Mongodb Update
     if (request.method == "POST"):
         db.Book.update_one(
-            {"id_nb": "#"+id},
+            {"id": id},
             {"$set": {"name": name,
                       "type_1": type_1,
                       "species": species,
                       "imageurl": imageurl}
              }
         )
-        #i = db.pokedex.find({'id_nb': "#"+id})
         n = db.pokedex.find({'name': name})
         if len(list(n) > 0):
             print('already exists')
             return 'Insert failed, name already exists'
-        
+    #ignite update
+        checkoutput = Ipokedex.get(id)
+        if(checkoutput!=None):
+            Ipokedex.remove_key(id)
+            Ipokedex.put(id, [name, type_1, type_2, link, species, height, weight, abilities, training_catch_rate, training_base_exp, training_growth_rate, breeding_gender_male, breeding_gender_female, stats_hp, stats_attack, stats_defense, stats_sp_atk, stats_sp_def, stats_speed, stats_total, imageurl])
+        else:
+            return "No such Id"
         
 
 @app.route('/Delete/<name>', methods=["DELETE"])
