@@ -3,18 +3,19 @@ body{
     border: 0px;
 }
 
+
 #indexImgContainer, #loginButtonContainer, #indexPage{
     text-align: center;
 }
-
 #main{
-    margin-inline: 5vw;
     margin-top: 2vh;
+    width: 100vw;
+    text-align: center;
 }
 .picContainer{
-    margin-inline: 15px;
+    /* margin-inline: 0.5vw; */
     text-align: center;
-    width:15vw;
+    width:12vw;
 }
 
 .picContainer > img{
