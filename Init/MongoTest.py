@@ -16,9 +16,9 @@ document = (
 )
 # print(type(document))
 # result = db.media.insert_one(document)
-# cursor = db.pokedex.find()
-cursor = db.pokedex.find({'name': 'abbb'})
+# cursor = db.pokedex.find({'name': 'abbb'})
 # print(cursor.min)
+cursor = db.pokedex.find()
 for data in cursor:
     print(data)
 # print(data['name'])
