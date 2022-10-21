@@ -12,7 +12,6 @@ from flask_pymongo import PyMongo
 import os
 
 # import Router as router
-
 app = Flask(__name__)
 # MClient is for mongodb
 mclient = MongoClient("mongodb://433-34.csse.rose-hulman.edu:27017")
@@ -78,8 +77,8 @@ def allPokemon():
 # insert part of data to mongodb and all the data to ignite
 
 
-@ app.route('/Insert/<id>/<name>/<type_1>/<type_2>', methods=["GET", "POST"])
-def insertPokemon(id=0, name=None, type_1=None, type_2=None, link=None, species=None, height=0, weight=0, abilities=None, training_catch_rate=0, training_base_exp=0, training_growth_rate=0, breeding_gender_male=0, breeding_gender_female=0, stats_hp=0, stats_attack=0, stats_defense=0, stats_sp_atk=0, stats_sp_def=0, stats_speed=0, stats_total=0, img=""):
+@app.route('/Insert/<id>/<name>/<type_1>/<type_2>', methods=["GET", "POST"])
+def insertPokemon(id=0, name=None, type_1="-", type_2="-", link=None, species=None, height=0, weight=0, abilities=None, training_catch_rate=0, training_base_exp=0, training_growth_rate=0, breeding_gender_male=0, breeding_gender_female=0, stats_hp=0, stats_attack=0, stats_defense=0, stats_sp_atk=0, stats_sp_def=0, stats_speed=0, stats_total=0, imageurl=""):
     if request.method == "GET":
         # Ignite insert
         checkoutput = Ipokedex.get(id)
@@ -92,6 +91,7 @@ def insertPokemon(id=0, name=None, type_1=None, type_2=None, link=None, species=
             'id': id,
             'name': name,
             'type_1': type_1,
+            'type_2': type_2,
             'species': species,
             'img': img
         }
@@ -143,14 +143,15 @@ def detailPage(id):
 # mongodb and ignite update
 
 
-@ app.route('/Update', methods=["GET", "POST"])
-def Update(id=0, name=None, type_1=None, type_2=None, link=None, species=None, height=0, weight=0, abilities=None, training_catch_rate=0, training_base_exp=0, training_growth_rate=0, breeding_gender_male=0, breeding_gender_female=0, stats_hp=0, stats_attack=0, stats_defense=0, stats_sp_atk=0, stats_sp_def=0, stats_speed=0, stats_total=0, img=""):
+@app.route('/Update', methods=["GET", "POST"])
+def Update(id=0, name=None, type_1="-", type_2="-", link=None, species=None, height=0, weight=0, abilities=None, training_catch_rate=0, training_base_exp=0, training_growth_rate=0, breeding_gender_male=0, breeding_gender_female=0, stats_hp=0, stats_attack=0, stats_defense=0, stats_sp_atk=0, stats_sp_def=0, stats_speed=0, stats_total=0, imageurl=""):
     # Mongodb Update
     if (request.method == "POST"):
         db.Book.update_one(
             {"id": id},
             {"$set": {"name": name,
                       "type_1": type_1,
+                      "type_2": type_2,
                       "species": species,
                       "img": img}
              }
