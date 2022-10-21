@@ -1,4 +1,3 @@
-from crypt import methods
 from tabnanny import check
 from urllib import response
 from pymongo import MongoClient
@@ -138,7 +137,10 @@ def Search(InfoType, info):
 def detailPage(id):
     if (request.method == "GET"):
         output = Ipokedex.get(id)
-        return output
+        if(output != None):
+            return output
+        else:
+            return "None"
 
 # mongodb and ignite update
 
