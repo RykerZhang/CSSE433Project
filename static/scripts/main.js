@@ -38,6 +38,15 @@ pokemondb.indexPageController = class {
 pokemondb.mainPageController = class {
   constructor() {
     this.init();
+    document.querySelector("#selectSearch").onclick = (event) => {
+      console.log($(this).val());
+      console.log(1);
+    };
+    document.querySelector("#searchBtn").onclick = (event) => {
+      var InfoType = document.querySelector("#selectSearch").value;
+      var info = document.querySelector("#condition").value;
+      this.search(InfoType, info);
+    };
   }
   init() {
     fetch("/getall", { method: "GET" })
@@ -46,6 +55,7 @@ pokemondb.mainPageController = class {
         for (var key in data) {
           var pokemon = data[key];
           pokemon["name"] = pokemon["name-form"].split("-")[0];
+          // pokemon["form"] = pokemon["name-form"].split("-")[1];
           var card = this.create_card(pokemon);
           document.querySelector("#main").append(card);
         }
@@ -56,6 +66,35 @@ pokemondb.mainPageController = class {
             <img src="${data.img}">
             <p class=caption>${data["name"]}</p>
         </span>`);
+  }
+  search(InfoType, info) {
+    console.log(InfoType);
+    console.log(info);
+    var node = document.querySelector("#main");
+    while (node.firstChild) {
+      node.removeChild(node.firstChild);
+    }
+    if (info == "") {
+      window.alert("condition can't be null");
+    } else {
+      fetch("/HomeSearch/" + InfoType + "/" + info, { method: "GET" })
+        .then((respnse) => respnse.json())
+        .then((data) => {
+          console.log(data);
+          console.log(data == {});
+          console.log(typeof data);
+          if (data == {}) {
+            window.alert("No such result. Please search again");
+          } else {
+            for (var key in data) {
+              var pokemon = data[key];
+              pokemon["name"] = pokemon["name-form"].split("-")[0];
+              var card = this.create_card(pokemon);
+              document.querySelector("#main").append(card);
+            }
+          }
+        });
+    }
   }
 };
 
