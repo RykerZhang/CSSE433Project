@@ -6,3 +6,15 @@ body{
 #indexImgContainer, #loginButtonContainer, #indexPage{
     text-align: center;
 }
+
+#main{
+    margin-inline: 5vw;
+    margin-top: 2vh;
+}
+.picContainer{
+    margin-inline: 15px;
+}
+
+.picContainer > img{
+ height: 20vh;
+}

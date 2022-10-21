@@ -2,7 +2,13 @@ var pokemondb = pokemondb || {}
 pokemondb.indexPageController = null;
 pokemondb.mainPageController = null;
 
-
+//From https://stackoverflow.com/questions/494143/creating-a-new-dom-element-from-an-html-string-using-built-in-dom-methods-or-pro/35385518#35385518
+function htmlToElement(html) {
+	var template = document.createElement('template');
+	html = html.trim();
+	template.innerHTML = html;
+	return template.content.firstChild;
+}
 
 pokemondb.indexPageController = class{
     constructor(){
@@ -21,6 +27,7 @@ pokemondb.indexPageController = class{
         fetch("login")
             .then(console.log("redirecting..."))
             .then(fetch('127.0.0.1/main'))
+            .then(console.log( console.log("{{pokemon}}")))
             .catch((err) => {
 				console.log(err);
 			});
