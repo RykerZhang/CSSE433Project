@@ -1,0 +1,474 @@
+,Before,Method,After,Before_id,Before_img,After_id,After_img
+0,Bulbasaur-Bulbasaur,(Level 16),Ivysaur-Ivysaur,0010,https://img.pokemondb.net/artwork/large/bulbasaur.jpg,0020,https://img.pokemondb.net/artwork/large/ivysaur.jpg
+1,Ivysaur-Ivysaur,(Level 32),Venusaur-Venusaur,0020,https://img.pokemondb.net/artwork/large/ivysaur.jpg,0030,https://img.pokemondb.net/artwork/large/venusaur.jpg
+2,Charmander-Charmander,(Level 16),Charmeleon-Charmeleon,0040,https://img.pokemondb.net/artwork/large/charmander.jpg,0050,https://img.pokemondb.net/artwork/large/charmeleon.jpg
+3,Charmeleon-Charmeleon,(Level 36),Charizard-Charizard,0050,https://img.pokemondb.net/artwork/large/charmeleon.jpg,0060,https://img.pokemondb.net/artwork/large/charizard.jpg
+4,Squirtle-Squirtle,(Level 16),Wartortle-Wartortle,0070,https://img.pokemondb.net/artwork/large/squirtle.jpg,0080,https://img.pokemondb.net/artwork/large/wartortle.jpg
+5,Wartortle-Wartortle,(Level 36),Blastoise-Blastoise,0080,https://img.pokemondb.net/artwork/large/wartortle.jpg,0090,https://img.pokemondb.net/artwork/large/blastoise.jpg
+6,Caterpie-Caterpie,(Level 7),Metapod-Metapod,0100,https://img.pokemondb.net/artwork/large/caterpie.jpg,0110,https://img.pokemondb.net/artwork/large/metapod.jpg
+7,Metapod-Metapod,(Level 10),Butterfree-Butterfree,0110,https://img.pokemondb.net/artwork/large/metapod.jpg,0120,https://img.pokemondb.net/artwork/large/butterfree.jpg
+8,Weedle-Weedle,(Level 7),Kakuna-Kakuna,0130,https://img.pokemondb.net/artwork/large/weedle.jpg,0140,https://img.pokemondb.net/artwork/large/kakuna.jpg
+9,Kakuna-Kakuna,(Level 10),Beedrill-Beedrill,0140,https://img.pokemondb.net/artwork/large/kakuna.jpg,0150,https://img.pokemondb.net/artwork/large/beedrill.jpg
+10,Pidgey-Pidgey,(Level 18),Pidgeotto-Pidgeotto,0160,https://img.pokemondb.net/artwork/large/pidgey.jpg,0170,https://img.pokemondb.net/artwork/large/pidgeotto.jpg
+11,Pidgeotto-Pidgeotto,(Level 36),Pidgeot-Pidgeot,0170,https://img.pokemondb.net/artwork/large/pidgeotto.jpg,0180,https://img.pokemondb.net/artwork/large/pidgeot.jpg
+12,Rattata-Rattata,(Level 20),Raticate-Raticate,0190,https://img.pokemondb.net/artwork/large/rattata.jpg,0200,https://img.pokemondb.net/artwork/large/raticate.jpg
+13,Rattata-Alolan Rattata,(Level 20; Nighttime),Raticate-Alolan Raticate,0191,https://img.pokemondb.net/artwork/large/rattata-alolan.jpg,0201,https://img.pokemondb.net/artwork/large/raticate-alolan.jpg
+14,Spearow-Spearow,(Level 20),Fearow-Fearow,0210,https://img.pokemondb.net/artwork/large/spearow.jpg,0220,https://img.pokemondb.net/artwork/large/fearow.jpg
+15,Ekans-Ekans,(Level 22),Arbok-Arbok,0230,https://img.pokemondb.net/artwork/large/ekans.jpg,0240,https://img.pokemondb.net/artwork/large/arbok.jpg
+16,Pichu-Pichu,(high Friendship),Pikachu-Pikachu,1720,https://img.pokemondb.net/artwork/large/pichu.jpg,0250,https://img.pokemondb.net/artwork/large/pikachu.jpg
+17,Pikachu-Pikachu,(use Thunder Stone; outside Alola),Raichu-Raichu,0250,https://img.pokemondb.net/artwork/large/pikachu.jpg,0260,https://img.pokemondb.net/artwork/large/raichu.jpg
+18,Pikachu-Pikachu,(use Thunder Stone; in Alola),Raichu-Alolan Raichu,0250,https://img.pokemondb.net/artwork/large/pikachu.jpg,0261,https://img.pokemondb.net/artwork/large/raichu-alolan.jpg
+19,Sandshrew-Sandshrew,(Level 22),Sandslash-Sandslash,0270,https://img.pokemondb.net/artwork/large/sandshrew.jpg,0280,https://img.pokemondb.net/artwork/large/sandslash.jpg
+20,Sandshrew-Alolan Sandshrew,(use Ice Stone),Sandslash-Alolan Sandslash,0271,https://img.pokemondb.net/artwork/large/sandshrew-alolan.jpg,0281,https://img.pokemondb.net/artwork/large/sandslash-alolan.jpg
+21,Nidoran♀-Nidoran♀,(Level 16),Nidorina-Nidorina,0290,https://img.pokemondb.net/artwork/large/nidoran-f.jpg,0300,https://img.pokemondb.net/artwork/large/nidorina.jpg
+22,Nidorina-Nidorina,(use Moon Stone),Nidoqueen-Nidoqueen,0300,https://img.pokemondb.net/artwork/large/nidorina.jpg,0310,https://img.pokemondb.net/artwork/large/nidoqueen.jpg
+23,Nidoran♂-Nidoran♂,(Level 16),Nidorino-Nidorino,0320,https://img.pokemondb.net/artwork/large/nidoran-m.jpg,0330,https://img.pokemondb.net/artwork/large/nidorino.jpg
+24,Nidorino-Nidorino,(use Moon Stone),Nidoking-Nidoking,0330,https://img.pokemondb.net/artwork/large/nidorino.jpg,0340,https://img.pokemondb.net/artwork/large/nidoking.jpg
+25,Cleffa-Cleffa,(high Friendship),Clefairy-Clefairy,1730,https://img.pokemondb.net/artwork/large/cleffa.jpg,0350,https://img.pokemondb.net/artwork/large/clefairy.jpg
+26,Clefairy-Clefairy,(use Moon Stone),Clefable-Clefable,0350,https://img.pokemondb.net/artwork/large/clefairy.jpg,0360,https://img.pokemondb.net/artwork/large/clefable.jpg
+27,Vulpix-Vulpix,(use Fire Stone),Ninetales-Ninetales,0370,https://img.pokemondb.net/artwork/large/vulpix.jpg,0380,https://img.pokemondb.net/artwork/large/ninetales.jpg
+28,Vulpix-Alolan Vulpix,(use Ice Stone),Ninetales-Alolan Ninetales,0371,https://img.pokemondb.net/artwork/large/vulpix-alolan.jpg,0381,https://img.pokemondb.net/artwork/large/ninetales-alolan.jpg
+29,Igglybuff-Igglybuff,(high Friendship),Jigglypuff-Jigglypuff,1740,https://img.pokemondb.net/artwork/large/igglybuff.jpg,0390,https://img.pokemondb.net/artwork/large/jigglypuff.jpg
+30,Jigglypuff-Jigglypuff,(use Moon Stone),Wigglytuff-Wigglytuff,0390,https://img.pokemondb.net/artwork/large/jigglypuff.jpg,0400,https://img.pokemondb.net/artwork/large/wigglytuff.jpg
+31,Zubat-Zubat,(Level 22),Golbat-Golbat,0410,https://img.pokemondb.net/artwork/large/zubat.jpg,0420,https://img.pokemondb.net/artwork/large/golbat.jpg
+32,Golbat-Golbat,(high Friendship),Crobat-Crobat,0420,https://img.pokemondb.net/artwork/large/golbat.jpg,1690,https://img.pokemondb.net/artwork/large/crobat.jpg
+33,Oddish-Oddish,(Level 21),Gloom-Gloom,0430,https://img.pokemondb.net/artwork/large/oddish.jpg,0440,https://img.pokemondb.net/artwork/large/gloom.jpg
+34,Gloom-Gloom,(use Leaf Stone),Vileplume-Vileplume,0440,https://img.pokemondb.net/artwork/large/gloom.jpg,0450,https://img.pokemondb.net/artwork/large/vileplume.jpg
+35,Gloom-Gloom,(use Sun Stone),Bellossom-Bellossom,0440,https://img.pokemondb.net/artwork/large/gloom.jpg,1820,https://img.pokemondb.net/artwork/large/bellossom.jpg
+36,Paras-Paras,(Level 24),Parasect-Parasect,0460,https://img.pokemondb.net/artwork/large/paras.jpg,0470,https://img.pokemondb.net/artwork/large/parasect.jpg
+37,Venonat-Venonat,(Level 31),Venomoth-Venomoth,0480,https://img.pokemondb.net/artwork/large/venonat.jpg,0490,https://img.pokemondb.net/artwork/large/venomoth.jpg
+38,Diglett-Diglett,(Level 26),Dugtrio-Dugtrio,0500,https://img.pokemondb.net/artwork/large/diglett.jpg,0510,https://img.pokemondb.net/artwork/large/dugtrio.jpg
+39,Diglett-Alolan Diglett,(Level 26),Dugtrio-Alolan Dugtrio,0501,https://img.pokemondb.net/artwork/large/diglett-alolan.jpg,0511,https://img.pokemondb.net/artwork/large/dugtrio-alolan.jpg
+40,Meowth-Meowth,(Level 28),Persian-Persian,0520,https://img.pokemondb.net/artwork/large/meowth.jpg,0530,https://img.pokemondb.net/artwork/large/persian.jpg
+41,Meowth-Alolan Meowth,(high Friendship),Persian-Alolan Persian,0521,https://img.pokemondb.net/artwork/large/meowth-alolan.jpg,0531,https://img.pokemondb.net/artwork/large/persian-alolan.jpg
+42,Meowth-Galarian Meowth,(Level 28),Perrserker-Perrserker,0522,https://img.pokemondb.net/artwork/large/meowth-galarian.jpg,8630,https://img.pokemondb.net/artwork/large/perrserker.jpg
+43,Psyduck-Psyduck,(Level 33),Golduck-Golduck,0540,https://img.pokemondb.net/artwork/large/psyduck.jpg,0550,https://img.pokemondb.net/artwork/large/golduck.jpg
+44,Mankey-Mankey,(Level 28),Primeape-Primeape,0560,https://img.pokemondb.net/artwork/large/mankey.jpg,0570,https://img.pokemondb.net/artwork/large/primeape.jpg
+45,Growlithe-Growlithe,(use Fire Stone),Arcanine-Arcanine,0580,https://img.pokemondb.net/artwork/large/growlithe.jpg,0590,https://img.pokemondb.net/artwork/large/arcanine.jpg
+46,Growlithe-Hisuian Growlithe,(use Fire Stone),Arcanine-Hisuian Arcanine,0581,https://img.pokemondb.net/artwork/large/growlithe-hisuian.jpg,0591,https://img.pokemondb.net/artwork/large/arcanine-hisuian.jpg
+47,Poliwag-Poliwag,(Level 25),Poliwhirl-Poliwhirl,0600,https://img.pokemondb.net/artwork/large/poliwag.jpg,0610,https://img.pokemondb.net/artwork/large/poliwhirl.jpg
+48,Poliwhirl-Poliwhirl,(use Water Stone),Poliwrath-Poliwrath,0610,https://img.pokemondb.net/artwork/large/poliwhirl.jpg,0620,https://img.pokemondb.net/artwork/large/poliwrath.jpg
+49,Poliwhirl-Poliwhirl,(trade holding Kings Rock),Politoed-Politoed,0610,https://img.pokemondb.net/artwork/large/poliwhirl.jpg,1860,https://img.pokemondb.net/artwork/large/politoed.jpg
+50,Abra-Abra,(Level 16),Kadabra-Kadabra,0630,https://img.pokemondb.net/artwork/large/abra.jpg,0640,https://img.pokemondb.net/artwork/large/kadabra.jpg
+51,Kadabra-Kadabra,(Trade),Alakazam-Alakazam,0640,https://img.pokemondb.net/artwork/large/kadabra.jpg,0650,https://img.pokemondb.net/artwork/large/alakazam.jpg
+52,Machop-Machop,(Level 28),Machoke-Machoke,0660,https://img.pokemondb.net/artwork/large/machop.jpg,0670,https://img.pokemondb.net/artwork/large/machoke.jpg
+53,Machoke-Machoke,(Trade),Machamp-Machamp,0670,https://img.pokemondb.net/artwork/large/machoke.jpg,0680,https://img.pokemondb.net/artwork/large/machamp.jpg
+54,Bellsprout-Bellsprout,(Level 21),Weepinbell-Weepinbell,0690,https://img.pokemondb.net/artwork/large/bellsprout.jpg,0700,https://img.pokemondb.net/artwork/large/weepinbell.jpg
+55,Weepinbell-Weepinbell,(use Leaf Stone),Victreebel-Victreebel,0700,https://img.pokemondb.net/artwork/large/weepinbell.jpg,0710,https://img.pokemondb.net/artwork/large/victreebel.jpg
+56,Tentacool-Tentacool,(Level 30),Tentacruel-Tentacruel,0720,https://img.pokemondb.net/artwork/large/tentacool.jpg,0730,https://img.pokemondb.net/artwork/large/tentacruel.jpg
+57,Geodude-Geodude,(Level 25),Graveler-Graveler,0740,https://img.pokemondb.net/artwork/large/geodude.jpg,0750,https://img.pokemondb.net/artwork/large/graveler.jpg
+58,Graveler-Graveler,(Trade),Golem-Golem,0750,https://img.pokemondb.net/artwork/large/graveler.jpg,0760,https://img.pokemondb.net/artwork/large/golem.jpg
+59,Geodude-Alolan Geodude,(Level 25),Graveler-Alolan Graveler,0741,https://img.pokemondb.net/artwork/large/geodude-alolan.jpg,0751,https://img.pokemondb.net/artwork/large/graveler-alolan.jpg
+60,Graveler-Alolan Graveler,(Trade),Golem-Alolan Golem,0751,https://img.pokemondb.net/artwork/large/graveler-alolan.jpg,0761,https://img.pokemondb.net/artwork/large/golem-alolan.jpg
+61,Ponyta-Ponyta,(Level 40),Rapidash-Rapidash,0770,https://img.pokemondb.net/artwork/large/ponyta.jpg,0780,https://img.pokemondb.net/artwork/large/rapidash.jpg
+62,Ponyta-Galarian Ponyta,(Level 40),Rapidash-Galarian Rapidash,0771,https://img.pokemondb.net/artwork/large/ponyta-galarian.jpg,0781,https://img.pokemondb.net/artwork/large/rapidash-galarian.jpg
+63,Slowpoke-Slowpoke,(Level 37),Slowbro-Slowbro,0790,https://img.pokemondb.net/artwork/large/slowpoke.jpg,0800,https://img.pokemondb.net/artwork/large/slowbro.jpg
+64,Slowpoke-Slowpoke,(trade holding Kings Rock),Slowking-Slowking,0790,https://img.pokemondb.net/artwork/large/slowpoke.jpg,1990,https://img.pokemondb.net/artwork/large/slowking.jpg
+65,Slowpoke-Galarian Slowpoke,(use Galarica Cuff),Slowbro-Galarian Slowbro,0791,https://img.pokemondb.net/artwork/large/slowpoke-galarian.jpg,0802,https://img.pokemondb.net/artwork/large/slowbro-galarian.jpg
+66,Slowpoke-Galarian Slowpoke,(use Galarica Wreath),Slowking-Galarian Slowking,0791,https://img.pokemondb.net/artwork/large/slowpoke-galarian.jpg,1991,https://img.pokemondb.net/artwork/large/slowking-galarian.jpg
+67,Magnemite-Magnemite,(Level 30),Magneton-Magneton,0810,https://img.pokemondb.net/artwork/large/magnemite.jpg,0820,https://img.pokemondb.net/artwork/large/magneton.jpg
+68,Magneton-Magneton,(level up in a Magnetic Field area),Magnezone-Magnezone,0820,https://img.pokemondb.net/artwork/large/magneton.jpg,4620,https://img.pokemondb.net/artwork/large/magnezone.jpg
+69,Doduo-Doduo,(Level 31),Dodrio-Dodrio,0840,https://img.pokemondb.net/artwork/large/doduo.jpg,0850,https://img.pokemondb.net/artwork/large/dodrio.jpg
+70,Seel-Seel,(Level 34),Dewgong-Dewgong,0860,https://img.pokemondb.net/artwork/large/seel.jpg,0870,https://img.pokemondb.net/artwork/large/dewgong.jpg
+71,Grimer-Grimer,(Level 38),Muk-Muk,0880,https://img.pokemondb.net/artwork/large/grimer.jpg,0890,https://img.pokemondb.net/artwork/large/muk.jpg
+72,Grimer-Alolan Grimer,(Level 38),Muk-Alolan Muk,0881,https://img.pokemondb.net/artwork/large/grimer-alolan.jpg,0891,https://img.pokemondb.net/artwork/large/muk-alolan.jpg
+73,Shellder-Shellder,(use Water Stone),Cloyster-Cloyster,0900,https://img.pokemondb.net/artwork/large/shellder.jpg,0910,https://img.pokemondb.net/artwork/large/cloyster.jpg
+74,Gastly-Gastly,(Level 25),Haunter-Haunter,0920,https://img.pokemondb.net/artwork/large/gastly.jpg,0930,https://img.pokemondb.net/artwork/large/haunter.jpg
+75,Haunter-Haunter,(Trade),Gengar-Gengar,0930,https://img.pokemondb.net/artwork/large/haunter.jpg,0940,https://img.pokemondb.net/artwork/large/gengar.jpg
+76,Onix-Onix,(trade holding Metal Coat),Steelix-Steelix,0950,https://img.pokemondb.net/artwork/large/onix.jpg,2080,https://img.pokemondb.net/artwork/large/steelix.jpg
+77,Drowzee-Drowzee,(Level 26),Hypno-Hypno,0960,https://img.pokemondb.net/artwork/large/drowzee.jpg,0970,https://img.pokemondb.net/artwork/large/hypno.jpg
+78,Krabby-Krabby,(Level 28),Kingler-Kingler,0980,https://img.pokemondb.net/artwork/large/krabby.jpg,0990,https://img.pokemondb.net/artwork/large/kingler.jpg
+79,Voltorb-Voltorb,(Level 30),Electrode-Electrode,1000,https://img.pokemondb.net/artwork/large/voltorb.jpg,1010,https://img.pokemondb.net/artwork/large/electrode.jpg
+80,Voltorb-Hisuian Voltorb,(use Leaf Stone),Electrode-Hisuian Electrode,1001,https://img.pokemondb.net/artwork/large/voltorb-hisuian.jpg,1011,https://img.pokemondb.net/artwork/large/electrode-hisuian.jpg
+81,Exeggcute-Exeggcute,(use Leaf Stone; outside Alola),Exeggutor-Exeggutor,1020,https://img.pokemondb.net/artwork/large/exeggcute.jpg,1030,https://img.pokemondb.net/artwork/large/exeggutor.jpg
+82,Exeggcute-Exeggcute,(use Leaf Stone; in Alola),Exeggutor-Alolan Exeggutor,1020,https://img.pokemondb.net/artwork/large/exeggcute.jpg,1031,https://img.pokemondb.net/artwork/large/exeggutor-alolan.jpg
+83,Cubone-Cubone,(Level 28; outside Alola),Marowak-Marowak,1040,https://img.pokemondb.net/artwork/large/cubone.jpg,1050,https://img.pokemondb.net/artwork/large/marowak.jpg
+84,Cubone-Cubone,(Level 28; Nighttime; in Alola),Marowak-Alolan Marowak,1040,https://img.pokemondb.net/artwork/large/cubone.jpg,1051,https://img.pokemondb.net/artwork/large/marowak-alolan.jpg
+85,Tyrogue-Tyrogue,(Level 20; Attack > Defense),Hitmonlee-Hitmonlee,2360,https://img.pokemondb.net/artwork/large/tyrogue.jpg,1060,https://img.pokemondb.net/artwork/large/hitmonlee.jpg
+86,Tyrogue-Tyrogue,(Level 20; Attack < Defense),Hitmonchan-Hitmonchan,2360,https://img.pokemondb.net/artwork/large/tyrogue.jpg,1070,https://img.pokemondb.net/artwork/large/hitmonchan.jpg
+87,Tyrogue-Tyrogue,(Level 20; Attack = Defense),Hitmontop-Hitmontop,2360,https://img.pokemondb.net/artwork/large/tyrogue.jpg,2370,https://img.pokemondb.net/artwork/large/hitmontop.jpg
+88,Lickitung-Lickitung,(after Rollout learned),Lickilicky-Lickilicky,1080,https://img.pokemondb.net/artwork/large/lickitung.jpg,4630,https://img.pokemondb.net/artwork/large/lickilicky.jpg
+89,Koffing-Koffing,(Level 35; outside Galar),Weezing-Weezing,1090,https://img.pokemondb.net/artwork/large/koffing.jpg,1100,https://img.pokemondb.net/artwork/large/weezing.jpg
+90,Koffing-Koffing,(Level 35; in Galar),Weezing-Galarian Weezing,1090,https://img.pokemondb.net/artwork/large/koffing.jpg,1101,https://img.pokemondb.net/artwork/large/weezing-galarian.jpg
+91,Rhyhorn-Rhyhorn,(Level 42),Rhydon-Rhydon,1110,https://img.pokemondb.net/artwork/large/rhyhorn.jpg,1120,https://img.pokemondb.net/artwork/large/rhydon.jpg
+92,Rhydon-Rhydon,(trade holding Protector),Rhyperior-Rhyperior,1120,https://img.pokemondb.net/artwork/large/rhydon.jpg,4640,https://img.pokemondb.net/artwork/large/rhyperior.jpg
+93,Happiny-Happiny,(hold Oval Stone; Daytime),Chansey-Chansey,4400,https://img.pokemondb.net/artwork/large/happiny.jpg,1130,https://img.pokemondb.net/artwork/large/chansey.jpg
+94,Chansey-Chansey,(high Friendship),Blissey-Blissey,1130,https://img.pokemondb.net/artwork/large/chansey.jpg,2420,https://img.pokemondb.net/artwork/large/blissey.jpg
+95,Tangela-Tangela,(after Ancient Power learned),Tangrowth-Tangrowth,1140,https://img.pokemondb.net/artwork/large/tangela.jpg,4650,https://img.pokemondb.net/artwork/large/tangrowth.jpg
+96,Horsea-Horsea,(Level 32),Seadra-Seadra,1160,https://img.pokemondb.net/artwork/large/horsea.jpg,1170,https://img.pokemondb.net/artwork/large/seadra.jpg
+97,Seadra-Seadra,(trade holding Dragon Scale),Kingdra-Kingdra,1170,https://img.pokemondb.net/artwork/large/seadra.jpg,2300,https://img.pokemondb.net/artwork/large/kingdra.jpg
+98,Goldeen-Goldeen,(Level 33),Seaking-Seaking,1180,https://img.pokemondb.net/artwork/large/goldeen.jpg,1190,https://img.pokemondb.net/artwork/large/seaking.jpg
+99,Staryu-Staryu,(use Water Stone),Starmie-Starmie,1200,https://img.pokemondb.net/artwork/large/staryu.jpg,1210,https://img.pokemondb.net/artwork/large/starmie.jpg
+100,Mime Jr.-Mime Jr.,(after Mimic learned; outside Galar),Mr. Mime-Mr. Mime,4390,https://img.pokemondb.net/artwork/large/mime-jr.jpg,1220,https://img.pokemondb.net/artwork/large/mr-mime.jpg
+101,Mime Jr.-Mime Jr.,(after Mimic learned; in Galar),Mr. Mime-Galarian Mr. Mime,4390,https://img.pokemondb.net/artwork/large/mime-jr.jpg,1221,https://img.pokemondb.net/artwork/large/mr-mime-galarian.jpg
+102,Mr. Mime-Galarian Mr. Mime,(Level 42),Mr. Rime-Mr. Rime,1221,https://img.pokemondb.net/artwork/large/mr-mime-galarian.jpg,8660,https://img.pokemondb.net/artwork/large/mr-rime.jpg
+103,Scyther-Scyther,(trade holding Metal Coat),Scizor-Scizor,1230,https://img.pokemondb.net/artwork/large/scyther.jpg,2120,https://img.pokemondb.net/artwork/large/scizor.jpg
+104,Scyther-Scyther,(use Black Augurite),Kleavor-Kleavor,1230,https://img.pokemondb.net/artwork/large/scyther.jpg,9000,https://img.pokemondb.net/artwork/large/kleavor.jpg
+105,Smoochum-Smoochum,(Level 30),Jynx-Jynx,2380,https://img.pokemondb.net/artwork/large/smoochum.jpg,1240,https://img.pokemondb.net/artwork/large/jynx.jpg
+106,Elekid-Elekid,(Level 30),Electabuzz-Electabuzz,2390,https://img.pokemondb.net/artwork/large/elekid.jpg,1250,https://img.pokemondb.net/artwork/large/electabuzz.jpg
+107,Electabuzz-Electabuzz,(trade holding Electirizer),Electivire-Electivire,1250,https://img.pokemondb.net/artwork/large/electabuzz.jpg,4660,https://img.pokemondb.net/artwork/large/electivire.jpg
+108,Magby-Magby,(Level 30),Magmar-Magmar,2400,https://img.pokemondb.net/artwork/large/magby.jpg,1260,https://img.pokemondb.net/artwork/large/magmar.jpg
+109,Magmar-Magmar,(trade holding Magmarizer),Magmortar-Magmortar,1260,https://img.pokemondb.net/artwork/large/magmar.jpg,4670,https://img.pokemondb.net/artwork/large/magmortar.jpg
+110,Magikarp-Magikarp,(Level 20),Gyarados-Gyarados,1290,https://img.pokemondb.net/artwork/large/magikarp.jpg,1300,https://img.pokemondb.net/artwork/large/gyarados.jpg
+111,Eevee-Eevee,(use Water Stone),Vaporeon-Vaporeon,1330,https://img.pokemondb.net/artwork/large/eevee.jpg,1340,https://img.pokemondb.net/artwork/large/vaporeon.jpg
+112,Eevee-Eevee,(use Thunder Stone),Jolteon-Jolteon,1330,https://img.pokemondb.net/artwork/large/eevee.jpg,1350,https://img.pokemondb.net/artwork/large/jolteon.jpg
+113,Eevee-Eevee,(use Fire Stone),Flareon-Flareon,1330,https://img.pokemondb.net/artwork/large/eevee.jpg,1360,https://img.pokemondb.net/artwork/large/flareon.jpg
+114,Eevee-Eevee,(high Friendship; Daytime),Espeon-Espeon,1330,https://img.pokemondb.net/artwork/large/eevee.jpg,1960,https://img.pokemondb.net/artwork/large/espeon.jpg
+115,Eevee-Eevee,(high Friendship; Nighttime),Umbreon-Umbreon,1330,https://img.pokemondb.net/artwork/large/eevee.jpg,1970,https://img.pokemondb.net/artwork/large/umbreon.jpg
+116,Eevee-Eevee,(use Leaf Stone; or level up near a Mossy Rock),Leafeon-Leafeon,1330,https://img.pokemondb.net/artwork/large/eevee.jpg,4700,https://img.pokemondb.net/artwork/large/leafeon.jpg
+117,Eevee-Eevee,(use Ice Stone; or level up near an Icy Rock),Glaceon-Glaceon,1330,https://img.pokemondb.net/artwork/large/eevee.jpg,4710,https://img.pokemondb.net/artwork/large/glaceon.jpg
+118,Eevee-Eevee,(after Fairy-type move learned; and either ♥♥ Affection in Gen 6-7 or high friendship in Gen 8+),Sylveon-Sylveon,1330,https://img.pokemondb.net/artwork/large/eevee.jpg,7000,https://img.pokemondb.net/artwork/large/sylveon.jpg
+119,Porygon-Porygon,(trade holding Upgrade),Porygon2-Porygon2,1370,https://img.pokemondb.net/artwork/large/porygon.jpg,2330,https://img.pokemondb.net/artwork/large/porygon2.jpg
+120,Porygon2-Porygon2,(trade holding Dubious Disc),Porygon-Z-Porygon-Z,2330,https://img.pokemondb.net/artwork/large/porygon2.jpg,4740,https://img.pokemondb.net/artwork/large/porygon-z.jpg
+121,Omanyte-Omanyte,(Level 40),Omastar-Omastar,1380,https://img.pokemondb.net/artwork/large/omanyte.jpg,1390,https://img.pokemondb.net/artwork/large/omastar.jpg
+122,Kabuto-Kabuto,(Level 40),Kabutops-Kabutops,1400,https://img.pokemondb.net/artwork/large/kabuto.jpg,1410,https://img.pokemondb.net/artwork/large/kabutops.jpg
+123,Munchlax-Munchlax,(high Friendship),Snorlax-Snorlax,4460,https://img.pokemondb.net/artwork/large/munchlax.jpg,1430,https://img.pokemondb.net/artwork/large/snorlax.jpg
+124,Dratini-Dratini,(Level 30),Dragonair-Dragonair,1470,https://img.pokemondb.net/artwork/large/dratini.jpg,1480,https://img.pokemondb.net/artwork/large/dragonair.jpg
+125,Dragonair-Dragonair,(Level 55),Dragonite-Dragonite,1480,https://img.pokemondb.net/artwork/large/dragonair.jpg,1490,https://img.pokemondb.net/artwork/large/dragonite.jpg
+126,Chikorita-Chikorita,(Level 16),Bayleef-Bayleef,1520,https://img.pokemondb.net/artwork/large/chikorita.jpg,1530,https://img.pokemondb.net/artwork/large/bayleef.jpg
+127,Bayleef-Bayleef,(Level 32),Meganium-Meganium,1530,https://img.pokemondb.net/artwork/large/bayleef.jpg,1540,https://img.pokemondb.net/artwork/large/meganium.jpg
+128,Cyndaquil-Cyndaquil,(Level 14; or Level 17 in Legends: Arceus),Quilava-Quilava,1550,https://img.pokemondb.net/artwork/large/cyndaquil.jpg,1560,https://img.pokemondb.net/artwork/large/quilava.jpg
+129,Quilava-Quilava,(Level 36),Typhlosion-Typhlosion,1560,https://img.pokemondb.net/artwork/large/quilava.jpg,1570,https://img.pokemondb.net/artwork/large/typhlosion.jpg
+130,Quilava-Quilava,(Level 36; in Legends: Arceus),Typhlosion-Hisuian Typhlosion,1560,https://img.pokemondb.net/artwork/large/quilava.jpg,1571,https://img.pokemondb.net/artwork/large/typhlosion-hisuian.jpg
+131,Totodile-Totodile,(Level 18),Croconaw-Croconaw,1580,https://img.pokemondb.net/artwork/large/totodile.jpg,1590,https://img.pokemondb.net/artwork/large/croconaw.jpg
+132,Croconaw-Croconaw,(Level 30),Feraligatr-Feraligatr,1590,https://img.pokemondb.net/artwork/large/croconaw.jpg,1600,https://img.pokemondb.net/artwork/large/feraligatr.jpg
+133,Sentret-Sentret,(Level 15),Furret-Furret,1610,https://img.pokemondb.net/artwork/large/sentret.jpg,1620,https://img.pokemondb.net/artwork/large/furret.jpg
+134,Hoothoot-Hoothoot,(Level 20),Noctowl-Noctowl,1630,https://img.pokemondb.net/artwork/large/hoothoot.jpg,1640,https://img.pokemondb.net/artwork/large/noctowl.jpg
+135,Ledyba-Ledyba,(Level 18),Ledian-Ledian,1650,https://img.pokemondb.net/artwork/large/ledyba.jpg,1660,https://img.pokemondb.net/artwork/large/ledian.jpg
+136,Spinarak-Spinarak,(Level 22),Ariados-Ariados,1670,https://img.pokemondb.net/artwork/large/spinarak.jpg,1680,https://img.pokemondb.net/artwork/large/ariados.jpg
+137,Chinchou-Chinchou,(Level 27),Lanturn-Lanturn,1700,https://img.pokemondb.net/artwork/large/chinchou.jpg,1710,https://img.pokemondb.net/artwork/large/lanturn.jpg
+138,Togepi-Togepi,(high Friendship),Togetic-Togetic,1750,https://img.pokemondb.net/artwork/large/togepi.jpg,1760,https://img.pokemondb.net/artwork/large/togetic.jpg
+139,Togetic-Togetic,(use Shiny Stone),Togekiss-Togekiss,1760,https://img.pokemondb.net/artwork/large/togetic.jpg,4680,https://img.pokemondb.net/artwork/large/togekiss.jpg
+140,Natu-Natu,(Level 25),Xatu-Xatu,1770,https://img.pokemondb.net/artwork/large/natu.jpg,1780,https://img.pokemondb.net/artwork/large/xatu.jpg
+141,Mareep-Mareep,(Level 15),Flaaffy-Flaaffy,1790,https://img.pokemondb.net/artwork/large/mareep.jpg,1800,https://img.pokemondb.net/artwork/large/flaaffy.jpg
+142,Flaaffy-Flaaffy,(Level 30),Ampharos-Ampharos,1800,https://img.pokemondb.net/artwork/large/flaaffy.jpg,1810,https://img.pokemondb.net/artwork/large/ampharos.jpg
+143,Azurill-Azurill,(high Friendship),Marill-Marill,2980,https://img.pokemondb.net/artwork/large/azurill.jpg,1830,https://img.pokemondb.net/artwork/large/marill.jpg
+144,Marill-Marill,(Level 18),Azumarill-Azumarill,1830,https://img.pokemondb.net/artwork/large/marill.jpg,1840,https://img.pokemondb.net/artwork/large/azumarill.jpg
+145,Bonsly-Bonsly,(after Mimic learned),Sudowoodo-Sudowoodo,4380,https://img.pokemondb.net/artwork/large/bonsly.jpg,1850,https://img.pokemondb.net/artwork/large/sudowoodo.jpg
+146,Hoppip-Hoppip,(Level 18),Skiploom-Skiploom,1870,https://img.pokemondb.net/artwork/large/hoppip.jpg,1880,https://img.pokemondb.net/artwork/large/skiploom.jpg
+147,Skiploom-Skiploom,(Level 27),Jumpluff-Jumpluff,1880,https://img.pokemondb.net/artwork/large/skiploom.jpg,1890,https://img.pokemondb.net/artwork/large/jumpluff.jpg
+148,Aipom-Aipom,(after Double Hit learned),Ambipom-Ambipom,1900,https://img.pokemondb.net/artwork/large/aipom.jpg,4240,https://img.pokemondb.net/artwork/large/ambipom.jpg
+149,Sunkern-Sunkern,(use Sun Stone),Sunflora-Sunflora,1910,https://img.pokemondb.net/artwork/large/sunkern.jpg,1920,https://img.pokemondb.net/artwork/large/sunflora.jpg
+150,Yanma-Yanma,(after Ancient Power learned),Yanmega-Yanmega,1930,https://img.pokemondb.net/artwork/large/yanma.jpg,4690,https://img.pokemondb.net/artwork/large/yanmega.jpg
+151,Wooper-Wooper,(Level 20),Quagsire-Quagsire,1940,https://img.pokemondb.net/artwork/large/wooper.jpg,1950,https://img.pokemondb.net/artwork/large/quagsire.jpg
+152,Murkrow-Murkrow,(use Dusk Stone),Honchkrow-Honchkrow,1980,https://img.pokemondb.net/artwork/large/murkrow.jpg,4300,https://img.pokemondb.net/artwork/large/honchkrow.jpg
+153,Misdreavus-Misdreavus,(use Dusk Stone),Mismagius-Mismagius,2000,https://img.pokemondb.net/artwork/large/misdreavus.jpg,4290,https://img.pokemondb.net/artwork/large/mismagius.jpg
+154,Wynaut-Wynaut,(Level 15),Wobbuffet-Wobbuffet,3600,https://img.pokemondb.net/artwork/large/wynaut.jpg,2020,https://img.pokemondb.net/artwork/large/wobbuffet.jpg
+155,Pineco-Pineco,(Level 31),Forretress-Forretress,2040,https://img.pokemondb.net/artwork/large/pineco.jpg,2050,https://img.pokemondb.net/artwork/large/forretress.jpg
+156,Gligar-Gligar,(hold Razor Fang; Nighttime),Gliscor-Gliscor,2070,https://img.pokemondb.net/artwork/large/gligar.jpg,4720,https://img.pokemondb.net/artwork/large/gliscor.jpg
+157,Snubbull-Snubbull,(Level 23),Granbull-Granbull,2090,https://img.pokemondb.net/artwork/large/snubbull.jpg,2100,https://img.pokemondb.net/artwork/large/granbull.jpg
+158,Sneasel-Sneasel,(hold Razor Claw; Nighttime),Weavile-Weavile,2150,https://img.pokemondb.net/artwork/large/sneasel.jpg,4610,https://img.pokemondb.net/artwork/large/weavile.jpg
+159,Sneasel-Hisuian Sneasel,(use Razor Claw; Daytime),Sneasler-Sneasler,2151,https://img.pokemondb.net/artwork/large/sneasel-hisuian.jpg,9030,https://img.pokemondb.net/artwork/large/sneasler.jpg
+160,Teddiursa-Teddiursa,(Level 30),Ursaring-Ursaring,2160,https://img.pokemondb.net/artwork/large/teddiursa.jpg,2170,https://img.pokemondb.net/artwork/large/ursaring.jpg
+161,Ursaring-Ursaring,(use Peat Block; under a full moon; in Legends: Arceus),Ursaluna-Ursaluna,2170,https://img.pokemondb.net/artwork/large/ursaring.jpg,9010,https://img.pokemondb.net/artwork/large/ursaluna.jpg
+162,Slugma-Slugma,(Level 38),Magcargo-Magcargo,2180,https://img.pokemondb.net/artwork/large/slugma.jpg,2190,https://img.pokemondb.net/artwork/large/magcargo.jpg
+163,Swinub-Swinub,(Level 33),Piloswine-Piloswine,2200,https://img.pokemondb.net/artwork/large/swinub.jpg,2210,https://img.pokemondb.net/artwork/large/piloswine.jpg
+164,Piloswine-Piloswine,(after Ancient Power learned),Mamoswine-Mamoswine,2210,https://img.pokemondb.net/artwork/large/piloswine.jpg,4730,https://img.pokemondb.net/artwork/large/mamoswine.jpg
+165,Remoraid-Remoraid,(Level 25),Octillery-Octillery,2230,https://img.pokemondb.net/artwork/large/remoraid.jpg,2240,https://img.pokemondb.net/artwork/large/octillery.jpg
+166,Mantyke-Mantyke,(with Remoraid in party),Mantine-Mantine,4580,https://img.pokemondb.net/artwork/large/mantyke.jpg,2260,https://img.pokemondb.net/artwork/large/mantine.jpg
+167,Houndour-Houndour,(Level 24),Houndoom-Houndoom,2280,https://img.pokemondb.net/artwork/large/houndour.jpg,2290,https://img.pokemondb.net/artwork/large/houndoom.jpg
+168,Phanpy-Phanpy,(Level 25),Donphan-Donphan,2310,https://img.pokemondb.net/artwork/large/phanpy.jpg,2320,https://img.pokemondb.net/artwork/large/donphan.jpg
+169,Larvitar-Larvitar,(Level 30),Pupitar-Pupitar,2460,https://img.pokemondb.net/artwork/large/larvitar.jpg,2470,https://img.pokemondb.net/artwork/large/pupitar.jpg
+170,Pupitar-Pupitar,(Level 55),Tyranitar-Tyranitar,2470,https://img.pokemondb.net/artwork/large/pupitar.jpg,2480,https://img.pokemondb.net/artwork/large/tyranitar.jpg
+171,Stantler-Stantler,(use Psyshield Bash 20 times in Agile Style),Wyrdeer-Wyrdeer,2340,https://img.pokemondb.net/artwork/large/stantler.jpg,8990,https://img.pokemondb.net/artwork/large/wyrdeer.jpg
+172,Treecko-Treecko,(Level 16),Grovyle-Grovyle,2520,https://img.pokemondb.net/artwork/large/treecko.jpg,2530,https://img.pokemondb.net/artwork/large/grovyle.jpg
+173,Grovyle-Grovyle,(Level 36),Sceptile-Sceptile,2530,https://img.pokemondb.net/artwork/large/grovyle.jpg,2540,https://img.pokemondb.net/artwork/large/sceptile.jpg
+174,Torchic-Torchic,(Level 16),Combusken-Combusken,2550,https://img.pokemondb.net/artwork/large/torchic.jpg,2560,https://img.pokemondb.net/artwork/large/combusken.jpg
+175,Combusken-Combusken,(Level 36),Blaziken-Blaziken,2560,https://img.pokemondb.net/artwork/large/combusken.jpg,2570,https://img.pokemondb.net/artwork/large/blaziken.jpg
+176,Mudkip-Mudkip,(Level 16),Marshtomp-Marshtomp,2580,https://img.pokemondb.net/artwork/large/mudkip.jpg,2590,https://img.pokemondb.net/artwork/large/marshtomp.jpg
+177,Marshtomp-Marshtomp,(Level 36),Swampert-Swampert,2590,https://img.pokemondb.net/artwork/large/marshtomp.jpg,2600,https://img.pokemondb.net/artwork/large/swampert.jpg
+178,Poochyena-Poochyena,(Level 18),Mightyena-Mightyena,2610,https://img.pokemondb.net/artwork/large/poochyena.jpg,2620,https://img.pokemondb.net/artwork/large/mightyena.jpg
+179,Zigzagoon-Zigzagoon,(Level 20),Linoone-Linoone,2630,https://img.pokemondb.net/artwork/large/zigzagoon.jpg,2640,https://img.pokemondb.net/artwork/large/linoone.jpg
+180,Zigzagoon-Galarian Zigzagoon,(Level 20),Linoone-Galarian Linoone,2631,https://img.pokemondb.net/artwork/large/zigzagoon-galarian.jpg,2641,https://img.pokemondb.net/artwork/large/linoone-galarian.jpg
+181,Linoone-Galarian Linoone,(Level 35; Nighttime),Obstagoon-Obstagoon,2641,https://img.pokemondb.net/artwork/large/linoone-galarian.jpg,8620,https://img.pokemondb.net/artwork/large/obstagoon.jpg
+182,Wurmple-Wurmple,(Level 7; random based on personality),Silcoon-Silcoon,2650,https://img.pokemondb.net/artwork/large/wurmple.jpg,2660,https://img.pokemondb.net/artwork/large/silcoon.jpg
+183,Silcoon-Silcoon,(Level 10),Beautifly-Beautifly,2660,https://img.pokemondb.net/artwork/large/silcoon.jpg,2670,https://img.pokemondb.net/artwork/large/beautifly.jpg
+184,Wurmple-Wurmple,(Level 7; random based on personality),Cascoon-Cascoon,2650,https://img.pokemondb.net/artwork/large/wurmple.jpg,2680,https://img.pokemondb.net/artwork/large/cascoon.jpg
+185,Cascoon-Cascoon,(Level 10),Dustox-Dustox,2680,https://img.pokemondb.net/artwork/large/cascoon.jpg,2690,https://img.pokemondb.net/artwork/large/dustox.jpg
+186,Lotad-Lotad,(Level 14),Lombre-Lombre,2700,https://img.pokemondb.net/artwork/large/lotad.jpg,2710,https://img.pokemondb.net/artwork/large/lombre.jpg
+187,Lombre-Lombre,(use Water Stone),Ludicolo-Ludicolo,2710,https://img.pokemondb.net/artwork/large/lombre.jpg,2720,https://img.pokemondb.net/artwork/large/ludicolo.jpg
+188,Seedot-Seedot,(Level 14),Nuzleaf-Nuzleaf,2730,https://img.pokemondb.net/artwork/large/seedot.jpg,2740,https://img.pokemondb.net/artwork/large/nuzleaf.jpg
+189,Nuzleaf-Nuzleaf,(use Leaf Stone),Shiftry-Shiftry,2740,https://img.pokemondb.net/artwork/large/nuzleaf.jpg,2750,https://img.pokemondb.net/artwork/large/shiftry.jpg
+190,Taillow-Taillow,(Level 22),Swellow-Swellow,2760,https://img.pokemondb.net/artwork/large/taillow.jpg,2770,https://img.pokemondb.net/artwork/large/swellow.jpg
+191,Wingull-Wingull,(Level 25),Pelipper-Pelipper,2780,https://img.pokemondb.net/artwork/large/wingull.jpg,2790,https://img.pokemondb.net/artwork/large/pelipper.jpg
+192,Ralts-Ralts,(Level 20),Kirlia-Kirlia,2800,https://img.pokemondb.net/artwork/large/ralts.jpg,2810,https://img.pokemondb.net/artwork/large/kirlia.jpg
+193,Kirlia-Kirlia,(Level 30),Gardevoir-Gardevoir,2810,https://img.pokemondb.net/artwork/large/kirlia.jpg,2820,https://img.pokemondb.net/artwork/large/gardevoir.jpg
+194,Kirlia-Kirlia,(use Dawn Stone; Male),Gallade-Gallade,2810,https://img.pokemondb.net/artwork/large/kirlia.jpg,4750,https://img.pokemondb.net/artwork/large/gallade.jpg
+195,Surskit-Surskit,(Level 22),Masquerain-Masquerain,2830,https://img.pokemondb.net/artwork/large/surskit.jpg,2840,https://img.pokemondb.net/artwork/large/masquerain.jpg
+196,Shroomish-Shroomish,(Level 23),Breloom-Breloom,2850,https://img.pokemondb.net/artwork/large/shroomish.jpg,2860,https://img.pokemondb.net/artwork/large/breloom.jpg
+197,Slakoth-Slakoth,(Level 18),Vigoroth-Vigoroth,2870,https://img.pokemondb.net/artwork/large/slakoth.jpg,2880,https://img.pokemondb.net/artwork/large/vigoroth.jpg
+198,Vigoroth-Vigoroth,(Level 36),Slaking-Slaking,2880,https://img.pokemondb.net/artwork/large/vigoroth.jpg,2890,https://img.pokemondb.net/artwork/large/slaking.jpg
+199,Nincada-Nincada,(Level 20),Ninjask-Ninjask,2900,https://img.pokemondb.net/artwork/large/nincada.jpg,2910,https://img.pokemondb.net/artwork/large/ninjask.jpg
+200,Nincada-Nincada,(Level 20; empty spot in party; Pokéball in bag),Ninjask-Ninjask,2900,https://img.pokemondb.net/artwork/large/nincada.jpg,2910,https://img.pokemondb.net/artwork/large/ninjask.jpg
+201,Whismur-Whismur,(Level 20),Loudred-Loudred,2930,https://img.pokemondb.net/artwork/large/whismur.jpg,2940,https://img.pokemondb.net/artwork/large/loudred.jpg
+202,Loudred-Loudred,(Level 40),Exploud-Exploud,2940,https://img.pokemondb.net/artwork/large/loudred.jpg,2950,https://img.pokemondb.net/artwork/large/exploud.jpg
+203,Makuhita-Makuhita,(Level 24),Hariyama-Hariyama,2960,https://img.pokemondb.net/artwork/large/makuhita.jpg,2970,https://img.pokemondb.net/artwork/large/hariyama.jpg
+204,Nosepass-Nosepass,(level up in a Magnetic Field area),Probopass-Probopass,2990,https://img.pokemondb.net/artwork/large/nosepass.jpg,4760,https://img.pokemondb.net/artwork/large/probopass.jpg
+205,Skitty-Skitty,(use Moon Stone),Delcatty-Delcatty,3000,https://img.pokemondb.net/artwork/large/skitty.jpg,3010,https://img.pokemondb.net/artwork/large/delcatty.jpg
+206,Aron-Aron,(Level 32),Lairon-Lairon,3040,https://img.pokemondb.net/artwork/large/aron.jpg,3050,https://img.pokemondb.net/artwork/large/lairon.jpg
+207,Lairon-Lairon,(Level 42),Aggron-Aggron,3050,https://img.pokemondb.net/artwork/large/lairon.jpg,3060,https://img.pokemondb.net/artwork/large/aggron.jpg
+208,Meditite-Meditite,(Level 37),Medicham-Medicham,3070,https://img.pokemondb.net/artwork/large/meditite.jpg,3080,https://img.pokemondb.net/artwork/large/medicham.jpg
+209,Electrike-Electrike,(Level 26),Manectric-Manectric,3090,https://img.pokemondb.net/artwork/large/electrike.jpg,3100,https://img.pokemondb.net/artwork/large/manectric.jpg
+210,Budew-Budew,(high Friendship; Daytime),Roselia-Roselia,4060,https://img.pokemondb.net/artwork/large/budew.jpg,3150,https://img.pokemondb.net/artwork/large/roselia.jpg
+211,Roselia-Roselia,(use Shiny Stone),Roserade-Roserade,3150,https://img.pokemondb.net/artwork/large/roselia.jpg,4070,https://img.pokemondb.net/artwork/large/roserade.jpg
+212,Gulpin-Gulpin,(Level 26),Swalot-Swalot,3160,https://img.pokemondb.net/artwork/large/gulpin.jpg,3170,https://img.pokemondb.net/artwork/large/swalot.jpg
+213,Carvanha-Carvanha,(Level 30),Sharpedo-Sharpedo,3180,https://img.pokemondb.net/artwork/large/carvanha.jpg,3190,https://img.pokemondb.net/artwork/large/sharpedo.jpg
+214,Wailmer-Wailmer,(Level 40),Wailord-Wailord,3200,https://img.pokemondb.net/artwork/large/wailmer.jpg,3210,https://img.pokemondb.net/artwork/large/wailord.jpg
+215,Numel-Numel,(Level 33),Camerupt-Camerupt,3220,https://img.pokemondb.net/artwork/large/numel.jpg,3230,https://img.pokemondb.net/artwork/large/camerupt.jpg
+216,Spoink-Spoink,(Level 32),Grumpig-Grumpig,3250,https://img.pokemondb.net/artwork/large/spoink.jpg,3260,https://img.pokemondb.net/artwork/large/grumpig.jpg
+217,Trapinch-Trapinch,(Level 35),Vibrava-Vibrava,3280,https://img.pokemondb.net/artwork/large/trapinch.jpg,3290,https://img.pokemondb.net/artwork/large/vibrava.jpg
+218,Vibrava-Vibrava,(Level 45),Flygon-Flygon,3290,https://img.pokemondb.net/artwork/large/vibrava.jpg,3300,https://img.pokemondb.net/artwork/large/flygon.jpg
+219,Cacnea-Cacnea,(Level 32),Cacturne-Cacturne,3310,https://img.pokemondb.net/artwork/large/cacnea.jpg,3320,https://img.pokemondb.net/artwork/large/cacturne.jpg
+220,Swablu-Swablu,(Level 35),Altaria-Altaria,3330,https://img.pokemondb.net/artwork/large/swablu.jpg,3340,https://img.pokemondb.net/artwork/large/altaria.jpg
+221,Barboach-Barboach,(Level 30),Whiscash-Whiscash,3390,https://img.pokemondb.net/artwork/large/barboach.jpg,3400,https://img.pokemondb.net/artwork/large/whiscash.jpg
+222,Corphish-Corphish,(Level 30),Crawdaunt-Crawdaunt,3410,https://img.pokemondb.net/artwork/large/corphish.jpg,3420,https://img.pokemondb.net/artwork/large/crawdaunt.jpg
+223,Baltoy-Baltoy,(Level 36),Claydol-Claydol,3430,https://img.pokemondb.net/artwork/large/baltoy.jpg,3440,https://img.pokemondb.net/artwork/large/claydol.jpg
+224,Lileep-Lileep,(Level 40),Cradily-Cradily,3450,https://img.pokemondb.net/artwork/large/lileep.jpg,3460,https://img.pokemondb.net/artwork/large/cradily.jpg
+225,Anorith-Anorith,(Level 40),Armaldo-Armaldo,3470,https://img.pokemondb.net/artwork/large/anorith.jpg,3480,https://img.pokemondb.net/artwork/large/armaldo.jpg
+226,Feebas-Feebas,(trade holding Prism Scale; or level up with max Beauty),Milotic-Milotic,3490,https://img.pokemondb.net/artwork/large/feebas.jpg,3500,https://img.pokemondb.net/artwork/large/milotic.jpg
+227,Shuppet-Shuppet,(Level 37),Banette-Banette,3530,https://img.pokemondb.net/artwork/large/shuppet.jpg,3540,https://img.pokemondb.net/artwork/large/banette.jpg
+228,Duskull-Duskull,(Level 37),Dusclops-Dusclops,3550,https://img.pokemondb.net/artwork/large/duskull.jpg,3560,https://img.pokemondb.net/artwork/large/dusclops.jpg
+229,Dusclops-Dusclops,(trade holding Reaper Cloth),Dusknoir-Dusknoir,3560,https://img.pokemondb.net/artwork/large/dusclops.jpg,4770,https://img.pokemondb.net/artwork/large/dusknoir.jpg
+230,Chingling-Chingling,(high Friendship; Nighttime),Chimecho-Chimecho,4330,https://img.pokemondb.net/artwork/large/chingling.jpg,3580,https://img.pokemondb.net/artwork/large/chimecho.jpg
+231,Snorunt-Snorunt,(Level 42),Glalie-Glalie,3610,https://img.pokemondb.net/artwork/large/snorunt.jpg,3620,https://img.pokemondb.net/artwork/large/glalie.jpg
+232,Snorunt-Snorunt,(use Dawn Stone; Female),Froslass-Froslass,3610,https://img.pokemondb.net/artwork/large/snorunt.jpg,4780,https://img.pokemondb.net/artwork/large/froslass.jpg
+233,Spheal-Spheal,(Level 32),Sealeo-Sealeo,3630,https://img.pokemondb.net/artwork/large/spheal.jpg,3640,https://img.pokemondb.net/artwork/large/sealeo.jpg
+234,Sealeo-Sealeo,(Level 44),Walrein-Walrein,3640,https://img.pokemondb.net/artwork/large/sealeo.jpg,3650,https://img.pokemondb.net/artwork/large/walrein.jpg
+235,Clamperl-Clamperl,(trade holding Deep Sea Tooth),Huntail-Huntail,3660,https://img.pokemondb.net/artwork/large/clamperl.jpg,3670,https://img.pokemondb.net/artwork/large/huntail.jpg
+236,Clamperl-Clamperl,(trade holding Deep Sea Scale),Gorebyss-Gorebyss,3660,https://img.pokemondb.net/artwork/large/clamperl.jpg,3680,https://img.pokemondb.net/artwork/large/gorebyss.jpg
+237,Bagon-Bagon,(Level 30),Shelgon-Shelgon,3710,https://img.pokemondb.net/artwork/large/bagon.jpg,3720,https://img.pokemondb.net/artwork/large/shelgon.jpg
+238,Shelgon-Shelgon,(Level 50),Salamence-Salamence,3720,https://img.pokemondb.net/artwork/large/shelgon.jpg,3730,https://img.pokemondb.net/artwork/large/salamence.jpg
+239,Beldum-Beldum,(Level 20),Metang-Metang,3740,https://img.pokemondb.net/artwork/large/beldum.jpg,3750,https://img.pokemondb.net/artwork/large/metang.jpg
+240,Metang-Metang,(Level 45),Metagross-Metagross,3750,https://img.pokemondb.net/artwork/large/metang.jpg,3760,https://img.pokemondb.net/artwork/large/metagross.jpg
+241,Turtwig-Turtwig,(Level 18),Grotle-Grotle,3870,https://img.pokemondb.net/artwork/large/turtwig.jpg,3880,https://img.pokemondb.net/artwork/large/grotle.jpg
+242,Grotle-Grotle,(Level 32),Torterra-Torterra,3880,https://img.pokemondb.net/artwork/large/grotle.jpg,3890,https://img.pokemondb.net/artwork/large/torterra.jpg
+243,Chimchar-Chimchar,(Level 14),Monferno-Monferno,3900,https://img.pokemondb.net/artwork/large/chimchar.jpg,3910,https://img.pokemondb.net/artwork/large/monferno.jpg
+244,Monferno-Monferno,(Level 36),Infernape-Infernape,3910,https://img.pokemondb.net/artwork/large/monferno.jpg,3920,https://img.pokemondb.net/artwork/large/infernape.jpg
+245,Piplup-Piplup,(Level 16),Prinplup-Prinplup,3930,https://img.pokemondb.net/artwork/large/piplup.jpg,3940,https://img.pokemondb.net/artwork/large/prinplup.jpg
+246,Prinplup-Prinplup,(Level 36),Empoleon-Empoleon,3940,https://img.pokemondb.net/artwork/large/prinplup.jpg,3950,https://img.pokemondb.net/artwork/large/empoleon.jpg
+247,Starly-Starly,(Level 14),Staravia-Staravia,3960,https://img.pokemondb.net/artwork/large/starly.jpg,3970,https://img.pokemondb.net/artwork/large/staravia.jpg
+248,Staravia-Staravia,(Level 34),Staraptor-Staraptor,3970,https://img.pokemondb.net/artwork/large/staravia.jpg,3980,https://img.pokemondb.net/artwork/large/staraptor.jpg
+249,Bidoof-Bidoof,(Level 15),Bibarel-Bibarel,3990,https://img.pokemondb.net/artwork/large/bidoof.jpg,4000,https://img.pokemondb.net/artwork/large/bibarel.jpg
+250,Kricketot-Kricketot,(Level 10),Kricketune-Kricketune,4010,https://img.pokemondb.net/artwork/large/kricketot.jpg,4020,https://img.pokemondb.net/artwork/large/kricketune.jpg
+251,Shinx-Shinx,(Level 15),Luxio-Luxio,4030,https://img.pokemondb.net/artwork/large/shinx.jpg,4040,https://img.pokemondb.net/artwork/large/luxio.jpg
+252,Luxio-Luxio,(Level 30),Luxray-Luxray,4040,https://img.pokemondb.net/artwork/large/luxio.jpg,4050,https://img.pokemondb.net/artwork/large/luxray.jpg
+253,Cranidos-Cranidos,(Level 30),Rampardos-Rampardos,4080,https://img.pokemondb.net/artwork/large/cranidos.jpg,4090,https://img.pokemondb.net/artwork/large/rampardos.jpg
+254,Shieldon-Shieldon,(Level 30),Bastiodon-Bastiodon,4100,https://img.pokemondb.net/artwork/large/shieldon.jpg,4110,https://img.pokemondb.net/artwork/large/bastiodon.jpg
+255,Burmy-Plant Cloak,(Level 20; Female; in grass),Wormadam-Plant Cloak,4120,https://img.pokemondb.net/artwork/large/burmy-plant.jpg,4130,https://img.pokemondb.net/artwork/large/wormadam-plant.jpg
+256,Burmy-Sandy Cloak,(Level 20; Female; in caves),Wormadam-Sandy Cloak,4121,https://img.pokemondb.net/artwork/large/burmy-sandy.jpg,4131,https://img.pokemondb.net/artwork/large/wormadam-sandy.jpg
+257,Burmy-Trash Cloak,(Level 20; Female; in buildings),Wormadam-Trash Cloak,4122,https://img.pokemondb.net/artwork/large/burmy-trash.jpg,4132,https://img.pokemondb.net/artwork/large/wormadam-trash.jpg
+258,Combee-Combee,(Level 21; Female),Vespiquen-Vespiquen,4150,https://img.pokemondb.net/artwork/large/combee.jpg,4160,https://img.pokemondb.net/artwork/large/vespiquen.jpg
+259,Buizel-Buizel,(Level 26),Floatzel-Floatzel,4180,https://img.pokemondb.net/artwork/large/buizel.jpg,4190,https://img.pokemondb.net/artwork/large/floatzel.jpg
+260,Cherubi-Cherubi,(Level 25),Cherrim-Cherrim,4200,https://img.pokemondb.net/artwork/large/cherubi.jpg,4210,https://img.pokemondb.net/artwork/large/cherrim.jpg
+261,Shellos-Shellos,(Level 30),Gastrodon-Gastrodon,4220,https://img.pokemondb.net/artwork/large/shellos.jpg,4230,https://img.pokemondb.net/artwork/large/gastrodon.jpg
+262,Drifloon-Drifloon,(Level 28),Drifblim-Drifblim,4250,https://img.pokemondb.net/artwork/large/drifloon.jpg,4260,https://img.pokemondb.net/artwork/large/drifblim.jpg
+263,Buneary-Buneary,(high Friendship),Lopunny-Lopunny,4270,https://img.pokemondb.net/artwork/large/buneary.jpg,4280,https://img.pokemondb.net/artwork/large/lopunny.jpg
+264,Glameow-Glameow,(Level 38),Purugly-Purugly,4310,https://img.pokemondb.net/artwork/large/glameow.jpg,4320,https://img.pokemondb.net/artwork/large/purugly.jpg
+265,Stunky-Stunky,(Level 34),Skuntank-Skuntank,4340,https://img.pokemondb.net/artwork/large/stunky.jpg,4350,https://img.pokemondb.net/artwork/large/skuntank.jpg
+266,Bronzor-Bronzor,(Level 33),Bronzong-Bronzong,4360,https://img.pokemondb.net/artwork/large/bronzor.jpg,4370,https://img.pokemondb.net/artwork/large/bronzong.jpg
+267,Gible-Gible,(Level 24),Gabite-Gabite,4430,https://img.pokemondb.net/artwork/large/gible.jpg,4440,https://img.pokemondb.net/artwork/large/gabite.jpg
+268,Gabite-Gabite,(Level 48),Garchomp-Garchomp,4440,https://img.pokemondb.net/artwork/large/gabite.jpg,4450,https://img.pokemondb.net/artwork/large/garchomp.jpg
+269,Riolu-Riolu,(high Friendship; Daytime),Lucario-Lucario,4470,https://img.pokemondb.net/artwork/large/riolu.jpg,4480,https://img.pokemondb.net/artwork/large/lucario.jpg
+270,Hippopotas-Hippopotas,(Level 34),Hippowdon-Hippowdon,4490,https://img.pokemondb.net/artwork/large/hippopotas.jpg,4500,https://img.pokemondb.net/artwork/large/hippowdon.jpg
+271,Skorupi-Skorupi,(Level 40),Drapion-Drapion,4510,https://img.pokemondb.net/artwork/large/skorupi.jpg,4520,https://img.pokemondb.net/artwork/large/drapion.jpg
+272,Croagunk-Croagunk,(Level 37),Toxicroak-Toxicroak,4530,https://img.pokemondb.net/artwork/large/croagunk.jpg,4540,https://img.pokemondb.net/artwork/large/toxicroak.jpg
+273,Finneon-Finneon,(Level 31),Lumineon-Lumineon,4560,https://img.pokemondb.net/artwork/large/finneon.jpg,4570,https://img.pokemondb.net/artwork/large/lumineon.jpg
+274,Snover-Snover,(Level 40),Abomasnow-Abomasnow,4590,https://img.pokemondb.net/artwork/large/snover.jpg,4600,https://img.pokemondb.net/artwork/large/abomasnow.jpg
+275,Snivy-Snivy,(Level 17),Servine-Servine,4950,https://img.pokemondb.net/artwork/large/snivy.jpg,4960,https://img.pokemondb.net/artwork/large/servine.jpg
+276,Servine-Servine,(Level 36),Serperior-Serperior,4960,https://img.pokemondb.net/artwork/large/servine.jpg,4970,https://img.pokemondb.net/artwork/large/serperior.jpg
+277,Tepig-Tepig,(Level 17),Pignite-Pignite,4980,https://img.pokemondb.net/artwork/large/tepig.jpg,4990,https://img.pokemondb.net/artwork/large/pignite.jpg
+278,Pignite-Pignite,(Level 36),Emboar-Emboar,4990,https://img.pokemondb.net/artwork/large/pignite.jpg,5000,https://img.pokemondb.net/artwork/large/emboar.jpg
+279,Oshawott-Oshawott,(Level 17),Dewott-Dewott,5010,https://img.pokemondb.net/artwork/large/oshawott.jpg,5020,https://img.pokemondb.net/artwork/large/dewott.jpg
+280,Dewott-Dewott,(Level 36),Samurott-Samurott,5020,https://img.pokemondb.net/artwork/large/dewott.jpg,5030,https://img.pokemondb.net/artwork/large/samurott.jpg
+281,Dewott-Dewott,(Level 36; in Legends: Arceus),Samurott-Hisuian Samurott,5020,https://img.pokemondb.net/artwork/large/dewott.jpg,5031,https://img.pokemondb.net/artwork/large/samurott-hisuian.jpg
+282,Patrat-Patrat,(Level 20),Watchog-Watchog,5040,https://img.pokemondb.net/artwork/large/patrat.jpg,5050,https://img.pokemondb.net/artwork/large/watchog.jpg
+283,Lillipup-Lillipup,(Level 16),Herdier-Herdier,5060,https://img.pokemondb.net/artwork/large/lillipup.jpg,5070,https://img.pokemondb.net/artwork/large/herdier.jpg
+284,Herdier-Herdier,(Level 32),Stoutland-Stoutland,5070,https://img.pokemondb.net/artwork/large/herdier.jpg,5080,https://img.pokemondb.net/artwork/large/stoutland.jpg
+285,Purrloin-Purrloin,(Level 20),Liepard-Liepard,5090,https://img.pokemondb.net/artwork/large/purrloin.jpg,5100,https://img.pokemondb.net/artwork/large/liepard.jpg
+286,Pansage-Pansage,(use Leaf Stone),Simisage-Simisage,5110,https://img.pokemondb.net/artwork/large/pansage.jpg,5120,https://img.pokemondb.net/artwork/large/simisage.jpg
+287,Pansear-Pansear,(use Fire Stone),Simisear-Simisear,5130,https://img.pokemondb.net/artwork/large/pansear.jpg,5140,https://img.pokemondb.net/artwork/large/simisear.jpg
+288,Panpour-Panpour,(use Water Stone),Simipour-Simipour,5150,https://img.pokemondb.net/artwork/large/panpour.jpg,5160,https://img.pokemondb.net/artwork/large/simipour.jpg
+289,Munna-Munna,(use Moon Stone),Musharna-Musharna,5170,https://img.pokemondb.net/artwork/large/munna.jpg,5180,https://img.pokemondb.net/artwork/large/musharna.jpg
+290,Pidove-Pidove,(Level 21),Tranquill-Tranquill,5190,https://img.pokemondb.net/artwork/large/pidove.jpg,5200,https://img.pokemondb.net/artwork/large/tranquill.jpg
+291,Tranquill-Tranquill,(Level 32),Unfezant-Unfezant,5200,https://img.pokemondb.net/artwork/large/tranquill.jpg,5210,https://img.pokemondb.net/artwork/large/unfezant.jpg
+292,Blitzle-Blitzle,(Level 27),Zebstrika-Zebstrika,5220,https://img.pokemondb.net/artwork/large/blitzle.jpg,5230,https://img.pokemondb.net/artwork/large/zebstrika.jpg
+293,Roggenrola-Roggenrola,(Level 25),Boldore-Boldore,5240,https://img.pokemondb.net/artwork/large/roggenrola.jpg,5250,https://img.pokemondb.net/artwork/large/boldore.jpg
+294,Boldore-Boldore,(Trade),Gigalith-Gigalith,5250,https://img.pokemondb.net/artwork/large/boldore.jpg,5260,https://img.pokemondb.net/artwork/large/gigalith.jpg
+295,Woobat-Woobat,(high Friendship),Swoobat-Swoobat,5270,https://img.pokemondb.net/artwork/large/woobat.jpg,5280,https://img.pokemondb.net/artwork/large/swoobat.jpg
+296,Drilbur-Drilbur,(Level 31),Excadrill-Excadrill,5290,https://img.pokemondb.net/artwork/large/drilbur.jpg,5300,https://img.pokemondb.net/artwork/large/excadrill.jpg
+297,Timburr-Timburr,(Level 25),Gurdurr-Gurdurr,5320,https://img.pokemondb.net/artwork/large/timburr.jpg,5330,https://img.pokemondb.net/artwork/large/gurdurr.jpg
+298,Gurdurr-Gurdurr,(Trade),Conkeldurr-Conkeldurr,5330,https://img.pokemondb.net/artwork/large/gurdurr.jpg,5340,https://img.pokemondb.net/artwork/large/conkeldurr.jpg
+299,Tympole-Tympole,(Level 25),Palpitoad-Palpitoad,5350,https://img.pokemondb.net/artwork/large/tympole.jpg,5360,https://img.pokemondb.net/artwork/large/palpitoad.jpg
+300,Palpitoad-Palpitoad,(Level 36),Seismitoad-Seismitoad,5360,https://img.pokemondb.net/artwork/large/palpitoad.jpg,5370,https://img.pokemondb.net/artwork/large/seismitoad.jpg
+301,Sewaddle-Sewaddle,(Level 20),Swadloon-Swadloon,5400,https://img.pokemondb.net/artwork/large/sewaddle.jpg,5410,https://img.pokemondb.net/artwork/large/swadloon.jpg
+302,Swadloon-Swadloon,(high Friendship),Leavanny-Leavanny,5410,https://img.pokemondb.net/artwork/large/swadloon.jpg,5420,https://img.pokemondb.net/artwork/large/leavanny.jpg
+303,Venipede-Venipede,(Level 22),Whirlipede-Whirlipede,5430,https://img.pokemondb.net/artwork/large/venipede.jpg,5440,https://img.pokemondb.net/artwork/large/whirlipede.jpg
+304,Whirlipede-Whirlipede,(Level 30),Scolipede-Scolipede,5440,https://img.pokemondb.net/artwork/large/whirlipede.jpg,5450,https://img.pokemondb.net/artwork/large/scolipede.jpg
+305,Cottonee-Cottonee,(use Sun Stone),Whimsicott-Whimsicott,5460,https://img.pokemondb.net/artwork/large/cottonee.jpg,5470,https://img.pokemondb.net/artwork/large/whimsicott.jpg
+306,Petilil-Petilil,(use Sun Stone),Lilligant-Lilligant,5480,https://img.pokemondb.net/artwork/large/petilil.jpg,5490,https://img.pokemondb.net/artwork/large/lilligant.jpg
+307,Petilil-Petilil,(use Sun Stone; in Legends: Arceus),Lilligant-Hisuian Lilligant,5480,https://img.pokemondb.net/artwork/large/petilil.jpg,5491,https://img.pokemondb.net/artwork/large/lilligant-hisuian.jpg
+308,Sandile-Sandile,(Level 29),Krokorok-Krokorok,5510,https://img.pokemondb.net/artwork/large/sandile.jpg,5520,https://img.pokemondb.net/artwork/large/krokorok.jpg
+309,Krokorok-Krokorok,(Level 40),Krookodile-Krookodile,5520,https://img.pokemondb.net/artwork/large/krokorok.jpg,5530,https://img.pokemondb.net/artwork/large/krookodile.jpg
+310,Darumaka-Darumaka,(Level 35),Darmanitan-Standard Mode,5540,https://img.pokemondb.net/artwork/large/darumaka.jpg,5550,https://img.pokemondb.net/artwork/large/darmanitan-standard.jpg
+311,Darumaka-Galarian Darumaka,(use Ice Stone),Darmanitan-Galarian Standard Mode,5541,https://img.pokemondb.net/artwork/large/darumaka-galarian.jpg,5552,https://img.pokemondb.net/artwork/large/darmanitan-galarian-standard.jpg
+312,Dwebble-Dwebble,(Level 34),Crustle-Crustle,5570,https://img.pokemondb.net/artwork/large/dwebble.jpg,5580,https://img.pokemondb.net/artwork/large/crustle.jpg
+313,Scraggy-Scraggy,(Level 39),Scrafty-Scrafty,5590,https://img.pokemondb.net/artwork/large/scraggy.jpg,5600,https://img.pokemondb.net/artwork/large/scrafty.jpg
+314,Yamask-Yamask,(Level 34),Cofagrigus-Cofagrigus,5620,https://img.pokemondb.net/artwork/large/yamask.jpg,5630,https://img.pokemondb.net/artwork/large/cofagrigus.jpg
+315,Yamask-Galarian Yamask,(near Dusty Bowl),Runerigus-Runerigus,5621,https://img.pokemondb.net/artwork/large/yamask-galarian.jpg,8670,https://img.pokemondb.net/artwork/large/runerigus.jpg
+316,Tirtouga-Tirtouga,(Level 37),Carracosta-Carracosta,5640,https://img.pokemondb.net/artwork/large/tirtouga.jpg,5650,https://img.pokemondb.net/artwork/large/carracosta.jpg
+317,Archen-Archen,(Level 37),Archeops-Archeops,5660,https://img.pokemondb.net/artwork/large/archen.jpg,5670,https://img.pokemondb.net/artwork/large/archeops.jpg
+318,Trubbish-Trubbish,(Level 36),Garbodor-Garbodor,5680,https://img.pokemondb.net/artwork/large/trubbish.jpg,5690,https://img.pokemondb.net/artwork/large/garbodor.jpg
+319,Zorua-Zorua,(Level 30),Zoroark-Zoroark,5700,https://img.pokemondb.net/artwork/large/zorua.jpg,5710,https://img.pokemondb.net/artwork/large/zoroark.jpg
+320,Zorua-Hisuian Zorua,(Level 30; in Legends: Arceus),Zoroark-Hisuian Zoroark,5701,https://img.pokemondb.net/artwork/large/zorua-hisuian.jpg,5711,https://img.pokemondb.net/artwork/large/zoroark-hisuian.jpg
+321,Minccino-Minccino,(use Shiny Stone),Cinccino-Cinccino,5720,https://img.pokemondb.net/artwork/large/minccino.jpg,5730,https://img.pokemondb.net/artwork/large/cinccino.jpg
+322,Gothita-Gothita,(Level 32),Gothorita-Gothorita,5740,https://img.pokemondb.net/artwork/large/gothita.jpg,5750,https://img.pokemondb.net/artwork/large/gothorita.jpg
+323,Gothorita-Gothorita,(Level 41),Gothitelle-Gothitelle,5750,https://img.pokemondb.net/artwork/large/gothorita.jpg,5760,https://img.pokemondb.net/artwork/large/gothitelle.jpg
+324,Solosis-Solosis,(Level 32),Duosion-Duosion,5770,https://img.pokemondb.net/artwork/large/solosis.jpg,5780,https://img.pokemondb.net/artwork/large/duosion.jpg
+325,Duosion-Duosion,(Level 41),Reuniclus-Reuniclus,5780,https://img.pokemondb.net/artwork/large/duosion.jpg,5790,https://img.pokemondb.net/artwork/large/reuniclus.jpg
+326,Ducklett-Ducklett,(Level 35),Swanna-Swanna,5800,https://img.pokemondb.net/artwork/large/ducklett.jpg,5810,https://img.pokemondb.net/artwork/large/swanna.jpg
+327,Vanillite-Vanillite,(Level 35),Vanillish-Vanillish,5820,https://img.pokemondb.net/artwork/large/vanillite.jpg,5830,https://img.pokemondb.net/artwork/large/vanillish.jpg
+328,Vanillish-Vanillish,(Level 47),Vanilluxe-Vanilluxe,5830,https://img.pokemondb.net/artwork/large/vanillish.jpg,5840,https://img.pokemondb.net/artwork/large/vanilluxe.jpg
+329,Deerling-Deerling,(Level 34),Sawsbuck-Sawsbuck,5850,https://img.pokemondb.net/artwork/large/deerling.jpg,5860,https://img.pokemondb.net/artwork/large/sawsbuck.jpg
+330,Karrablast-Karrablast,(Trade with Shelmet),Escavalier-Escavalier,5880,https://img.pokemondb.net/artwork/large/karrablast.jpg,5890,https://img.pokemondb.net/artwork/large/escavalier.jpg
+331,Foongus-Foongus,(Level 39),Amoonguss-Amoonguss,5900,https://img.pokemondb.net/artwork/large/foongus.jpg,5910,https://img.pokemondb.net/artwork/large/amoonguss.jpg
+332,Frillish-Frillish,(Level 40),Jellicent-Jellicent,5920,https://img.pokemondb.net/artwork/large/frillish.jpg,5930,https://img.pokemondb.net/artwork/large/jellicent.jpg
+333,Joltik-Joltik,(Level 36),Galvantula-Galvantula,5950,https://img.pokemondb.net/artwork/large/joltik.jpg,5960,https://img.pokemondb.net/artwork/large/galvantula.jpg
+334,Ferroseed-Ferroseed,(Level 40),Ferrothorn-Ferrothorn,5970,https://img.pokemondb.net/artwork/large/ferroseed.jpg,5980,https://img.pokemondb.net/artwork/large/ferrothorn.jpg
+335,Klink-Klink,(Level 38),Klang-Klang,5990,https://img.pokemondb.net/artwork/large/klink.jpg,6000,https://img.pokemondb.net/artwork/large/klang.jpg
+336,Klang-Klang,(Level 49),Klinklang-Klinklang,6000,https://img.pokemondb.net/artwork/large/klang.jpg,6010,https://img.pokemondb.net/artwork/large/klinklang.jpg
+337,Tynamo-Tynamo,(Level 39),Eelektrik-Eelektrik,6020,https://img.pokemondb.net/artwork/large/tynamo.jpg,6030,https://img.pokemondb.net/artwork/large/eelektrik.jpg
+338,Eelektrik-Eelektrik,(use Thunder Stone),Eelektross-Eelektross,6030,https://img.pokemondb.net/artwork/large/eelektrik.jpg,6040,https://img.pokemondb.net/artwork/large/eelektross.jpg
+339,Elgyem-Elgyem,(Level 42),Beheeyem-Beheeyem,6050,https://img.pokemondb.net/artwork/large/elgyem.jpg,6060,https://img.pokemondb.net/artwork/large/beheeyem.jpg
+340,Litwick-Litwick,(Level 41),Lampent-Lampent,6070,https://img.pokemondb.net/artwork/large/litwick.jpg,6080,https://img.pokemondb.net/artwork/large/lampent.jpg
+341,Lampent-Lampent,(use Dusk Stone),Chandelure-Chandelure,6080,https://img.pokemondb.net/artwork/large/lampent.jpg,6090,https://img.pokemondb.net/artwork/large/chandelure.jpg
+342,Axew-Axew,(Level 38),Fraxure-Fraxure,6100,https://img.pokemondb.net/artwork/large/axew.jpg,6110,https://img.pokemondb.net/artwork/large/fraxure.jpg
+343,Fraxure-Fraxure,(Level 48),Haxorus-Haxorus,6110,https://img.pokemondb.net/artwork/large/fraxure.jpg,6120,https://img.pokemondb.net/artwork/large/haxorus.jpg
+344,Cubchoo-Cubchoo,(Level 37),Beartic-Beartic,6130,https://img.pokemondb.net/artwork/large/cubchoo.jpg,6140,https://img.pokemondb.net/artwork/large/beartic.jpg
+345,Shelmet-Shelmet,(Trade with Karrablast),Accelgor-Accelgor,6160,https://img.pokemondb.net/artwork/large/shelmet.jpg,6170,https://img.pokemondb.net/artwork/large/accelgor.jpg
+346,Mienfoo-Mienfoo,(Level 50),Mienshao-Mienshao,6190,https://img.pokemondb.net/artwork/large/mienfoo.jpg,6200,https://img.pokemondb.net/artwork/large/mienshao.jpg
+347,Golett-Golett,(Level 43),Golurk-Golurk,6220,https://img.pokemondb.net/artwork/large/golett.jpg,6230,https://img.pokemondb.net/artwork/large/golurk.jpg
+348,Pawniard-Pawniard,(Level 52),Bisharp-Bisharp,6240,https://img.pokemondb.net/artwork/large/pawniard.jpg,6250,https://img.pokemondb.net/artwork/large/bisharp.jpg
+349,Rufflet-Rufflet,(Level 54),Braviary-Braviary,6270,https://img.pokemondb.net/artwork/large/rufflet.jpg,6280,https://img.pokemondb.net/artwork/large/braviary.jpg
+350,Rufflet-Rufflet,(Level 54; in Legends: Arceus),Braviary-Hisuian Braviary,6270,https://img.pokemondb.net/artwork/large/rufflet.jpg,6281,https://img.pokemondb.net/artwork/large/braviary-hisuian.jpg
+351,Vullaby-Vullaby,(Level 54),Mandibuzz-Mandibuzz,6290,https://img.pokemondb.net/artwork/large/vullaby.jpg,6300,https://img.pokemondb.net/artwork/large/mandibuzz.jpg
+352,Deino-Deino,(Level 50),Zweilous-Zweilous,6330,https://img.pokemondb.net/artwork/large/deino.jpg,6340,https://img.pokemondb.net/artwork/large/zweilous.jpg
+353,Zweilous-Zweilous,(Level 64),Hydreigon-Hydreigon,6340,https://img.pokemondb.net/artwork/large/zweilous.jpg,6350,https://img.pokemondb.net/artwork/large/hydreigon.jpg
+354,Larvesta-Larvesta,(Level 59),Volcarona-Volcarona,6360,https://img.pokemondb.net/artwork/large/larvesta.jpg,6370,https://img.pokemondb.net/artwork/large/volcarona.jpg
+355,Chespin-Chespin,(Level 16),Quilladin-Quilladin,6500,https://img.pokemondb.net/artwork/large/chespin.jpg,6510,https://img.pokemondb.net/artwork/large/quilladin.jpg
+356,Quilladin-Quilladin,(Level 36),Chesnaught-Chesnaught,6510,https://img.pokemondb.net/artwork/large/quilladin.jpg,6520,https://img.pokemondb.net/artwork/large/chesnaught.jpg
+357,Fennekin-Fennekin,(Level 16),Braixen-Braixen,6530,https://img.pokemondb.net/artwork/large/fennekin.jpg,6540,https://img.pokemondb.net/artwork/large/braixen.jpg
+358,Braixen-Braixen,(Level 36),Delphox-Delphox,6540,https://img.pokemondb.net/artwork/large/braixen.jpg,6550,https://img.pokemondb.net/artwork/large/delphox.jpg
+359,Froakie-Froakie,(Level 16),Frogadier-Frogadier,6560,https://img.pokemondb.net/artwork/large/froakie.jpg,6570,https://img.pokemondb.net/artwork/large/frogadier.jpg
+360,Frogadier-Frogadier,(Level 36),Greninja-Greninja,6570,https://img.pokemondb.net/artwork/large/frogadier.jpg,6580,https://img.pokemondb.net/artwork/large/greninja.jpg
+361,Bunnelby-Bunnelby,(Level 20),Diggersby-Diggersby,6590,https://img.pokemondb.net/artwork/large/bunnelby.jpg,6600,https://img.pokemondb.net/artwork/large/diggersby.jpg
+362,Fletchling-Fletchling,(Level 17),Fletchinder-Fletchinder,6610,https://img.pokemondb.net/artwork/large/fletchling.jpg,6620,https://img.pokemondb.net/artwork/large/fletchinder.jpg
+363,Fletchinder-Fletchinder,(Level 35),Talonflame-Talonflame,6620,https://img.pokemondb.net/artwork/large/fletchinder.jpg,6630,https://img.pokemondb.net/artwork/large/talonflame.jpg
+364,Scatterbug-Scatterbug,(Level 9),Spewpa-Spewpa,6640,https://img.pokemondb.net/artwork/large/scatterbug.jpg,6650,https://img.pokemondb.net/artwork/large/spewpa.jpg
+365,Spewpa-Spewpa,(Level 12),Vivillon-Vivillon,6650,https://img.pokemondb.net/artwork/large/spewpa.jpg,6660,https://img.pokemondb.net/artwork/large/vivillon.jpg
+366,Litleo-Litleo,(Level 35),Pyroar-Pyroar,6670,https://img.pokemondb.net/artwork/large/litleo.jpg,6680,https://img.pokemondb.net/artwork/large/pyroar.jpg
+367,Flabébé-Flabébé,(Level 19),Floette-Floette,6690,https://img.pokemondb.net/artwork/large/flabebe.jpg,6700,https://img.pokemondb.net/artwork/large/floette.jpg
+368,Floette-Floette,(use Shiny Stone),Florges-Florges,6700,https://img.pokemondb.net/artwork/large/floette.jpg,6710,https://img.pokemondb.net/artwork/large/florges.jpg
+369,Skiddo-Skiddo,(Level 32),Gogoat-Gogoat,6720,https://img.pokemondb.net/artwork/large/skiddo.jpg,6730,https://img.pokemondb.net/artwork/large/gogoat.jpg
+370,Pancham-Pancham,(Level 32; Dark type Pokémon in party),Pangoro-Pangoro,6740,https://img.pokemondb.net/artwork/large/pancham.jpg,6750,https://img.pokemondb.net/artwork/large/pangoro.jpg
+371,Espurr-Espurr,(Level 25; Male),Meowstic-Male,6770,https://img.pokemondb.net/artwork/large/espurr.jpg,6780,https://img.pokemondb.net/artwork/large/meowstic-male.jpg
+372,Espurr-Espurr,(Level 25; Female),Meowstic-Female,6770,https://img.pokemondb.net/artwork/large/espurr.jpg,6781,https://img.pokemondb.net/artwork/large/meowstic-female.jpg
+373,Honedge-Honedge,(Level 35),Doublade-Doublade,6790,https://img.pokemondb.net/artwork/large/honedge.jpg,6800,https://img.pokemondb.net/artwork/large/doublade.jpg
+374,Doublade-Doublade,(use Dusk Stone),Aegislash-Blade Forme,6800,https://img.pokemondb.net/artwork/large/doublade.jpg,6811,https://img.pokemondb.net/artwork/large/aegislash-blade.jpg
+375,Doublade-Doublade,(use Dusk Stone),Aegislash-Shield Forme,6800,https://img.pokemondb.net/artwork/large/doublade.jpg,6810,https://img.pokemondb.net/artwork/large/aegislash-shield.jpg
+376,Spritzee-Spritzee,(trade holding Sachet),Aromatisse-Aromatisse,6820,https://img.pokemondb.net/artwork/large/spritzee.jpg,6830,https://img.pokemondb.net/artwork/large/aromatisse.jpg
+377,Swirlix-Swirlix,(trade holding Whipped Dream),Slurpuff-Slurpuff,6840,https://img.pokemondb.net/artwork/large/swirlix.jpg,6850,https://img.pokemondb.net/artwork/large/slurpuff.jpg
+378,Inkay-Inkay,(Level 30; holding console upside down),Malamar-Malamar,6860,https://img.pokemondb.net/artwork/large/inkay.jpg,6870,https://img.pokemondb.net/artwork/large/malamar.jpg
+379,Binacle-Binacle,(Level 39),Barbaracle-Barbaracle,6880,https://img.pokemondb.net/artwork/large/binacle.jpg,6890,https://img.pokemondb.net/artwork/large/barbaracle.jpg
+380,Skrelp-Skrelp,(Level 48),Dragalge-Dragalge,6900,https://img.pokemondb.net/artwork/large/skrelp.jpg,6910,https://img.pokemondb.net/artwork/large/dragalge.jpg
+381,Clauncher-Clauncher,(Level 37),Clawitzer-Clawitzer,6920,https://img.pokemondb.net/artwork/large/clauncher.jpg,6930,https://img.pokemondb.net/artwork/large/clawitzer.jpg
+382,Helioptile-Helioptile,(use Sun Stone),Heliolisk-Heliolisk,6940,https://img.pokemondb.net/artwork/large/helioptile.jpg,6950,https://img.pokemondb.net/artwork/large/heliolisk.jpg
+383,Tyrunt-Tyrunt,(Level 39; Daytime),Tyrantrum-Tyrantrum,6960,https://img.pokemondb.net/artwork/large/tyrunt.jpg,6970,https://img.pokemondb.net/artwork/large/tyrantrum.jpg
+384,Amaura-Amaura,(Level 39; Nighttime),Aurorus-Aurorus,6980,https://img.pokemondb.net/artwork/large/amaura.jpg,6990,https://img.pokemondb.net/artwork/large/aurorus.jpg
+385,Goomy-Goomy,(Level 40),Sliggoo-Sliggoo,7040,https://img.pokemondb.net/artwork/large/goomy.jpg,7050,https://img.pokemondb.net/artwork/large/sliggoo.jpg
+386,Sliggoo-Sliggoo,(Level 50; during rain),Goodra-Goodra,7050,https://img.pokemondb.net/artwork/large/sliggoo.jpg,7060,https://img.pokemondb.net/artwork/large/goodra.jpg
+387,Goomy-Goomy,(Level 40; in Legends: Arceus),Sliggoo-Hisuian Sliggoo,7040,https://img.pokemondb.net/artwork/large/goomy.jpg,7051,https://img.pokemondb.net/artwork/large/sliggoo-hisuian.jpg
+388,Sliggoo-Hisuian Sliggoo,(Level 50; during rain; in Legends: Arceus),Goodra-Hisuian Goodra,7051,https://img.pokemondb.net/artwork/large/sliggoo-hisuian.jpg,7061,https://img.pokemondb.net/artwork/large/goodra-hisuian.jpg
+389,Phantump-Phantump,(Trade),Trevenant-Trevenant,7080,https://img.pokemondb.net/artwork/large/phantump.jpg,7090,https://img.pokemondb.net/artwork/large/trevenant.jpg
+390,Pumpkaboo-Average Size,(Trade),Gourgeist-Average Size,7100,—,7110,—
+391,Bergmite-Bergmite,(Level 37),Avalugg-Avalugg,7120,https://img.pokemondb.net/artwork/large/bergmite.jpg,7130,https://img.pokemondb.net/artwork/large/avalugg.jpg
+392,Bergmite-Bergmite,(Level 37; in Legends: Arceus),Avalugg-Hisuian Avalugg,7120,https://img.pokemondb.net/artwork/large/bergmite.jpg,7131,https://img.pokemondb.net/artwork/large/avalugg-hisuian.jpg
+393,Noibat-Noibat,(Level 48),Noivern-Noivern,7140,https://img.pokemondb.net/artwork/large/noibat.jpg,7150,https://img.pokemondb.net/artwork/large/noivern.jpg
+394,Rowlet-Rowlet,(Level 17),Dartrix-Dartrix,7220,https://img.pokemondb.net/artwork/large/rowlet.jpg,7230,https://img.pokemondb.net/artwork/large/dartrix.jpg
+395,Dartrix-Dartrix,(Level 34),Decidueye-Decidueye,7230,https://img.pokemondb.net/artwork/large/dartrix.jpg,7240,https://img.pokemondb.net/artwork/large/decidueye.jpg
+396,Dartrix-Dartrix,(Level 36; in Legends: Arceus),Decidueye-Hisuian Decidueye,7230,https://img.pokemondb.net/artwork/large/dartrix.jpg,7241,https://img.pokemondb.net/artwork/large/decidueye-hisuian.jpg
+397,Litten-Litten,(Level 17),Torracat-Torracat,7250,https://img.pokemondb.net/artwork/large/litten.jpg,7260,https://img.pokemondb.net/artwork/large/torracat.jpg
+398,Torracat-Torracat,(Level 34),Incineroar-Incineroar,7260,https://img.pokemondb.net/artwork/large/torracat.jpg,7270,https://img.pokemondb.net/artwork/large/incineroar.jpg
+399,Popplio-Popplio,(Level 17),Brionne-Brionne,7280,https://img.pokemondb.net/artwork/large/popplio.jpg,7290,https://img.pokemondb.net/artwork/large/brionne.jpg
+400,Brionne-Brionne,(Level 34),Primarina-Primarina,7290,https://img.pokemondb.net/artwork/large/brionne.jpg,7300,https://img.pokemondb.net/artwork/large/primarina.jpg
+401,Pikipek-Pikipek,(Level 14),Trumbeak-Trumbeak,7310,https://img.pokemondb.net/artwork/large/pikipek.jpg,7320,https://img.pokemondb.net/artwork/large/trumbeak.jpg
+402,Trumbeak-Trumbeak,(Level 28),Toucannon-Toucannon,7320,https://img.pokemondb.net/artwork/large/trumbeak.jpg,7330,https://img.pokemondb.net/artwork/large/toucannon.jpg
+403,Yungoos-Yungoos,(Level 20; Daytime),Gumshoos-Gumshoos,7340,https://img.pokemondb.net/artwork/large/yungoos.jpg,7350,https://img.pokemondb.net/artwork/large/gumshoos.jpg
+404,Grubbin-Grubbin,(Level 20),Charjabug-Charjabug,7360,https://img.pokemondb.net/artwork/large/grubbin.jpg,7370,https://img.pokemondb.net/artwork/large/charjabug.jpg
+405,Charjabug-Charjabug,(use Thunder Stone; in Gen 8; or level up in a Magnetic Field area),Vikavolt-Vikavolt,7370,https://img.pokemondb.net/artwork/large/charjabug.jpg,7380,https://img.pokemondb.net/artwork/large/vikavolt.jpg
+406,Crabrawler-Crabrawler,(at Mount Lanakila),Crabominable-Crabominable,7390,https://img.pokemondb.net/artwork/large/crabrawler.jpg,7400,https://img.pokemondb.net/artwork/large/crabominable.jpg
+407,Cutiefly-Cutiefly,(Level 25),Ribombee-Ribombee,7420,https://img.pokemondb.net/artwork/large/cutiefly.jpg,7430,https://img.pokemondb.net/artwork/large/ribombee.jpg
+408,Rockruff-Rockruff,(Level 25; Daytime),Lycanroc-Midday Form,7440,https://img.pokemondb.net/artwork/large/rockruff.jpg,7450,https://img.pokemondb.net/artwork/large/lycanroc-midday.jpg
+409,Rockruff-Rockruff,(Level 25; Nighttime),Lycanroc-Midnight Form,7440,https://img.pokemondb.net/artwork/large/rockruff.jpg,7451,https://img.pokemondb.net/artwork/large/lycanroc-midnight.jpg
+410,Rockruff-Own Tempo Rockruff,(Level 25; Dusk),Lycanroc-Dusk Form,7441,—,7452,https://img.pokemondb.net/artwork/large/lycanroc-dusk.jpg
+411,Mareanie-Mareanie,(Level 38),Toxapex-Toxapex,7470,https://img.pokemondb.net/artwork/large/mareanie.jpg,7480,https://img.pokemondb.net/artwork/large/toxapex.jpg
+412,Mudbray-Mudbray,(Level 30),Mudsdale-Mudsdale,7490,https://img.pokemondb.net/artwork/large/mudbray.jpg,7500,https://img.pokemondb.net/artwork/large/mudsdale.jpg
+413,Dewpider-Dewpider,(Level 22),Araquanid-Araquanid,7510,https://img.pokemondb.net/artwork/large/dewpider.jpg,7520,https://img.pokemondb.net/artwork/large/araquanid.jpg
+414,Fomantis-Fomantis,(Level 34; Daytime),Lurantis-Lurantis,7530,https://img.pokemondb.net/artwork/large/fomantis.jpg,7540,https://img.pokemondb.net/artwork/large/lurantis.jpg
+415,Morelull-Morelull,(Level 24),Shiinotic-Shiinotic,7550,https://img.pokemondb.net/artwork/large/morelull.jpg,7560,https://img.pokemondb.net/artwork/large/shiinotic.jpg
+416,Salandit-Salandit,(Level 33; Female),Salazzle-Salazzle,7570,https://img.pokemondb.net/artwork/large/salandit.jpg,7580,https://img.pokemondb.net/artwork/large/salazzle.jpg
+417,Stufful-Stufful,(Level 27),Bewear-Bewear,7590,https://img.pokemondb.net/artwork/large/stufful.jpg,7600,https://img.pokemondb.net/artwork/large/bewear.jpg
+418,Bounsweet-Bounsweet,(Level 18),Steenee-Steenee,7610,https://img.pokemondb.net/artwork/large/bounsweet.jpg,7620,https://img.pokemondb.net/artwork/large/steenee.jpg
+419,Steenee-Steenee,(after Stomp learned),Tsareena-Tsareena,7620,https://img.pokemondb.net/artwork/large/steenee.jpg,7630,https://img.pokemondb.net/artwork/large/tsareena.jpg
+420,Wimpod-Wimpod,(Level 30),Golisopod-Golisopod,7670,https://img.pokemondb.net/artwork/large/wimpod.jpg,7680,https://img.pokemondb.net/artwork/large/golisopod.jpg
+421,Sandygast-Sandygast,(Level 42),Palossand-Palossand,7690,https://img.pokemondb.net/artwork/large/sandygast.jpg,7700,https://img.pokemondb.net/artwork/large/palossand.jpg
+422,Type: Null-Type: Null,(high Friendship),Silvally-Silvally,7720,https://img.pokemondb.net/artwork/large/type-null.jpg,7730,https://img.pokemondb.net/artwork/large/silvally.jpg
+423,Jangmo-o-Jangmo-o,(Level 35),Hakamo-o-Hakamo-o,7820,https://img.pokemondb.net/artwork/large/jangmo-o.jpg,7830,https://img.pokemondb.net/artwork/large/hakamo-o.jpg
+424,Hakamo-o-Hakamo-o,(Level 45),Kommo-o-Kommo-o,7830,https://img.pokemondb.net/artwork/large/hakamo-o.jpg,7840,https://img.pokemondb.net/artwork/large/kommo-o.jpg
+425,Cosmog-Cosmog,(Level 43),Cosmoem-Cosmoem,7890,https://img.pokemondb.net/artwork/large/cosmog.jpg,7900,https://img.pokemondb.net/artwork/large/cosmoem.jpg
+426,Cosmoem-Cosmoem,(Level 53; in Pokémon Sun or Ultra Sun),Solgaleo-Solgaleo,7900,https://img.pokemondb.net/artwork/large/cosmoem.jpg,7910,https://img.pokemondb.net/artwork/large/solgaleo.jpg
+427,Cosmoem-Cosmoem,(Level 53; in Pokémon Moon or Ultra Moon),Lunala-Lunala,7900,https://img.pokemondb.net/artwork/large/cosmoem.jpg,7920,https://img.pokemondb.net/artwork/large/lunala.jpg
+428,Poipole-Poipole,(after Dragon Pulse learned),Naganadel-Naganadel,8030,https://img.pokemondb.net/artwork/large/poipole.jpg,8040,https://img.pokemondb.net/artwork/large/naganadel.jpg
+429,Meltan-Meltan,(Pokémon GO only; 400 Meltan Candies),Melmetal-Melmetal,8080,https://img.pokemondb.net/artwork/large/meltan.jpg,8090,https://img.pokemondb.net/artwork/large/melmetal.jpg
+430,Grookey-Grookey,(Level 16),Thwackey-Thwackey,8100,https://img.pokemondb.net/artwork/large/grookey.jpg,8110,https://img.pokemondb.net/artwork/large/thwackey.jpg
+431,Thwackey-Thwackey,(Level 35),Rillaboom-Rillaboom,8110,https://img.pokemondb.net/artwork/large/thwackey.jpg,8120,https://img.pokemondb.net/artwork/large/rillaboom.jpg
+432,Scorbunny-Scorbunny,(Level 16),Raboot-Raboot,8130,https://img.pokemondb.net/artwork/large/scorbunny.jpg,8140,https://img.pokemondb.net/artwork/large/raboot.jpg
+433,Raboot-Raboot,(Level 35),Cinderace-Cinderace,8140,https://img.pokemondb.net/artwork/large/raboot.jpg,8150,https://img.pokemondb.net/artwork/large/cinderace.jpg
+434,Sobble-Sobble,(Level 16),Drizzile-Drizzile,8160,https://img.pokemondb.net/artwork/large/sobble.jpg,8170,https://img.pokemondb.net/artwork/large/drizzile.jpg
+435,Drizzile-Drizzile,(Level 35),Inteleon-Inteleon,8170,https://img.pokemondb.net/artwork/large/drizzile.jpg,8180,https://img.pokemondb.net/artwork/large/inteleon.jpg
+436,Blipbug-Blipbug,(Level 10),Dottler-Dottler,8240,https://img.pokemondb.net/artwork/large/blipbug.jpg,8250,https://img.pokemondb.net/artwork/large/dottler.jpg
+437,Dottler-Dottler,(Level 30),Orbeetle-Orbeetle,8250,https://img.pokemondb.net/artwork/large/dottler.jpg,8260,https://img.pokemondb.net/artwork/large/orbeetle.jpg
+438,Rookidee-Rookidee,(Level 18),Corvisquire-Corvisquire,8210,https://img.pokemondb.net/artwork/large/rookidee.jpg,8220,https://img.pokemondb.net/artwork/large/corvisquire.jpg
+439,Corvisquire-Corvisquire,(Level 38),Corviknight-Corviknight,8220,https://img.pokemondb.net/artwork/large/corvisquire.jpg,8230,https://img.pokemondb.net/artwork/large/corviknight.jpg
+440,Skwovet-Skwovet,(Level 24),Greedent-Greedent,8190,https://img.pokemondb.net/artwork/large/skwovet.jpg,8200,https://img.pokemondb.net/artwork/large/greedent.jpg
+441,Nickit-Nickit,(Level 18),Thievul-Thievul,8270,https://img.pokemondb.net/artwork/large/nickit.jpg,8280,https://img.pokemondb.net/artwork/large/thievul.jpg
+442,Wooloo-Wooloo,(Level 24),Dubwool-Dubwool,8310,https://img.pokemondb.net/artwork/large/wooloo.jpg,8320,https://img.pokemondb.net/artwork/large/dubwool.jpg
+443,Chewtle-Chewtle,(Level 22),Drednaw-Drednaw,8330,https://img.pokemondb.net/artwork/large/chewtle.jpg,8340,https://img.pokemondb.net/artwork/large/drednaw.jpg
+444,Yamper-Yamper,(Level 25),Boltund-Boltund,8350,https://img.pokemondb.net/artwork/large/yamper.jpg,8360,https://img.pokemondb.net/artwork/large/boltund.jpg
+445,Gossifleur-Gossifleur,(Level 20),Eldegoss-Eldegoss,8290,https://img.pokemondb.net/artwork/large/gossifleur.jpg,8300,https://img.pokemondb.net/artwork/large/eldegoss.jpg
+446,Sizzlipede-Sizzlipede,(Level 28),Centiskorch-Centiskorch,8500,https://img.pokemondb.net/artwork/large/sizzlipede.jpg,8510,https://img.pokemondb.net/artwork/large/centiskorch.jpg
+447,Rolycoly-Rolycoly,(Level 18),Carkol-Carkol,8370,https://img.pokemondb.net/artwork/large/rolycoly.jpg,8380,https://img.pokemondb.net/artwork/large/carkol.jpg
+448,Carkol-Carkol,(Level 34),Coalossal-Coalossal,8380,https://img.pokemondb.net/artwork/large/carkol.jpg,8390,https://img.pokemondb.net/artwork/large/coalossal.jpg
+449,Arrokuda-Arrokuda,(Level 26),Barraskewda-Barraskewda,8460,https://img.pokemondb.net/artwork/large/arrokuda.jpg,8470,https://img.pokemondb.net/artwork/large/barraskewda.jpg
+450,Milcery-Milcery,(spin around holding Sweet),Alcremie-Alcremie,8680,https://img.pokemondb.net/artwork/large/milcery.jpg,8690,https://img.pokemondb.net/artwork/large/alcremie.jpg
+451,Applin-Applin,(use Tart Apple),Flapple-Flapple,8400,https://img.pokemondb.net/artwork/large/applin.jpg,8410,https://img.pokemondb.net/artwork/large/flapple.jpg
+452,Applin-Applin,(use Sweet Apple),Appletun-Appletun,8400,https://img.pokemondb.net/artwork/large/applin.jpg,8420,https://img.pokemondb.net/artwork/large/appletun.jpg
+453,Farfetch'd-Galarian Farfetch'd,(achieve 3 critical hits in one battle),Sirfetch'd-Sirfetch'd,0831,https://img.pokemondb.net/artwork/large/farfetchd-galarian.jpg,8650,https://img.pokemondb.net/artwork/large/sirfetchd.jpg
+454,Corsola-Galarian Corsola,(Level 38),Cursola-Cursola,2221,https://img.pokemondb.net/artwork/large/corsola-galarian.jpg,8640,https://img.pokemondb.net/artwork/large/cursola.jpg
+455,Impidimp-Impidimp,(Level 32),Morgrem-Morgrem,8590,https://img.pokemondb.net/artwork/large/impidimp.jpg,8600,https://img.pokemondb.net/artwork/large/morgrem.jpg
+456,Morgrem-Morgrem,(Level 42),Grimmsnarl-Grimmsnarl,8600,https://img.pokemondb.net/artwork/large/morgrem.jpg,8610,https://img.pokemondb.net/artwork/large/grimmsnarl.jpg
+457,Hatenna-Hatenna,(Level 32),Hattrem-Hattrem,8560,https://img.pokemondb.net/artwork/large/hatenna.jpg,8570,https://img.pokemondb.net/artwork/large/hattrem.jpg
+458,Hattrem-Hattrem,(Level 42),Hatterene-Hatterene,8570,https://img.pokemondb.net/artwork/large/hattrem.jpg,8580,https://img.pokemondb.net/artwork/large/hatterene.jpg
+459,Cufant-Cufant,(Level 34),Copperajah-Copperajah,8780,https://img.pokemondb.net/artwork/large/cufant.jpg,8790,https://img.pokemondb.net/artwork/large/copperajah.jpg
+460,Toxel-Toxel,(Level 30; with an amped Nature),Toxtricity-Amped Form,8480,https://img.pokemondb.net/artwork/large/toxel.jpg,8490,https://img.pokemondb.net/artwork/large/toxtricity-amped.jpg
+461,Toxel-Toxel,(Level 30; with a low key Nature),Toxtricity-Low Key Form,8480,https://img.pokemondb.net/artwork/large/toxel.jpg,8491,https://img.pokemondb.net/artwork/large/toxtricity-low-key.jpg
+462,Silicobra-Silicobra,(Level 36),Sandaconda-Sandaconda,8430,https://img.pokemondb.net/artwork/large/silicobra.jpg,8440,https://img.pokemondb.net/artwork/large/sandaconda.jpg
+463,Sinistea-Sinistea,(use Cracked Pot),Polteageist-Polteageist,8540,https://img.pokemondb.net/artwork/large/sinistea.jpg,8550,https://img.pokemondb.net/artwork/large/polteageist.jpg
+464,Snom-Snom,(high Friendship; Nighttime),Frosmoth-Frosmoth,8720,https://img.pokemondb.net/artwork/large/snom.jpg,8730,https://img.pokemondb.net/artwork/large/frosmoth.jpg
+465,Clobbopus-Clobbopus,(after Taunt learned),Grapploct-Grapploct,8520,https://img.pokemondb.net/artwork/large/clobbopus.jpg,8530,https://img.pokemondb.net/artwork/large/grapploct.jpg
+466,Dreepy-Dreepy,(Level 50),Drakloak-Drakloak,8850,https://img.pokemondb.net/artwork/large/dreepy.jpg,8860,https://img.pokemondb.net/artwork/large/drakloak.jpg
+467,Drakloak-Drakloak,(Level 60),Dragapult-Dragapult,8860,https://img.pokemondb.net/artwork/large/drakloak.jpg,8870,https://img.pokemondb.net/artwork/large/dragapult.jpg
+468,Kubfu-Kubfu,(in Tower of Darkness),Urshifu-Single Strike Style,8910,https://img.pokemondb.net/artwork/large/kubfu.jpg,8920,https://img.pokemondb.net/artwork/large/urshifu-single-strike.jpg
+469,Kubfu-Kubfu,(in Tower of Water),Urshifu-Rapid Strike Style,8910,https://img.pokemondb.net/artwork/large/kubfu.jpg,8921,https://img.pokemondb.net/artwork/large/urshifu-rapid-strike.jpg
+470,Basculin-White-Striped Form,(Male; receive 294 recoil damage in battle),Basculegion-Male,5502,https://img.pokemondb.net/artwork/large/basculin-white-striped.jpg,9020,https://img.pokemondb.net/artwork/large/basculegion-male.jpg
+471,Basculin-White-Striped Form,(Female; receive 294 recoil damage in battle),Basculegion-Female,5502,https://img.pokemondb.net/artwork/large/basculin-white-striped.jpg,9021,https://img.pokemondb.net/artwork/large/basculegion-female.jpg
+472,Qwilfish-Hisuian Qwilfish,(use Barb Barrage 20 times in Strong Style),Overqwil-Overqwil,2111,https://img.pokemondb.net/artwork/large/qwilfish-hisuian.jpg,9040,https://img.pokemondb.net/artwork/large/overqwil.jpg

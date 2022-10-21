@@ -1,0 +1,474 @@
+Before,Method,After
+Bulbasaur-Bulbasaur,(Level 16),Ivysaur-Ivysaur
+Ivysaur-Ivysaur,(Level 32),Venusaur-Venusaur
+Charmander-Charmander,(Level 16),Charmeleon-Charmeleon
+Charmeleon-Charmeleon,(Level 36),Charizard-Charizard
+Squirtle-Squirtle,(Level 16),Wartortle-Wartortle
+Wartortle-Wartortle,(Level 36),Blastoise-Blastoise
+Caterpie-Caterpie,(Level 7),Metapod-Metapod
+Metapod-Metapod,(Level 10),Butterfree-Butterfree
+Weedle-Weedle,(Level 7),Kakuna-Kakuna
+Kakuna-Kakuna,(Level 10),Beedrill-Beedrill
+Pidgey-Pidgey,(Level 18),Pidgeotto-Pidgeotto
+Pidgeotto-Pidgeotto,(Level 36),Pidgeot-Pidgeot
+Rattata-Rattata,(Level 20),Raticate-Raticate
+Rattata-Alolan Rattata,(Level 20; Nighttime),Raticate-Alolan Raticate
+Spearow-Spearow,(Level 20),Fearow-Fearow
+Ekans-Ekans,(Level 22),Arbok-Arbok
+Pichu-Pichu,(high Friendship),Pikachu-Pikachu
+Pikachu-Pikachu,(use Thunder Stone; outside Alola),Raichu-Raichu
+Pikachu-Pikachu,(use Thunder Stone; in Alola),Raichu-Alolan Raichu
+Sandshrew-Sandshrew,(Level 22),Sandslash-Sandslash
+Sandshrew-Alolan Sandshrew,(use Ice Stone),Sandslash-Alolan Sandslash
+Nidoran♀-Nidoran♀,(Level 16),Nidorina-Nidorina
+Nidorina-Nidorina,(use Moon Stone),Nidoqueen-Nidoqueen
+Nidoran♂-Nidoran♂,(Level 16),Nidorino-Nidorino
+Nidorino-Nidorino,(use Moon Stone),Nidoking-Nidoking
+Cleffa-Cleffa,(high Friendship),Clefairy-Clefairy
+Clefairy-Clefairy,(use Moon Stone),Clefable-Clefable
+Vulpix-Vulpix,(use Fire Stone),Ninetales-Ninetales
+Vulpix-Alolan Vulpix,(use Ice Stone),Ninetales-Alolan Ninetales
+Igglybuff-Igglybuff,(high Friendship),Jigglypuff-Jigglypuff
+Jigglypuff-Jigglypuff,(use Moon Stone),Wigglytuff-Wigglytuff
+Zubat-Zubat,(Level 22),Golbat-Golbat
+Golbat-Golbat,(high Friendship),Crobat-Crobat
+Oddish-Oddish,(Level 21),Gloom-Gloom
+Gloom-Gloom,(use Leaf Stone),Vileplume-Vileplume
+Gloom-Gloom,(use Sun Stone),Bellossom-Bellossom
+Paras-Paras,(Level 24),Parasect-Parasect
+Venonat-Venonat,(Level 31),Venomoth-Venomoth
+Diglett-Diglett,(Level 26),Dugtrio-Dugtrio
+Diglett-Alolan Diglett,(Level 26),Dugtrio-Alolan Dugtrio
+Meowth-Meowth,(Level 28),Persian-Persian
+Meowth-Alolan Meowth,(high Friendship),Persian-Alolan Persian
+Meowth-Galarian Meowth,(Level 28),Perrserker-Perrserker
+Psyduck-Psyduck,(Level 33),Golduck-Golduck
+Mankey-Mankey,(Level 28),Primeape-Primeape
+Growlithe-Growlithe,(use Fire Stone),Arcanine-Arcanine
+Growlithe-Hisuian Growlithe,(use Fire Stone),Arcanine-Hisuian Arcanine
+Poliwag-Poliwag,(Level 25),Poliwhirl-Poliwhirl
+Poliwhirl-Poliwhirl,(use Water Stone),Poliwrath-Poliwrath
+Poliwhirl-Poliwhirl,(trade holding Kings Rock),Politoed-Politoed
+Abra-Abra,(Level 16),Kadabra-Kadabra
+Kadabra-Kadabra,(Trade),Alakazam-Alakazam
+Machop-Machop,(Level 28),Machoke-Machoke
+Machoke-Machoke,(Trade),Machamp-Machamp
+Bellsprout-Bellsprout,(Level 21),Weepinbell-Weepinbell
+Weepinbell-Weepinbell,(use Leaf Stone),Victreebel-Victreebel
+Tentacool-Tentacool,(Level 30),Tentacruel-Tentacruel
+Geodude-Geodude,(Level 25),Graveler-Graveler
+Graveler-Graveler,(Trade),Golem-Golem
+Geodude-Alolan Geodude,(Level 25),Graveler-Alolan Graveler
+Graveler-Alolan Graveler,(Trade),Golem-Alolan Golem
+Ponyta-Ponyta,(Level 40),Rapidash-Rapidash
+Ponyta-Galarian Ponyta,(Level 40),Rapidash-Galarian Rapidash
+Slowpoke-Slowpoke,(Level 37),Slowbro-Slowbro
+Slowpoke-Slowpoke,(trade holding Kings Rock),Slowking-Slowking
+Slowpoke-Galarian Slowpoke,(use Galarica Cuff),Slowbro-Galarian Slowbro
+Slowpoke-Galarian Slowpoke,(use Galarica Wreath),Slowking-Galarian Slowking
+Magnemite-Magnemite,(Level 30),Magneton-Magneton
+Magneton-Magneton,(level up in a Magnetic Field area),Magnezone-Magnezone
+Doduo-Doduo,(Level 31),Dodrio-Dodrio
+Seel-Seel,(Level 34),Dewgong-Dewgong
+Grimer-Grimer,(Level 38),Muk-Muk
+Grimer-Alolan Grimer,(Level 38),Muk-Alolan Muk
+Shellder-Shellder,(use Water Stone),Cloyster-Cloyster
+Gastly-Gastly,(Level 25),Haunter-Haunter
+Haunter-Haunter,(Trade),Gengar-Gengar
+Onix-Onix,(trade holding Metal Coat),Steelix-Steelix
+Drowzee-Drowzee,(Level 26),Hypno-Hypno
+Krabby-Krabby,(Level 28),Kingler-Kingler
+Voltorb-Voltorb,(Level 30),Electrode-Electrode
+Voltorb-Hisuian Voltorb,(use Leaf Stone),Electrode-Hisuian Electrode
+Exeggcute-Exeggcute,(use Leaf Stone; outside Alola),Exeggutor-Exeggutor
+Exeggcute-Exeggcute,(use Leaf Stone; in Alola),Exeggutor-Alolan Exeggutor
+Cubone-Cubone,(Level 28; outside Alola),Marowak-Marowak
+Cubone-Cubone,(Level 28; Nighttime; in Alola),Marowak-Alolan Marowak
+Tyrogue-Tyrogue,(Level 20; Attack > Defense),Hitmonlee-Hitmonlee
+Tyrogue-Tyrogue,(Level 20; Attack < Defense),Hitmonchan-Hitmonchan
+Tyrogue-Tyrogue,(Level 20; Attack = Defense),Hitmontop-Hitmontop
+Lickitung-Lickitung,(after Rollout learned),Lickilicky-Lickilicky
+Koffing-Koffing,(Level 35; outside Galar),Weezing-Weezing
+Koffing-Koffing,(Level 35; in Galar),Weezing-Galarian Weezing
+Rhyhorn-Rhyhorn,(Level 42),Rhydon-Rhydon
+Rhydon-Rhydon,(trade holding Protector),Rhyperior-Rhyperior
+Happiny-Happiny,(hold Oval Stone; Daytime),Chansey-Chansey
+Chansey-Chansey,(high Friendship),Blissey-Blissey
+Tangela-Tangela,(after Ancient Power learned),Tangrowth-Tangrowth
+Horsea-Horsea,(Level 32),Seadra-Seadra
+Seadra-Seadra,(trade holding Dragon Scale),Kingdra-Kingdra
+Goldeen-Goldeen,(Level 33),Seaking-Seaking
+Staryu-Staryu,(use Water Stone),Starmie-Starmie
+Mime Jr.-Mime Jr.,(after Mimic learned; outside Galar),Mr. Mime-Mr. Mime
+Mime Jr.-Mime Jr.,(after Mimic learned; in Galar),Mr. Mime-Galarian Mr. Mime
+Mr. Mime-Galarian Mr. Mime,(Level 42),Mr. Rime-Mr. Rime
+Scyther-Scyther,(trade holding Metal Coat),Scizor-Scizor
+Scyther-Scyther,(use Black Augurite),Kleavor-Kleavor
+Smoochum-Smoochum,(Level 30),Jynx-Jynx
+Elekid-Elekid,(Level 30),Electabuzz-Electabuzz
+Electabuzz-Electabuzz,(trade holding Electirizer),Electivire-Electivire
+Magby-Magby,(Level 30),Magmar-Magmar
+Magmar-Magmar,(trade holding Magmarizer),Magmortar-Magmortar
+Magikarp-Magikarp,(Level 20),Gyarados-Gyarados
+Eevee-Eevee,(use Water Stone),Vaporeon-Vaporeon
+Eevee-Eevee,(use Thunder Stone),Jolteon-Jolteon
+Eevee-Eevee,(use Fire Stone),Flareon-Flareon
+Eevee-Eevee,(high Friendship; Daytime),Espeon-Espeon
+Eevee-Eevee,(high Friendship; Nighttime),Umbreon-Umbreon
+Eevee-Eevee,(use Leaf Stone; or level up near a Mossy Rock),Leafeon-Leafeon
+Eevee-Eevee,(use Ice Stone; or level up near an Icy Rock),Glaceon-Glaceon
+Eevee-Eevee,(after Fairy-type move learned; and either ♥♥ Affection in Gen 6-7 or high friendship in Gen 8+),Sylveon-Sylveon
+Porygon-Porygon,(trade holding Upgrade),Porygon2-Porygon2
+Porygon2-Porygon2,(trade holding Dubious Disc),Porygon-Z-Porygon-Z
+Omanyte-Omanyte,(Level 40),Omastar-Omastar
+Kabuto-Kabuto,(Level 40),Kabutops-Kabutops
+Munchlax-Munchlax,(high Friendship),Snorlax-Snorlax
+Dratini-Dratini,(Level 30),Dragonair-Dragonair
+Dragonair-Dragonair,(Level 55),Dragonite-Dragonite
+Chikorita-Chikorita,(Level 16),Bayleef-Bayleef
+Bayleef-Bayleef,(Level 32),Meganium-Meganium
+Cyndaquil-Cyndaquil,(Level 14; or Level 17 in Legends: Arceus),Quilava-Quilava
+Quilava-Quilava,(Level 36),Typhlosion-Typhlosion
+Quilava-Quilava,(Level 36; in Legends: Arceus),Typhlosion-Hisuian Typhlosion
+Totodile-Totodile,(Level 18),Croconaw-Croconaw
+Croconaw-Croconaw,(Level 30),Feraligatr-Feraligatr
+Sentret-Sentret,(Level 15),Furret-Furret
+Hoothoot-Hoothoot,(Level 20),Noctowl-Noctowl
+Ledyba-Ledyba,(Level 18),Ledian-Ledian
+Spinarak-Spinarak,(Level 22),Ariados-Ariados
+Chinchou-Chinchou,(Level 27),Lanturn-Lanturn
+Togepi-Togepi,(high Friendship),Togetic-Togetic
+Togetic-Togetic,(use Shiny Stone),Togekiss-Togekiss
+Natu-Natu,(Level 25),Xatu-Xatu
+Mareep-Mareep,(Level 15),Flaaffy-Flaaffy
+Flaaffy-Flaaffy,(Level 30),Ampharos-Ampharos
+Azurill-Azurill,(high Friendship),Marill-Marill
+Marill-Marill,(Level 18),Azumarill-Azumarill
+Bonsly-Bonsly,(after Mimic learned),Sudowoodo-Sudowoodo
+Hoppip-Hoppip,(Level 18),Skiploom-Skiploom
+Skiploom-Skiploom,(Level 27),Jumpluff-Jumpluff
+Aipom-Aipom,(after Double Hit learned),Ambipom-Ambipom
+Sunkern-Sunkern,(use Sun Stone),Sunflora-Sunflora
+Yanma-Yanma,(after Ancient Power learned),Yanmega-Yanmega
+Wooper-Wooper,(Level 20),Quagsire-Quagsire
+Murkrow-Murkrow,(use Dusk Stone),Honchkrow-Honchkrow
+Misdreavus-Misdreavus,(use Dusk Stone),Mismagius-Mismagius
+Wynaut-Wynaut,(Level 15),Wobbuffet-Wobbuffet
+Pineco-Pineco,(Level 31),Forretress-Forretress
+Gligar-Gligar,(hold Razor Fang; Nighttime),Gliscor-Gliscor
+Snubbull-Snubbull,(Level 23),Granbull-Granbull
+Sneasel-Sneasel,(hold Razor Claw; Nighttime),Weavile-Weavile
+Sneasel-Hisuian Sneasel,(use Razor Claw; Daytime),Sneasler-Sneasler
+Teddiursa-Teddiursa,(Level 30),Ursaring-Ursaring
+Ursaring-Ursaring,(use Peat Block; under a full moon; in Legends: Arceus),Ursaluna-Ursaluna
+Slugma-Slugma,(Level 38),Magcargo-Magcargo
+Swinub-Swinub,(Level 33),Piloswine-Piloswine
+Piloswine-Piloswine,(after Ancient Power learned),Mamoswine-Mamoswine
+Remoraid-Remoraid,(Level 25),Octillery-Octillery
+Mantyke-Mantyke,(with Remoraid in party),Mantine-Mantine
+Houndour-Houndour,(Level 24),Houndoom-Houndoom
+Phanpy-Phanpy,(Level 25),Donphan-Donphan
+Larvitar-Larvitar,(Level 30),Pupitar-Pupitar
+Pupitar-Pupitar,(Level 55),Tyranitar-Tyranitar
+Stantler-Stantler,(use Psyshield Bash 20 times in Agile Style),Wyrdeer-Wyrdeer
+Treecko-Treecko,(Level 16),Grovyle-Grovyle
+Grovyle-Grovyle,(Level 36),Sceptile-Sceptile
+Torchic-Torchic,(Level 16),Combusken-Combusken
+Combusken-Combusken,(Level 36),Blaziken-Blaziken
+Mudkip-Mudkip,(Level 16),Marshtomp-Marshtomp
+Marshtomp-Marshtomp,(Level 36),Swampert-Swampert
+Poochyena-Poochyena,(Level 18),Mightyena-Mightyena
+Zigzagoon-Zigzagoon,(Level 20),Linoone-Linoone
+Zigzagoon-Galarian Zigzagoon,(Level 20),Linoone-Galarian Linoone
+Linoone-Galarian Linoone,(Level 35; Nighttime),Obstagoon-Obstagoon
+Wurmple-Wurmple,(Level 7; random based on personality),Silcoon-Silcoon
+Silcoon-Silcoon,(Level 10),Beautifly-Beautifly
+Wurmple-Wurmple,(Level 7; random based on personality),Cascoon-Cascoon
+Cascoon-Cascoon,(Level 10),Dustox-Dustox
+Lotad-Lotad,(Level 14),Lombre-Lombre
+Lombre-Lombre,(use Water Stone),Ludicolo-Ludicolo
+Seedot-Seedot,(Level 14),Nuzleaf-Nuzleaf
+Nuzleaf-Nuzleaf,(use Leaf Stone),Shiftry-Shiftry
+Taillow-Taillow,(Level 22),Swellow-Swellow
+Wingull-Wingull,(Level 25),Pelipper-Pelipper
+Ralts-Ralts,(Level 20),Kirlia-Kirlia
+Kirlia-Kirlia,(Level 30),Gardevoir-Gardevoir
+Kirlia-Kirlia,(use Dawn Stone; Male),Gallade-Gallade
+Surskit-Surskit,(Level 22),Masquerain-Masquerain
+Shroomish-Shroomish,(Level 23),Breloom-Breloom
+Slakoth-Slakoth,(Level 18),Vigoroth-Vigoroth
+Vigoroth-Vigoroth,(Level 36),Slaking-Slaking
+Nincada-Nincada,(Level 20),Ninjask-Ninjask
+Nincada-Nincada,(Level 20; empty spot in party; Pokéball in bag),Ninjask-Ninjask
+Whismur-Whismur,(Level 20),Loudred-Loudred
+Loudred-Loudred,(Level 40),Exploud-Exploud
+Makuhita-Makuhita,(Level 24),Hariyama-Hariyama
+Nosepass-Nosepass,(level up in a Magnetic Field area),Probopass-Probopass
+Skitty-Skitty,(use Moon Stone),Delcatty-Delcatty
+Aron-Aron,(Level 32),Lairon-Lairon
+Lairon-Lairon,(Level 42),Aggron-Aggron
+Meditite-Meditite,(Level 37),Medicham-Medicham
+Electrike-Electrike,(Level 26),Manectric-Manectric
+Budew-Budew,(high Friendship; Daytime),Roselia-Roselia
+Roselia-Roselia,(use Shiny Stone),Roserade-Roserade
+Gulpin-Gulpin,(Level 26),Swalot-Swalot
+Carvanha-Carvanha,(Level 30),Sharpedo-Sharpedo
+Wailmer-Wailmer,(Level 40),Wailord-Wailord
+Numel-Numel,(Level 33),Camerupt-Camerupt
+Spoink-Spoink,(Level 32),Grumpig-Grumpig
+Trapinch-Trapinch,(Level 35),Vibrava-Vibrava
+Vibrava-Vibrava,(Level 45),Flygon-Flygon
+Cacnea-Cacnea,(Level 32),Cacturne-Cacturne
+Swablu-Swablu,(Level 35),Altaria-Altaria
+Barboach-Barboach,(Level 30),Whiscash-Whiscash
+Corphish-Corphish,(Level 30),Crawdaunt-Crawdaunt
+Baltoy-Baltoy,(Level 36),Claydol-Claydol
+Lileep-Lileep,(Level 40),Cradily-Cradily
+Anorith-Anorith,(Level 40),Armaldo-Armaldo
+Feebas-Feebas,(trade holding Prism Scale; or level up with max Beauty),Milotic-Milotic
+Shuppet-Shuppet,(Level 37),Banette-Banette
+Duskull-Duskull,(Level 37),Dusclops-Dusclops
+Dusclops-Dusclops,(trade holding Reaper Cloth),Dusknoir-Dusknoir
+Chingling-Chingling,(high Friendship; Nighttime),Chimecho-Chimecho
+Snorunt-Snorunt,(Level 42),Glalie-Glalie
+Snorunt-Snorunt,(use Dawn Stone; Female),Froslass-Froslass
+Spheal-Spheal,(Level 32),Sealeo-Sealeo
+Sealeo-Sealeo,(Level 44),Walrein-Walrein
+Clamperl-Clamperl,(trade holding Deep Sea Tooth),Huntail-Huntail
+Clamperl-Clamperl,(trade holding Deep Sea Scale),Gorebyss-Gorebyss
+Bagon-Bagon,(Level 30),Shelgon-Shelgon
+Shelgon-Shelgon,(Level 50),Salamence-Salamence
+Beldum-Beldum,(Level 20),Metang-Metang
+Metang-Metang,(Level 45),Metagross-Metagross
+Turtwig-Turtwig,(Level 18),Grotle-Grotle
+Grotle-Grotle,(Level 32),Torterra-Torterra
+Chimchar-Chimchar,(Level 14),Monferno-Monferno
+Monferno-Monferno,(Level 36),Infernape-Infernape
+Piplup-Piplup,(Level 16),Prinplup-Prinplup
+Prinplup-Prinplup,(Level 36),Empoleon-Empoleon
+Starly-Starly,(Level 14),Staravia-Staravia
+Staravia-Staravia,(Level 34),Staraptor-Staraptor
+Bidoof-Bidoof,(Level 15),Bibarel-Bibarel
+Kricketot-Kricketot,(Level 10),Kricketune-Kricketune
+Shinx-Shinx,(Level 15),Luxio-Luxio
+Luxio-Luxio,(Level 30),Luxray-Luxray
+Cranidos-Cranidos,(Level 30),Rampardos-Rampardos
+Shieldon-Shieldon,(Level 30),Bastiodon-Bastiodon
+Burmy-Plant Cloak,(Level 20; Female; in grass),Wormadam-Plant Cloak
+Burmy-Sandy Cloak,(Level 20; Female; in caves),Wormadam-Sandy Cloak
+Burmy-Trash Cloak,(Level 20; Female; in buildings),Wormadam-Trash Cloak
+Combee-Combee,(Level 21; Female),Vespiquen-Vespiquen
+Buizel-Buizel,(Level 26),Floatzel-Floatzel
+Cherubi-Cherubi,(Level 25),Cherrim-Cherrim
+Shellos-Shellos,(Level 30),Gastrodon-Gastrodon
+Drifloon-Drifloon,(Level 28),Drifblim-Drifblim
+Buneary-Buneary,(high Friendship),Lopunny-Lopunny
+Glameow-Glameow,(Level 38),Purugly-Purugly
+Stunky-Stunky,(Level 34),Skuntank-Skuntank
+Bronzor-Bronzor,(Level 33),Bronzong-Bronzong
+Gible-Gible,(Level 24),Gabite-Gabite
+Gabite-Gabite,(Level 48),Garchomp-Garchomp
+Riolu-Riolu,(high Friendship; Daytime),Lucario-Lucario
+Hippopotas-Hippopotas,(Level 34),Hippowdon-Hippowdon
+Skorupi-Skorupi,(Level 40),Drapion-Drapion
+Croagunk-Croagunk,(Level 37),Toxicroak-Toxicroak
+Finneon-Finneon,(Level 31),Lumineon-Lumineon
+Snover-Snover,(Level 40),Abomasnow-Abomasnow
+Snivy-Snivy,(Level 17),Servine-Servine
+Servine-Servine,(Level 36),Serperior-Serperior
+Tepig-Tepig,(Level 17),Pignite-Pignite
+Pignite-Pignite,(Level 36),Emboar-Emboar
+Oshawott-Oshawott,(Level 17),Dewott-Dewott
+Dewott-Dewott,(Level 36),Samurott-Samurott
+Dewott-Dewott,(Level 36; in Legends: Arceus),Samurott-Hisuian Samurott
+Patrat-Patrat,(Level 20),Watchog-Watchog
+Lillipup-Lillipup,(Level 16),Herdier-Herdier
+Herdier-Herdier,(Level 32),Stoutland-Stoutland
+Purrloin-Purrloin,(Level 20),Liepard-Liepard
+Pansage-Pansage,(use Leaf Stone),Simisage-Simisage
+Pansear-Pansear,(use Fire Stone),Simisear-Simisear
+Panpour-Panpour,(use Water Stone),Simipour-Simipour
+Munna-Munna,(use Moon Stone),Musharna-Musharna
+Pidove-Pidove,(Level 21),Tranquill-Tranquill
+Tranquill-Tranquill,(Level 32),Unfezant-Unfezant
+Blitzle-Blitzle,(Level 27),Zebstrika-Zebstrika
+Roggenrola-Roggenrola,(Level 25),Boldore-Boldore
+Boldore-Boldore,(Trade),Gigalith-Gigalith
+Woobat-Woobat,(high Friendship),Swoobat-Swoobat
+Drilbur-Drilbur,(Level 31),Excadrill-Excadrill
+Timburr-Timburr,(Level 25),Gurdurr-Gurdurr
+Gurdurr-Gurdurr,(Trade),Conkeldurr-Conkeldurr
+Tympole-Tympole,(Level 25),Palpitoad-Palpitoad
+Palpitoad-Palpitoad,(Level 36),Seismitoad-Seismitoad
+Sewaddle-Sewaddle,(Level 20),Swadloon-Swadloon
+Swadloon-Swadloon,(high Friendship),Leavanny-Leavanny
+Venipede-Venipede,(Level 22),Whirlipede-Whirlipede
+Whirlipede-Whirlipede,(Level 30),Scolipede-Scolipede
+Cottonee-Cottonee,(use Sun Stone),Whimsicott-Whimsicott
+Petilil-Petilil,(use Sun Stone),Lilligant-Lilligant
+Petilil-Petilil,(use Sun Stone; in Legends: Arceus),Lilligant-Hisuian Lilligant
+Sandile-Sandile,(Level 29),Krokorok-Krokorok
+Krokorok-Krokorok,(Level 40),Krookodile-Krookodile
+Darumaka-Darumaka,(Level 35),Darmanitan-Standard Mode
+Darumaka-Galarian Darumaka,(use Ice Stone),Darmanitan-Galarian Standard Mode
+Dwebble-Dwebble,(Level 34),Crustle-Crustle
+Scraggy-Scraggy,(Level 39),Scrafty-Scrafty
+Yamask-Yamask,(Level 34),Cofagrigus-Cofagrigus
+Yamask-Galarian Yamask,(near Dusty Bowl),Runerigus-Runerigus
+Tirtouga-Tirtouga,(Level 37),Carracosta-Carracosta
+Archen-Archen,(Level 37),Archeops-Archeops
+Trubbish-Trubbish,(Level 36),Garbodor-Garbodor
+Zorua-Zorua,(Level 30),Zoroark-Zoroark
+Zorua-Hisuian Zorua,(Level 30; in Legends: Arceus),Zoroark-Hisuian Zoroark
+Minccino-Minccino,(use Shiny Stone),Cinccino-Cinccino
+Gothita-Gothita,(Level 32),Gothorita-Gothorita
+Gothorita-Gothorita,(Level 41),Gothitelle-Gothitelle
+Solosis-Solosis,(Level 32),Duosion-Duosion
+Duosion-Duosion,(Level 41),Reuniclus-Reuniclus
+Ducklett-Ducklett,(Level 35),Swanna-Swanna
+Vanillite-Vanillite,(Level 35),Vanillish-Vanillish
+Vanillish-Vanillish,(Level 47),Vanilluxe-Vanilluxe
+Deerling-Deerling,(Level 34),Sawsbuck-Sawsbuck
+Karrablast-Karrablast,(Trade with Shelmet),Escavalier-Escavalier
+Foongus-Foongus,(Level 39),Amoonguss-Amoonguss
+Frillish-Frillish,(Level 40),Jellicent-Jellicent
+Joltik-Joltik,(Level 36),Galvantula-Galvantula
+Ferroseed-Ferroseed,(Level 40),Ferrothorn-Ferrothorn
+Klink-Klink,(Level 38),Klang-Klang
+Klang-Klang,(Level 49),Klinklang-Klinklang
+Tynamo-Tynamo,(Level 39),Eelektrik-Eelektrik
+Eelektrik-Eelektrik,(use Thunder Stone),Eelektross-Eelektross
+Elgyem-Elgyem,(Level 42),Beheeyem-Beheeyem
+Litwick-Litwick,(Level 41),Lampent-Lampent
+Lampent-Lampent,(use Dusk Stone),Chandelure-Chandelure
+Axew-Axew,(Level 38),Fraxure-Fraxure
+Fraxure-Fraxure,(Level 48),Haxorus-Haxorus
+Cubchoo-Cubchoo,(Level 37),Beartic-Beartic
+Shelmet-Shelmet,(Trade with Karrablast),Accelgor-Accelgor
+Mienfoo-Mienfoo,(Level 50),Mienshao-Mienshao
+Golett-Golett,(Level 43),Golurk-Golurk
+Pawniard-Pawniard,(Level 52),Bisharp-Bisharp
+Rufflet-Rufflet,(Level 54),Braviary-Braviary
+Rufflet-Rufflet,(Level 54; in Legends: Arceus),Braviary-Hisuian Braviary
+Vullaby-Vullaby,(Level 54),Mandibuzz-Mandibuzz
+Deino-Deino,(Level 50),Zweilous-Zweilous
+Zweilous-Zweilous,(Level 64),Hydreigon-Hydreigon
+Larvesta-Larvesta,(Level 59),Volcarona-Volcarona
+Chespin-Chespin,(Level 16),Quilladin-Quilladin
+Quilladin-Quilladin,(Level 36),Chesnaught-Chesnaught
+Fennekin-Fennekin,(Level 16),Braixen-Braixen
+Braixen-Braixen,(Level 36),Delphox-Delphox
+Froakie-Froakie,(Level 16),Frogadier-Frogadier
+Frogadier-Frogadier,(Level 36),Greninja-Greninja
+Bunnelby-Bunnelby,(Level 20),Diggersby-Diggersby
+Fletchling-Fletchling,(Level 17),Fletchinder-Fletchinder
+Fletchinder-Fletchinder,(Level 35),Talonflame-Talonflame
+Scatterbug-Scatterbug,(Level 9),Spewpa-Spewpa
+Spewpa-Spewpa,(Level 12),Vivillon-Vivillon
+Litleo-Litleo,(Level 35),Pyroar-Pyroar
+Flabébé-Flabébé,(Level 19),Floette-Floette
+Floette-Floette,(use Shiny Stone),Florges-Florges
+Skiddo-Skiddo,(Level 32),Gogoat-Gogoat
+Pancham-Pancham,(Level 32; Dark type Pokémon in party),Pangoro-Pangoro
+Espurr-Espurr,(Level 25; Male),Meowstic-Male
+Espurr-Espurr,(Level 25; Female),Meowstic-Female
+Honedge-Honedge,(Level 35),Doublade-Doublade
+Doublade-Doublade,(use Dusk Stone),Aegislash-Blade Forme
+Doublade-Doublade,(use Dusk Stone),Aegislash-Shield Forme
+Spritzee-Spritzee,(trade holding Sachet),Aromatisse-Aromatisse
+Swirlix-Swirlix,(trade holding Whipped Dream),Slurpuff-Slurpuff
+Inkay-Inkay,(Level 30; holding console upside down),Malamar-Malamar
+Binacle-Binacle,(Level 39),Barbaracle-Barbaracle
+Skrelp-Skrelp,(Level 48),Dragalge-Dragalge
+Clauncher-Clauncher,(Level 37),Clawitzer-Clawitzer
+Helioptile-Helioptile,(use Sun Stone),Heliolisk-Heliolisk
+Tyrunt-Tyrunt,(Level 39; Daytime),Tyrantrum-Tyrantrum
+Amaura-Amaura,(Level 39; Nighttime),Aurorus-Aurorus
+Goomy-Goomy,(Level 40),Sliggoo-Sliggoo
+Sliggoo-Sliggoo,(Level 50; during rain),Goodra-Goodra
+Goomy-Goomy,(Level 40; in Legends: Arceus),Sliggoo-Hisuian Sliggoo
+Sliggoo-Hisuian Sliggoo,(Level 50; during rain; in Legends: Arceus),Goodra-Hisuian Goodra
+Phantump-Phantump,(Trade),Trevenant-Trevenant
+Pumpkaboo-Average Size,(Trade),Gourgeist-Average Size
+Bergmite-Bergmite,(Level 37),Avalugg-Avalugg
+Bergmite-Bergmite,(Level 37; in Legends: Arceus),Avalugg-Hisuian Avalugg
+Noibat-Noibat,(Level 48),Noivern-Noivern
+Rowlet-Rowlet,(Level 17),Dartrix-Dartrix
+Dartrix-Dartrix,(Level 34),Decidueye-Decidueye
+Dartrix-Dartrix,(Level 36; in Legends: Arceus),Decidueye-Hisuian Decidueye
+Litten-Litten,(Level 17),Torracat-Torracat
+Torracat-Torracat,(Level 34),Incineroar-Incineroar
+Popplio-Popplio,(Level 17),Brionne-Brionne
+Brionne-Brionne,(Level 34),Primarina-Primarina
+Pikipek-Pikipek,(Level 14),Trumbeak-Trumbeak
+Trumbeak-Trumbeak,(Level 28),Toucannon-Toucannon
+Yungoos-Yungoos,(Level 20; Daytime),Gumshoos-Gumshoos
+Grubbin-Grubbin,(Level 20),Charjabug-Charjabug
+Charjabug-Charjabug,(use Thunder Stone; in Gen 8; or level up in a Magnetic Field area),Vikavolt-Vikavolt
+Crabrawler-Crabrawler,(at Mount Lanakila),Crabominable-Crabominable
+Cutiefly-Cutiefly,(Level 25),Ribombee-Ribombee
+Rockruff-Rockruff,(Level 25; Daytime),Lycanroc-Midday Form
+Rockruff-Rockruff,(Level 25; Nighttime),Lycanroc-Midnight Form
+Rockruff-Own Tempo Rockruff,(Level 25; Dusk),Lycanroc-Dusk Form
+Mareanie-Mareanie,(Level 38),Toxapex-Toxapex
+Mudbray-Mudbray,(Level 30),Mudsdale-Mudsdale
+Dewpider-Dewpider,(Level 22),Araquanid-Araquanid
+Fomantis-Fomantis,(Level 34; Daytime),Lurantis-Lurantis
+Morelull-Morelull,(Level 24),Shiinotic-Shiinotic
+Salandit-Salandit,(Level 33; Female),Salazzle-Salazzle
+Stufful-Stufful,(Level 27),Bewear-Bewear
+Bounsweet-Bounsweet,(Level 18),Steenee-Steenee
+Steenee-Steenee,(after Stomp learned),Tsareena-Tsareena
+Wimpod-Wimpod,(Level 30),Golisopod-Golisopod
+Sandygast-Sandygast,(Level 42),Palossand-Palossand
+Type: Null-Type: Null,(high Friendship),Silvally-Silvally
+Jangmo-o-Jangmo-o,(Level 35),Hakamo-o-Hakamo-o
+Hakamo-o-Hakamo-o,(Level 45),Kommo-o-Kommo-o
+Cosmog-Cosmog,(Level 43),Cosmoem-Cosmoem
+Cosmoem-Cosmoem,(Level 53; in Pokémon Sun or Ultra Sun),Solgaleo-Solgaleo
+Cosmoem-Cosmoem,(Level 53; in Pokémon Moon or Ultra Moon),Lunala-Lunala
+Poipole-Poipole,(after Dragon Pulse learned),Naganadel-Naganadel
+Meltan-Meltan,(Pokémon GO only; 400 Meltan Candies),Melmetal-Melmetal
+Grookey-Grookey,(Level 16),Thwackey-Thwackey
+Thwackey-Thwackey,(Level 35),Rillaboom-Rillaboom
+Scorbunny-Scorbunny,(Level 16),Raboot-Raboot
+Raboot-Raboot,(Level 35),Cinderace-Cinderace
+Sobble-Sobble,(Level 16),Drizzile-Drizzile
+Drizzile-Drizzile,(Level 35),Inteleon-Inteleon
+Blipbug-Blipbug,(Level 10),Dottler-Dottler
+Dottler-Dottler,(Level 30),Orbeetle-Orbeetle
+Rookidee-Rookidee,(Level 18),Corvisquire-Corvisquire
+Corvisquire-Corvisquire,(Level 38),Corviknight-Corviknight
+Skwovet-Skwovet,(Level 24),Greedent-Greedent
+Nickit-Nickit,(Level 18),Thievul-Thievul
+Wooloo-Wooloo,(Level 24),Dubwool-Dubwool
+Chewtle-Chewtle,(Level 22),Drednaw-Drednaw
+Yamper-Yamper,(Level 25),Boltund-Boltund
+Gossifleur-Gossifleur,(Level 20),Eldegoss-Eldegoss
+Sizzlipede-Sizzlipede,(Level 28),Centiskorch-Centiskorch
+Rolycoly-Rolycoly,(Level 18),Carkol-Carkol
+Carkol-Carkol,(Level 34),Coalossal-Coalossal
+Arrokuda-Arrokuda,(Level 26),Barraskewda-Barraskewda
+Milcery-Milcery,(spin around holding Sweet),Alcremie-Alcremie
+Applin-Applin,(use Tart Apple),Flapple-Flapple
+Applin-Applin,(use Sweet Apple),Appletun-Appletun
+Farfetch'd-Galarian Farfetch'd,(achieve 3 critical hits in one battle),Sirfetch'd-Sirfetch'd
+Corsola-Galarian Corsola,(Level 38),Cursola-Cursola
+Impidimp-Impidimp,(Level 32),Morgrem-Morgrem
+Morgrem-Morgrem,(Level 42),Grimmsnarl-Grimmsnarl
+Hatenna-Hatenna,(Level 32),Hattrem-Hattrem
+Hattrem-Hattrem,(Level 42),Hatterene-Hatterene
+Cufant-Cufant,(Level 34),Copperajah-Copperajah
+Toxel-Toxel,(Level 30; with an amped Nature),Toxtricity-Amped Form
+Toxel-Toxel,(Level 30; with a low key Nature),Toxtricity-Low Key Form
+Silicobra-Silicobra,(Level 36),Sandaconda-Sandaconda
+Sinistea-Sinistea,(use Cracked Pot),Polteageist-Polteageist
+Snom-Snom,(high Friendship; Nighttime),Frosmoth-Frosmoth
+Clobbopus-Clobbopus,(after Taunt learned),Grapploct-Grapploct
+Dreepy-Dreepy,(Level 50),Drakloak-Drakloak
+Drakloak-Drakloak,(Level 60),Dragapult-Dragapult
+Kubfu-Kubfu,(in Tower of Darkness),Urshifu-Single Strike Style
+Kubfu-Kubfu,(in Tower of Water),Urshifu-Rapid Strike Style
+Basculin-White-Striped Form,(Male; receive 294 recoil damage in battle),Basculegion-Male
+Basculin-White-Striped Form,(Female; receive 294 recoil damage in battle),Basculegion-Female
+Qwilfish-Hisuian Qwilfish,(use Barb Barrage 20 times in Strong Style),Overqwil-Overqwil

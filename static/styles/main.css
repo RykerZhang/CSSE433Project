@@ -12,13 +12,18 @@ body{
     width: 100vw;
     text-align: center;
 }
+.con{
+    width: 98vw;
+}
 .picContainer{
-    /* margin-inline: 0.5vw; */
+    margin-inline: 1vw;
     margin-top:67px;
     text-align: center;
-    width:12vw;
+    width:14vw;
 }
 
 .picContainer > img{
  height: 20vh;
+ /* width: 11vw; */
 }
+

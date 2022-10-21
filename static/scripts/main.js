@@ -2,6 +2,7 @@ var pokemondb = pokemondb || {};
 pokemondb.indexPageController = null;
 pokemondb.mainPageController = null;
 pokemondb.db = null;
+
 //From https://stackoverflow.com/questions/494143/creating-a-new-dom-element-from-an-html-string-using-built-in-dom-methods-or-pro/35385518#35385518
 function htmlToElement(html) {
   var template = document.createElement("template");
@@ -44,6 +45,9 @@ pokemondb.mainPageController = class {
     document.querySelector("#homeButton").onclick = (event) => {
       window.location.href = "/main";
     };
+    document.querySelector("#logOutButton").onclick = (event) => {
+      this.logOut();
+    };
   }
   init() {
     fetch("/getall", { method: "GET" })
@@ -55,6 +59,10 @@ pokemondb.mainPageController = class {
           document.querySelector("#main").append(card);
         }
       });
+  }
+  logOut() {
+    // TODO: add log out
+    window.location.href = "/index";
   }
   create_card(data) {
     return htmlToElement(` <span class="picContainer d-inline-block">
