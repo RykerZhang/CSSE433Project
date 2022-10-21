@@ -11,7 +11,6 @@ from flask_pymongo import PyMongo
 import os
 
 # import Router as router
-
 app = Flask(__name__)
 # MClient is for mongodb
 mclient = MongoClient("mongodb://433-34.csse.rose-hulman.edu:27017")
