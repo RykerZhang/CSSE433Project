@@ -36,7 +36,23 @@ pokemondb.indexPageController = class {
 };
 
 pokemondb.mainPageController = class {
-  constructor() {}
+  constructor() {
+    this.init();
+  }
+  init() {
+    fetch("/getall", { method: "GET" })
+      .then((respnse) => respnse.json())
+      .then((data) => {
+        console.log(data);
+        for (let i = 0; i < Object.keys(data).length; i++) {}
+        for (var key in Object.keys(data)) {
+          var pokemon = data["#" + key];
+          console.log(key);
+          console.log(pokemon);
+          console.log(typeof pokemon);
+        }
+      });
+  }
 };
 
 pokemondb.initialize = function () {

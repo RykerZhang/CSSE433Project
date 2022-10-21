@@ -18,7 +18,7 @@ mclient = MongoClient("mongodb://433-34.csse.rose-hulman.edu:27017")
 Iclient = Client()
 Iclient.connect('433-34.csse.rose-hulman.edu', 10800)
 
-db = mclient['pokemon_test']
+db = mclient['pokemon']
 
 # Apach Ignite part
 # create a attribute number map for storing the sequence of attributes. Key is the attribute name, value is No.
@@ -73,7 +73,7 @@ def mainPage():
 # get all pokemons
 
 
-@app.route('/getall', methods=["POST"])
+@app.route('/getall', methods=["GET"])
 def allPokemon():
     cursor = db.pokedex.find()
     re = {}
