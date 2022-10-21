@@ -1,6 +1,3 @@
-from crypt import methods
-from tabnanny import check
-from urllib import response
 from pymongo import MongoClient
 from pyignite import Client
 import pymongo
@@ -116,8 +113,6 @@ def insertPokemon(id=0, name=None, type_1="-", type_2="-", link=None, species=No
 @ app.route('/HomeSearch/<InfoType>/<info>', methods=["GET"])
 # if the result is not found, it will return "No such result". If the result is found, it will return the result of the find_one function.
 def Search(InfoType, info):
-    print(InfoType)
-    print(info)
     if InfoType == "type":
         output = db.pokedex.find({"$or": [{"type_1": info}, {"type_2": info}]})
     else:
