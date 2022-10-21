@@ -13,6 +13,7 @@ body{
 }
 .picContainer{
     margin-inline: 15px;
+    text-align: center;
 }
 
 .picContainer > img{

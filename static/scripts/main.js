@@ -43,15 +43,19 @@ pokemondb.mainPageController = class {
     fetch("/getall", { method: "GET" })
       .then((respnse) => respnse.json())
       .then((data) => {
-        console.log(data);
-        for (let i = 0; i < Object.keys(data).length; i++) {}
-        for (var key in Object.keys(data)) {
-          var pokemon = data["#" + key];
-          console.log(key);
-          console.log(pokemon);
-          console.log(typeof pokemon);
+        for (var key in data) {
+          var pokemon = data[key];
+          pokemon["name"] = pokemon["name-form"].split("-")[0];
+          var card = this.create_card(pokemon);
+          document.querySelector("#main").append(card);
         }
       });
+  }
+  create_card(data) {
+    return htmlToElement(` <span class="picContainer d-inline-block">
+            <img src="${data.img}">
+            <p class=caption>${data["name"]}</p>
+        </span>`);
   }
 };
 
