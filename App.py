@@ -161,59 +161,5 @@ def Del(name='a'):
             else:
                 return 'deletion failed'
 
-
-# if the result is not found, it will return "No such result". If the result is found, it will return the result of the find_one function.
-
-
-def Mfind(InfoType, info):
-    output = db.pokedex.find_one({InfoType: info})
-    if (output == None):
-        return "No such result. Please search again"
-    else:
-        return output
-
-
-# Apach Ignite part
-# create a attribute number map for storing the sequence of attributes. Key is the attribute name, value is No.
-attributeNo = Iclient.get_or_create_cache("attributeNo")
-# fill the attributeNo map.
-attributeArray = ["id_nb", "name", "type_1", "type_2", "link", "species", "height", "weight", "abilities", "training_catch_rate", "breeding_gender_male",
-                  "breeding_gender_male", "breeding_gender_female", "stats_hp", "stats_attack", "stats_defense", "stats_sp_atk", "stats_sp_def", "stats_speed", "stats_total"]
-for i in range(len(attributeArray)):
-    attributeNo.put(i, attributeArray[i])
-# create a map for pokemon. Key is the id (without #) and the value is an array of attributes.
-Ipokedex = Iclient.get_or_create_cache("Ipokedex")
-
-# the create function for Ipokedex
-
-
-def Iinsert(id=0, name=None, type_1=None, type_2=None, link=None, species=None, height=0, weight=0, abilities=None, training_catch_rate=0, training_base_exp=0, training_growth_rate=0, breeding_gender_male=0, breeding_gender_female=0, stats_hp=0, stats_attack=0, stats_defense=0, stats_sp_atk=0, stats_sp_def=0, stats_speed=0, stats_total=0):
-    # check if id already exist
-    checkoutput = Ipokedex.get(id)
-    if (checkoutput != None):
-        return "id already exist."
-    Ipokedex.put(id, [name, type_1, type_2, link, species, height, weight, abilities, training_catch_rate, training_base_exp, training_growth_rate,
-                 breeding_gender_male, breeding_gender_female, stats_hp, stats_attack, stats_defense, stats_sp_atk, stats_sp_def, stats_speed, stats_total])
-
-# the delete function for Ipokedex using id
-
-
-def Idelete(id):
-    checkoutput = Ipokedex.get(id)
-    if (checkoutput != None):
-        Ipokedex.remove_key(id)
-
-# the update function for Ipokedex
-
-
-def Iupdate(id=0, name=None, type_1=None, type_2=None, link=None, species=None, height=0, weight=0, abilities=None, training_catch_rate=0, training_base_exp=0, training_growth_rate=0, breeding_gender_male=0, breeding_gender_female=0, stats_hp=0, stats_attack=0, stats_defense=0, stats_sp_atk=0, stats_sp_def=0, stats_speed=0, stats_total=0):
-    checkoutput = Ipokedex.get(id)
-    if (checkoutput != None):
-        return "id already exist"
-    else:
-        Ipokedex.put(id, [name, type_1, type_2, link, species, height, weight, abilities, training_catch_rate, training_base_exp, training_growth_rate,
-                     breeding_gender_male, breeding_gender_female, stats_hp, stats_attack, stats_defense, stats_sp_atk, stats_sp_def, stats_speed, stats_total])
-
-
 if __name__ == "__main__":
     app.run()
