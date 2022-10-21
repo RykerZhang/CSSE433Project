@@ -171,8 +171,8 @@ def Update(id=0, name=None, type_1="-", type_2="-", link=None, species=None, hei
 @ app.route('/Delete/<id>', methods=["DELETE"])
 def Del(name='0'):
     if request.method == "DELETE":
-        if (id == None):
-            return 'id can not be null'
+        if (name == None):
+            return 'name can not be null'
         else:
             # Ignite delete
             id = INameAndId.get(name)
