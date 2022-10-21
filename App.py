@@ -78,7 +78,7 @@ def allPokemon():
 
 
 @app.route('/Insert/<id>/<name>/<type_1>/<type_2>', methods=["GET", "POST"])
-def insertPokemon(id=0, name=None, type_1="-", type_2="-", link=None, species=None, height=0, weight=0, abilities=None, training_catch_rate=0, training_base_exp=0, training_growth_rate=0, breeding_gender_male=0, breeding_gender_female=0, stats_hp=0, stats_attack=0, stats_defense=0, stats_sp_atk=0, stats_sp_def=0, stats_speed=0, stats_total=0, imageurl=""):
+def insertPokemon(id=0, name=None, type_1="-", type_2="-", link=None, species=None, height=0, weight=0, abilities=None, training_catch_rate=0, training_base_exp=0, training_growth_rate=0, breeding_gender_male=0, breeding_gender_female=0, stats_hp=0, stats_attack=0, stats_defense=0, stats_sp_atk=0, stats_sp_def=0, stats_speed=0, stats_total=0, img=""):
     if request.method == "GET":
         # Ignite insert
         checkoutput = Ipokedex.get(id)
@@ -144,7 +144,7 @@ def detailPage(id):
 
 
 @app.route('/Update', methods=["GET", "POST"])
-def Update(id=0, name=None, type_1="-", type_2="-", link=None, species=None, height=0, weight=0, abilities=None, training_catch_rate=0, training_base_exp=0, training_growth_rate=0, breeding_gender_male=0, breeding_gender_female=0, stats_hp=0, stats_attack=0, stats_defense=0, stats_sp_atk=0, stats_sp_def=0, stats_speed=0, stats_total=0, imageurl=""):
+def Update(id=0, name=None, type_1="-", type_2="-", link=None, species=None, height=0, weight=0, abilities=None, training_catch_rate=0, training_base_exp=0, training_growth_rate=0, breeding_gender_male=0, breeding_gender_female=0, stats_hp=0, stats_attack=0, stats_defense=0, stats_sp_atk=0, stats_sp_def=0, stats_speed=0, stats_total=0, img=""):
     # Mongodb Update
     if (request.method == "POST"):
         db.Book.update_one(
