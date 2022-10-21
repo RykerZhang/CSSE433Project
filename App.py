@@ -28,6 +28,7 @@ for i in range(len(attributeArray)):
     attributeNo.put(i, attributeArray[i])
 # create a map for pokemon. Key is the id (without #) and the value is an array of attributes.
 Ipokedex = Iclient.get_or_create_cache("Ipokedex")
+INameAndId = Iclient.get_or_create_cache("INameAndId")
 
 app.config['IMAGE_FOLDER'] = os.path.join('static', 'images')
 app.config['CSS_FOLDER'] = os.path.join('static', 'styles')
@@ -81,8 +82,10 @@ def insertPokemon(id=0, name=None, type_1="-", type_2="-", link=None, species=No
         checkoutput = Ipokedex.get(id)
         if (checkoutput != None):
             return "id already exist."
+        INameAndId.put(name, id)
         Ipokedex.put(id, [name, type_1, type_2, link, species, height, weight, abilities, training_catch_rate, training_base_exp, training_growth_rate,
                      breeding_gender_male, breeding_gender_female, stats_hp, stats_attack, stats_defense, stats_sp_atk, stats_sp_def, stats_speed, stats_total, img])
+        
         # Mongodb insert
         data = {
             'id': id,
@@ -164,6 +167,7 @@ def Update(id=0, name=None, type_1="-", type_2="-", link=None, species=None, hei
             Ipokedex.remove_key(id)
             Ipokedex.put(id, [name, type_1, type_2, link, species, height, weight, abilities, training_catch_rate, training_base_exp, training_growth_rate,
                          breeding_gender_male, breeding_gender_female, stats_hp, stats_attack, stats_defense, stats_sp_atk, stats_sp_def, stats_speed, stats_total, img])
+            Ipokedex.put(name, id)
         else:
             return "No such Id"
 
@@ -175,9 +179,11 @@ def Del(name='a'):
             return 'name can not be null'
         else:
             # Ignite delete
+            id = INameAndId.get(name)
             checkoutput = Ipokedex.get(id)
             if (checkoutput != None):
                 Ipokedex.remove_key(id)
+                INameAndId.remove_key(name)
             # Mongodb delete
             result = db.pokedex.delete_many({'name-form': name})
             if (result.deleted_count >= 1):
