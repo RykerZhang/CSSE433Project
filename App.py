@@ -86,19 +86,19 @@ def insertPokemon(id=0, name=None, type_1="-", type_2="-", link=None, species=No
         # Mongodb insert
         data = {
             'id': id,
-            'name': name,
+            'name-form': name,
             'type_1': type_1,
             'type_2': type_2,
             'data_species': species,
             'img': img
         }
         i = db.pokedex.find({'id': id})
-        n = db.pokedex.find({'name': name})
+        n = db.pokedex.find({'name-form': name})
         if len(list(n)) > 0 or len(list(i)):
             print('already exists')
             return 'Insert failed, name already exists'
         db.pokedex.insert_one(data)
-        cursor = db.pokedex.find({'name': name})
+        cursor = db.pokedex.find({'name-form': name})
         x = {}
         for i in cursor:
             x.update(i)
@@ -147,14 +147,14 @@ def Update(id=0, name=None, type_1="-", type_2="-", link=None, species=None, hei
     if (request.method == "POST"):
         db.pokedex.update_one(
             {"id": id},
-            {"$set": {"name": name,
+            {"$set": {"name-form": name,
                       "type_1": type_1,
                       "type_2": type_2,
                       "data_species": species,
                       "img": img}
              }
         )
-        n = db.pokedex.find({'name': name})
+        n = db.pokedex.find({'name-form': name})
         if len(list(n) > 0):
             print('already exists')
             return 'Insert failed, name already exists'
