@@ -22,7 +22,7 @@ db = mclient['pokemon']
 # create a attribute number map for storing the sequence of attributes. Key is the attribute name, value is No.
 attributeNo = Iclient.get_or_create_cache("attributeNo")
 # fill the attributeNo map.
-attributeArray = ["id", "name", "type_1", "type_2", "link", "species", "height", "weight", "abilities", "training_catch_rate", "breeding_gender_male",
+attributeArray = ["id", "name-form", "type_1", "type_2", "link", "data_species", "height", "weight", "abilities", "training_catch_rate", "breeding_gender_male",
                   "breeding_gender_male", "breeding_gender_female", "stats_hp", "stats_attack", "stats_defense", "stats_sp_atk", "stats_sp_def", "stats_speed", "stats_total", "img"]
 for i in range(len(attributeArray)):
     attributeNo.put(i, attributeArray[i])
@@ -154,10 +154,6 @@ def Update(id=0, name=None, type_1="-", type_2="-", link=None, species=None, hei
                       "img": img}
              }
         )
-        n = db.pokedex.find({'name-form': name})
-        if len(list(n) > 0):
-            print('already exists')
-            return 'Insert failed, name already exists'
     # ignite update
         checkoutput = Ipokedex.get(id)
         if (checkoutput != None):
@@ -168,20 +164,20 @@ def Update(id=0, name=None, type_1="-", type_2="-", link=None, species=None, hei
             return "No such Id"
 
 
-@ app.route('/Delete/<name>', methods=["DELETE"])
-def Del(name='a'):
+@ app.route('/Delete/<id>', methods=["DELETE"])
+def Del(id='0'):
     if request.method == "DELETE":
-        if (name == None):
-            return 'name can not be null'
+        if (id == None):
+            return 'id can not be null'
         else:
             # Ignite delete
             checkoutput = Ipokedex.get(id)
             if (checkoutput != None):
                 Ipokedex.remove_key(id)
             # Mongodb delete
-            result = db.pokedex.delete_many({'name-form': name})
+            result = db.pokedex.delete_many({'id': id})
             if (result.deleted_count >= 1):
-                print(name+' deleted')
+                print(id+' deleted')
                 return 'deletion succeed'
             else:
                 return 'deletion failed'
