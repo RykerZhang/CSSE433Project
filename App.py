@@ -89,7 +89,7 @@ def insertPokemon(id=0, name=None, type_1="-", type_2="-", link=None, species=No
             'name': name,
             'type_1': type_1,
             'type_2': type_2,
-            'species': species,
+            'data_species': species,
             'img': img
         }
         i = db.pokedex.find({'id': id})
@@ -150,7 +150,7 @@ def Update(id=0, name=None, type_1="-", type_2="-", link=None, species=None, hei
             {"$set": {"name": name,
                       "type_1": type_1,
                       "type_2": type_2,
-                      "species": species,
+                      "data_species": species,
                       "img": img}
              }
         )
@@ -179,7 +179,7 @@ def Del(name='a'):
             if (checkoutput != None):
                 Ipokedex.remove_key(id)
             # Mongodb delete
-            result = db.pokedex.delete_many({'name': name})
+            result = db.pokedex.delete_many({'name-form': name})
             if (result.deleted_count >= 1):
                 print(name+' deleted')
                 return 'deletion succeed'
