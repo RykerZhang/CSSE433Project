@@ -41,14 +41,13 @@ pokemondb.mainPageController = class {
     document.querySelector("#homeButton").onclick = (event) =>{
       window.location.href="/main"
     }
-    document.querySelector("#selectSearch").onclick = (event) => {
-      console.log($(this).val());
-      console.log(1);
-    };
     document.querySelector("#searchBtn").onclick = (event) => {
       var InfoType = document.querySelector("#selectSearch").value;
       var info = document.querySelector("#condition").value;
       this.search(InfoType, info);
+    };
+    document.querySelector("#refreshButton").onclick = (event) => {
+      this.init();
     };
   }
   init() {
@@ -71,8 +70,6 @@ pokemondb.mainPageController = class {
         </span>`);
   }
   search(InfoType, info) {
-    console.log(InfoType);
-    console.log(info);
     var node = document.querySelector("#main");
     while (node.firstChild) {
       node.removeChild(node.firstChild);
@@ -83,10 +80,7 @@ pokemondb.mainPageController = class {
       fetch("/HomeSearch/" + InfoType + "/" + info, { method: "GET" })
         .then((respnse) => respnse.json())
         .then((data) => {
-          console.log(data);
-          console.log(data == {});
-          console.log(typeof data);
-          if (data == {}) {
+          if (Object.keys(data).length == 0) {
             window.alert("No such result. Please search again");
           } else {
             for (var key in data) {
