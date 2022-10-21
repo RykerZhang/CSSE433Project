@@ -17,8 +17,6 @@ pokemondb.indexPageController = class {
     };
   }
   login() {
-    const inputUsername = document.querySelector("#inputName");
-    const inputPassword = document.querySelector("#inputPassword");
     let data = {
       username: document.querySelector("#username").value,
       password: document.querySelector("#password").value,
@@ -53,8 +51,6 @@ pokemondb.mainPageController = class {
       .then((data) => {
         for (var key in data) {
           var pokemon = data[key];
-          pokemon["name"] = pokemon["name-form"].split("-")[0];
-          // pokemon["form"] = pokemon["name-form"].split("-")[1];
           var card = this.create_card(pokemon);
           document.querySelector("#main").append(card);
         }
@@ -63,7 +59,7 @@ pokemondb.mainPageController = class {
   create_card(data) {
     return htmlToElement(` <span class="picContainer d-inline-block">
             <img src="${data.img}">
-            <p class=caption>${data["name"]}</p>
+            <p class=caption>${data["name-form"]}</p>
         </span>`);
   }
   search(InfoType, info) {
@@ -82,7 +78,6 @@ pokemondb.mainPageController = class {
           } else {
             for (var key in data) {
               var pokemon = data[key];
-              pokemon["name"] = pokemon["name-form"].split("-")[0];
               var card = this.create_card(pokemon);
               document.querySelector("#main").append(card);
             }

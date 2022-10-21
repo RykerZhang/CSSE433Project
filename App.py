@@ -22,7 +22,7 @@ db = mclient['pokemon']
 # create a attribute number map for storing the sequence of attributes. Key is the attribute name, value is No.
 attributeNo = Iclient.get_or_create_cache("attributeNo")
 # fill the attributeNo map.
-attributeArray = ["id", "name", "type_1", "type_2", "link", "species", "height", "weight", "abilities", "training_catch_rate", "breeding_gender_male",
+attributeArray = ["id", "name-form", "type_1", "type_2", "link", "data_species", "height", "weight", "abilities", "training_catch_rate", "breeding_gender_male",
                   "breeding_gender_male", "breeding_gender_female", "stats_hp", "stats_attack", "stats_defense", "stats_sp_atk", "stats_sp_def", "stats_speed", "stats_total", "img"]
 for i in range(len(attributeArray)):
     attributeNo.put(i, attributeArray[i])
@@ -89,19 +89,19 @@ def insertPokemon(id=0, name=None, type_1="-", type_2="-", link=None, species=No
         # Mongodb insert
         data = {
             'id': id,
-            'name': name,
+            'name-form': name,
             'type_1': type_1,
             'type_2': type_2,
             'data_species': species,
             'img': img
         }
         i = db.pokedex.find({'id': id})
-        n = db.pokedex.find({'name': name})
+        n = db.pokedex.find({'name-form': name})
         if len(list(n)) > 0 or len(list(i)):
             print('already exists')
             return 'Insert failed, name already exists'
         db.pokedex.insert_one(data)
-        cursor = db.pokedex.find({'name': name})
+        cursor = db.pokedex.find({'name-form': name})
         x = {}
         for i in cursor:
             x.update(i)
@@ -150,17 +150,13 @@ def Update(id=0, name=None, type_1="-", type_2="-", link=None, species=None, hei
     if (request.method == "POST"):
         db.pokedex.update_one(
             {"id": id},
-            {"$set": {"name": name,
+            {"$set": {"name-form": name,
                       "type_1": type_1,
                       "type_2": type_2,
                       "data_species": species,
                       "img": img}
              }
         )
-        n = db.pokedex.find({'name': name})
-        if len(list(n) > 0):
-            print('already exists')
-            return 'Insert failed, name already exists'
     # ignite update
         checkoutput = Ipokedex.get(id)
         if (checkoutput != None):
@@ -172,11 +168,11 @@ def Update(id=0, name=None, type_1="-", type_2="-", link=None, species=None, hei
             return "No such Id"
 
 
-@ app.route('/Delete/<name>', methods=["DELETE"])
-def Del(name='a'):
+@ app.route('/Delete/<id>', methods=["DELETE"])
+def Del(id='0'):
     if request.method == "DELETE":
-        if (name == None):
-            return 'name can not be null'
+        if (id == None):
+            return 'id can not be null'
         else:
             # Ignite delete
             id = INameAndId.get(name)
@@ -185,9 +181,9 @@ def Del(name='a'):
                 Ipokedex.remove_key(id)
                 INameAndId.remove_key(name)
             # Mongodb delete
-            result = db.pokedex.delete_many({'name-form': name})
+            result = db.pokedex.delete_many({'id': id})
             if (result.deleted_count >= 1):
-                print(name+' deleted')
+                print(id+' deleted')
                 return 'deletion succeed'
             else:
                 return 'deletion failed'
