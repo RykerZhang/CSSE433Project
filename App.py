@@ -131,10 +131,12 @@ def Search(InfoType, info):
 
 @ app.route('/DetailSearch/<id>', methods=["GET"])
 def detailPage(id):
-    # if (request.method == "GET"):
-    output = Ipokedex.get(id)
-    print(output)
-    # return output
+    if (request.method == "GET"):
+        output = Ipokedex.get(id)
+        if (output != None):
+            return output
+        else:
+            return "None"
 
 # mongodb and ignite update
 

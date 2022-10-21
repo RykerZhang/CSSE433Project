@@ -39,6 +39,9 @@ pokemondb.indexPageController = class {
 pokemondb.mainPageController = class {
   constructor() {
     this.init();
+    document.querySelector("#homeButton").onclick = (event) =>{
+      window.location.href="/main"
+    }
     document.querySelector("#searchBtn").onclick = (event) => {
       var InfoType = document.querySelector("#selectSearch").value;
       var info = document.querySelector("#condition").value;
