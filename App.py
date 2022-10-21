@@ -147,7 +147,7 @@ def detailPage(id):
 def Update(id=0, name=None, type_1="-", type_2="-", link=None, species=None, height=0, weight=0, abilities=None, training_catch_rate=0, training_base_exp=0, training_growth_rate=0, breeding_gender_male=0, breeding_gender_female=0, stats_hp=0, stats_attack=0, stats_defense=0, stats_sp_atk=0, stats_sp_def=0, stats_speed=0, stats_total=0, img=""):
     # Mongodb Update
     if (request.method == "POST"):
-        db.Book.update_one(
+        db.pokedex.update_one(
             {"id": id},
             {"$set": {"name": name,
                       "type_1": type_1,
