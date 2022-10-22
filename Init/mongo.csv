@@ -1,0 +1,1077 @@
+id,name-form,type_1,type_2,data_species,img
+10,Bulbasaur-Bulbasaur,Grass,Poison,Seed Pokémon,https://img.pokemondb.net/artwork/large/bulbasaur.jpg
+20,Ivysaur-Ivysaur,Grass,Poison,Seed Pokémon,https://img.pokemondb.net/artwork/large/ivysaur.jpg
+30,Venusaur-Venusaur,Grass,Poison,Seed Pokémon,https://img.pokemondb.net/artwork/large/venusaur.jpg
+31,Venusaur-Mega Venusaur,Grass,Poison,Seed Pokémon,https://img.pokemondb.net/artwork/large/venusaur-mega.jpg
+40,Charmander-Charmander,Fire,-,Lizard Pokémon,https://img.pokemondb.net/artwork/large/charmander.jpg
+50,Charmeleon-Charmeleon,Fire,-,Flame Pokémon,https://img.pokemondb.net/artwork/large/charmeleon.jpg
+60,Charizard-Charizard,Fire,Flying,Flame Pokémon,https://img.pokemondb.net/artwork/large/charizard.jpg
+61,Charizard-Mega Charizard X,Fire,Flying,Flame Pokémon,https://img.pokemondb.net/artwork/large/charizard-mega-x.jpg
+62,Charizard-Mega Charizard Y,Fire,Flying,Flame Pokémon,https://img.pokemondb.net/artwork/large/charizard-mega-y.jpg
+70,Squirtle-Squirtle,Water,-,Tiny Turtle Pokémon,https://img.pokemondb.net/artwork/large/squirtle.jpg
+80,Wartortle-Wartortle,Water,-,Turtle Pokémon,https://img.pokemondb.net/artwork/large/wartortle.jpg
+90,Blastoise-Blastoise,Water,-,Shellfish Pokémon,https://img.pokemondb.net/artwork/large/blastoise.jpg
+91,Blastoise-Mega Blastoise,Water,-,Shellfish Pokémon,https://img.pokemondb.net/artwork/large/blastoise-mega.jpg
+100,Caterpie-Caterpie,Bug,-,Worm Pokémon,https://img.pokemondb.net/artwork/large/caterpie.jpg
+110,Metapod-Metapod,Bug,-,Cocoon Pokémon,https://img.pokemondb.net/artwork/large/metapod.jpg
+120,Butterfree-Butterfree,Bug,Flying,Butterfly Pokémon,https://img.pokemondb.net/artwork/large/butterfree.jpg
+130,Weedle-Weedle,Bug,Poison,Hairy Bug Pokémon,https://img.pokemondb.net/artwork/large/weedle.jpg
+140,Kakuna-Kakuna,Bug,Poison,Cocoon Pokémon,https://img.pokemondb.net/artwork/large/kakuna.jpg
+150,Beedrill-Beedrill,Bug,Poison,Poison Bee Pokémon,https://img.pokemondb.net/artwork/large/beedrill.jpg
+151,Beedrill-Mega Beedrill,Bug,Poison,Poison Bee Pokémon,https://img.pokemondb.net/artwork/large/beedrill-mega.jpg
+160,Pidgey-Pidgey,Normal,Flying,Tiny Bird Pokémon,https://img.pokemondb.net/artwork/large/pidgey.jpg
+170,Pidgeotto-Pidgeotto,Normal,Flying,Bird Pokémon,https://img.pokemondb.net/artwork/large/pidgeotto.jpg
+180,Pidgeot-Pidgeot,Normal,Flying,Bird Pokémon,https://img.pokemondb.net/artwork/large/pidgeot.jpg
+181,Pidgeot-Mega Pidgeot,Normal,Flying,Bird Pokémon,https://img.pokemondb.net/artwork/large/pidgeot-mega.jpg
+190,Rattata-Rattata,Normal,-,Mouse Pokémon,https://img.pokemondb.net/artwork/large/rattata.jpg
+191,Rattata-Alolan Rattata,Normal,-,Mouse Pokémon,https://img.pokemondb.net/artwork/large/rattata-alolan.jpg
+200,Raticate-Raticate,Normal,-,Mouse Pokémon,https://img.pokemondb.net/artwork/large/raticate.jpg
+201,Raticate-Alolan Raticate,Normal,-,Mouse Pokémon,https://img.pokemondb.net/artwork/large/raticate-alolan.jpg
+210,Spearow-Spearow,Normal,Flying,Tiny Bird Pokémon,https://img.pokemondb.net/artwork/large/spearow.jpg
+220,Fearow-Fearow,Normal,Flying,Beak Pokémon,https://img.pokemondb.net/artwork/large/fearow.jpg
+230,Ekans-Ekans,Poison,-,Snake Pokémon,https://img.pokemondb.net/artwork/large/ekans.jpg
+240,Arbok-Arbok,Poison,-,Cobra Pokémon,https://img.pokemondb.net/artwork/large/arbok.jpg
+250,Pikachu-Pikachu,Electric,-,Mouse Pokémon,https://img.pokemondb.net/artwork/large/pikachu.jpg
+251,Pikachu-Partner Pikachu,Electric,-,Mouse Pokémon,https://img.pokemondb.net/artwork/large/pikachu-lets-go.jpg
+260,Raichu-Raichu,Electric,-,Mouse Pokémon,https://img.pokemondb.net/artwork/large/raichu.jpg
+261,Raichu-Alolan Raichu,Electric,-,Mouse Pokémon,https://img.pokemondb.net/artwork/large/raichu-alolan.jpg
+270,Sandshrew-Sandshrew,Ground,-,Mouse Pokémon,https://img.pokemondb.net/artwork/large/sandshrew.jpg
+271,Sandshrew-Alolan Sandshrew,Ground,-,Mouse Pokémon,https://img.pokemondb.net/artwork/large/sandshrew-alolan.jpg
+280,Sandslash-Sandslash,Ground,-,Mouse Pokémon,https://img.pokemondb.net/artwork/large/sandslash.jpg
+281,Sandslash-Alolan Sandslash,Ground,-,Mouse Pokémon,https://img.pokemondb.net/artwork/large/sandslash-alolan.jpg
+290,Nidoran♀-Nidoran♀,Poison,-,Poison Pin Pokémon,https://img.pokemondb.net/artwork/large/nidoran-f.jpg
+300,Nidorina-Nidorina,Poison,-,Poison Pin Pokémon,https://img.pokemondb.net/artwork/large/nidorina.jpg
+310,Nidoqueen-Nidoqueen,Poison,Ground,Drill Pokémon,https://img.pokemondb.net/artwork/large/nidoqueen.jpg
+320,Nidoran♂-Nidoran♂,Poison,-,Poison Pin Pokémon,https://img.pokemondb.net/artwork/large/nidoran-m.jpg
+330,Nidorino-Nidorino,Poison,-,Poison Pin Pokémon,https://img.pokemondb.net/artwork/large/nidorino.jpg
+340,Nidoking-Nidoking,Poison,Ground,Drill Pokémon,https://img.pokemondb.net/artwork/large/nidoking.jpg
+350,Clefairy-Clefairy,Fairy,-,Fairy Pokémon,https://img.pokemondb.net/artwork/large/clefairy.jpg
+360,Clefable-Clefable,Fairy,-,Fairy Pokémon,https://img.pokemondb.net/artwork/large/clefable.jpg
+370,Vulpix-Vulpix,Fire,-,Fox Pokémon,https://img.pokemondb.net/artwork/large/vulpix.jpg
+371,Vulpix-Alolan Vulpix,Fire,-,Fox Pokémon,https://img.pokemondb.net/artwork/large/vulpix-alolan.jpg
+380,Ninetales-Ninetales,Fire,-,Fox Pokémon,https://img.pokemondb.net/artwork/large/ninetales.jpg
+381,Ninetales-Alolan Ninetales,Fire,-,Fox Pokémon,https://img.pokemondb.net/artwork/large/ninetales-alolan.jpg
+390,Jigglypuff-Jigglypuff,Normal,Fairy,Balloon Pokémon,https://img.pokemondb.net/artwork/large/jigglypuff.jpg
+400,Wigglytuff-Wigglytuff,Normal,Fairy,Balloon Pokémon,https://img.pokemondb.net/artwork/large/wigglytuff.jpg
+410,Zubat-Zubat,Poison,Flying,Bat Pokémon,https://img.pokemondb.net/artwork/large/zubat.jpg
+420,Golbat-Golbat,Poison,Flying,Bat Pokémon,https://img.pokemondb.net/artwork/large/golbat.jpg
+430,Oddish-Oddish,Grass,Poison,Weed Pokémon,https://img.pokemondb.net/artwork/large/oddish.jpg
+440,Gloom-Gloom,Grass,Poison,Weed Pokémon,https://img.pokemondb.net/artwork/large/gloom.jpg
+450,Vileplume-Vileplume,Grass,Poison,Flower Pokémon,https://img.pokemondb.net/artwork/large/vileplume.jpg
+460,Paras-Paras,Bug,Grass,Mushroom Pokémon,https://img.pokemondb.net/artwork/large/paras.jpg
+470,Parasect-Parasect,Bug,Grass,Mushroom Pokémon,https://img.pokemondb.net/artwork/large/parasect.jpg
+480,Venonat-Venonat,Bug,Poison,Insect Pokémon,https://img.pokemondb.net/artwork/large/venonat.jpg
+490,Venomoth-Venomoth,Bug,Poison,Poison Moth Pokémon,https://img.pokemondb.net/artwork/large/venomoth.jpg
+500,Diglett-Diglett,Ground,-,Mole Pokémon,https://img.pokemondb.net/artwork/large/diglett.jpg
+501,Diglett-Alolan Diglett,Ground,-,Mole Pokémon,https://img.pokemondb.net/artwork/large/diglett-alolan.jpg
+510,Dugtrio-Dugtrio,Ground,-,Mole Pokémon,https://img.pokemondb.net/artwork/large/dugtrio.jpg
+511,Dugtrio-Alolan Dugtrio,Ground,-,Mole Pokémon,https://img.pokemondb.net/artwork/large/dugtrio-alolan.jpg
+520,Meowth-Meowth,Normal,-,Scratch Cat Pokémon,https://img.pokemondb.net/artwork/large/meowth.jpg
+521,Meowth-Alolan Meowth,Normal,-,Scratch Cat Pokémon,https://img.pokemondb.net/artwork/large/meowth-alolan.jpg
+522,Meowth-Galarian Meowth,Normal,-,Scratch Cat Pokémon,https://img.pokemondb.net/artwork/large/meowth-galarian.jpg
+530,Persian-Persian,Normal,-,Classy Cat Pokémon,https://img.pokemondb.net/artwork/large/persian.jpg
+531,Persian-Alolan Persian,Normal,-,Classy Cat Pokémon,https://img.pokemondb.net/artwork/large/persian-alolan.jpg
+540,Psyduck-Psyduck,Water,-,Duck Pokémon,https://img.pokemondb.net/artwork/large/psyduck.jpg
+550,Golduck-Golduck,Water,-,Duck Pokémon,https://img.pokemondb.net/artwork/large/golduck.jpg
+560,Mankey-Mankey,Fighting,-,Pig Monkey Pokémon,https://img.pokemondb.net/artwork/large/mankey.jpg
+570,Primeape-Primeape,Fighting,-,Pig Monkey Pokémon,https://img.pokemondb.net/artwork/large/primeape.jpg
+580,Growlithe-Growlithe,Fire,-,Puppy Pokémon,https://img.pokemondb.net/artwork/large/growlithe.jpg
+581,Growlithe-Hisuian Growlithe,Fire,-,Scout Pokémon,https://img.pokemondb.net/artwork/large/growlithe-hisuian.jpg
+590,Arcanine-Arcanine,Fire,-,Legendary Pokémon,https://img.pokemondb.net/artwork/large/arcanine.jpg
+591,Arcanine-Hisuian Arcanine,Fire,-,Legendary Pokémon,https://img.pokemondb.net/artwork/large/arcanine-hisuian.jpg
+600,Poliwag-Poliwag,Water,-,Tadpole Pokémon,https://img.pokemondb.net/artwork/large/poliwag.jpg
+610,Poliwhirl-Poliwhirl,Water,-,Tadpole Pokémon,https://img.pokemondb.net/artwork/large/poliwhirl.jpg
+620,Poliwrath-Poliwrath,Water,Fighting,Tadpole Pokémon,https://img.pokemondb.net/artwork/large/poliwrath.jpg
+630,Abra-Abra,Psychic,-,Psi Pokémon,https://img.pokemondb.net/artwork/large/abra.jpg
+640,Kadabra-Kadabra,Psychic,-,Psi Pokémon,https://img.pokemondb.net/artwork/large/kadabra.jpg
+650,Alakazam-Alakazam,Psychic,-,Psi Pokémon,https://img.pokemondb.net/artwork/large/alakazam.jpg
+651,Alakazam-Mega Alakazam,Psychic,-,Psi Pokémon,https://img.pokemondb.net/artwork/large/alakazam-mega.jpg
+660,Machop-Machop,Fighting,-,Superpower Pokémon,https://img.pokemondb.net/artwork/large/machop.jpg
+670,Machoke-Machoke,Fighting,-,Superpower Pokémon,https://img.pokemondb.net/artwork/large/machoke.jpg
+680,Machamp-Machamp,Fighting,-,Superpower Pokémon,https://img.pokemondb.net/artwork/large/machamp.jpg
+690,Bellsprout-Bellsprout,Grass,Poison,Flower Pokémon,https://img.pokemondb.net/artwork/large/bellsprout.jpg
+700,Weepinbell-Weepinbell,Grass,Poison,Flycatcher Pokémon,https://img.pokemondb.net/artwork/large/weepinbell.jpg
+710,Victreebel-Victreebel,Grass,Poison,Flycatcher Pokémon,https://img.pokemondb.net/artwork/large/victreebel.jpg
+720,Tentacool-Tentacool,Water,Poison,Jellyfish Pokémon,https://img.pokemondb.net/artwork/large/tentacool.jpg
+730,Tentacruel-Tentacruel,Water,Poison,Jellyfish Pokémon,https://img.pokemondb.net/artwork/large/tentacruel.jpg
+740,Geodude-Geodude,Rock,Ground,Rock Pokémon,https://img.pokemondb.net/artwork/large/geodude.jpg
+741,Geodude-Alolan Geodude,Rock,Ground,Rock Pokémon,https://img.pokemondb.net/artwork/large/geodude-alolan.jpg
+750,Graveler-Graveler,Rock,Ground,Rock Pokémon,https://img.pokemondb.net/artwork/large/graveler.jpg
+751,Graveler-Alolan Graveler,Rock,Ground,Rock Pokémon,https://img.pokemondb.net/artwork/large/graveler-alolan.jpg
+760,Golem-Golem,Rock,Ground,Megaton Pokémon,https://img.pokemondb.net/artwork/large/golem.jpg
+761,Golem-Alolan Golem,Rock,Ground,Megaton Pokémon,https://img.pokemondb.net/artwork/large/golem-alolan.jpg
+770,Ponyta-Ponyta,Fire,-,Fire Horse Pokémon,https://img.pokemondb.net/artwork/large/ponyta.jpg
+771,Ponyta-Galarian Ponyta,Fire,-,Unique Horn Pokémon,https://img.pokemondb.net/artwork/large/ponyta-galarian.jpg
+780,Rapidash-Rapidash,Fire,-,Fire Horse Pokémon,https://img.pokemondb.net/artwork/large/rapidash.jpg
+781,Rapidash-Galarian Rapidash,Fire,-,Unique Horn Pokémon,https://img.pokemondb.net/artwork/large/rapidash-galarian.jpg
+790,Slowpoke-Slowpoke,Water,Psychic,Dopey Pokémon,https://img.pokemondb.net/artwork/large/slowpoke.jpg
+791,Slowpoke-Galarian Slowpoke,Water,Psychic,Dopey Pokémon,https://img.pokemondb.net/artwork/large/slowpoke-galarian.jpg
+800,Slowbro-Slowbro,Water,Psychic,Hermit Crab Pokémon,https://img.pokemondb.net/artwork/large/slowbro.jpg
+801,Slowbro-Mega Slowbro,Water,Psychic,Hermit Crab Pokémon,https://img.pokemondb.net/artwork/large/slowbro-mega.jpg
+802,Slowbro-Galarian Slowbro,Water,Psychic,Hermit Crab Pokémon,https://img.pokemondb.net/artwork/large/slowbro-galarian.jpg
+810,Magnemite-Magnemite,Electric,Steel,Magnet Pokémon,https://img.pokemondb.net/artwork/large/magnemite.jpg
+820,Magneton-Magneton,Electric,Steel,Magnet Pokémon,https://img.pokemondb.net/artwork/large/magneton.jpg
+830,Farfetch'd-Farfetch'd,Normal,Flying,Wild Duck Pokémon,https://img.pokemondb.net/artwork/large/farfetchd.jpg
+831,Farfetch'd-Galarian Farfetch'd,Normal,Flying,Wild Duck Pokémon,https://img.pokemondb.net/artwork/large/farfetchd-galarian.jpg
+840,Doduo-Doduo,Normal,Flying,Twin Bird Pokémon,https://img.pokemondb.net/artwork/large/doduo.jpg
+850,Dodrio-Dodrio,Normal,Flying,Triple Bird Pokémon,https://img.pokemondb.net/artwork/large/dodrio.jpg
+860,Seel-Seel,Water,-,Sea Lion Pokémon,https://img.pokemondb.net/artwork/large/seel.jpg
+870,Dewgong-Dewgong,Water,Ice,Sea Lion Pokémon,https://img.pokemondb.net/artwork/large/dewgong.jpg
+880,Grimer-Grimer,Poison,-,Sludge Pokémon,https://img.pokemondb.net/artwork/large/grimer.jpg
+881,Grimer-Alolan Grimer,Poison,-,Sludge Pokémon,https://img.pokemondb.net/artwork/large/grimer-alolan.jpg
+890,Muk-Muk,Poison,-,Sludge Pokémon,https://img.pokemondb.net/artwork/large/muk.jpg
+891,Muk-Alolan Muk,Poison,-,Sludge Pokémon,https://img.pokemondb.net/artwork/large/muk-alolan.jpg
+900,Shellder-Shellder,Water,-,Bivalve Pokémon,https://img.pokemondb.net/artwork/large/shellder.jpg
+910,Cloyster-Cloyster,Water,Ice,Bivalve Pokémon,https://img.pokemondb.net/artwork/large/cloyster.jpg
+920,Gastly-Gastly,Ghost,Poison,Gas Pokémon,https://img.pokemondb.net/artwork/large/gastly.jpg
+930,Haunter-Haunter,Ghost,Poison,Gas Pokémon,https://img.pokemondb.net/artwork/large/haunter.jpg
+940,Gengar-Gengar,Ghost,Poison,Shadow Pokémon,https://img.pokemondb.net/artwork/large/gengar.jpg
+941,Gengar-Mega Gengar,Ghost,Poison,Shadow Pokémon,https://img.pokemondb.net/artwork/large/gengar-mega.jpg
+950,Onix-Onix,Rock,Ground,Rock Snake Pokémon,https://img.pokemondb.net/artwork/large/onix.jpg
+960,Drowzee-Drowzee,Psychic,-,Hypnosis Pokémon,https://img.pokemondb.net/artwork/large/drowzee.jpg
+970,Hypno-Hypno,Psychic,-,Hypnosis Pokémon,https://img.pokemondb.net/artwork/large/hypno.jpg
+980,Krabby-Krabby,Water,-,River Crab Pokémon,https://img.pokemondb.net/artwork/large/krabby.jpg
+990,Kingler-Kingler,Water,-,Pincer Pokémon,https://img.pokemondb.net/artwork/large/kingler.jpg
+1000,Voltorb-Voltorb,Electric,-,Ball Pokémon,https://img.pokemondb.net/artwork/large/voltorb.jpg
+1001,Voltorb-Hisuian Voltorb,Electric,-,Sphere Pokémon,https://img.pokemondb.net/artwork/large/voltorb-hisuian.jpg
+1010,Electrode-Electrode,Electric,-,Ball Pokémon,https://img.pokemondb.net/artwork/large/electrode.jpg
+1011,Electrode-Hisuian Electrode,Electric,-,Sphere Pokémon,https://img.pokemondb.net/artwork/large/electrode-hisuian.jpg
+1020,Exeggcute-Exeggcute,Grass,Psychic,Egg Pokémon,https://img.pokemondb.net/artwork/large/exeggcute.jpg
+1030,Exeggutor-Exeggutor,Grass,Psychic,Coconut Pokémon,https://img.pokemondb.net/artwork/large/exeggutor.jpg
+1031,Exeggutor-Alolan Exeggutor,Grass,Psychic,Coconut Pokémon,https://img.pokemondb.net/artwork/large/exeggutor-alolan.jpg
+1040,Cubone-Cubone,Ground,-,Lonely Pokémon,https://img.pokemondb.net/artwork/large/cubone.jpg
+1050,Marowak-Marowak,Ground,-,Bone Keeper Pokémon,https://img.pokemondb.net/artwork/large/marowak.jpg
+1051,Marowak-Alolan Marowak,Ground,-,Bone Keeper Pokémon,https://img.pokemondb.net/artwork/large/marowak-alolan.jpg
+1060,Hitmonlee-Hitmonlee,Fighting,-,Kicking Pokémon,https://img.pokemondb.net/artwork/large/hitmonlee.jpg
+1070,Hitmonchan-Hitmonchan,Fighting,-,Punching Pokémon,https://img.pokemondb.net/artwork/large/hitmonchan.jpg
+1080,Lickitung-Lickitung,Normal,-,Licking Pokémon,https://img.pokemondb.net/artwork/large/lickitung.jpg
+1090,Koffing-Koffing,Poison,-,Poison Gas Pokémon,https://img.pokemondb.net/artwork/large/koffing.jpg
+1100,Weezing-Weezing,Poison,-,Poison Gas Pokémon,https://img.pokemondb.net/artwork/large/weezing.jpg
+1101,Weezing-Galarian Weezing,Poison,-,Poison Gas Pokémon,https://img.pokemondb.net/artwork/large/weezing-galarian.jpg
+1110,Rhyhorn-Rhyhorn,Ground,Rock,Spikes Pokémon,https://img.pokemondb.net/artwork/large/rhyhorn.jpg
+1120,Rhydon-Rhydon,Ground,Rock,Drill Pokémon,https://img.pokemondb.net/artwork/large/rhydon.jpg
+1130,Chansey-Chansey,Normal,-,Egg Pokémon,https://img.pokemondb.net/artwork/large/chansey.jpg
+1140,Tangela-Tangela,Grass,-,Vine Pokémon,https://img.pokemondb.net/artwork/large/tangela.jpg
+1150,Kangaskhan-Kangaskhan,Normal,-,Parent Pokémon,https://img.pokemondb.net/artwork/large/kangaskhan.jpg
+1151,Kangaskhan-Mega Kangaskhan,Normal,-,Parent Pokémon,https://img.pokemondb.net/artwork/large/kangaskhan-mega.jpg
+1160,Horsea-Horsea,Water,-,Dragon Pokémon,https://img.pokemondb.net/artwork/large/horsea.jpg
+1170,Seadra-Seadra,Water,-,Dragon Pokémon,https://img.pokemondb.net/artwork/large/seadra.jpg
+1180,Goldeen-Goldeen,Water,-,Goldfish Pokémon,https://img.pokemondb.net/artwork/large/goldeen.jpg
+1190,Seaking-Seaking,Water,-,Goldfish Pokémon,https://img.pokemondb.net/artwork/large/seaking.jpg
+1200,Staryu-Staryu,Water,-,Star Shape Pokémon,https://img.pokemondb.net/artwork/large/staryu.jpg
+1210,Starmie-Starmie,Water,Psychic,Mysterious Pokémon,https://img.pokemondb.net/artwork/large/starmie.jpg
+1220,Mr. Mime-Mr. Mime,Psychic,Fairy,Barrier Pokémon,https://img.pokemondb.net/artwork/large/mr-mime.jpg
+1221,Mr. Mime-Galarian Mr. Mime,Psychic,Fairy,Dancing Pokémon,https://img.pokemondb.net/artwork/large/mr-mime-galarian.jpg
+1230,Scyther-Scyther,Bug,Flying,Mantis Pokémon,https://img.pokemondb.net/artwork/large/scyther.jpg
+1240,Jynx-Jynx,Ice,Psychic,Human Shape Pokémon,https://img.pokemondb.net/artwork/large/jynx.jpg
+1250,Electabuzz-Electabuzz,Electric,-,Electric Pokémon,https://img.pokemondb.net/artwork/large/electabuzz.jpg
+1260,Magmar-Magmar,Fire,-,Spitfire Pokémon,https://img.pokemondb.net/artwork/large/magmar.jpg
+1270,Pinsir-Pinsir,Bug,-,Stag Beetle Pokémon,https://img.pokemondb.net/artwork/large/pinsir.jpg
+1271,Pinsir-Mega Pinsir,Bug,-,Stag Beetle Pokémon,https://img.pokemondb.net/artwork/large/pinsir-mega.jpg
+1280,Tauros-Tauros,Normal,-,Wild Bull Pokémon,https://img.pokemondb.net/artwork/large/tauros.jpg
+1290,Magikarp-Magikarp,Water,-,Fish Pokémon,https://img.pokemondb.net/artwork/large/magikarp.jpg
+1300,Gyarados-Gyarados,Water,Flying,Atrocious Pokémon,https://img.pokemondb.net/artwork/large/gyarados.jpg
+1301,Gyarados-Mega Gyarados,Water,Flying,Atrocious Pokémon,https://img.pokemondb.net/artwork/large/gyarados-mega.jpg
+1310,Lapras-Lapras,Water,Ice,Transport Pokémon,https://img.pokemondb.net/artwork/large/lapras.jpg
+1320,Ditto-Ditto,Normal,-,Transform Pokémon,https://img.pokemondb.net/artwork/large/ditto.jpg
+1330,Eevee-Eevee,Normal,-,Evolution Pokémon,https://img.pokemondb.net/artwork/large/eevee.jpg
+1331,Eevee-Partner Eevee,Normal,-,Evolution Pokémon,https://img.pokemondb.net/artwork/large/eevee-lets-go.jpg
+1340,Vaporeon-Vaporeon,Water,-,Bubble Jet Pokémon,https://img.pokemondb.net/artwork/large/vaporeon.jpg
+1350,Jolteon-Jolteon,Electric,-,Lightning Pokémon,https://img.pokemondb.net/artwork/large/jolteon.jpg
+1360,Flareon-Flareon,Fire,-,Flame Pokémon,https://img.pokemondb.net/artwork/large/flareon.jpg
+1370,Porygon-Porygon,Normal,-,Virtual Pokémon,https://img.pokemondb.net/artwork/large/porygon.jpg
+1380,Omanyte-Omanyte,Rock,Water,Spiral Pokémon,https://img.pokemondb.net/artwork/large/omanyte.jpg
+1390,Omastar-Omastar,Rock,Water,Spiral Pokémon,https://img.pokemondb.net/artwork/large/omastar.jpg
+1400,Kabuto-Kabuto,Rock,Water,Shellfish Pokémon,https://img.pokemondb.net/artwork/large/kabuto.jpg
+1410,Kabutops-Kabutops,Rock,Water,Shellfish Pokémon,https://img.pokemondb.net/artwork/large/kabutops.jpg
+1420,Aerodactyl-Aerodactyl,Rock,Flying,Fossil Pokémon,https://img.pokemondb.net/artwork/large/aerodactyl.jpg
+1421,Aerodactyl-Mega Aerodactyl,Rock,Flying,Fossil Pokémon,https://img.pokemondb.net/artwork/large/aerodactyl-mega.jpg
+1430,Snorlax-Snorlax,Normal,-,Sleeping Pokémon,https://img.pokemondb.net/artwork/large/snorlax.jpg
+1440,Articuno-Articuno,Ice,Flying,Freeze Pokémon,https://img.pokemondb.net/artwork/large/articuno.jpg
+1441,Articuno-Galarian Articuno,Ice,Flying,Cruel Pokémon,https://img.pokemondb.net/artwork/large/articuno-galarian.jpg
+1450,Zapdos-Zapdos,Electric,Flying,Electric Pokémon,https://img.pokemondb.net/artwork/large/zapdos.jpg
+1451,Zapdos-Galarian Zapdos,Electric,Flying,Strong Legs Pokémon,https://img.pokemondb.net/artwork/large/zapdos-galarian.jpg
+1460,Moltres-Moltres,Fire,Flying,Flame Pokémon,https://img.pokemondb.net/artwork/large/moltres.jpg
+1461,Moltres-Galarian Moltres,Fire,Flying,Malevolent Pokémon,https://img.pokemondb.net/artwork/large/moltres-galarian.jpg
+1470,Dratini-Dratini,Dragon,-,Dragon Pokémon,https://img.pokemondb.net/artwork/large/dratini.jpg
+1480,Dragonair-Dragonair,Dragon,-,Dragon Pokémon,https://img.pokemondb.net/artwork/large/dragonair.jpg
+1490,Dragonite-Dragonite,Dragon,Flying,Dragon Pokémon,https://img.pokemondb.net/artwork/large/dragonite.jpg
+1500,Mewtwo-Mewtwo,Psychic,-,Genetic Pokémon,https://img.pokemondb.net/artwork/large/mewtwo.jpg
+1501,Mewtwo-Mega Mewtwo X,Psychic,-,Genetic Pokémon,https://img.pokemondb.net/artwork/large/mewtwo-mega-x.jpg
+1502,Mewtwo-Mega Mewtwo Y,Psychic,-,Genetic Pokémon,https://img.pokemondb.net/artwork/large/mewtwo-mega-y.jpg
+1510,Mew-Mew,Psychic,-,New Species Pokémon,https://img.pokemondb.net/artwork/large/mew.jpg
+1520,Chikorita-Chikorita,Grass,-,Leaf Pokémon,https://img.pokemondb.net/artwork/large/chikorita.jpg
+1530,Bayleef-Bayleef,Grass,-,Leaf Pokémon,https://img.pokemondb.net/artwork/large/bayleef.jpg
+1540,Meganium-Meganium,Grass,-,Herb Pokémon,https://img.pokemondb.net/artwork/large/meganium.jpg
+1550,Cyndaquil-Cyndaquil,Fire,-,Fire Mouse Pokémon,https://img.pokemondb.net/artwork/large/cyndaquil.jpg
+1560,Quilava-Quilava,Fire,-,Volcano Pokémon,https://img.pokemondb.net/artwork/large/quilava.jpg
+1570,Typhlosion-Typhlosion,Fire,-,Volcano Pokémon,https://img.pokemondb.net/artwork/large/typhlosion.jpg
+1571,Typhlosion-Hisuian Typhlosion,Fire,-,Ghost Flame Pokémon,https://img.pokemondb.net/artwork/large/typhlosion-hisuian.jpg
+1580,Totodile-Totodile,Water,-,Big Jaw Pokémon,https://img.pokemondb.net/artwork/large/totodile.jpg
+1590,Croconaw-Croconaw,Water,-,Big Jaw Pokémon,https://img.pokemondb.net/artwork/large/croconaw.jpg
+1600,Feraligatr-Feraligatr,Water,-,Big Jaw Pokémon,https://img.pokemondb.net/artwork/large/feraligatr.jpg
+1610,Sentret-Sentret,Normal,-,Scout Pokémon,https://img.pokemondb.net/artwork/large/sentret.jpg
+1620,Furret-Furret,Normal,-,Long Body Pokémon,https://img.pokemondb.net/artwork/large/furret.jpg
+1630,Hoothoot-Hoothoot,Normal,Flying,Owl Pokémon,https://img.pokemondb.net/artwork/large/hoothoot.jpg
+1640,Noctowl-Noctowl,Normal,Flying,Owl Pokémon,https://img.pokemondb.net/artwork/large/noctowl.jpg
+1650,Ledyba-Ledyba,Bug,Flying,Five Star Pokémon,https://img.pokemondb.net/artwork/large/ledyba.jpg
+1660,Ledian-Ledian,Bug,Flying,Five Star Pokémon,https://img.pokemondb.net/artwork/large/ledian.jpg
+1670,Spinarak-Spinarak,Bug,Poison,String Spit Pokémon,https://img.pokemondb.net/artwork/large/spinarak.jpg
+1680,Ariados-Ariados,Bug,Poison,Long Leg Pokémon,https://img.pokemondb.net/artwork/large/ariados.jpg
+1690,Crobat-Crobat,Poison,Flying,Bat Pokémon,https://img.pokemondb.net/artwork/large/crobat.jpg
+1700,Chinchou-Chinchou,Water,Electric,Angler Pokémon,https://img.pokemondb.net/artwork/large/chinchou.jpg
+1710,Lanturn-Lanturn,Water,Electric,Light Pokémon,https://img.pokemondb.net/artwork/large/lanturn.jpg
+1720,Pichu-Pichu,Electric,-,Tiny Mouse Pokémon,https://img.pokemondb.net/artwork/large/pichu.jpg
+1730,Cleffa-Cleffa,Fairy,-,Star Shape Pokémon,https://img.pokemondb.net/artwork/large/cleffa.jpg
+1740,Igglybuff-Igglybuff,Normal,Fairy,Balloon Pokémon,https://img.pokemondb.net/artwork/large/igglybuff.jpg
+1750,Togepi-Togepi,Fairy,-,Spike Ball Pokémon,https://img.pokemondb.net/artwork/large/togepi.jpg
+1760,Togetic-Togetic,Fairy,Flying,Happiness Pokémon,https://img.pokemondb.net/artwork/large/togetic.jpg
+1770,Natu-Natu,Psychic,Flying,Tiny Bird Pokémon,https://img.pokemondb.net/artwork/large/natu.jpg
+1780,Xatu-Xatu,Psychic,Flying,Mystic Pokémon,https://img.pokemondb.net/artwork/large/xatu.jpg
+1790,Mareep-Mareep,Electric,-,Wool Pokémon,https://img.pokemondb.net/artwork/large/mareep.jpg
+1800,Flaaffy-Flaaffy,Electric,-,Wool Pokémon,https://img.pokemondb.net/artwork/large/flaaffy.jpg
+1810,Ampharos-Ampharos,Electric,-,Light Pokémon,https://img.pokemondb.net/artwork/large/ampharos.jpg
+1811,Ampharos-Mega Ampharos,Electric,-,Light Pokémon,https://img.pokemondb.net/artwork/large/ampharos-mega.jpg
+1820,Bellossom-Bellossom,Grass,-,Flower Pokémon,https://img.pokemondb.net/artwork/large/bellossom.jpg
+1830,Marill-Marill,Water,Fairy,Aqua Mouse Pokémon,https://img.pokemondb.net/artwork/large/marill.jpg
+1840,Azumarill-Azumarill,Water,Fairy,Aqua Rabbit Pokémon,https://img.pokemondb.net/artwork/large/azumarill.jpg
+1850,Sudowoodo-Sudowoodo,Rock,-,Imitation Pokémon,https://img.pokemondb.net/artwork/large/sudowoodo.jpg
+1860,Politoed-Politoed,Water,-,Frog Pokémon,https://img.pokemondb.net/artwork/large/politoed.jpg
+1870,Hoppip-Hoppip,Grass,Flying,Cottonweed Pokémon,https://img.pokemondb.net/artwork/large/hoppip.jpg
+1880,Skiploom-Skiploom,Grass,Flying,Cottonweed Pokémon,https://img.pokemondb.net/artwork/large/skiploom.jpg
+1890,Jumpluff-Jumpluff,Grass,Flying,Cottonweed Pokémon,https://img.pokemondb.net/artwork/large/jumpluff.jpg
+1900,Aipom-Aipom,Normal,-,Long Tail Pokémon,https://img.pokemondb.net/artwork/large/aipom.jpg
+1910,Sunkern-Sunkern,Grass,-,Seed Pokémon,https://img.pokemondb.net/artwork/large/sunkern.jpg
+1920,Sunflora-Sunflora,Grass,-,Sun Pokémon,https://img.pokemondb.net/artwork/large/sunflora.jpg
+1930,Yanma-Yanma,Bug,Flying,Clear Wing Pokémon,https://img.pokemondb.net/artwork/large/yanma.jpg
+1940,Wooper-Wooper,Water,Ground,Water Fish Pokémon,https://img.pokemondb.net/artwork/large/wooper.jpg
+1941,Wooper-Paldean Wooper,Water,Ground,Poison Fish Pokémon,https://img.pokemondb.net/artwork/large/wooper-paldean.jpg
+1950,Quagsire-Quagsire,Water,Ground,Water Fish Pokémon,https://img.pokemondb.net/artwork/large/quagsire.jpg
+1960,Espeon-Espeon,Psychic,-,Sun Pokémon,https://img.pokemondb.net/artwork/large/espeon.jpg
+1970,Umbreon-Umbreon,Dark,-,Moonlight Pokémon,https://img.pokemondb.net/artwork/large/umbreon.jpg
+1980,Murkrow-Murkrow,Dark,Flying,Darkness Pokémon,https://img.pokemondb.net/artwork/large/murkrow.jpg
+1990,Slowking-Slowking,Water,Psychic,Royal Pokémon,https://img.pokemondb.net/artwork/large/slowking.jpg
+1991,Slowking-Galarian Slowking,Water,Psychic,Hexpert Pokémon,https://img.pokemondb.net/artwork/large/slowking-galarian.jpg
+2000,Misdreavus-Misdreavus,Ghost,-,Screech Pokémon,https://img.pokemondb.net/artwork/large/misdreavus.jpg
+2010,Unown-Unown,Psychic,-,Symbol Pokémon,https://img.pokemondb.net/artwork/large/unown.jpg
+2020,Wobbuffet-Wobbuffet,Psychic,-,Patient Pokémon,https://img.pokemondb.net/artwork/large/wobbuffet.jpg
+2030,Girafarig-Girafarig,Normal,Psychic,Long Neck Pokémon,https://img.pokemondb.net/artwork/large/girafarig.jpg
+2040,Pineco-Pineco,Bug,-,Bagworm Pokémon,https://img.pokemondb.net/artwork/large/pineco.jpg
+2050,Forretress-Forretress,Bug,Steel,Bagworm Pokémon,https://img.pokemondb.net/artwork/large/forretress.jpg
+2060,Dunsparce-Dunsparce,Normal,-,Land Snake Pokémon,https://img.pokemondb.net/artwork/large/dunsparce.jpg
+2070,Gligar-Gligar,Ground,Flying,FlyScorpion Pokémon,https://img.pokemondb.net/artwork/large/gligar.jpg
+2080,Steelix-Steelix,Steel,Ground,Iron Snake Pokémon,https://img.pokemondb.net/artwork/large/steelix.jpg
+2081,Steelix-Mega Steelix,Steel,Ground,Iron Snake Pokémon,https://img.pokemondb.net/artwork/large/steelix-mega.jpg
+2090,Snubbull-Snubbull,Fairy,-,Fairy Pokémon,https://img.pokemondb.net/artwork/large/snubbull.jpg
+2100,Granbull-Granbull,Fairy,-,Fairy Pokémon,https://img.pokemondb.net/artwork/large/granbull.jpg
+2110,Qwilfish-Qwilfish,Water,Poison,Balloon Pokémon,https://img.pokemondb.net/artwork/large/qwilfish.jpg
+2111,Qwilfish-Hisuian Qwilfish,Water,Poison,Balloon Pokémon,https://img.pokemondb.net/artwork/large/qwilfish-hisuian.jpg
+2120,Scizor-Scizor,Bug,Steel,Pincer Pokémon,https://img.pokemondb.net/artwork/large/scizor.jpg
+2121,Scizor-Mega Scizor,Bug,Steel,Pincer Pokémon,https://img.pokemondb.net/artwork/large/scizor-mega.jpg
+2130,Shuckle-Shuckle,Bug,Rock,Mold Pokémon,https://img.pokemondb.net/artwork/large/shuckle.jpg
+2140,Heracross-Heracross,Bug,Fighting,Single Horn Pokémon,https://img.pokemondb.net/artwork/large/heracross.jpg
+2141,Heracross-Mega Heracross,Bug,Fighting,Single Horn Pokémon,https://img.pokemondb.net/artwork/large/heracross-mega.jpg
+2150,Sneasel-Sneasel,Dark,Ice,Sharp Claw Pokémon,https://img.pokemondb.net/artwork/large/sneasel.jpg
+2151,Sneasel-Hisuian Sneasel,Dark,Ice,Sharp Claw Pokémon,https://img.pokemondb.net/artwork/large/sneasel-hisuian.jpg
+2160,Teddiursa-Teddiursa,Normal,-,Little Bear Pokémon,https://img.pokemondb.net/artwork/large/teddiursa.jpg
+2170,Ursaring-Ursaring,Normal,-,Hibernator Pokémon,https://img.pokemondb.net/artwork/large/ursaring.jpg
+2180,Slugma-Slugma,Fire,-,Lava Pokémon,https://img.pokemondb.net/artwork/large/slugma.jpg
+2190,Magcargo-Magcargo,Fire,Rock,Lava Pokémon,https://img.pokemondb.net/artwork/large/magcargo.jpg
+2200,Swinub-Swinub,Ice,Ground,Pig Pokémon,https://img.pokemondb.net/artwork/large/swinub.jpg
+2210,Piloswine-Piloswine,Ice,Ground,Swine Pokémon,https://img.pokemondb.net/artwork/large/piloswine.jpg
+2220,Corsola-Corsola,Water,Rock,Coral Pokémon,https://img.pokemondb.net/artwork/large/corsola.jpg
+2221,Corsola-Galarian Corsola,Water,Rock,Coral Pokémon,https://img.pokemondb.net/artwork/large/corsola-galarian.jpg
+2230,Remoraid-Remoraid,Water,-,Jet Pokémon,https://img.pokemondb.net/artwork/large/remoraid.jpg
+2240,Octillery-Octillery,Water,-,Jet Pokémon,https://img.pokemondb.net/artwork/large/octillery.jpg
+2250,Delibird-Delibird,Ice,Flying,Delivery Pokémon,https://img.pokemondb.net/artwork/large/delibird.jpg
+2260,Mantine-Mantine,Water,Flying,Kite Pokémon,https://img.pokemondb.net/artwork/large/mantine.jpg
+2270,Skarmory-Skarmory,Steel,Flying,Armor Bird Pokémon,https://img.pokemondb.net/artwork/large/skarmory.jpg
+2280,Houndour-Houndour,Dark,Fire,Dark Pokémon,https://img.pokemondb.net/artwork/large/houndour.jpg
+2290,Houndoom-Houndoom,Dark,Fire,Dark Pokémon,https://img.pokemondb.net/artwork/large/houndoom.jpg
+2291,Houndoom-Mega Houndoom,Dark,Fire,Dark Pokémon,https://img.pokemondb.net/artwork/large/houndoom-mega.jpg
+2300,Kingdra-Kingdra,Water,Dragon,Dragon Pokémon,https://img.pokemondb.net/artwork/large/kingdra.jpg
+2310,Phanpy-Phanpy,Ground,-,Long Nose Pokémon,https://img.pokemondb.net/artwork/large/phanpy.jpg
+2320,Donphan-Donphan,Ground,-,Armor Pokémon,https://img.pokemondb.net/artwork/large/donphan.jpg
+2330,Porygon2-Porygon2,Normal,-,Virtual Pokémon,https://img.pokemondb.net/artwork/large/porygon2.jpg
+2340,Stantler-Stantler,Normal,-,Big Horn Pokémon,https://img.pokemondb.net/artwork/large/stantler.jpg
+2350,Smeargle-Smeargle,Normal,-,Painter Pokémon,https://img.pokemondb.net/artwork/large/smeargle.jpg
+2360,Tyrogue-Tyrogue,Fighting,-,Scuffle Pokémon,https://img.pokemondb.net/artwork/large/tyrogue.jpg
+2370,Hitmontop-Hitmontop,Fighting,-,Handstand Pokémon,https://img.pokemondb.net/artwork/large/hitmontop.jpg
+2380,Smoochum-Smoochum,Ice,Psychic,Kiss Pokémon,https://img.pokemondb.net/artwork/large/smoochum.jpg
+2390,Elekid-Elekid,Electric,-,Electric Pokémon,https://img.pokemondb.net/artwork/large/elekid.jpg
+2400,Magby-Magby,Fire,-,Live Coal Pokémon,https://img.pokemondb.net/artwork/large/magby.jpg
+2410,Miltank-Miltank,Normal,-,Milk Cow Pokémon,https://img.pokemondb.net/artwork/large/miltank.jpg
+2420,Blissey-Blissey,Normal,-,Happiness Pokémon,https://img.pokemondb.net/artwork/large/blissey.jpg
+2430,Raikou-Raikou,Electric,-,Thunder Pokémon,https://img.pokemondb.net/artwork/large/raikou.jpg
+2440,Entei-Entei,Fire,-,Volcano Pokémon,https://img.pokemondb.net/artwork/large/entei.jpg
+2450,Suicune-Suicune,Water,-,Aurora Pokémon,https://img.pokemondb.net/artwork/large/suicune.jpg
+2460,Larvitar-Larvitar,Rock,Ground,Rock Skin Pokémon,https://img.pokemondb.net/artwork/large/larvitar.jpg
+2470,Pupitar-Pupitar,Rock,Ground,Hard Shell Pokémon,https://img.pokemondb.net/artwork/large/pupitar.jpg
+2480,Tyranitar-Tyranitar,Rock,Dark,Armor Pokémon,https://img.pokemondb.net/artwork/large/tyranitar.jpg
+2481,Tyranitar-Mega Tyranitar,Rock,Dark,Armor Pokémon,https://img.pokemondb.net/artwork/large/tyranitar-mega.jpg
+2490,Lugia-Lugia,Psychic,Flying,Diving Pokémon,https://img.pokemondb.net/artwork/large/lugia.jpg
+2500,Ho-oh-Ho-oh,Fire,Flying,Rainbow Pokémon,https://img.pokemondb.net/artwork/large/ho-oh.jpg
+2510,Celebi-Celebi,Psychic,Grass,Time Travel Pokémon,https://img.pokemondb.net/artwork/large/celebi.jpg
+2520,Treecko-Treecko,Grass,-,Wood Gecko Pokémon,https://img.pokemondb.net/artwork/large/treecko.jpg
+2530,Grovyle-Grovyle,Grass,-,Wood Gecko Pokémon,https://img.pokemondb.net/artwork/large/grovyle.jpg
+2540,Sceptile-Sceptile,Grass,-,Forest Pokémon,https://img.pokemondb.net/artwork/large/sceptile.jpg
+2541,Sceptile-Mega Sceptile,Grass,-,Forest Pokémon,https://img.pokemondb.net/artwork/large/sceptile-mega.jpg
+2550,Torchic-Torchic,Fire,-,Chick Pokémon,https://img.pokemondb.net/artwork/large/torchic.jpg
+2560,Combusken-Combusken,Fire,Fighting,Young Fowl Pokémon,https://img.pokemondb.net/artwork/large/combusken.jpg
+2570,Blaziken-Blaziken,Fire,Fighting,Blaze Pokémon,https://img.pokemondb.net/artwork/large/blaziken.jpg
+2571,Blaziken-Mega Blaziken,Fire,Fighting,Blaze Pokémon,https://img.pokemondb.net/artwork/large/blaziken-mega.jpg
+2580,Mudkip-Mudkip,Water,-,Mud Fish Pokémon,https://img.pokemondb.net/artwork/large/mudkip.jpg
+2590,Marshtomp-Marshtomp,Water,Ground,Mud Fish Pokémon,https://img.pokemondb.net/artwork/large/marshtomp.jpg
+2600,Swampert-Swampert,Water,Ground,Mud Fish Pokémon,https://img.pokemondb.net/artwork/large/swampert.jpg
+2601,Swampert-Mega Swampert,Water,Ground,Mud Fish Pokémon,https://img.pokemondb.net/artwork/large/swampert-mega.jpg
+2610,Poochyena-Poochyena,Dark,-,Bite Pokémon,https://img.pokemondb.net/artwork/large/poochyena.jpg
+2620,Mightyena-Mightyena,Dark,-,Bite Pokémon,https://img.pokemondb.net/artwork/large/mightyena.jpg
+2630,Zigzagoon-Zigzagoon,Normal,-,TinyRaccoon Pokémon,https://img.pokemondb.net/artwork/large/zigzagoon.jpg
+2631,Zigzagoon-Galarian Zigzagoon,Normal,-,Tiny Raccoon Pokémon,https://img.pokemondb.net/artwork/large/zigzagoon-galarian.jpg
+2640,Linoone-Linoone,Normal,-,Rushing Pokémon,https://img.pokemondb.net/artwork/large/linoone.jpg
+2641,Linoone-Galarian Linoone,Normal,-,Rushing Pokémon,https://img.pokemondb.net/artwork/large/linoone-galarian.jpg
+2650,Wurmple-Wurmple,Bug,-,Worm Pokémon,https://img.pokemondb.net/artwork/large/wurmple.jpg
+2660,Silcoon-Silcoon,Bug,-,Cocoon Pokémon,https://img.pokemondb.net/artwork/large/silcoon.jpg
+2670,Beautifly-Beautifly,Bug,Flying,Butterfly Pokémon,https://img.pokemondb.net/artwork/large/beautifly.jpg
+2680,Cascoon-Cascoon,Bug,-,Cocoon Pokémon,https://img.pokemondb.net/artwork/large/cascoon.jpg
+2690,Dustox-Dustox,Bug,Poison,Poison Moth Pokémon,https://img.pokemondb.net/artwork/large/dustox.jpg
+2700,Lotad-Lotad,Water,Grass,Water Weed Pokémon,https://img.pokemondb.net/artwork/large/lotad.jpg
+2710,Lombre-Lombre,Water,Grass,Jolly Pokémon,https://img.pokemondb.net/artwork/large/lombre.jpg
+2720,Ludicolo-Ludicolo,Water,Grass,Carefree Pokémon,https://img.pokemondb.net/artwork/large/ludicolo.jpg
+2730,Seedot-Seedot,Grass,-,Acorn Pokémon,https://img.pokemondb.net/artwork/large/seedot.jpg
+2740,Nuzleaf-Nuzleaf,Grass,Dark,Wily Pokémon,https://img.pokemondb.net/artwork/large/nuzleaf.jpg
+2750,Shiftry-Shiftry,Grass,Dark,Wicked Pokémon,https://img.pokemondb.net/artwork/large/shiftry.jpg
+2760,Taillow-Taillow,Normal,Flying,TinySwallow Pokémon,https://img.pokemondb.net/artwork/large/taillow.jpg
+2770,Swellow-Swellow,Normal,Flying,Swallow Pokémon,https://img.pokemondb.net/artwork/large/swellow.jpg
+2780,Wingull-Wingull,Water,Flying,Seagull Pokémon,https://img.pokemondb.net/artwork/large/wingull.jpg
+2790,Pelipper-Pelipper,Water,Flying,Water Bird Pokémon,https://img.pokemondb.net/artwork/large/pelipper.jpg
+2800,Ralts-Ralts,Psychic,Fairy,Feeling Pokémon,https://img.pokemondb.net/artwork/large/ralts.jpg
+2810,Kirlia-Kirlia,Psychic,Fairy,Emotion Pokémon,https://img.pokemondb.net/artwork/large/kirlia.jpg
+2820,Gardevoir-Gardevoir,Psychic,Fairy,Embrace Pokémon,https://img.pokemondb.net/artwork/large/gardevoir.jpg
+2821,Gardevoir-Mega Gardevoir,Psychic,Fairy,Embrace Pokémon,https://img.pokemondb.net/artwork/large/gardevoir-mega.jpg
+2830,Surskit-Surskit,Bug,Water,Pond Skater Pokémon,https://img.pokemondb.net/artwork/large/surskit.jpg
+2840,Masquerain-Masquerain,Bug,Flying,Eyeball Pokémon,https://img.pokemondb.net/artwork/large/masquerain.jpg
+2850,Shroomish-Shroomish,Grass,-,Mushroom Pokémon,https://img.pokemondb.net/artwork/large/shroomish.jpg
+2860,Breloom-Breloom,Grass,Fighting,Mushroom Pokémon,https://img.pokemondb.net/artwork/large/breloom.jpg
+2870,Slakoth-Slakoth,Normal,-,Slacker Pokémon,https://img.pokemondb.net/artwork/large/slakoth.jpg
+2880,Vigoroth-Vigoroth,Normal,-,Wild Monkey Pokémon,https://img.pokemondb.net/artwork/large/vigoroth.jpg
+2890,Slaking-Slaking,Normal,-,Lazy Pokémon,https://img.pokemondb.net/artwork/large/slaking.jpg
+2900,Nincada-Nincada,Bug,Ground,Trainee Pokémon,https://img.pokemondb.net/artwork/large/nincada.jpg
+2910,Ninjask-Ninjask,Bug,Flying,Ninja Pokémon,https://img.pokemondb.net/artwork/large/ninjask.jpg
+2920,Shedinja-Shedinja,Bug,Ghost,Shed Pokémon,https://img.pokemondb.net/artwork/large/shedinja.jpg
+2930,Whismur-Whismur,Normal,-,Whisper Pokémon,https://img.pokemondb.net/artwork/large/whismur.jpg
+2940,Loudred-Loudred,Normal,-,Big Voice Pokémon,https://img.pokemondb.net/artwork/large/loudred.jpg
+2950,Exploud-Exploud,Normal,-,Loud Noise Pokémon,https://img.pokemondb.net/artwork/large/exploud.jpg
+2960,Makuhita-Makuhita,Fighting,-,Guts Pokémon,https://img.pokemondb.net/artwork/large/makuhita.jpg
+2970,Hariyama-Hariyama,Fighting,-,Arm Thrust Pokémon,https://img.pokemondb.net/artwork/large/hariyama.jpg
+2980,Azurill-Azurill,Normal,Fairy,Polka Dot Pokémon,https://img.pokemondb.net/artwork/large/azurill.jpg
+2990,Nosepass-Nosepass,Rock,-,Compass Pokémon,https://img.pokemondb.net/artwork/large/nosepass.jpg
+3000,Skitty-Skitty,Normal,-,Kitten Pokémon,https://img.pokemondb.net/artwork/large/skitty.jpg
+3010,Delcatty-Delcatty,Normal,-,Prim Pokémon,https://img.pokemondb.net/artwork/large/delcatty.jpg
+3020,Sableye-Sableye,Dark,Ghost,Darkness Pokémon,https://img.pokemondb.net/artwork/large/sableye.jpg
+3021,Sableye-Mega Sableye,Dark,Ghost,Darkness Pokémon,https://img.pokemondb.net/artwork/large/sableye-mega.jpg
+3030,Mawile-Mawile,Steel,Fairy,Deceiver Pokémon,https://img.pokemondb.net/artwork/large/mawile.jpg
+3031,Mawile-Mega Mawile,Steel,Fairy,Deceiver Pokémon,https://img.pokemondb.net/artwork/large/mawile-mega.jpg
+3040,Aron-Aron,Steel,Rock,Iron Armor Pokémon,https://img.pokemondb.net/artwork/large/aron.jpg
+3050,Lairon-Lairon,Steel,Rock,Iron Armor Pokémon,https://img.pokemondb.net/artwork/large/lairon.jpg
+3060,Aggron-Aggron,Steel,Rock,Iron Armor Pokémon,https://img.pokemondb.net/artwork/large/aggron.jpg
+3061,Aggron-Mega Aggron,Steel,Rock,Iron Armor Pokémon,https://img.pokemondb.net/artwork/large/aggron-mega.jpg
+3070,Meditite-Meditite,Fighting,Psychic,Meditate Pokémon,https://img.pokemondb.net/artwork/large/meditite.jpg
+3080,Medicham-Medicham,Fighting,Psychic,Meditate Pokémon,https://img.pokemondb.net/artwork/large/medicham.jpg
+3081,Medicham-Mega Medicham,Fighting,Psychic,Meditate Pokémon,https://img.pokemondb.net/artwork/large/medicham-mega.jpg
+3090,Electrike-Electrike,Electric,-,Lightning Pokémon,https://img.pokemondb.net/artwork/large/electrike.jpg
+3100,Manectric-Manectric,Electric,-,Discharge Pokémon,https://img.pokemondb.net/artwork/large/manectric.jpg
+3101,Manectric-Mega Manectric,Electric,-,Discharge Pokémon,https://img.pokemondb.net/artwork/large/manectric-mega.jpg
+3110,Plusle-Plusle,Electric,-,Cheering Pokémon,https://img.pokemondb.net/artwork/large/plusle.jpg
+3120,Minun-Minun,Electric,-,Cheering Pokémon,https://img.pokemondb.net/artwork/large/minun.jpg
+3130,Volbeat-Volbeat,Bug,-,Firefly Pokémon,https://img.pokemondb.net/artwork/large/volbeat.jpg
+3140,Illumise-Illumise,Bug,-,Firefly Pokémon,https://img.pokemondb.net/artwork/large/illumise.jpg
+3150,Roselia-Roselia,Grass,Poison,Thorn Pokémon,https://img.pokemondb.net/artwork/large/roselia.jpg
+3160,Gulpin-Gulpin,Poison,-,Stomach Pokémon,https://img.pokemondb.net/artwork/large/gulpin.jpg
+3170,Swalot-Swalot,Poison,-,Poison Bag Pokémon,https://img.pokemondb.net/artwork/large/swalot.jpg
+3180,Carvanha-Carvanha,Water,Dark,Savage Pokémon,https://img.pokemondb.net/artwork/large/carvanha.jpg
+3190,Sharpedo-Sharpedo,Water,Dark,Brutal Pokémon,https://img.pokemondb.net/artwork/large/sharpedo.jpg
+3191,Sharpedo-Mega Sharpedo,Water,Dark,Brutal Pokémon,https://img.pokemondb.net/artwork/large/sharpedo-mega.jpg
+3200,Wailmer-Wailmer,Water,-,Ball Whale Pokémon,https://img.pokemondb.net/artwork/large/wailmer.jpg
+3210,Wailord-Wailord,Water,-,Float Whale Pokémon,https://img.pokemondb.net/artwork/large/wailord.jpg
+3220,Numel-Numel,Fire,Ground,Numb Pokémon,https://img.pokemondb.net/artwork/large/numel.jpg
+3230,Camerupt-Camerupt,Fire,Ground,Eruption Pokémon,https://img.pokemondb.net/artwork/large/camerupt.jpg
+3231,Camerupt-Mega Camerupt,Fire,Ground,Eruption Pokémon,https://img.pokemondb.net/artwork/large/camerupt-mega.jpg
+3240,Torkoal-Torkoal,Fire,-,Coal Pokémon,https://img.pokemondb.net/artwork/large/torkoal.jpg
+3250,Spoink-Spoink,Psychic,-,Bounce Pokémon,https://img.pokemondb.net/artwork/large/spoink.jpg
+3260,Grumpig-Grumpig,Psychic,-,Manipulate Pokémon,https://img.pokemondb.net/artwork/large/grumpig.jpg
+3270,Spinda-Spinda,Normal,-,Spot Panda Pokémon,https://img.pokemondb.net/artwork/large/spinda.jpg
+3280,Trapinch-Trapinch,Ground,-,Ant Pit Pokémon,https://img.pokemondb.net/artwork/large/trapinch.jpg
+3290,Vibrava-Vibrava,Ground,Dragon,Vibration Pokémon,https://img.pokemondb.net/artwork/large/vibrava.jpg
+3300,Flygon-Flygon,Ground,Dragon,Mystic Pokémon,https://img.pokemondb.net/artwork/large/flygon.jpg
+3310,Cacnea-Cacnea,Grass,-,Cactus Pokémon,https://img.pokemondb.net/artwork/large/cacnea.jpg
+3320,Cacturne-Cacturne,Grass,Dark,Scarecrow Pokémon,https://img.pokemondb.net/artwork/large/cacturne.jpg
+3330,Swablu-Swablu,Normal,Flying,Cotton Bird Pokémon,https://img.pokemondb.net/artwork/large/swablu.jpg
+3340,Altaria-Altaria,Dragon,Flying,Humming Pokémon,https://img.pokemondb.net/artwork/large/altaria.jpg
+3341,Altaria-Mega Altaria,Dragon,Flying,Humming Pokémon,https://img.pokemondb.net/artwork/large/altaria-mega.jpg
+3350,Zangoose-Zangoose,Normal,-,Cat Ferret Pokémon,https://img.pokemondb.net/artwork/large/zangoose.jpg
+3360,Seviper-Seviper,Poison,-,Fang Snake Pokémon,https://img.pokemondb.net/artwork/large/seviper.jpg
+3370,Lunatone-Lunatone,Rock,Psychic,Meteorite Pokémon,https://img.pokemondb.net/artwork/large/lunatone.jpg
+3380,Solrock-Solrock,Rock,Psychic,Meteorite Pokémon,https://img.pokemondb.net/artwork/large/solrock.jpg
+3390,Barboach-Barboach,Water,Ground,Whiskers Pokémon,https://img.pokemondb.net/artwork/large/barboach.jpg
+3400,Whiscash-Whiscash,Water,Ground,Whiskers Pokémon,https://img.pokemondb.net/artwork/large/whiscash.jpg
+3410,Corphish-Corphish,Water,-,Ruffian Pokémon,https://img.pokemondb.net/artwork/large/corphish.jpg
+3420,Crawdaunt-Crawdaunt,Water,Dark,Rogue Pokémon,https://img.pokemondb.net/artwork/large/crawdaunt.jpg
+3430,Baltoy-Baltoy,Ground,Psychic,Clay Doll Pokémon,https://img.pokemondb.net/artwork/large/baltoy.jpg
+3440,Claydol-Claydol,Ground,Psychic,Clay Doll Pokémon,https://img.pokemondb.net/artwork/large/claydol.jpg
+3450,Lileep-Lileep,Rock,Grass,Sea Lily Pokémon,https://img.pokemondb.net/artwork/large/lileep.jpg
+3460,Cradily-Cradily,Rock,Grass,Barnacle Pokémon,https://img.pokemondb.net/artwork/large/cradily.jpg
+3470,Anorith-Anorith,Rock,Bug,Old Shrimp Pokémon,https://img.pokemondb.net/artwork/large/anorith.jpg
+3480,Armaldo-Armaldo,Rock,Bug,Plate Pokémon,https://img.pokemondb.net/artwork/large/armaldo.jpg
+3490,Feebas-Feebas,Water,-,Fish Pokémon,https://img.pokemondb.net/artwork/large/feebas.jpg
+3500,Milotic-Milotic,Water,-,Tender Pokémon,https://img.pokemondb.net/artwork/large/milotic.jpg
+3510,Castform-Castform,Normal,-,Weather Pokémon,https://img.pokemondb.net/artwork/large/castform.jpg
+3511,Castform-Sunny Form,Normal,-,Weather Pokémon,https://img.pokemondb.net/artwork/vector/castform-sunny.png
+3512,Castform-Rainy Form,Normal,-,Weather Pokémon,https://img.pokemondb.net/artwork/vector/castform-rainy.png
+3513,Castform-Snowy Form,Normal,-,Weather Pokémon,https://img.pokemondb.net/artwork/vector/castform-snowy.png
+3520,Kecleon-Kecleon,Normal,-,Color Swap Pokémon,https://img.pokemondb.net/artwork/large/kecleon.jpg
+3530,Shuppet-Shuppet,Ghost,-,Puppet Pokémon,https://img.pokemondb.net/artwork/large/shuppet.jpg
+3540,Banette-Banette,Ghost,-,Marionette Pokémon,https://img.pokemondb.net/artwork/large/banette.jpg
+3541,Banette-Mega Banette,Ghost,-,Marionette Pokémon,https://img.pokemondb.net/artwork/large/banette-mega.jpg
+3550,Duskull-Duskull,Ghost,-,Requiem Pokémon,https://img.pokemondb.net/artwork/large/duskull.jpg
+3560,Dusclops-Dusclops,Ghost,-,Beckon Pokémon,https://img.pokemondb.net/artwork/large/dusclops.jpg
+3570,Tropius-Tropius,Grass,Flying,Fruit Pokémon,https://img.pokemondb.net/artwork/large/tropius.jpg
+3580,Chimecho-Chimecho,Psychic,-,Wind Chime Pokémon,https://img.pokemondb.net/artwork/large/chimecho.jpg
+3590,Absol-Absol,Dark,-,Disaster Pokémon,https://img.pokemondb.net/artwork/large/absol.jpg
+3591,Absol-Mega Absol,Dark,-,Disaster Pokémon,https://img.pokemondb.net/artwork/large/absol-mega.jpg
+3600,Wynaut-Wynaut,Psychic,-,Bright Pokémon,https://img.pokemondb.net/artwork/large/wynaut.jpg
+3610,Snorunt-Snorunt,Ice,-,Snow Hat Pokémon,https://img.pokemondb.net/artwork/large/snorunt.jpg
+3620,Glalie-Glalie,Ice,-,Face Pokémon,https://img.pokemondb.net/artwork/large/glalie.jpg
+3621,Glalie-Mega Glalie,Ice,-,Face Pokémon,https://img.pokemondb.net/artwork/large/glalie-mega.jpg
+3630,Spheal-Spheal,Ice,Water,Clap Pokémon,https://img.pokemondb.net/artwork/large/spheal.jpg
+3640,Sealeo-Sealeo,Ice,Water,Ball Roll Pokémon,https://img.pokemondb.net/artwork/large/sealeo.jpg
+3650,Walrein-Walrein,Ice,Water,Ice Break Pokémon,https://img.pokemondb.net/artwork/large/walrein.jpg
+3660,Clamperl-Clamperl,Water,-,Bivalve Pokémon,https://img.pokemondb.net/artwork/large/clamperl.jpg
+3670,Huntail-Huntail,Water,-,Deep Sea Pokémon,https://img.pokemondb.net/artwork/large/huntail.jpg
+3680,Gorebyss-Gorebyss,Water,-,South Sea Pokémon,https://img.pokemondb.net/artwork/large/gorebyss.jpg
+3690,Relicanth-Relicanth,Water,Rock,Longevity Pokémon,https://img.pokemondb.net/artwork/large/relicanth.jpg
+3700,Luvdisc-Luvdisc,Water,-,Rendezvous Pokémon,https://img.pokemondb.net/artwork/large/luvdisc.jpg
+3710,Bagon-Bagon,Dragon,-,Rock Head Pokémon,https://img.pokemondb.net/artwork/large/bagon.jpg
+3720,Shelgon-Shelgon,Dragon,-,Endurance Pokémon,https://img.pokemondb.net/artwork/large/shelgon.jpg
+3730,Salamence-Salamence,Dragon,Flying,Dragon Pokémon,https://img.pokemondb.net/artwork/large/salamence.jpg
+3731,Salamence-Mega Salamence,Dragon,Flying,Dragon Pokémon,https://img.pokemondb.net/artwork/large/salamence-mega.jpg
+3740,Beldum-Beldum,Steel,Psychic,Iron Ball Pokémon,https://img.pokemondb.net/artwork/large/beldum.jpg
+3750,Metang-Metang,Steel,Psychic,Iron Claw Pokémon,https://img.pokemondb.net/artwork/large/metang.jpg
+3760,Metagross-Metagross,Steel,Psychic,Iron Leg Pokémon,https://img.pokemondb.net/artwork/large/metagross.jpg
+3761,Metagross-Mega Metagross,Steel,Psychic,Iron Leg Pokémon,https://img.pokemondb.net/artwork/large/metagross-mega.jpg
+3770,Regirock-Regirock,Rock,-,Rock Peak Pokémon,https://img.pokemondb.net/artwork/large/regirock.jpg
+3780,Regice-Regice,Ice,-,Iceberg Pokémon,https://img.pokemondb.net/artwork/large/regice.jpg
+3790,Registeel-Registeel,Steel,-,Iron Pokémon,https://img.pokemondb.net/artwork/large/registeel.jpg
+3800,Latias-Latias,Dragon,Psychic,Eon Pokémon,https://img.pokemondb.net/artwork/large/latias.jpg
+3801,Latias-Mega Latias,Dragon,Psychic,Eon Pokémon,https://img.pokemondb.net/artwork/large/latias-mega.jpg
+3810,Latios-Latios,Dragon,Psychic,Eon Pokémon,https://img.pokemondb.net/artwork/large/latios.jpg
+3811,Latios-Mega Latios,Dragon,Psychic,Eon Pokémon,https://img.pokemondb.net/artwork/large/latios-mega.jpg
+3820,Kyogre-Kyogre,Water,-,Sea Basin Pokémon,https://img.pokemondb.net/artwork/large/kyogre.jpg
+3821,Kyogre-Primal Kyogre,Water,-,Sea Basin Pokémon,https://img.pokemondb.net/artwork/large/kyogre-primal.jpg
+3830,Groudon-Groudon,Ground,-,Continent Pokémon,https://img.pokemondb.net/artwork/large/groudon.jpg
+3831,Groudon-Primal Groudon,Ground,-,Continent Pokémon,https://img.pokemondb.net/artwork/large/groudon-primal.jpg
+3840,Rayquaza-Rayquaza,Dragon,Flying,Sky High Pokémon,https://img.pokemondb.net/artwork/large/rayquaza.jpg
+3841,Rayquaza-Mega Rayquaza,Dragon,Flying,Sky High Pokémon,https://img.pokemondb.net/artwork/large/rayquaza-mega.jpg
+3850,Jirachi-Jirachi,Steel,Psychic,Wish Pokémon,https://img.pokemondb.net/artwork/large/jirachi.jpg
+3860,Deoxys-Normal Forme,Psychic,-,DNA Pokémon,https://img.pokemondb.net/artwork/large/deoxys-normal.jpg
+3861,Deoxys-Attack Forme,Psychic,-,DNA Pokémon,https://img.pokemondb.net/artwork/large/deoxys-attack.jpg
+3862,Deoxys-Defense Forme,Psychic,-,DNA Pokémon,https://img.pokemondb.net/artwork/large/deoxys-defense.jpg
+3863,Deoxys-Speed Forme,Psychic,-,DNA Pokémon,https://img.pokemondb.net/artwork/large/deoxys-speed.jpg
+3870,Turtwig-Turtwig,Grass,-,Tiny Leaf Pokémon,https://img.pokemondb.net/artwork/large/turtwig.jpg
+3880,Grotle-Grotle,Grass,-,Grove Pokémon,https://img.pokemondb.net/artwork/large/grotle.jpg
+3890,Torterra-Torterra,Grass,Ground,Continent Pokémon,https://img.pokemondb.net/artwork/large/torterra.jpg
+3900,Chimchar-Chimchar,Fire,-,Chimp Pokémon,https://img.pokemondb.net/artwork/large/chimchar.jpg
+3910,Monferno-Monferno,Fire,Fighting,Playful Pokémon,https://img.pokemondb.net/artwork/large/monferno.jpg
+3920,Infernape-Infernape,Fire,Fighting,Flame Pokémon,https://img.pokemondb.net/artwork/large/infernape.jpg
+3930,Piplup-Piplup,Water,-,Penguin Pokémon,https://img.pokemondb.net/artwork/large/piplup.jpg
+3940,Prinplup-Prinplup,Water,-,Penguin Pokémon,https://img.pokemondb.net/artwork/large/prinplup.jpg
+3950,Empoleon-Empoleon,Water,Steel,Emperor Pokémon,https://img.pokemondb.net/artwork/large/empoleon.jpg
+3960,Starly-Starly,Normal,Flying,Starling Pokémon,https://img.pokemondb.net/artwork/large/starly.jpg
+3970,Staravia-Staravia,Normal,Flying,Starling Pokémon,https://img.pokemondb.net/artwork/large/staravia.jpg
+3980,Staraptor-Staraptor,Normal,Flying,Predator Pokémon,https://img.pokemondb.net/artwork/large/staraptor.jpg
+3990,Bidoof-Bidoof,Normal,-,Plump Mouse Pokémon,https://img.pokemondb.net/artwork/large/bidoof.jpg
+4000,Bibarel-Bibarel,Normal,Water,Beaver Pokémon,https://img.pokemondb.net/artwork/large/bibarel.jpg
+4010,Kricketot-Kricketot,Bug,-,Cricket Pokémon,https://img.pokemondb.net/artwork/large/kricketot.jpg
+4020,Kricketune-Kricketune,Bug,-,Cricket Pokémon,https://img.pokemondb.net/artwork/large/kricketune.jpg
+4030,Shinx-Shinx,Electric,-,Flash Pokémon,https://img.pokemondb.net/artwork/large/shinx.jpg
+4040,Luxio-Luxio,Electric,-,Spark Pokémon,https://img.pokemondb.net/artwork/large/luxio.jpg
+4050,Luxray-Luxray,Electric,-,Gleam Eyes Pokémon,https://img.pokemondb.net/artwork/large/luxray.jpg
+4060,Budew-Budew,Grass,Poison,Bud Pokémon,https://img.pokemondb.net/artwork/large/budew.jpg
+4070,Roserade-Roserade,Grass,Poison,Bouquet Pokémon,https://img.pokemondb.net/artwork/large/roserade.jpg
+4080,Cranidos-Cranidos,Rock,-,Head Butt Pokémon,https://img.pokemondb.net/artwork/large/cranidos.jpg
+4090,Rampardos-Rampardos,Rock,-,Head Butt Pokémon,https://img.pokemondb.net/artwork/large/rampardos.jpg
+4100,Shieldon-Shieldon,Rock,Steel,Shield Pokémon,https://img.pokemondb.net/artwork/large/shieldon.jpg
+4110,Bastiodon-Bastiodon,Rock,Steel,Shield Pokémon,https://img.pokemondb.net/artwork/large/bastiodon.jpg
+4120,Burmy-Plant Cloak,Bug,-,Bagworm Pokémon,https://img.pokemondb.net/artwork/large/burmy-plant.jpg
+4121,Burmy-Sandy Cloak,Bug,-,Bagworm Pokémon,https://img.pokemondb.net/artwork/large/burmy-sandy.jpg
+4122,Burmy-Trash Cloak,Bug,-,Bagworm Pokémon,https://img.pokemondb.net/artwork/large/burmy-trash.jpg
+4130,Wormadam-Plant Cloak,Bug,Grass,Bagworm Pokémon,https://img.pokemondb.net/artwork/large/wormadam-plant.jpg
+4131,Wormadam-Sandy Cloak,Bug,Grass,Bagworm Pokémon,https://img.pokemondb.net/artwork/large/wormadam-sandy.jpg
+4132,Wormadam-Trash Cloak,Bug,Grass,Bagworm Pokémon,https://img.pokemondb.net/artwork/large/wormadam-trash.jpg
+4140,Mothim-Mothim,Bug,Flying,Moth Pokémon,https://img.pokemondb.net/artwork/large/mothim.jpg
+4150,Combee-Combee,Bug,Flying,Tiny Bee Pokémon,https://img.pokemondb.net/artwork/large/combee.jpg
+4160,Vespiquen-Vespiquen,Bug,Flying,Beehive Pokémon,https://img.pokemondb.net/artwork/large/vespiquen.jpg
+4170,Pachirisu-Pachirisu,Electric,-,EleSquirrel Pokémon,https://img.pokemondb.net/artwork/large/pachirisu.jpg
+4180,Buizel-Buizel,Water,-,Sea Weasel Pokémon,https://img.pokemondb.net/artwork/large/buizel.jpg
+4190,Floatzel-Floatzel,Water,-,Sea Weasel Pokémon,https://img.pokemondb.net/artwork/large/floatzel.jpg
+4200,Cherubi-Cherubi,Grass,-,Cherry Pokémon,https://img.pokemondb.net/artwork/large/cherubi.jpg
+4210,Cherrim-Cherrim,Grass,-,Blossom Pokémon,https://img.pokemondb.net/artwork/large/cherrim.jpg
+4220,Shellos-Shellos,Water,-,Sea Slug Pokémon,https://img.pokemondb.net/artwork/large/shellos.jpg
+4230,Gastrodon-Gastrodon,Water,Ground,Sea Slug Pokémon,https://img.pokemondb.net/artwork/large/gastrodon.jpg
+4240,Ambipom-Ambipom,Normal,-,Long Tail Pokémon,https://img.pokemondb.net/artwork/large/ambipom.jpg
+4250,Drifloon-Drifloon,Ghost,Flying,Balloon Pokémon,https://img.pokemondb.net/artwork/large/drifloon.jpg
+4260,Drifblim-Drifblim,Ghost,Flying,Blimp Pokémon,https://img.pokemondb.net/artwork/large/drifblim.jpg
+4270,Buneary-Buneary,Normal,-,Rabbit Pokémon,https://img.pokemondb.net/artwork/large/buneary.jpg
+4280,Lopunny-Lopunny,Normal,-,Rabbit Pokémon,https://img.pokemondb.net/artwork/large/lopunny.jpg
+4281,Lopunny-Mega Lopunny,Normal,-,Rabbit Pokémon,https://img.pokemondb.net/artwork/large/lopunny-mega.jpg
+4290,Mismagius-Mismagius,Ghost,-,Magical Pokémon,https://img.pokemondb.net/artwork/large/mismagius.jpg
+4300,Honchkrow-Honchkrow,Dark,Flying,Big Boss Pokémon,https://img.pokemondb.net/artwork/large/honchkrow.jpg
+4310,Glameow-Glameow,Normal,-,Catty Pokémon,https://img.pokemondb.net/artwork/large/glameow.jpg
+4320,Purugly-Purugly,Normal,-,Tiger Cat Pokémon,https://img.pokemondb.net/artwork/large/purugly.jpg
+4330,Chingling-Chingling,Psychic,-,Bell Pokémon,https://img.pokemondb.net/artwork/large/chingling.jpg
+4340,Stunky-Stunky,Poison,Dark,Skunk Pokémon,https://img.pokemondb.net/artwork/large/stunky.jpg
+4350,Skuntank-Skuntank,Poison,Dark,Skunk Pokémon,https://img.pokemondb.net/artwork/large/skuntank.jpg
+4360,Bronzor-Bronzor,Steel,Psychic,Bronze Pokémon,https://img.pokemondb.net/artwork/large/bronzor.jpg
+4370,Bronzong-Bronzong,Steel,Psychic,Bronze Bell Pokémon,https://img.pokemondb.net/artwork/large/bronzong.jpg
+4380,Bonsly-Bonsly,Rock,-,Bonsai Pokémon,https://img.pokemondb.net/artwork/large/bonsly.jpg
+4390,Mime Jr.-Mime Jr.,Psychic,Fairy,Mime Pokémon,https://img.pokemondb.net/artwork/large/mime-jr.jpg
+4400,Happiny-Happiny,Normal,-,Playhouse Pokémon,https://img.pokemondb.net/artwork/large/happiny.jpg
+4410,Chatot-Chatot,Normal,Flying,Music Note Pokémon,https://img.pokemondb.net/artwork/large/chatot.jpg
+4420,Spiritomb-Spiritomb,Ghost,Dark,Forbidden Pokémon,https://img.pokemondb.net/artwork/large/spiritomb.jpg
+4430,Gible-Gible,Dragon,Ground,Land Shark Pokémon,https://img.pokemondb.net/artwork/large/gible.jpg
+4440,Gabite-Gabite,Dragon,Ground,Cave Pokémon,https://img.pokemondb.net/artwork/large/gabite.jpg
+4450,Garchomp-Garchomp,Dragon,Ground,Mach Pokémon,https://img.pokemondb.net/artwork/large/garchomp.jpg
+4451,Garchomp-Mega Garchomp,Dragon,Ground,Mach Pokémon,https://img.pokemondb.net/artwork/large/garchomp-mega.jpg
+4460,Munchlax-Munchlax,Normal,-,Big Eater Pokémon,https://img.pokemondb.net/artwork/large/munchlax.jpg
+4470,Riolu-Riolu,Fighting,-,Emanation Pokémon,https://img.pokemondb.net/artwork/large/riolu.jpg
+4480,Lucario-Lucario,Fighting,Steel,Aura Pokémon,https://img.pokemondb.net/artwork/large/lucario.jpg
+4481,Lucario-Mega Lucario,Fighting,Steel,Aura Pokémon,https://img.pokemondb.net/artwork/large/lucario-mega.jpg
+4490,Hippopotas-Hippopotas,Ground,-,Hippo Pokémon,https://img.pokemondb.net/artwork/large/hippopotas.jpg
+4500,Hippowdon-Hippowdon,Ground,-,Heavyweight Pokémon,https://img.pokemondb.net/artwork/large/hippowdon.jpg
+4510,Skorupi-Skorupi,Poison,Bug,Scorpion Pokémon,https://img.pokemondb.net/artwork/large/skorupi.jpg
+4520,Drapion-Drapion,Poison,Dark,Ogre Scorp Pokémon,https://img.pokemondb.net/artwork/large/drapion.jpg
+4530,Croagunk-Croagunk,Poison,Fighting,Toxic Mouth Pokémon,https://img.pokemondb.net/artwork/large/croagunk.jpg
+4540,Toxicroak-Toxicroak,Poison,Fighting,Toxic Mouth Pokémon,https://img.pokemondb.net/artwork/large/toxicroak.jpg
+4550,Carnivine-Carnivine,Grass,-,Bug Catcher Pokémon,https://img.pokemondb.net/artwork/large/carnivine.jpg
+4560,Finneon-Finneon,Water,-,Wing Fish Pokémon,https://img.pokemondb.net/artwork/large/finneon.jpg
+4570,Lumineon-Lumineon,Water,-,Neon Pokémon,https://img.pokemondb.net/artwork/large/lumineon.jpg
+4580,Mantyke-Mantyke,Water,Flying,Kite Pokémon,https://img.pokemondb.net/artwork/large/mantyke.jpg
+4590,Snover-Snover,Grass,Ice,Frost Tree Pokémon,https://img.pokemondb.net/artwork/large/snover.jpg
+4600,Abomasnow-Abomasnow,Grass,Ice,Frost Tree Pokémon,https://img.pokemondb.net/artwork/large/abomasnow.jpg
+4601,Abomasnow-Mega Abomasnow,Grass,Ice,Frost Tree Pokémon,https://img.pokemondb.net/artwork/large/abomasnow-mega.jpg
+4610,Weavile-Weavile,Dark,Ice,Sharp Claw Pokémon,https://img.pokemondb.net/artwork/large/weavile.jpg
+4620,Magnezone-Magnezone,Electric,Steel,Magnet Area Pokémon,https://img.pokemondb.net/artwork/large/magnezone.jpg
+4630,Lickilicky-Lickilicky,Normal,-,Licking Pokémon,https://img.pokemondb.net/artwork/large/lickilicky.jpg
+4640,Rhyperior-Rhyperior,Ground,Rock,Drill Pokémon,https://img.pokemondb.net/artwork/large/rhyperior.jpg
+4650,Tangrowth-Tangrowth,Grass,-,Vine Pokémon,https://img.pokemondb.net/artwork/large/tangrowth.jpg
+4660,Electivire-Electivire,Electric,-,Thunderbolt Pokémon,https://img.pokemondb.net/artwork/large/electivire.jpg
+4670,Magmortar-Magmortar,Fire,-,Blast Pokémon,https://img.pokemondb.net/artwork/large/magmortar.jpg
+4680,Togekiss-Togekiss,Fairy,Flying,Jubilee Pokémon,https://img.pokemondb.net/artwork/large/togekiss.jpg
+4690,Yanmega-Yanmega,Bug,Flying,Ogre Darner Pokémon,https://img.pokemondb.net/artwork/large/yanmega.jpg
+4700,Leafeon-Leafeon,Grass,-,Verdant Pokémon,https://img.pokemondb.net/artwork/large/leafeon.jpg
+4710,Glaceon-Glaceon,Ice,-,Fresh Snow Pokémon,https://img.pokemondb.net/artwork/large/glaceon.jpg
+4720,Gliscor-Gliscor,Ground,Flying,Fang Scorp Pokémon,https://img.pokemondb.net/artwork/large/gliscor.jpg
+4730,Mamoswine-Mamoswine,Ice,Ground,Twin Tusk Pokémon,https://img.pokemondb.net/artwork/large/mamoswine.jpg
+4740,Porygon-Z-Porygon-Z,Normal,-,Virtual Pokémon,https://img.pokemondb.net/artwork/large/porygon-z.jpg
+4750,Gallade-Gallade,Psychic,Fighting,Blade Pokémon,https://img.pokemondb.net/artwork/large/gallade.jpg
+4751,Gallade-Mega Gallade,Psychic,Fighting,Blade Pokémon,https://img.pokemondb.net/artwork/large/gallade-mega.jpg
+4760,Probopass-Probopass,Rock,Steel,Compass Pokémon,https://img.pokemondb.net/artwork/large/probopass.jpg
+4770,Dusknoir-Dusknoir,Ghost,-,Gripper Pokémon,https://img.pokemondb.net/artwork/large/dusknoir.jpg
+4780,Froslass-Froslass,Ice,Ghost,Snow Land Pokémon,https://img.pokemondb.net/artwork/large/froslass.jpg
+4790,Rotom-Rotom,Electric,Ghost,Plasma Pokémon,https://img.pokemondb.net/artwork/large/rotom.jpg
+4791,Rotom-Heat Rotom,Electric,Ghost,Plasma Pokémon,https://img.pokemondb.net/artwork/large/rotom-heat.jpg
+4792,Rotom-Wash Rotom,Electric,Ghost,Plasma Pokémon,https://img.pokemondb.net/artwork/large/rotom-wash.jpg
+4793,Rotom-Frost Rotom,Electric,Ghost,Plasma Pokémon,https://img.pokemondb.net/artwork/large/rotom-frost.jpg
+4794,Rotom-Fan Rotom,Electric,Ghost,Plasma Pokémon,https://img.pokemondb.net/artwork/large/rotom-fan.jpg
+4795,Rotom-Mow Rotom,Electric,Ghost,Plasma Pokémon,https://img.pokemondb.net/artwork/large/rotom-mow.jpg
+4800,Uxie-Uxie,Psychic,-,Knowledge Pokémon,https://img.pokemondb.net/artwork/large/uxie.jpg
+4810,Mesprit-Mesprit,Psychic,-,Emotion Pokémon,https://img.pokemondb.net/artwork/large/mesprit.jpg
+4820,Azelf-Azelf,Psychic,-,Willpower Pokémon,https://img.pokemondb.net/artwork/large/azelf.jpg
+4830,Dialga-Dialga,Steel,Dragon,Temporal Pokémon,https://img.pokemondb.net/artwork/large/dialga.jpg
+4831,Dialga-Origin Forme,Steel,Dragon,Temporal Pokémon,https://img.pokemondb.net/artwork/large/dialga-origin.jpg
+4840,Palkia-Palkia,Water,Dragon,Spatial Pokémon,https://img.pokemondb.net/artwork/large/palkia.jpg
+4841,Palkia-Origin Forme,Water,Dragon,Spatial Pokémon,https://img.pokemondb.net/artwork/large/palkia-origin.jpg
+4850,Heatran-Heatran,Fire,Steel,Lava Dome Pokémon,https://img.pokemondb.net/artwork/large/heatran.jpg
+4860,Regigigas-Regigigas,Normal,-,Colossal Pokémon,https://img.pokemondb.net/artwork/large/regigigas.jpg
+4870,Giratina-Altered Forme,Ghost,Dragon,Renegade Pokémon,https://img.pokemondb.net/artwork/large/giratina-altered.jpg
+4871,Giratina-Origin Forme,Ghost,Dragon,Renegade Pokémon,https://img.pokemondb.net/artwork/large/giratina-origin.jpg
+4880,Cresselia-Cresselia,Psychic,-,Lunar Pokémon,https://img.pokemondb.net/artwork/large/cresselia.jpg
+4890,Phione-Phione,Water,-,Sea Drifter Pokémon,https://img.pokemondb.net/artwork/large/phione.jpg
+4900,Manaphy-Manaphy,Water,-,Seafaring Pokémon,https://img.pokemondb.net/artwork/large/manaphy.jpg
+4910,Darkrai-Darkrai,Dark,-,Pitch-Black Pokémon,https://img.pokemondb.net/artwork/large/darkrai.jpg
+4920,Shaymin-Land Forme,Grass,-,Gratitude Pokémon,https://img.pokemondb.net/artwork/large/shaymin-land.jpg
+4921,Shaymin-Sky Forme,Grass,-,Gratitude Pokémon,https://img.pokemondb.net/artwork/large/shaymin-sky.jpg
+4930,Arceus-Arceus,Normal,-,Alpha Pokémon,https://img.pokemondb.net/artwork/large/arceus.jpg
+4940,Victini-Victini,Psychic,Fire,Victory Pokémon,https://img.pokemondb.net/artwork/large/victini.jpg
+4950,Snivy-Snivy,Grass,-,Grass Snake Pokémon,https://img.pokemondb.net/artwork/large/snivy.jpg
+4960,Servine-Servine,Grass,-,Grass Snake Pokémon,https://img.pokemondb.net/artwork/large/servine.jpg
+4970,Serperior-Serperior,Grass,-,Regal Pokémon,https://img.pokemondb.net/artwork/large/serperior.jpg
+4980,Tepig-Tepig,Fire,-,Fire Pig Pokémon,https://img.pokemondb.net/artwork/large/tepig.jpg
+4990,Pignite-Pignite,Fire,Fighting,Fire Pig Pokémon,https://img.pokemondb.net/artwork/large/pignite.jpg
+5000,Emboar-Emboar,Fire,Fighting,Mega Fire Pig Pokémon,https://img.pokemondb.net/artwork/large/emboar.jpg
+5010,Oshawott-Oshawott,Water,-,Sea Otter Pokémon,https://img.pokemondb.net/artwork/large/oshawott.jpg
+5020,Dewott-Dewott,Water,-,Discipline Pokémon,https://img.pokemondb.net/artwork/large/dewott.jpg
+5030,Samurott-Samurott,Water,-,Formidable Pokémon,https://img.pokemondb.net/artwork/large/samurott.jpg
+5031,Samurott-Hisuian Samurott,Water,-,Formidable Pokémon,https://img.pokemondb.net/artwork/large/samurott-hisuian.jpg
+5040,Patrat-Patrat,Normal,-,Scout Pokémon,https://img.pokemondb.net/artwork/large/patrat.jpg
+5050,Watchog-Watchog,Normal,-,Lookout Pokémon,https://img.pokemondb.net/artwork/large/watchog.jpg
+5060,Lillipup-Lillipup,Normal,-,Puppy Pokémon,https://img.pokemondb.net/artwork/large/lillipup.jpg
+5070,Herdier-Herdier,Normal,-,Loyal Dog Pokémon,https://img.pokemondb.net/artwork/large/herdier.jpg
+5080,Stoutland-Stoutland,Normal,-,Big-Hearted Pokémon,https://img.pokemondb.net/artwork/large/stoutland.jpg
+5090,Purrloin-Purrloin,Dark,-,Devious Pokémon,https://img.pokemondb.net/artwork/large/purrloin.jpg
+5100,Liepard-Liepard,Dark,-,Cruel Pokémon,https://img.pokemondb.net/artwork/large/liepard.jpg
+5110,Pansage-Pansage,Grass,-,Grass Monkey Pokémon,https://img.pokemondb.net/artwork/large/pansage.jpg
+5120,Simisage-Simisage,Grass,-,Thorn Monkey Pokémon,https://img.pokemondb.net/artwork/large/simisage.jpg
+5130,Pansear-Pansear,Fire,-,High Temp Pokémon,https://img.pokemondb.net/artwork/large/pansear.jpg
+5140,Simisear-Simisear,Fire,-,Ember Pokémon,https://img.pokemondb.net/artwork/large/simisear.jpg
+5150,Panpour-Panpour,Water,-,Spray Pokémon,https://img.pokemondb.net/artwork/large/panpour.jpg
+5160,Simipour-Simipour,Water,-,Geyser Pokémon,https://img.pokemondb.net/artwork/large/simipour.jpg
+5170,Munna-Munna,Psychic,-,Dream Eater Pokémon,https://img.pokemondb.net/artwork/large/munna.jpg
+5180,Musharna-Musharna,Psychic,-,Drowsing Pokémon,https://img.pokemondb.net/artwork/large/musharna.jpg
+5190,Pidove-Pidove,Normal,Flying,Tiny Pigeon Pokémon,https://img.pokemondb.net/artwork/large/pidove.jpg
+5200,Tranquill-Tranquill,Normal,Flying,Wild Pigeon Pokémon,https://img.pokemondb.net/artwork/large/tranquill.jpg
+5210,Unfezant-Unfezant,Normal,Flying,Proud Pokémon,https://img.pokemondb.net/artwork/large/unfezant.jpg
+5220,Blitzle-Blitzle,Electric,-,Electrified Pokémon,https://img.pokemondb.net/artwork/large/blitzle.jpg
+5230,Zebstrika-Zebstrika,Electric,-,Thunderbolt Pokémon,https://img.pokemondb.net/artwork/large/zebstrika.jpg
+5240,Roggenrola-Roggenrola,Rock,-,Mantle Pokémon,https://img.pokemondb.net/artwork/large/roggenrola.jpg
+5250,Boldore-Boldore,Rock,-,Ore Pokémon,https://img.pokemondb.net/artwork/large/boldore.jpg
+5260,Gigalith-Gigalith,Rock,-,Compressed Pokémon,https://img.pokemondb.net/artwork/large/gigalith.jpg
+5270,Woobat-Woobat,Psychic,Flying,Bat Pokémon,https://img.pokemondb.net/artwork/large/woobat.jpg
+5280,Swoobat-Swoobat,Psychic,Flying,Courting Pokémon,https://img.pokemondb.net/artwork/large/swoobat.jpg
+5290,Drilbur-Drilbur,Ground,-,Mole Pokémon,https://img.pokemondb.net/artwork/large/drilbur.jpg
+5300,Excadrill-Excadrill,Ground,Steel,Subterrene Pokémon,https://img.pokemondb.net/artwork/large/excadrill.jpg
+5310,Audino-Audino,Normal,-,Hearing Pokémon,https://img.pokemondb.net/artwork/large/audino.jpg
+5311,Audino-Mega Audino,Normal,-,Hearing Pokémon,https://img.pokemondb.net/artwork/large/audino-mega.jpg
+5320,Timburr-Timburr,Fighting,-,Muscular Pokémon,https://img.pokemondb.net/artwork/large/timburr.jpg
+5330,Gurdurr-Gurdurr,Fighting,-,Muscular Pokémon,https://img.pokemondb.net/artwork/large/gurdurr.jpg
+5340,Conkeldurr-Conkeldurr,Fighting,-,Muscular Pokémon,https://img.pokemondb.net/artwork/large/conkeldurr.jpg
+5350,Tympole-Tympole,Water,-,Tadpole Pokémon,https://img.pokemondb.net/artwork/large/tympole.jpg
+5360,Palpitoad-Palpitoad,Water,Ground,Vibration Pokémon,https://img.pokemondb.net/artwork/large/palpitoad.jpg
+5370,Seismitoad-Seismitoad,Water,Ground,Vibration Pokémon,https://img.pokemondb.net/artwork/large/seismitoad.jpg
+5380,Throh-Throh,Fighting,-,Judo Pokémon,https://img.pokemondb.net/artwork/large/throh.jpg
+5390,Sawk-Sawk,Fighting,-,Karate Pokémon,https://img.pokemondb.net/artwork/large/sawk.jpg
+5400,Sewaddle-Sewaddle,Bug,Grass,Sewing Pokémon,https://img.pokemondb.net/artwork/large/sewaddle.jpg
+5410,Swadloon-Swadloon,Bug,Grass,Leaf-Wrapped Pokémon,https://img.pokemondb.net/artwork/large/swadloon.jpg
+5420,Leavanny-Leavanny,Bug,Grass,Nurturing Pokémon,https://img.pokemondb.net/artwork/large/leavanny.jpg
+5430,Venipede-Venipede,Bug,Poison,Centipede Pokémon,https://img.pokemondb.net/artwork/large/venipede.jpg
+5440,Whirlipede-Whirlipede,Bug,Poison,Curlipede Pokémon,https://img.pokemondb.net/artwork/large/whirlipede.jpg
+5450,Scolipede-Scolipede,Bug,Poison,Megapede Pokémon,https://img.pokemondb.net/artwork/large/scolipede.jpg
+5460,Cottonee-Cottonee,Grass,Fairy,Cotton Puff Pokémon,https://img.pokemondb.net/artwork/large/cottonee.jpg
+5470,Whimsicott-Whimsicott,Grass,Fairy,Windveiled Pokémon,https://img.pokemondb.net/artwork/large/whimsicott.jpg
+5480,Petilil-Petilil,Grass,-,Bulb Pokémon,https://img.pokemondb.net/artwork/large/petilil.jpg
+5490,Lilligant-Lilligant,Grass,-,Flowering Pokémon,https://img.pokemondb.net/artwork/large/lilligant.jpg
+5491,Lilligant-Hisuian Lilligant,Grass,-,Spinning Pokémon,https://img.pokemondb.net/artwork/large/lilligant-hisuian.jpg
+5500,Basculin-Red-Striped Form,Water,-,Hostile Pokémon,https://img.pokemondb.net/artwork/large/basculin-red-striped.jpg
+5501,Basculin-Blue-Striped Form,Water,-,Hostile Pokémon,https://img.pokemondb.net/artwork/large/basculin-blue-striped.jpg
+5502,Basculin-White-Striped Form,Water,-,Mellow Pokémon,https://img.pokemondb.net/artwork/large/basculin-white-striped.jpg
+5510,Sandile-Sandile,Ground,Dark,Desert Croc Pokémon,https://img.pokemondb.net/artwork/large/sandile.jpg
+5520,Krokorok-Krokorok,Ground,Dark,Desert Croc Pokémon,https://img.pokemondb.net/artwork/large/krokorok.jpg
+5530,Krookodile-Krookodile,Ground,Dark,Intimidation Pokémon,https://img.pokemondb.net/artwork/large/krookodile.jpg
+5540,Darumaka-Darumaka,Fire,-,Zen Charm Pokémon,https://img.pokemondb.net/artwork/large/darumaka.jpg
+5541,Darumaka-Galarian Darumaka,Fire,-,Zen Charm Pokémon,https://img.pokemondb.net/artwork/large/darumaka-galarian.jpg
+5550,Darmanitan-Standard Mode,Fire,-,Blazing Pokémon,https://img.pokemondb.net/artwork/large/darmanitan-standard.jpg
+5551,Darmanitan-Zen Mode,Fire,-,Blazing Pokémon,https://img.pokemondb.net/artwork/large/darmanitan-zen.jpg
+5552,Darmanitan-Galarian Standard Mode,Fire,-,Zen Charm Pokémon,https://img.pokemondb.net/artwork/large/darmanitan-galarian-standard.jpg
+5553,Darmanitan-Galarian Zen Mode,Fire,-,Zen Charm Pokémon,https://img.pokemondb.net/artwork/large/darmanitan-galarian-zen.jpg
+5560,Maractus-Maractus,Grass,-,Cactus Pokémon,https://img.pokemondb.net/artwork/large/maractus.jpg
+5570,Dwebble-Dwebble,Bug,Rock,Rock Inn Pokémon,https://img.pokemondb.net/artwork/large/dwebble.jpg
+5580,Crustle-Crustle,Bug,Rock,Stone Home Pokémon,https://img.pokemondb.net/artwork/large/crustle.jpg
+5590,Scraggy-Scraggy,Dark,Fighting,Shedding Pokémon,https://img.pokemondb.net/artwork/large/scraggy.jpg
+5600,Scrafty-Scrafty,Dark,Fighting,Hoodlum Pokémon,https://img.pokemondb.net/artwork/large/scrafty.jpg
+5610,Sigilyph-Sigilyph,Psychic,Flying,Avianoid Pokémon,https://img.pokemondb.net/artwork/large/sigilyph.jpg
+5620,Yamask-Yamask,Ghost,-,Spirit Pokémon,https://img.pokemondb.net/artwork/large/yamask.jpg
+5621,Yamask-Galarian Yamask,Ghost,-,Spirit Pokémon,https://img.pokemondb.net/artwork/large/yamask-galarian.jpg
+5630,Cofagrigus-Cofagrigus,Ghost,-,Coffin Pokémon,https://img.pokemondb.net/artwork/large/cofagrigus.jpg
+5640,Tirtouga-Tirtouga,Water,Rock,Prototurtle Pokémon,https://img.pokemondb.net/artwork/large/tirtouga.jpg
+5650,Carracosta-Carracosta,Water,Rock,Prototurtle Pokémon,https://img.pokemondb.net/artwork/large/carracosta.jpg
+5660,Archen-Archen,Rock,Flying,First Bird Pokémon,https://img.pokemondb.net/artwork/large/archen.jpg
+5670,Archeops-Archeops,Rock,Flying,First Bird Pokémon,https://img.pokemondb.net/artwork/large/archeops.jpg
+5680,Trubbish-Trubbish,Poison,-,Trash Bag Pokémon,https://img.pokemondb.net/artwork/large/trubbish.jpg
+5690,Garbodor-Garbodor,Poison,-,Trash Heap Pokémon,https://img.pokemondb.net/artwork/large/garbodor.jpg
+5700,Zorua-Zorua,Dark,-,Tricky Fox Pokémon,https://img.pokemondb.net/artwork/large/zorua.jpg
+5701,Zorua-Hisuian Zorua,Dark,-,Spiteful Fox Pokémon,https://img.pokemondb.net/artwork/large/zorua-hisuian.jpg
+5710,Zoroark-Zoroark,Dark,-,Illusion Fox Pokémon,https://img.pokemondb.net/artwork/large/zoroark.jpg
+5711,Zoroark-Hisuian Zoroark,Dark,-,Baneful Fox Pokémon,https://img.pokemondb.net/artwork/large/zoroark-hisuian.jpg
+5720,Minccino-Minccino,Normal,-,Chinchilla Pokémon,https://img.pokemondb.net/artwork/large/minccino.jpg
+5730,Cinccino-Cinccino,Normal,-,Scarf Pokémon,https://img.pokemondb.net/artwork/large/cinccino.jpg
+5740,Gothita-Gothita,Psychic,-,Fixation Pokémon,https://img.pokemondb.net/artwork/large/gothita.jpg
+5750,Gothorita-Gothorita,Psychic,-,Manipulate Pokémon,https://img.pokemondb.net/artwork/large/gothorita.jpg
+5760,Gothitelle-Gothitelle,Psychic,-,Astral Body Pokémon,https://img.pokemondb.net/artwork/large/gothitelle.jpg
+5770,Solosis-Solosis,Psychic,-,Cell Pokémon,https://img.pokemondb.net/artwork/large/solosis.jpg
+5780,Duosion-Duosion,Psychic,-,Mitosis Pokémon,https://img.pokemondb.net/artwork/large/duosion.jpg
+5790,Reuniclus-Reuniclus,Psychic,-,Multiplying Pokémon,https://img.pokemondb.net/artwork/large/reuniclus.jpg
+5800,Ducklett-Ducklett,Water,Flying,Water Bird Pokémon,https://img.pokemondb.net/artwork/large/ducklett.jpg
+5810,Swanna-Swanna,Water,Flying,White Bird Pokémon,https://img.pokemondb.net/artwork/large/swanna.jpg
+5820,Vanillite-Vanillite,Ice,-,Fresh Snow Pokémon,https://img.pokemondb.net/artwork/large/vanillite.jpg
+5830,Vanillish-Vanillish,Ice,-,Icy Snow Pokémon,https://img.pokemondb.net/artwork/large/vanillish.jpg
+5840,Vanilluxe-Vanilluxe,Ice,-,Snowstorm Pokémon,https://img.pokemondb.net/artwork/large/vanilluxe.jpg
+5850,Deerling-Deerling,Normal,Grass,Season Pokémon,https://img.pokemondb.net/artwork/large/deerling.jpg
+5860,Sawsbuck-Sawsbuck,Normal,Grass,Season Pokémon,https://img.pokemondb.net/artwork/large/sawsbuck.jpg
+5870,Emolga-Emolga,Electric,Flying,Sky Squirrel Pokémon,https://img.pokemondb.net/artwork/large/emolga.jpg
+5880,Karrablast-Karrablast,Bug,-,Clamping Pokémon,https://img.pokemondb.net/artwork/large/karrablast.jpg
+5890,Escavalier-Escavalier,Bug,Steel,Cavalry Pokémon,https://img.pokemondb.net/artwork/large/escavalier.jpg
+5900,Foongus-Foongus,Grass,Poison,Mushroom Pokémon,https://img.pokemondb.net/artwork/large/foongus.jpg
+5910,Amoonguss-Amoonguss,Grass,Poison,Mushroom Pokémon,https://img.pokemondb.net/artwork/large/amoonguss.jpg
+5920,Frillish-Frillish,Water,Ghost,Floating Pokémon,https://img.pokemondb.net/artwork/large/frillish.jpg
+5930,Jellicent-Jellicent,Water,Ghost,Floating Pokémon,https://img.pokemondb.net/artwork/large/jellicent.jpg
+5940,Alomomola-Alomomola,Water,-,Caring Pokémon,https://img.pokemondb.net/artwork/large/alomomola.jpg
+5950,Joltik-Joltik,Bug,Electric,Attaching Pokémon,https://img.pokemondb.net/artwork/large/joltik.jpg
+5960,Galvantula-Galvantula,Bug,Electric,EleSpider Pokémon,https://img.pokemondb.net/artwork/large/galvantula.jpg
+5970,Ferroseed-Ferroseed,Grass,Steel,Thorn Seed Pokémon,https://img.pokemondb.net/artwork/large/ferroseed.jpg
+5980,Ferrothorn-Ferrothorn,Grass,Steel,Thorn Pod Pokémon,https://img.pokemondb.net/artwork/large/ferrothorn.jpg
+5990,Klink-Klink,Steel,-,Gear Pokémon,https://img.pokemondb.net/artwork/large/klink.jpg
+6000,Klang-Klang,Steel,-,Gear Pokémon,https://img.pokemondb.net/artwork/large/klang.jpg
+6010,Klinklang-Klinklang,Steel,-,Gear Pokémon,https://img.pokemondb.net/artwork/large/klinklang.jpg
+6020,Tynamo-Tynamo,Electric,-,EleFish Pokémon,https://img.pokemondb.net/artwork/large/tynamo.jpg
+6030,Eelektrik-Eelektrik,Electric,-,EleFish Pokémon,https://img.pokemondb.net/artwork/large/eelektrik.jpg
+6040,Eelektross-Eelektross,Electric,-,EleFish Pokémon,https://img.pokemondb.net/artwork/large/eelektross.jpg
+6050,Elgyem-Elgyem,Psychic,-,Cerebral Pokémon,https://img.pokemondb.net/artwork/large/elgyem.jpg
+6060,Beheeyem-Beheeyem,Psychic,-,Cerebral Pokémon,https://img.pokemondb.net/artwork/large/beheeyem.jpg
+6070,Litwick-Litwick,Ghost,Fire,Candle Pokémon,https://img.pokemondb.net/artwork/large/litwick.jpg
+6080,Lampent-Lampent,Ghost,Fire,Lamp Pokémon,https://img.pokemondb.net/artwork/large/lampent.jpg
+6090,Chandelure-Chandelure,Ghost,Fire,Luring Pokémon,https://img.pokemondb.net/artwork/large/chandelure.jpg
+6100,Axew-Axew,Dragon,-,Tusk Pokémon,https://img.pokemondb.net/artwork/large/axew.jpg
+6110,Fraxure-Fraxure,Dragon,-,Axe Jaw Pokémon,https://img.pokemondb.net/artwork/large/fraxure.jpg
+6120,Haxorus-Haxorus,Dragon,-,Axe Jaw Pokémon,https://img.pokemondb.net/artwork/large/haxorus.jpg
+6130,Cubchoo-Cubchoo,Ice,-,Chill Pokémon,https://img.pokemondb.net/artwork/large/cubchoo.jpg
+6140,Beartic-Beartic,Ice,-,Freezing Pokémon,https://img.pokemondb.net/artwork/large/beartic.jpg
+6150,Cryogonal-Cryogonal,Ice,-,Crystallizing Pokémon,https://img.pokemondb.net/artwork/large/cryogonal.jpg
+6160,Shelmet-Shelmet,Bug,-,Snail Pokémon,https://img.pokemondb.net/artwork/large/shelmet.jpg
+6170,Accelgor-Accelgor,Bug,-,Shell Out Pokémon,https://img.pokemondb.net/artwork/large/accelgor.jpg
+6180,Stunfisk-Stunfisk,Ground,Electric,Trap Pokémon,https://img.pokemondb.net/artwork/large/stunfisk.jpg
+6181,Stunfisk-Galarian Stunfisk,Ground,Electric,Trap Pokémon,https://img.pokemondb.net/artwork/large/stunfisk-galarian.jpg
+6190,Mienfoo-Mienfoo,Fighting,-,Martial Arts Pokémon,https://img.pokemondb.net/artwork/large/mienfoo.jpg
+6200,Mienshao-Mienshao,Fighting,-,Martial Arts Pokémon,https://img.pokemondb.net/artwork/large/mienshao.jpg
+6210,Druddigon-Druddigon,Dragon,-,Cave Pokémon,https://img.pokemondb.net/artwork/large/druddigon.jpg
+6220,Golett-Golett,Ground,Ghost,Automaton Pokémon,https://img.pokemondb.net/artwork/large/golett.jpg
+6230,Golurk-Golurk,Ground,Ghost,Automaton Pokémon,https://img.pokemondb.net/artwork/large/golurk.jpg
+6240,Pawniard-Pawniard,Dark,Steel,Sharp Blade Pokémon,https://img.pokemondb.net/artwork/large/pawniard.jpg
+6250,Bisharp-Bisharp,Dark,Steel,Sword Blade Pokémon,https://img.pokemondb.net/artwork/large/bisharp.jpg
+6260,Bouffalant-Bouffalant,Normal,-,Bash Buffalo Pokémon,https://img.pokemondb.net/artwork/large/bouffalant.jpg
+6270,Rufflet-Rufflet,Normal,Flying,Eaglet Pokémon,https://img.pokemondb.net/artwork/large/rufflet.jpg
+6280,Braviary-Braviary,Normal,Flying,Valiant Pokémon,https://img.pokemondb.net/artwork/large/braviary.jpg
+6281,Braviary-Hisuian Braviary,Normal,Flying,Battle Cry Pokémon,https://img.pokemondb.net/artwork/large/braviary-hisuian.jpg
+6290,Vullaby-Vullaby,Dark,Flying,Diapered Pokémon,https://img.pokemondb.net/artwork/large/vullaby.jpg
+6300,Mandibuzz-Mandibuzz,Dark,Flying,Bone Vulture Pokémon,https://img.pokemondb.net/artwork/large/mandibuzz.jpg
+6310,Heatmor-Heatmor,Fire,-,Anteater Pokémon,https://img.pokemondb.net/artwork/large/heatmor.jpg
+6320,Durant-Durant,Bug,Steel,Iron Ant Pokémon,https://img.pokemondb.net/artwork/large/durant.jpg
+6330,Deino-Deino,Dark,Dragon,Irate Pokémon,https://img.pokemondb.net/artwork/large/deino.jpg
+6340,Zweilous-Zweilous,Dark,Dragon,Hostile Pokémon,https://img.pokemondb.net/artwork/large/zweilous.jpg
+6350,Hydreigon-Hydreigon,Dark,Dragon,Brutal Pokémon,https://img.pokemondb.net/artwork/large/hydreigon.jpg
+6360,Larvesta-Larvesta,Bug,Fire,Torch Pokémon,https://img.pokemondb.net/artwork/large/larvesta.jpg
+6370,Volcarona-Volcarona,Bug,Fire,Sun Pokémon,https://img.pokemondb.net/artwork/large/volcarona.jpg
+6380,Cobalion-Cobalion,Steel,Fighting,Iron Will Pokémon,https://img.pokemondb.net/artwork/large/cobalion.jpg
+6390,Terrakion-Terrakion,Rock,Fighting,Cavern Pokémon,https://img.pokemondb.net/artwork/large/terrakion.jpg
+6400,Virizion-Virizion,Grass,Fighting,Grassland Pokémon,https://img.pokemondb.net/artwork/large/virizion.jpg
+6410,Tornadus-Incarnate Forme,Flying,-,Cyclone Pokémon,https://img.pokemondb.net/artwork/large/tornadus-incarnate.jpg
+6411,Tornadus-Therian Forme,Flying,-,Cyclone Pokémon,https://img.pokemondb.net/artwork/large/tornadus-therian.jpg
+6420,Thundurus-Incarnate Forme,Electric,Flying,Bolt Strike Pokémon,https://img.pokemondb.net/artwork/large/thundurus-incarnate.jpg
+6421,Thundurus-Therian Forme,Electric,Flying,Bolt Strike Pokémon,https://img.pokemondb.net/artwork/large/thundurus-therian.jpg
+6430,Reshiram-Reshiram,Dragon,Fire,Vast White Pokémon,https://img.pokemondb.net/artwork/large/reshiram.jpg
+6440,Zekrom-Zekrom,Dragon,Electric,Deep Black Pokémon,https://img.pokemondb.net/artwork/large/zekrom.jpg
+6450,Landorus-Incarnate Forme,Ground,Flying,Abundance Pokémon,https://img.pokemondb.net/artwork/large/landorus-incarnate.jpg
+6451,Landorus-Therian Forme,Ground,Flying,Abundance Pokémon,https://img.pokemondb.net/artwork/large/landorus-therian.jpg
+6460,Kyurem-Kyurem,Dragon,Ice,Boundary Pokémon,https://img.pokemondb.net/artwork/large/kyurem.jpg
+6461,Kyurem-White Kyurem,Dragon,Ice,Boundary Pokémon,https://img.pokemondb.net/artwork/large/kyurem-white.jpg
+6462,Kyurem-Black Kyurem,Dragon,Ice,Boundary Pokémon,https://img.pokemondb.net/artwork/large/kyurem-black.jpg
+6470,Keldeo-Ordinary Form,Water,Fighting,Colt Pokémon,https://img.pokemondb.net/artwork/large/keldeo-ordinary.jpg
+6471,Keldeo-Resolute Form,Water,Fighting,Colt Pokémon,https://img.pokemondb.net/artwork/large/keldeo-resolute.jpg
+6480,Meloetta-Aria Forme,Normal,Psychic,Melody Pokémon,https://img.pokemondb.net/artwork/large/meloetta-aria.jpg
+6481,Meloetta-Pirouette Forme,Normal,Psychic,Melody Pokémon,https://img.pokemondb.net/artwork/large/meloetta-pirouette.jpg
+6490,Genesect-Genesect,Bug,Steel,Paleozoic Pokémon,https://img.pokemondb.net/artwork/large/genesect.jpg
+6500,Chespin-Chespin,Grass,-,Spiny Nut Pokémon,https://img.pokemondb.net/artwork/large/chespin.jpg
+6510,Quilladin-Quilladin,Grass,-,Spiny Armor Pokémon,https://img.pokemondb.net/artwork/large/quilladin.jpg
+6520,Chesnaught-Chesnaught,Grass,Fighting,Spiny Armor Pokémon,https://img.pokemondb.net/artwork/large/chesnaught.jpg
+6530,Fennekin-Fennekin,Fire,-,Fox Pokémon,https://img.pokemondb.net/artwork/large/fennekin.jpg
+6540,Braixen-Braixen,Fire,-,Fox Pokémon,https://img.pokemondb.net/artwork/large/braixen.jpg
+6550,Delphox-Delphox,Fire,Psychic,Fox Pokémon,https://img.pokemondb.net/artwork/large/delphox.jpg
+6560,Froakie-Froakie,Water,-,Bubble Frog Pokémon,https://img.pokemondb.net/artwork/large/froakie.jpg
+6570,Frogadier-Frogadier,Water,-,Bubble Frog Pokémon,https://img.pokemondb.net/artwork/large/frogadier.jpg
+6580,Greninja-Greninja,Water,Dark,Ninja Pokémon,https://img.pokemondb.net/artwork/large/greninja.jpg
+6581,Greninja-Ash-Greninja,Water,Dark,Ninja Pokémon,https://img.pokemondb.net/artwork/large/greninja-ash.jpg
+6590,Bunnelby-Bunnelby,Normal,-,Digging Pokémon,https://img.pokemondb.net/artwork/large/bunnelby.jpg
+6600,Diggersby-Diggersby,Normal,Ground,Digging Pokémon,https://img.pokemondb.net/artwork/large/diggersby.jpg
+6610,Fletchling-Fletchling,Normal,Flying,Tiny Robin Pokémon,https://img.pokemondb.net/artwork/large/fletchling.jpg
+6620,Fletchinder-Fletchinder,Fire,Flying,Ember Pokémon,https://img.pokemondb.net/artwork/large/fletchinder.jpg
+6630,Talonflame-Talonflame,Fire,Flying,Scorching Pokémon,https://img.pokemondb.net/artwork/large/talonflame.jpg
+6640,Scatterbug-Scatterbug,Bug,-,Scatterdust Pokémon,https://img.pokemondb.net/artwork/large/scatterbug.jpg
+6650,Spewpa-Spewpa,Bug,-,Scatterdust Pokémon,https://img.pokemondb.net/artwork/large/spewpa.jpg
+6660,Vivillon-Vivillon,Bug,Flying,Scale Pokémon,https://img.pokemondb.net/artwork/large/vivillon.jpg
+6670,Litleo-Litleo,Fire,Normal,Lion Cub Pokémon,https://img.pokemondb.net/artwork/large/litleo.jpg
+6680,Pyroar-Pyroar,Fire,Normal,Royal Pokémon,https://img.pokemondb.net/artwork/large/pyroar.jpg
+6690,Flabébé-Flabébé,Fairy,-,Single Bloom Pokémon,https://img.pokemondb.net/artwork/large/flabebe.jpg
+6700,Floette-Floette,Fairy,-,Single Bloom Pokémon,https://img.pokemondb.net/artwork/large/floette.jpg
+6710,Florges-Florges,Fairy,-,Garden Pokémon,https://img.pokemondb.net/artwork/large/florges.jpg
+6720,Skiddo-Skiddo,Grass,-,Mount Pokémon,https://img.pokemondb.net/artwork/large/skiddo.jpg
+6730,Gogoat-Gogoat,Grass,-,Mount Pokémon,https://img.pokemondb.net/artwork/large/gogoat.jpg
+6740,Pancham-Pancham,Fighting,-,Playful Pokémon,https://img.pokemondb.net/artwork/large/pancham.jpg
+6750,Pangoro-Pangoro,Fighting,Dark,Daunting Pokémon,https://img.pokemondb.net/artwork/large/pangoro.jpg
+6760,Furfrou-Furfrou,Normal,-,Poodle Pokémon,https://img.pokemondb.net/artwork/large/furfrou.jpg
+6770,Espurr-Espurr,Psychic,-,Restraint Pokémon,https://img.pokemondb.net/artwork/large/espurr.jpg
+6780,Meowstic-Male,Psychic,-,Constraint Pokémon,https://img.pokemondb.net/artwork/large/meowstic-male.jpg
+6781,Meowstic-Female,Psychic,-,Constraint Pokémon,https://img.pokemondb.net/artwork/large/meowstic-female.jpg
+6790,Honedge-Honedge,Steel,Ghost,Sword Pokémon,https://img.pokemondb.net/artwork/large/honedge.jpg
+6800,Doublade-Doublade,Steel,Ghost,Sword Pokémon,https://img.pokemondb.net/artwork/large/doublade.jpg
+6810,Aegislash-Shield Forme,Steel,Ghost,Royal Sword Pokémon,https://img.pokemondb.net/artwork/large/aegislash-shield.jpg
+6811,Aegislash-Blade Forme,Steel,Ghost,Royal Sword Pokémon,https://img.pokemondb.net/artwork/large/aegislash-blade.jpg
+6820,Spritzee-Spritzee,Fairy,-,Perfume Pokémon,https://img.pokemondb.net/artwork/large/spritzee.jpg
+6830,Aromatisse-Aromatisse,Fairy,-,Fragrance Pokémon,https://img.pokemondb.net/artwork/large/aromatisse.jpg
+6840,Swirlix-Swirlix,Fairy,-,Cotton Candy Pokémon,https://img.pokemondb.net/artwork/large/swirlix.jpg
+6850,Slurpuff-Slurpuff,Fairy,-,Meringue Pokémon,https://img.pokemondb.net/artwork/large/slurpuff.jpg
+6860,Inkay-Inkay,Dark,Psychic,Revolving Pokémon,https://img.pokemondb.net/artwork/large/inkay.jpg
+6870,Malamar-Malamar,Dark,Psychic,Overturning Pokémon,https://img.pokemondb.net/artwork/large/malamar.jpg
+6880,Binacle-Binacle,Rock,Water,Two-Handed Pokémon,https://img.pokemondb.net/artwork/large/binacle.jpg
+6890,Barbaracle-Barbaracle,Rock,Water,Collective Pokémon,https://img.pokemondb.net/artwork/large/barbaracle.jpg
+6900,Skrelp-Skrelp,Poison,Water,Mock Kelp Pokémon,https://img.pokemondb.net/artwork/large/skrelp.jpg
+6910,Dragalge-Dragalge,Poison,Dragon,Mock Kelp Pokémon,https://img.pokemondb.net/artwork/large/dragalge.jpg
+6920,Clauncher-Clauncher,Water,-,Water Gun Pokémon,https://img.pokemondb.net/artwork/large/clauncher.jpg
+6930,Clawitzer-Clawitzer,Water,-,Howitzer Pokémon,https://img.pokemondb.net/artwork/large/clawitzer.jpg
+6940,Helioptile-Helioptile,Electric,Normal,Generator Pokémon,https://img.pokemondb.net/artwork/large/helioptile.jpg
+6950,Heliolisk-Heliolisk,Electric,Normal,Generator Pokémon,https://img.pokemondb.net/artwork/large/heliolisk.jpg
+6960,Tyrunt-Tyrunt,Rock,Dragon,Royal Heir Pokémon,https://img.pokemondb.net/artwork/large/tyrunt.jpg
+6970,Tyrantrum-Tyrantrum,Rock,Dragon,Despot Pokémon,https://img.pokemondb.net/artwork/large/tyrantrum.jpg
+6980,Amaura-Amaura,Rock,Ice,Tundra Pokémon,https://img.pokemondb.net/artwork/large/amaura.jpg
+6990,Aurorus-Aurorus,Rock,Ice,Tundra Pokémon,https://img.pokemondb.net/artwork/large/aurorus.jpg
+7000,Sylveon-Sylveon,Fairy,-,Intertwining Pokémon,https://img.pokemondb.net/artwork/large/sylveon.jpg
+7010,Hawlucha-Hawlucha,Fighting,Flying,Wrestling Pokémon,https://img.pokemondb.net/artwork/large/hawlucha.jpg
+7020,Dedenne-Dedenne,Electric,Fairy,Antenna Pokémon,https://img.pokemondb.net/artwork/large/dedenne.jpg
+7030,Carbink-Carbink,Rock,Fairy,Jewel Pokémon,https://img.pokemondb.net/artwork/large/carbink.jpg
+7040,Goomy-Goomy,Dragon,-,Soft Tissue Pokémon,https://img.pokemondb.net/artwork/large/goomy.jpg
+7050,Sliggoo-Sliggoo,Dragon,-,Soft Tissue Pokémon,https://img.pokemondb.net/artwork/large/sliggoo.jpg
+7051,Sliggoo-Hisuian Sliggoo,Dragon,-,Snail Pokémon,https://img.pokemondb.net/artwork/large/sliggoo-hisuian.jpg
+7060,Goodra-Goodra,Dragon,-,Dragon Pokémon,https://img.pokemondb.net/artwork/large/goodra.jpg
+7061,Goodra-Hisuian Goodra,Dragon,-,Shell Bunker Pokémon,https://img.pokemondb.net/artwork/large/goodra-hisuian.jpg
+7070,Klefki-Klefki,Steel,Fairy,Key Ring Pokémon,https://img.pokemondb.net/artwork/large/klefki.jpg
+7080,Phantump-Phantump,Ghost,Grass,Stump Pokémon,https://img.pokemondb.net/artwork/large/phantump.jpg
+7090,Trevenant-Trevenant,Ghost,Grass,Elder Tree Pokémon,https://img.pokemondb.net/artwork/large/trevenant.jpg
+7100,Pumpkaboo-Average Size,Ghost,Grass,Pumpkin Pokémon,https://img.pokemondb.net/artwork/pumpkaboo.jpg
+7101,Pumpkaboo-Small Size,Ghost,Grass,Pumpkin Pokémon,https://img.pokemondb.net/artwork/pumpkaboo.jpg
+7102,Pumpkaboo-Large Size,Ghost,Grass,Pumpkin Pokémon,https://img.pokemondb.net/artwork/pumpkaboo.jpg
+7103,Pumpkaboo-Super Size,Ghost,Grass,Pumpkin Pokémon,https://img.pokemondb.net/artwork/pumpkaboo.jpg
+7110,Gourgeist-Average Size,Ghost,Grass,Pumpkin Pokémon,https://img.pokemondb.net/artwork/gourgeist.jpg
+7111,Gourgeist-Small Size,Ghost,Grass,Pumpkin Pokémon,https://img.pokemondb.net/artwork/gourgeist.jpg
+7112,Gourgeist-Large Size,Ghost,Grass,Pumpkin Pokémon,https://img.pokemondb.net/artwork/gourgeist.jpg
+7113,Gourgeist-Super Size,Ghost,Grass,Pumpkin Pokémon,https://img.pokemondb.net/artwork/gourgeist.jpg
+7120,Bergmite-Bergmite,Ice,-,Ice Chunk Pokémon,https://img.pokemondb.net/artwork/large/bergmite.jpg
+7130,Avalugg-Avalugg,Ice,-,Iceberg Pokémon,https://img.pokemondb.net/artwork/large/avalugg.jpg
+7131,Avalugg-Hisuian Avalugg,Ice,-,Iceberg Pokémon,https://img.pokemondb.net/artwork/large/avalugg-hisuian.jpg
+7140,Noibat-Noibat,Flying,Dragon,Sound Wave Pokémon,https://img.pokemondb.net/artwork/large/noibat.jpg
+7150,Noivern-Noivern,Flying,Dragon,Sound Wave Pokémon,https://img.pokemondb.net/artwork/large/noivern.jpg
+7160,Xerneas-Xerneas,Fairy,-,Life Pokémon,https://img.pokemondb.net/artwork/large/xerneas.jpg
+7170,Yveltal-Yveltal,Dark,Flying,Destruction Pokémon,https://img.pokemondb.net/artwork/large/yveltal.jpg
+7180,Zygarde-50% Forme,Dragon,Ground,Order Pokémon,https://img.pokemondb.net/artwork/large/zygarde-50.jpg
+7181,Zygarde-10% Forme,Dragon,Ground,Order Pokémon,https://img.pokemondb.net/artwork/large/zygarde-10.jpg
+7182,Zygarde-Complete Forme,Dragon,Ground,Order Pokémon,https://img.pokemondb.net/artwork/large/zygarde-complete.jpg
+7190,Diancie-Diancie,Rock,Fairy,Jewel Pokémon,https://img.pokemondb.net/artwork/large/diancie.jpg
+7191,Diancie-Mega Diancie,Rock,Fairy,Jewel Pokémon,https://img.pokemondb.net/artwork/large/diancie-mega.jpg
+7200,Hoopa-Hoopa Confined,Psychic,Ghost,Mischief Pokémon,https://img.pokemondb.net/artwork/large/hoopa-confined.jpg
+7201,Hoopa-Hoopa Unbound,Psychic,Ghost,Djinn Pokémon,https://img.pokemondb.net/artwork/large/hoopa-unbound.jpg
+7210,Volcanion-Volcanion,Fire,Water,Steam Pokémon,https://img.pokemondb.net/artwork/large/volcanion.jpg
+7220,Rowlet-Rowlet,Grass,Flying,Grass Quill Pokémon,https://img.pokemondb.net/artwork/large/rowlet.jpg
+7230,Dartrix-Dartrix,Grass,Flying,Blade Quill Pokémon,https://img.pokemondb.net/artwork/large/dartrix.jpg
+7240,Decidueye-Decidueye,Grass,Ghost,Arrow Quill Pokémon,https://img.pokemondb.net/artwork/large/decidueye.jpg
+7241,Decidueye-Hisuian Decidueye,Grass,Ghost,Arrow Quill Pokémon,https://img.pokemondb.net/artwork/large/decidueye-hisuian.jpg
+7250,Litten-Litten,Fire,-,Fire Cat Pokémon,https://img.pokemondb.net/artwork/large/litten.jpg
+7260,Torracat-Torracat,Fire,-,Fire Cat Pokémon,https://img.pokemondb.net/artwork/large/torracat.jpg
+7270,Incineroar-Incineroar,Fire,Dark,Heel Pokémon,https://img.pokemondb.net/artwork/large/incineroar.jpg
+7280,Popplio-Popplio,Water,-,Sea Lion Pokémon,https://img.pokemondb.net/artwork/large/popplio.jpg
+7290,Brionne-Brionne,Water,-,Pop Star Pokémon,https://img.pokemondb.net/artwork/large/brionne.jpg
+7300,Primarina-Primarina,Water,Fairy,Soloist Pokémon,https://img.pokemondb.net/artwork/large/primarina.jpg
+7310,Pikipek-Pikipek,Normal,Flying,Woodpecker Pokémon,https://img.pokemondb.net/artwork/large/pikipek.jpg
+7320,Trumbeak-Trumbeak,Normal,Flying,Bugle Beak Pokémon,https://img.pokemondb.net/artwork/large/trumbeak.jpg
+7330,Toucannon-Toucannon,Normal,Flying,Cannon Pokémon,https://img.pokemondb.net/artwork/large/toucannon.jpg
+7340,Yungoos-Yungoos,Normal,-,Loitering Pokémon,https://img.pokemondb.net/artwork/large/yungoos.jpg
+7350,Gumshoos-Gumshoos,Normal,-,Stakeout Pokémon,https://img.pokemondb.net/artwork/large/gumshoos.jpg
+7360,Grubbin-Grubbin,Bug,-,Larva Pokémon,https://img.pokemondb.net/artwork/large/grubbin.jpg
+7370,Charjabug-Charjabug,Bug,Electric,Battery Pokémon,https://img.pokemondb.net/artwork/large/charjabug.jpg
+7380,Vikavolt-Vikavolt,Bug,Electric,Stag Beetle Pokémon,https://img.pokemondb.net/artwork/large/vikavolt.jpg
+7390,Crabrawler-Crabrawler,Fighting,-,Boxing Pokémon,https://img.pokemondb.net/artwork/large/crabrawler.jpg
+7400,Crabominable-Crabominable,Fighting,Ice,Woolly Crab Pokémon,https://img.pokemondb.net/artwork/large/crabominable.jpg
+7410,Oricorio-Baile Style,Fire,Flying,Dancing Pokémon,https://img.pokemondb.net/artwork/large/oricorio-baile.jpg
+7411,Oricorio-Pom-Pom Style,Fire,Flying,Dancing Pokémon,https://img.pokemondb.net/artwork/large/oricorio-pom-pom.jpg
+7412,Oricorio-Pa'u Style,Fire,Flying,Dancing Pokémon,https://img.pokemondb.net/artwork/large/oricorio-pau.jpg
+7413,Oricorio-Sensu Style,Fire,Flying,Dancing Pokémon,https://img.pokemondb.net/artwork/large/oricorio-sensu.jpg
+7420,Cutiefly-Cutiefly,Bug,Fairy,Bee Fly Pokémon,https://img.pokemondb.net/artwork/large/cutiefly.jpg
+7430,Ribombee-Ribombee,Bug,Fairy,Bee Fly Pokémon,https://img.pokemondb.net/artwork/large/ribombee.jpg
+7440,Rockruff-Rockruff,Rock,-,Puppy Pokémon,https://img.pokemondb.net/artwork/large/rockruff.jpg
+7441,Rockruff-Own Tempo Rockruff,Rock,-,Puppy Pokémon,https://img.pokemondb.net/artwork/rockruff.jpg
+7450,Lycanroc-Midday Form,Rock,-,Wolf Pokémon,https://img.pokemondb.net/artwork/large/lycanroc-midday.jpg
+7451,Lycanroc-Midnight Form,Rock,-,Wolf Pokémon,https://img.pokemondb.net/artwork/large/lycanroc-midnight.jpg
+7452,Lycanroc-Dusk Form,Rock,-,Wolf Pokémon,https://img.pokemondb.net/artwork/large/lycanroc-dusk.jpg
+7460,Wishiwashi-Solo Form,Water,-,Small Fry Pokémon,https://img.pokemondb.net/artwork/large/wishiwashi-solo.jpg
+7461,Wishiwashi-School Form,Water,-,Small Fry Pokémon,https://img.pokemondb.net/artwork/large/wishiwashi-school.jpg
+7470,Mareanie-Mareanie,Poison,Water,Brutal Star Pokémon,https://img.pokemondb.net/artwork/large/mareanie.jpg
+7480,Toxapex-Toxapex,Poison,Water,Brutal Star Pokémon,https://img.pokemondb.net/artwork/large/toxapex.jpg
+7490,Mudbray-Mudbray,Ground,-,Donkey Pokémon,https://img.pokemondb.net/artwork/large/mudbray.jpg
+7500,Mudsdale-Mudsdale,Ground,-,Draft Horse Pokémon,https://img.pokemondb.net/artwork/large/mudsdale.jpg
+7510,Dewpider-Dewpider,Water,Bug,Water Bubble Pokémon,https://img.pokemondb.net/artwork/large/dewpider.jpg
+7520,Araquanid-Araquanid,Water,Bug,Water Bubble Pokémon,https://img.pokemondb.net/artwork/large/araquanid.jpg
+7530,Fomantis-Fomantis,Grass,-,Sickle Grass Pokémon,https://img.pokemondb.net/artwork/large/fomantis.jpg
+7540,Lurantis-Lurantis,Grass,-,Bloom Sickle Pokémon,https://img.pokemondb.net/artwork/large/lurantis.jpg
+7550,Morelull-Morelull,Grass,Fairy,Illuminating Pokémon,https://img.pokemondb.net/artwork/large/morelull.jpg
+7560,Shiinotic-Shiinotic,Grass,Fairy,Illuminating Pokémon,https://img.pokemondb.net/artwork/large/shiinotic.jpg
+7570,Salandit-Salandit,Poison,Fire,Toxic Lizard Pokémon,https://img.pokemondb.net/artwork/large/salandit.jpg
+7580,Salazzle-Salazzle,Poison,Fire,Toxic Lizard Pokémon,https://img.pokemondb.net/artwork/large/salazzle.jpg
+7590,Stufful-Stufful,Normal,Fighting,Flailing Pokémon,https://img.pokemondb.net/artwork/large/stufful.jpg
+7600,Bewear-Bewear,Normal,Fighting,Strong Arm Pokémon,https://img.pokemondb.net/artwork/large/bewear.jpg
+7610,Bounsweet-Bounsweet,Grass,-,Fruit Pokémon,https://img.pokemondb.net/artwork/large/bounsweet.jpg
+7620,Steenee-Steenee,Grass,-,Fruit Pokémon,https://img.pokemondb.net/artwork/large/steenee.jpg
+7630,Tsareena-Tsareena,Grass,-,Fruit Pokémon,https://img.pokemondb.net/artwork/large/tsareena.jpg
+7640,Comfey-Comfey,Fairy,-,Posy Picker Pokémon,https://img.pokemondb.net/artwork/large/comfey.jpg
+7650,Oranguru-Oranguru,Normal,Psychic,Sage Pokémon,https://img.pokemondb.net/artwork/large/oranguru.jpg
+7660,Passimian-Passimian,Fighting,-,Teamwork Pokémon,https://img.pokemondb.net/artwork/large/passimian.jpg
+7670,Wimpod-Wimpod,Bug,Water,Turn Tail Pokémon,https://img.pokemondb.net/artwork/large/wimpod.jpg
+7680,Golisopod-Golisopod,Bug,Water,Hard Scale Pokémon,https://img.pokemondb.net/artwork/large/golisopod.jpg
+7690,Sandygast-Sandygast,Ghost,Ground,Sand Heap Pokémon,https://img.pokemondb.net/artwork/large/sandygast.jpg
+7700,Palossand-Palossand,Ghost,Ground,Sand Castle Pokémon,https://img.pokemondb.net/artwork/large/palossand.jpg
+7710,Pyukumuku-Pyukumuku,Water,-,Sea Cucumber Pokémon,https://img.pokemondb.net/artwork/large/pyukumuku.jpg
+7720,Type: Null-Type: Null,Normal,-,Synthetic Pokémon,https://img.pokemondb.net/artwork/large/type-null.jpg
+7730,Silvally-Silvally,Normal,-,Synthetic Pokémon,https://img.pokemondb.net/artwork/large/silvally.jpg
+7740,Minior-Meteor Form,Rock,Flying,Meteor Pokémon,https://img.pokemondb.net/artwork/large/minior-meteor.jpg
+7741,Minior-Core Form,Rock,Flying,Meteor Pokémon,https://img.pokemondb.net/artwork/large/minior-core.jpg
+7750,Komala-Komala,Normal,-,Drowsing Pokémon,https://img.pokemondb.net/artwork/large/komala.jpg
+7760,Turtonator-Turtonator,Fire,Dragon,Blast Turtle Pokémon,https://img.pokemondb.net/artwork/large/turtonator.jpg
+7770,Togedemaru-Togedemaru,Electric,Steel,Roly-Poly Pokémon,https://img.pokemondb.net/artwork/large/togedemaru.jpg
+7780,Mimikyu-Mimikyu,Ghost,Fairy,Disguise Pokémon,https://img.pokemondb.net/artwork/large/mimikyu.jpg
+7790,Bruxish-Bruxish,Water,Psychic,Gnash Teeth Pokémon,https://img.pokemondb.net/artwork/large/bruxish.jpg
+7800,Drampa-Drampa,Normal,Dragon,Placid Pokémon,https://img.pokemondb.net/artwork/large/drampa.jpg
+7810,Dhelmise-Dhelmise,Ghost,Grass,Sea Creeper Pokémon,https://img.pokemondb.net/artwork/large/dhelmise.jpg
+7820,Jangmo-o-Jangmo-o,Dragon,-,Scaly Pokémon,https://img.pokemondb.net/artwork/large/jangmo-o.jpg
+7830,Hakamo-o-Hakamo-o,Dragon,Fighting,Scaly Pokémon,https://img.pokemondb.net/artwork/large/hakamo-o.jpg
+7840,Kommo-o-Kommo-o,Dragon,Fighting,Scaly Pokémon,https://img.pokemondb.net/artwork/large/kommo-o.jpg
+7850,Tapu Koko-Tapu Koko,Electric,Fairy,Land Spirit Pokémon,https://img.pokemondb.net/artwork/large/tapu-koko.jpg
+7860,Tapu Lele-Tapu Lele,Psychic,Fairy,Land Spirit Pokémon,https://img.pokemondb.net/artwork/large/tapu-lele.jpg
+7870,Tapu Bulu-Tapu Bulu,Grass,Fairy,Land Spirit Pokémon,https://img.pokemondb.net/artwork/large/tapu-bulu.jpg
+7880,Tapu Fini-Tapu Fini,Water,Fairy,Land Spirit Pokémon,https://img.pokemondb.net/artwork/large/tapu-fini.jpg
+7890,Cosmog-Cosmog,Psychic,-,Nebula Pokémon,https://img.pokemondb.net/artwork/large/cosmog.jpg
+7900,Cosmoem-Cosmoem,Psychic,-,Protostar Pokémon,https://img.pokemondb.net/artwork/large/cosmoem.jpg
+7910,Solgaleo-Solgaleo,Psychic,Steel,Sunne Pokémon,https://img.pokemondb.net/artwork/large/solgaleo.jpg
+7920,Lunala-Lunala,Psychic,Ghost,Moone Pokémon,https://img.pokemondb.net/artwork/large/lunala.jpg
+7930,Nihilego-Nihilego,Rock,Poison,Parasite Pokémon,https://img.pokemondb.net/artwork/large/nihilego.jpg
+7940,Buzzwole-Buzzwole,Bug,Fighting,Swollen Pokémon,https://img.pokemondb.net/artwork/large/buzzwole.jpg
+7950,Pheromosa-Pheromosa,Bug,Fighting,Lissome Pokémon,https://img.pokemondb.net/artwork/large/pheromosa.jpg
+7960,Xurkitree-Xurkitree,Electric,-,Glowing Pokémon,https://img.pokemondb.net/artwork/large/xurkitree.jpg
+7970,Celesteela-Celesteela,Steel,Flying,Launch Pokémon,https://img.pokemondb.net/artwork/large/celesteela.jpg
+7980,Kartana-Kartana,Grass,Steel,Drawn Sword Pokémon,https://img.pokemondb.net/artwork/large/kartana.jpg
+7990,Guzzlord-Guzzlord,Dark,Dragon,Junkivore Pokémon,https://img.pokemondb.net/artwork/large/guzzlord.jpg
+8000,Necrozma-Necrozma,Psychic,-,Prism Pokémon,https://img.pokemondb.net/artwork/large/necrozma.jpg
+8001,Necrozma-Dusk Mane Necrozma,Psychic,-,Prism Pokémon,https://img.pokemondb.net/artwork/large/necrozma-dusk-mane.jpg
+8002,Necrozma-Dawn Wings Necrozma,Psychic,-,Prism Pokémon,https://img.pokemondb.net/artwork/large/necrozma-dawn-wings.jpg
+8003,Necrozma-Ultra Necrozma,Psychic,-,Prism Pokémon,https://img.pokemondb.net/artwork/large/necrozma-ultra.jpg
+8010,Magearna-Magearna,Steel,Fairy,Artificial Pokémon,https://img.pokemondb.net/artwork/large/magearna.jpg
+8020,Marshadow-Marshadow,Fighting,Ghost,Gloomdweller Pokémon,https://img.pokemondb.net/artwork/large/marshadow.jpg
+8030,Poipole-Poipole,Poison,-,Poison Pin Pokémon,https://img.pokemondb.net/artwork/large/poipole.jpg
+8040,Naganadel-Naganadel,Poison,Dragon,Poison Pin Pokémon,https://img.pokemondb.net/artwork/large/naganadel.jpg
+8050,Stakataka-Stakataka,Rock,Steel,Rampart Pokémon,https://img.pokemondb.net/artwork/large/stakataka.jpg
+8060,Blacephalon-Blacephalon,Fire,Ghost,Fireworks Pokémon,https://img.pokemondb.net/artwork/large/blacephalon.jpg
+8070,Zeraora-Zeraora,Electric,-,Thunderclap Pokémon,https://img.pokemondb.net/artwork/large/zeraora.jpg
+8080,Meltan-Meltan,Steel,-,Hex Nut Pokémon,https://img.pokemondb.net/artwork/large/meltan.jpg
+8090,Melmetal-Melmetal,Steel,-,Hex Nut Pokémon,https://img.pokemondb.net/artwork/large/melmetal.jpg
+8100,Grookey-Grookey,Grass,-,Chimp Pokémon,https://img.pokemondb.net/artwork/large/grookey.jpg
+8110,Thwackey-Thwackey,Grass,-,Beat Pokémon,https://img.pokemondb.net/artwork/large/thwackey.jpg
+8120,Rillaboom-Rillaboom,Grass,-,Drummer Pokémon,https://img.pokemondb.net/artwork/large/rillaboom.jpg
+8130,Scorbunny-Scorbunny,Fire,-,Rabbit Pokémon,https://img.pokemondb.net/artwork/large/scorbunny.jpg
+8140,Raboot-Raboot,Fire,-,Rabbit Pokémon,https://img.pokemondb.net/artwork/large/raboot.jpg
+8150,Cinderace-Cinderace,Fire,-,Striker Pokémon,https://img.pokemondb.net/artwork/large/cinderace.jpg
+8160,Sobble-Sobble,Water,-,Water Lizard Pokémon,https://img.pokemondb.net/artwork/large/sobble.jpg
+8170,Drizzile-Drizzile,Water,-,Water lizard Pokémon,https://img.pokemondb.net/artwork/large/drizzile.jpg
+8180,Inteleon-Inteleon,Water,-,Secret Agent Pokémon,https://img.pokemondb.net/artwork/large/inteleon.jpg
+8190,Skwovet-Skwovet,Normal,-,Cheeky Pokémon,https://img.pokemondb.net/artwork/large/skwovet.jpg
+8200,Greedent-Greedent,Normal,-,Greedy Pokémon,https://img.pokemondb.net/artwork/large/greedent.jpg
+8210,Rookidee-Rookidee,Flying,-,Tiny Bird Pokémon,https://img.pokemondb.net/artwork/large/rookidee.jpg
+8220,Corvisquire-Corvisquire,Flying,-,Raven Pokémon,https://img.pokemondb.net/artwork/large/corvisquire.jpg
+8230,Corviknight-Corviknight,Flying,Steel,Raven Pokémon,https://img.pokemondb.net/artwork/large/corviknight.jpg
+8240,Blipbug-Blipbug,Bug,-,Larva Pokémon,https://img.pokemondb.net/artwork/large/blipbug.jpg
+8250,Dottler-Dottler,Bug,Psychic,Radome Pokémon,https://img.pokemondb.net/artwork/large/dottler.jpg
+8260,Orbeetle-Orbeetle,Bug,Psychic,Seven Spot Pokémon,https://img.pokemondb.net/artwork/large/orbeetle.jpg
+8270,Nickit-Nickit,Dark,-,Fox Pokémon,https://img.pokemondb.net/artwork/large/nickit.jpg
+8280,Thievul-Thievul,Dark,-,Fox Pokémon,https://img.pokemondb.net/artwork/large/thievul.jpg
+8290,Gossifleur-Gossifleur,Grass,-,Flowering Pokémon,https://img.pokemondb.net/artwork/large/gossifleur.jpg
+8300,Eldegoss-Eldegoss,Grass,-,Cotton Bloom Pokémon,https://img.pokemondb.net/artwork/large/eldegoss.jpg
+8310,Wooloo-Wooloo,Normal,-,Sheep Pokémon,https://img.pokemondb.net/artwork/large/wooloo.jpg
+8320,Dubwool-Dubwool,Normal,-,Sheep Pokémon,https://img.pokemondb.net/artwork/large/dubwool.jpg
+8330,Chewtle-Chewtle,Water,-,Snapping Pokémon,https://img.pokemondb.net/artwork/large/chewtle.jpg
+8340,Drednaw-Drednaw,Water,Rock,Bite Pokémon,https://img.pokemondb.net/artwork/large/drednaw.jpg
+8350,Yamper-Yamper,Electric,-,Puppy Pokémon,https://img.pokemondb.net/artwork/large/yamper.jpg
+8360,Boltund-Boltund,Electric,-,Dog Pokémon,https://img.pokemondb.net/artwork/large/boltund.jpg
+8370,Rolycoly-Rolycoly,Rock,-,Coal Pokémon,https://img.pokemondb.net/artwork/large/rolycoly.jpg
+8380,Carkol-Carkol,Rock,Fire,Coal Pokémon,https://img.pokemondb.net/artwork/large/carkol.jpg
+8390,Coalossal-Coalossal,Rock,Fire,Coal Pokémon,https://img.pokemondb.net/artwork/large/coalossal.jpg
+8400,Applin-Applin,Grass,Dragon,Apple Core Pokémon,https://img.pokemondb.net/artwork/large/applin.jpg
+8410,Flapple-Flapple,Grass,Dragon,Apple Wing Pokémon,https://img.pokemondb.net/artwork/large/flapple.jpg
+8420,Appletun-Appletun,Grass,Dragon,Apple Nectar Pokémon,https://img.pokemondb.net/artwork/large/appletun.jpg
+8430,Silicobra-Silicobra,Ground,-,Sand Snake Pokémon,https://img.pokemondb.net/artwork/large/silicobra.jpg
+8440,Sandaconda-Sandaconda,Ground,-,Sand Snake Pokémon,https://img.pokemondb.net/artwork/large/sandaconda.jpg
+8450,Cramorant-Cramorant,Flying,Water,Gulp Pokémon,https://img.pokemondb.net/artwork/large/cramorant.jpg
+8460,Arrokuda-Arrokuda,Water,-,Rush Pokémon,https://img.pokemondb.net/artwork/large/arrokuda.jpg
+8470,Barraskewda-Barraskewda,Water,-,Skewer Pokémon,https://img.pokemondb.net/artwork/large/barraskewda.jpg
+8480,Toxel-Toxel,Electric,Poison,Baby Pokémon,https://img.pokemondb.net/artwork/large/toxel.jpg
+8490,Toxtricity-Amped Form,Electric,Poison,Punk Pokémon,https://img.pokemondb.net/artwork/large/toxtricity-amped.jpg
+8491,Toxtricity-Low Key Form,Electric,Poison,Punk Pokémon,https://img.pokemondb.net/artwork/large/toxtricity-low-key.jpg
+8500,Sizzlipede-Sizzlipede,Fire,Bug,Radiator Pokémon,https://img.pokemondb.net/artwork/large/sizzlipede.jpg
+8510,Centiskorch-Centiskorch,Fire,Bug,Radiator Pokémon,https://img.pokemondb.net/artwork/large/centiskorch.jpg
+8520,Clobbopus-Clobbopus,Fighting,-,Tantrum Pokémon,https://img.pokemondb.net/artwork/large/clobbopus.jpg
+8530,Grapploct-Grapploct,Fighting,-,Tantrum Pokémon,https://img.pokemondb.net/artwork/large/grapploct.jpg
+8540,Sinistea-Sinistea,Ghost,-,Black Tea Pokémon,https://img.pokemondb.net/artwork/large/sinistea.jpg
+8550,Polteageist-Polteageist,Ghost,-,Black Tea Pokémon,https://img.pokemondb.net/artwork/large/polteageist.jpg
+8560,Hatenna-Hatenna,Psychic,-,Calm Pokémon,https://img.pokemondb.net/artwork/large/hatenna.jpg
+8570,Hattrem-Hattrem,Psychic,-,Serene Pokémon,https://img.pokemondb.net/artwork/large/hattrem.jpg
+8580,Hatterene-Hatterene,Psychic,Fairy,Silent Pokémon,https://img.pokemondb.net/artwork/large/hatterene.jpg
+8590,Impidimp-Impidimp,Dark,Fairy,Wily Pokémon,https://img.pokemondb.net/artwork/large/impidimp.jpg
+8600,Morgrem-Morgrem,Dark,Fairy,Devious Pokémon,https://img.pokemondb.net/artwork/large/morgrem.jpg
+8610,Grimmsnarl-Grimmsnarl,Dark,Fairy,Bulk Up Pokémon,https://img.pokemondb.net/artwork/large/grimmsnarl.jpg
+8620,Obstagoon-Obstagoon,Dark,Normal,Blocking Pokémon,https://img.pokemondb.net/artwork/large/obstagoon.jpg
+8630,Perrserker-Perrserker,Steel,-,Viking Pokémon,https://img.pokemondb.net/artwork/large/perrserker.jpg
+8640,Cursola-Cursola,Ghost,-,Coral Pokémon,https://img.pokemondb.net/artwork/large/cursola.jpg
+8650,Sirfetch'd-Sirfetch'd,Fighting,-,Wild Duck Pokémon,https://img.pokemondb.net/artwork/large/sirfetchd.jpg
+8660,Mr. Rime-Mr. Rime,Ice,Psychic,Comedian Pokémon,https://img.pokemondb.net/artwork/large/mr-rime.jpg
+8670,Runerigus-Runerigus,Ground,Ghost,Grudge Pokémon,https://img.pokemondb.net/artwork/large/runerigus.jpg
+8680,Milcery-Milcery,Fairy,-,Cream Pokémon,https://img.pokemondb.net/artwork/large/milcery.jpg
+8690,Alcremie-Alcremie,Fairy,-,Cream Pokémon,https://img.pokemondb.net/artwork/large/alcremie.jpg
+8700,Falinks-Falinks,Fighting,-,Formation Pokémon,https://img.pokemondb.net/artwork/large/falinks.jpg
+8710,Pincurchin-Pincurchin,Electric,-,Sea Urchin Pokémon,https://img.pokemondb.net/artwork/large/pincurchin.jpg
+8720,Snom-Snom,Ice,Bug,Worm Pokémon,https://img.pokemondb.net/artwork/large/snom.jpg
+8730,Frosmoth-Frosmoth,Ice,Bug,Frost Moth Pokémon,https://img.pokemondb.net/artwork/large/frosmoth.jpg
+8740,Stonjourner-Stonjourner,Rock,-,Big Rock Pokémon,https://img.pokemondb.net/artwork/large/stonjourner.jpg
+8750,Eiscue-Ice Face,Ice,-,Penguin Pokémon,https://img.pokemondb.net/artwork/large/eiscue-ice.jpg
+8751,Eiscue-Noice Face,Ice,-,Penguin Pokémon,https://img.pokemondb.net/artwork/large/eiscue-noice.jpg
+8760,Indeedee-Male,Psychic,Normal,Emotion Pokémon,https://img.pokemondb.net/artwork/large/indeedee-male.jpg
+8761,Indeedee-Female,Psychic,Normal,Emotion Pokémon,https://img.pokemondb.net/artwork/large/indeedee-female.jpg
+8770,Morpeko-Full Belly Mode,Electric,Dark,Two-Sided Pokémon,https://img.pokemondb.net/artwork/large/morpeko-full-belly.jpg
+8771,Morpeko-Hangry Mode,Electric,Dark,Two-Sided Pokémon,https://img.pokemondb.net/artwork/large/morpeko-hangry.jpg
+8780,Cufant-Cufant,Steel,-,Copperderm Pokémon,https://img.pokemondb.net/artwork/large/cufant.jpg
+8790,Copperajah-Copperajah,Steel,-,Copperderm Pokémon,https://img.pokemondb.net/artwork/large/copperajah.jpg
+8800,Dracozolt-Dracozolt,Electric,Dragon,Fossil Pokémon,https://img.pokemondb.net/artwork/large/dracozolt.jpg
+8810,Arctozolt-Arctozolt,Electric,Ice,Fossil Pokémon,https://img.pokemondb.net/artwork/large/arctozolt.jpg
+8820,Dracovish-Dracovish,Water,Dragon,Fossil Pokémon,https://img.pokemondb.net/artwork/large/dracovish.jpg
+8830,Arctovish-Arctovish,Water,Ice,Fossil Pokémon,https://img.pokemondb.net/artwork/large/arctovish.jpg
+8840,Duraludon-Duraludon,Steel,Dragon,Alloy Pokémon,https://img.pokemondb.net/artwork/large/duraludon.jpg
+8850,Dreepy-Dreepy,Dragon,Ghost,Lingering Pokémon,https://img.pokemondb.net/artwork/large/dreepy.jpg
+8860,Drakloak-Drakloak,Dragon,Ghost,Caretaker Pokémon,https://img.pokemondb.net/artwork/large/drakloak.jpg
+8870,Dragapult-Dragapult,Dragon,Ghost,Stealth Pokémon,https://img.pokemondb.net/artwork/large/dragapult.jpg
+8880,Zacian-Hero of Many Battles,Fairy,-,Warrior Pokémon,https://img.pokemondb.net/artwork/large/zacian-hero.jpg
+8881,Zacian-Crowned Sword,Fairy,-,Warrior Pokémon,https://img.pokemondb.net/artwork/large/zacian-crowned.jpg
+8890,Zamazenta-Hero of Many Battles,Fighting,-,Warrior Pokémon,https://img.pokemondb.net/artwork/large/zamazenta-hero.jpg
+8891,Zamazenta-Crowned Shield,Fighting,-,Warrior Pokémon,https://img.pokemondb.net/artwork/large/zamazenta-crowned.jpg
+8900,Eternatus-Eternatus,Poison,Dragon,Gigantic Pokémon,https://img.pokemondb.net/artwork/large/eternatus.jpg
+8901,Eternatus-Eternamax,Poison,Dragon,Gigantic Pokémon,https://img.pokemondb.net/artwork/tmp/icon-eternatus-eternamax.png
+8910,Kubfu-Kubfu,Fighting,-,Wushu Pokémon,https://img.pokemondb.net/artwork/large/kubfu.jpg
+8920,Urshifu-Single Strike Style,Fighting,Dark,Wushu Pokémon,https://img.pokemondb.net/artwork/large/urshifu-single-strike.jpg
+8921,Urshifu-Rapid Strike Style,Fighting,Dark,Wushu Pokémon,https://img.pokemondb.net/artwork/large/urshifu-rapid-strike.jpg
+8930,Zarude-Zarude,Dark,Grass,Rogue Monkey Pokémon,https://img.pokemondb.net/artwork/large/zarude.jpg
+8940,Regieleki-Regieleki,Electric,-,Electron Pokémon,https://img.pokemondb.net/artwork/large/regieleki.jpg
+8950,Regidrago-Regidrago,Dragon,-,Dragon Orb Pokémon,https://img.pokemondb.net/artwork/large/regidrago.jpg
+8960,Glastrier-Glastrier,Ice,-,Wild Horse Pokémon,https://img.pokemondb.net/artwork/large/glastrier.jpg
+8970,Spectrier-Spectrier,Ghost,-,Swift Horse Pokémon,https://img.pokemondb.net/artwork/large/spectrier.jpg
+8980,Calyrex-Calyrex,Psychic,Grass,King Pokémon,https://img.pokemondb.net/artwork/large/calyrex.jpg
+8981,Calyrex-Ice Rider,Psychic,Grass,High King Pokémon,https://img.pokemondb.net/artwork/large/calyrex-ice-rider.jpg
+8982,Calyrex-Shadow Rider,Psychic,Grass,High King Pokémon,https://img.pokemondb.net/artwork/large/calyrex-shadow-rider.jpg
+8990,Wyrdeer-Wyrdeer,Normal,Psychic,Big Horn Pokémon,https://img.pokemondb.net/artwork/large/wyrdeer.jpg
+9000,Kleavor-Kleavor,Bug,Rock,Axe Pokémon,https://img.pokemondb.net/artwork/large/kleavor.jpg
+9010,Ursaluna-Ursaluna,Ground,Normal,Peat Pokémon,https://img.pokemondb.net/artwork/large/ursaluna.jpg
+9020,Basculegion-Male,Water,Ghost,Big Fish Pokémon,https://img.pokemondb.net/artwork/large/basculegion-male.jpg
+9021,Basculegion-Female,Water,Ghost,Big Fish Pokémon,https://img.pokemondb.net/artwork/large/basculegion-female.jpg
+9030,Sneasler-Sneasler,Poison,Fighting,Free Climb Pokémon,https://img.pokemondb.net/artwork/large/sneasler.jpg
+9040,Overqwil-Overqwil,Dark,Poison,Pin Cluster Pokémon,https://img.pokemondb.net/artwork/large/overqwil.jpg
+9050,Enamorus-Incarnate Forme,Fairy,Flying,Love-Hate Pokémon,https://img.pokemondb.net/artwork/large/enamorus-incarnate.jpg
+9051,Enamorus-Therian Forme,Fairy,Flying,Love-Hate Pokémon,https://img.pokemondb.net/artwork/large/enamorus-therian.jpg

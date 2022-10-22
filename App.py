@@ -22,8 +22,8 @@ db = mclient['pokemon']
 # create a attribute number map for storing the sequence of attributes. Key is the attribute name, value is No.
 attributeNo = Iclient.get_or_create_cache("attributeNo")
 # fill the attributeNo map.
-attributeArray = ["id", "name-form", "type_1", "type_2", "link", "data_species", "height", "weight", "abilities", "training_catch_rate", "breeding_gender_male",
-                  "breeding_gender_male", "breeding_gender_female", "stats_hp", "stats_attack", "stats_defense", "stats_sp_atk", "stats_sp_def", "stats_speed", "stats_total", "img"]
+attributeArray = ["id", "name-form", "type_1", "type_2", "data_species", "data_height", "data_weight", "first_ability", "second_ability", "hidden_ability" "training_catch_rate", "training_base_exp", "training_growth_rate", "breeding_gender_male",
+                  "breeding_gender_male", "breeding_gender_female", "egg_group1", "egg_group2", "egg_cycle", "stats_hp", "stats_attack", "stats_defense", "stats_sp_atk", "stats_sp_def", "stats_speed", "stats_total", "img"]
 for i in range(len(attributeArray)):
     attributeNo.put(i, attributeArray[i])
 # create a map for pokemon. Key is the id (without #) and the value is an array of attributes.
@@ -77,7 +77,7 @@ def allPokemon():
 
 @app.route('/Insert/<id>/<name>', methods=["GET", "POST"])
 @app.route('/insert', methods=["POST"])
-def insertPokemon(id=0, name="-", type_1="-", type_2="-", link="-", species="-", height="0", weight="0", abilities="-", training_catch_rate="0", training_base_exp="0", training_growth_rate="0", breeding_gender_male="0", breeding_gender_female="0", stats_hp="0", stats_attack="0", stats_defense="0", stats_sp_atk="0", stats_sp_def="0", stats_speed="0", stats_total="0", img="-"):
+def insertPokemon(id=0, name="-", type_1="-", type_2="-", species="-", height="0", weight="0", abilities="-", training_catch_rate="0", training_base_exp="0", training_growth_rate="0", breeding_gender_male="0", breeding_gender_female="0", stats_hp="0", stats_attack="0", stats_defense="0", stats_sp_atk="0", stats_sp_def="0", stats_speed="0", stats_total="0", img="-"):
     if request.method == "POST":
         data = request.data
         print(data)
@@ -89,7 +89,7 @@ def insertPokemon(id=0, name="-", type_1="-", type_2="-", link="-", species="-",
             return 'Insert failed, id already exists'
         else:
             INameAndId.put(name, id)
-            Ipokedex.put(id, [name, type_1, type_2, link, species, height, weight, abilities, training_catch_rate, training_base_exp, training_growth_rate,
+            Ipokedex.put(id, [name, type_1, type_2, species, height, weight, abilities, training_catch_rate, training_base_exp, training_growth_rate,
                               breeding_gender_male, breeding_gender_female, stats_hp, stats_attack, stats_defense, stats_sp_atk, stats_sp_def, stats_speed, stats_total, img])
 
             # Mongodb insert
