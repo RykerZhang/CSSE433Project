@@ -16,6 +16,8 @@ def create_pokemon(tx, before_id, before_name, before_img, method, after_id, aft
 db = pd.read_csv('./neo4j.csv')
 # connect to db
 # change "433-34.csse.rose-hulman.edu" for different host
+# first parameter of auth is username
+# second parameter of auth is password
 driver = GraphDatabase.driver(
     'bolt://433-34.csse.rose-hulman.edu:7687', auth=('neo4j', 'neo4j'))
 

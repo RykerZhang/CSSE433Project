@@ -18,17 +18,15 @@ pokemondb.indexPageController = class {
     };
   }
   login() {
-    let data = {
-      username: document.querySelector("#username").value,
-      password: document.querySelector("#password").value,
-    };
-    fetch("/main", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
+    username = document.querySelector("#username").value;
+    password = document.querySelector("#password").value;
+    fetch("/login?username=" + username + "&password=" + password, {
+      method: "GET",
     }).then((response) => {
       if (response.redirected) {
         window.location.href = response.url;
+      } else {
+        window.alert("login failed");
       }
     });
   }
@@ -58,8 +56,11 @@ pokemondb.mainPageController = class {
       .then((data) => {
         pokemondb.db = data;
         for (var key in data) {
-          var pokemon = data[key];
+          let pokemon = data[key];
           var card = this.create_card(pokemon);
+          card.onclick = (event) => {
+            window.location.href = "detail?id=" + pokemon["id"];
+          };
           document.querySelector("#main").append(card);
         }
       });
@@ -117,6 +118,15 @@ pokemondb.mainPageController = class {
   }
 };
 
+pokemondb.detailPageController = class {
+  constructor() {
+    console.log("detail page");
+    document.querySelector("#updateButton").onclick = (event) => {
+      console.log("update");
+    };
+  }
+};
+
 pokemondb.initialize = function () {
   if (document.querySelector("#indexPage")) {
     console.log("index page");
@@ -125,6 +135,10 @@ pokemondb.initialize = function () {
   if (document.querySelector("#mainPage")) {
     console.log("main page");
     new pokemondb.mainPageController();
+  }
+  if (document.querySelector("#detailPage")) {
+    console.log("detail page");
+    new pokemondb.detailPageController();
   }
 };
 

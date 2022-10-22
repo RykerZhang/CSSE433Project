@@ -1,3 +1,8 @@
+from email import message
+from enum import auto
+from pickle import FALSE
+from pyexpat.errors import messages
+from time import clock_getres
 from pymongo import MongoClient
 from pyignite import Client
 import pymongo
@@ -9,7 +14,7 @@ from flask_pymongo import PyMongo
 import os
 
 # import Router as router
-app = Flask(__name__, static_url_path="/static/")
+app = Flask(__name__)
 # MClient is for mongodb
 mclient = MongoClient("mongodb://433-34.csse.rose-hulman.edu:27017")
 # Iclient is for neo4j.
@@ -43,24 +48,50 @@ def icon():
 @app.route('/', methods=["GET"])
 @app.route('/index', methods=["GET"])
 def indexPage():
+    # fail = False
     elep = os.path.join(app.config['IMAGE_FOLDER'], 'elep.png')
     css = os.path.join(app.config['CSS_FOLDER'], 'main.css')
     js = os.path.join(app.config["SCRIPT_FOLDER"], 'main.js')
     return render_template("index.html", logo=elep, style=css, script=js)
 
 
-@app.route('/main', methods=["GET", "POST"])
-def mainPage():
-    if request.method == "POST":
-        data = request.data
-        # TODO: add authentication
-        print(data)
-        return redirect('main')
+@app.route('/login', methods=["GET"])
+def login():
+    # data = json.loads(request.data.decode(utf-8"))
+    username = request.args.get('username')
+    password = request.args.get('password')
+    print('username: ', username)
+    print('password: ', password)
+    # TODO: add authentication
+    if username == "1":
+        return redirect('/main')
     else:
-        elep = os.path.join(app.config['IMAGE_FOLDER'], 'elep.png')
+        return "login failed"
+
+
+@app.route('/main', methods=["GET"])
+def mainPage():
+    css = os.path.join(app.config['CSS_FOLDER'], 'main.css')
+    js = os.path.join(app.config["SCRIPT_FOLDER"], 'main.js')
+    return render_template("main.html", style=css, script=js)
+
+# detailPage return an array, in the sequence of ["id", "name", "type_1", "type_2", "link", "species", "height", "weight", "abilities", "training_catch_rate", "breeding_gender_male", "breeding_gender_male", "breeding_gender_female", "stats_hp", "stats_attack", "stats_defense", "stats_sp_atk", "stats_sp_def", "stats_speed", "stats_total", "iamgeurl"]
+
+
+@ app.route('/detail', methods=["GET", "POST"])
+def detailPage():
+    if (request.method == "GET"):
+        id = request.args.get('id')
+        output = Ipokedex.get(id)
+        if (output != None):
+            # print(output)
+            css = os.path.join(app.config['CSS_FOLDER'], 'main.css')
+            js = os.path.join(app.config["SCRIPT_FOLDER"], 'main.js')
+            return render_template("detail.html", style=css, script=js, pokemon=output)
+    else:
         css = os.path.join(app.config['CSS_FOLDER'], 'main.css')
         js = os.path.join(app.config["SCRIPT_FOLDER"], 'main.js')
-        return render_template("main.html", logo=elep, style=css, script=js)
+        return render_template("detail.html", style=css, script=js)
 
 
 @app.route('/getall', methods=["GET"])
@@ -133,17 +164,6 @@ def Search(InfoType, info):
             re[data['id']] = data
         return re
 
-# detailPage return an array, in the sequence of ["id", "name", "type_1", "type_2", "link", "species", "height", "weight", "abilities", "training_catch_rate", "breeding_gender_male", "breeding_gender_male", "breeding_gender_female", "stats_hp", "stats_attack", "stats_defense", "stats_sp_atk", "stats_sp_def", "stats_speed", "stats_total", "iamgeurl"]
-
-
-@ app.route('/DetailSearch/<id>', methods=["GET"])
-def detailPage(id):
-    if (request.method == "GET"):
-        output = Ipokedex.get(id)
-        if (output != None):
-            return {"re": output}
-        else:
-            return "None"
 
 # mongodb and ignite update
 
@@ -216,4 +236,4 @@ def Del(id=''):
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
