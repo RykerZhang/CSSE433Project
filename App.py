@@ -9,7 +9,7 @@ from flask_pymongo import PyMongo
 import os
 
 # import Router as router
-app = Flask(__name__)
+app = Flask(__name__, static_url_path="/static/")
 # MClient is for mongodb
 mclient = MongoClient("mongodb://433-34.csse.rose-hulman.edu:27017")
 # Iclient is for neo4j.
