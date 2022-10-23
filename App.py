@@ -9,6 +9,7 @@ import pymongo
 import json
 from bson import json_util
 from flask import Flask, render_template, request, redirect, url_for, jsonify
+from neo4j import GraphDatabase
 from flask_pymongo import PyMongo
 
 import os
@@ -16,12 +17,27 @@ import os
 # import Router as router
 app = Flask(__name__)
 # MClient is for mongodb
-mclient = MongoClient("mongodb://433-34.csse.rose-hulman.edu:27017")
-# Iclient is for neo4j.
+Mclient = MongoClient("mongodb://433-34.csse.rose-hulman.edu:27017")
+db = Mclient['pokemon']
+
+# Iclient is for Ignite.
 Iclient = Client()
 Iclient.connect('433-34.csse.rose-hulman.edu', 10800)
 
-db = mclient['pokemon']
+# Nclient is for neo4j
+Nclient = GraphDatabase.driver(
+    'bolt://433-34.csse.rose-hulman.edu:7687', auth=('neo4j', 'neo4j'))
+# with Nclient.session() as session:
+#     session.execute_write(
+#         function, param1,param2,...)
+
+
+def search_Evo(tx, id):
+    tx.run("MATCH(p:Pokemon)-[evo*]->(p2)"
+           "WHERE p.id = $id"
+           "RETURN p, evo, p2", id=id)
+    print("")
+
 
 # Apach Ignite part
 # create a attribute number map for storing the sequence of attributes. Key is the attribute name, value is No.

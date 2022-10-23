@@ -34,9 +34,7 @@ for tmp in db.iterrows():
     after_img = data[6]
 
     # call the method to build a evolution
-    with driver.session() as session:
-        session.execute_write(
-            create_pokemon, before_id, before_name, before_img, method, after_id, after_name, after_img)
+
 
 # print completion
 print("done")
