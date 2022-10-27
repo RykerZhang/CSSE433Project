@@ -1,0 +1,12 @@
+{
+    "type": "insert",
+    "fields": {
+        "id": 9990,
+        "name-form": "New",
+        "type_1": "Grass",
+        "type_2": "Bug",
+        "data_species": "New Pokemon",
+        "img": "img"
+    },
+    "timestamp": 1666889391.685976
+}
