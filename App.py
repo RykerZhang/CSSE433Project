@@ -12,13 +12,11 @@ from flask import Flask, render_template, request, redirect, url_for, jsonify
 from neo4j import GraphDatabase
 from flask_pymongo import PyMongo
 import os
-from py2neo import Graph
+import router
 
-# neo4j graph connect
-graph = Graph("bolt://433-34.csse.rose-hulman.edu:7687",
-              auth=("neo4j", "neo4j"))
-# import Router as router
 app = Flask(__name__)
+
+
 # MClient is for mongodb
 Mclient = MongoClient("mongodb://433-34.csse.rose-hulman.edu:27017")
 db = Mclient['pokemon']
@@ -253,27 +251,29 @@ def Del(id=''):
                     else:
                         return 'deletion failed'
 
-#neo4j detail page next evo check
+# neo4j detail page next evo check
+
+
 @app.route('/detail/NEXTEVO/<id>', methods=["GET"])
 def getNextEvo(id):
-    #get name
+    # get name
     evoNameResult = graph.run("MATCH ((n)-[]->(m)) "
-                          "WHERE n.id = $id " 
-                          "return m.name", id=id)
+                              "WHERE n.id = $id "
+                              "return m.name", id=id)
     evoNameArray = []
     for e in evoNameResult:
         evoNameArray.append(e["m.name"])
-    #get id
+    # get id
     evoIdResult = graph.run("MATCH ((n)-[]->(m)) "
-                          "WHERE n.id = $id " 
-                          "return m.id", id=id)
+                            "WHERE n.id = $id "
+                            "return m.id", id=id)
     evoIdArray = []
     for e in evoIdResult:
         evoIdArray.append(e["m.id"])
-    #get img link string
+    # get img link string
     evoImgResult = graph.run("MATCH ((n)-[]->(m)) "
-                          "WHERE n.id = $id " 
-                          "return m.img", id=id)
+                             "WHERE n.id = $id "
+                             "return m.img", id=id)
     evoImgArray = []
     for e in evoImgResult:
         evoImgArray.append(e["m.img"])
@@ -281,30 +281,32 @@ def getNextEvo(id):
     dict["name"] = evoNameArray
     dict["id"] = evoIdArray
     dict["img"] = evoImgArray
-    #print(dict)
+    # print(dict)
     return dict
 
-#get previous Evo
+# get previous Evo
+
+
 @app.route('/detail/PREVEVO/<id>', methods=["GET"])
 def getPrevEvo(id):
-    #get name
+    # get name
     evoNameResult = graph.run("MATCH ((n)-[]->(m)) "
-                          "WHERE m.id = $id " 
-                          "return n.name", id=id)
+                              "WHERE m.id = $id "
+                              "return n.name", id=id)
     evoNameArray = []
     for e in evoNameResult:
         evoNameArray.append(e["n.name"])
-    #get id
+    # get id
     evoIdResult = graph.run("MATCH ((n)-[]->(m)) "
-                          "WHERE m.id = $id " 
-                          "return n.id", id=id)
+                            "WHERE m.id = $id "
+                            "return n.id", id=id)
     evoIdArray = []
     for e in evoIdResult:
         evoIdArray.append(e["n.id"])
-    #get img link string
+    # get img link string
     evoImgResult = graph.run("MATCH ((n)-[]->(m)) "
-                          "WHERE m.id = $id " 
-                          "return n.img", id=id)
+                             "WHERE m.id = $id "
+                             "return n.img", id=id)
     evoImgArray = []
     for e in evoImgResult:
         evoImgArray.append(e["n.img"])
@@ -315,47 +317,50 @@ def getPrevEvo(id):
    # print(dict)
     return dict
 
-#Function haven't been routed yet: (neo4j create node , relation and delete node with repetition check )
+# Function haven't been routed yet: (neo4j create node , relation and delete node with repetition check )
+
+
 def createNode(name, id, img):
-    #check if the node exist:
+    # check if the node exist:
     oldResult = graph.run("MATCH (p:Pokemon { id : $id }) "
-                          "return p.id", id = id)
+                          "return p.id", id=id)
     for e in oldResult:
-        if(e["p.id"]!=None):
+        if (e["p.id"] != None):
             print(oldResult)
             print("This node already exist")
             return "This node already exist"
     else:
         result = graph.run("CREATE (p:Pokemon { name: $name , id : $id, img : $img }) "
-                        "RETURN p", name = name, id = id, img = img)
+                           "RETURN p", name=name, id=id, img=img)
         print(result)
         return "Node created!"
-       
-        
+
 
 def addEVO(lowId, highId):
-    #check if the relationship exist:
+    # check if the relationship exist:
     oldResult = graph.run("MATCH (low:Pokemon { id : $lowId }) "
                           "MATCH (high:Pokemon {id : $highId }) "
                           "WHERE (low)-[]->(high) "
-                          "RETURN low.id", lowId = lowId, highId = highId)
+                          "RETURN low.id", lowId=lowId, highId=highId)
     for e in oldResult:
-        if(e["low.id"]!=None):
+        if (e["low.id"] != None):
             print("Relation already exists")
             return "Relation already exists"
     else:
-            result = graph.run("MATCH (low:Pokemon { id : $lowId }) "
-                            "MATCH (high:Pokemon {id : $highId }) "
-                            "CREATE (low)-[:evolution]->(high)", lowId = lowId, highId = highId)
-            print(result)
-            print("Relation created")
-            return "Relation created"
-  
+        result = graph.run("MATCH (low:Pokemon { id : $lowId }) "
+                           "MATCH (high:Pokemon {id : $highId }) "
+                           "CREATE (low)-[:evolution]->(high)", lowId=lowId, highId=highId)
+        print(result)
+        print("Relation created")
+        return "Relation created"
+
+
 def deleteNode(id):
     result = graph.run("MATCH (p:Pokemon {id : $id}) "
-                       "DETACH DELETE p", id = id)
+                       "DETACH DELETE p", id=id)
     print(result)
     return "delete success"
+
 
 if __name__ == "__main__":
     app.run(debug=True)
