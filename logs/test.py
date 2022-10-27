@@ -17,12 +17,23 @@ def isOpen(ip, port):
 
 # print(isOpen("433-34.csse.rose-hulman.edu", 10800))
 def monitor_host():
-    open = isOpen("433-34.csse.rose-hulman.edu", 27017)
-    if open:
-        print("It's running")
+    mongo = isOpen("433-34.csse.rose-hulman.edu", 27017)
+    ignite = isOpen("433-34.csse.rose-hulman.edu", 10800)
+    neo = isOpen("433-34.csse.rose-hulman.edu", 7474)
+    if neo:
+        print("neo4j is running")
     else:
-        print("It's down")
-    threading.Timer(300, monitor_host).start()
+        print("neo4j is down")
+    if mongo:
+        print("mongo is running")
+    else:
+        print("mongo is down")
+    if ignite:
+        print("ignite is running")
+    else:
+        print("ignite is down")
+    print("---------------------------------")
+    threading.Timer(2, monitor_host).start()
 
 
 class MyHandler(FileSystemEventHandler):
@@ -44,10 +55,10 @@ if __name__ == "__main__":
         event_handler,  path='/Users/IscoJ/Desktop/CSSE433Project/logs/tmp.log',  recursive=False)
     observer.start()
 
-    try:
-        while True:
-            time.sleep(1)
-    except KeyboardInterrupt:
-        observer.stop()
-        observer.join()
-# monitor_host()
+    # try:
+    #     while True:
+    #         time.sleep(1)
+    # except KeyboardInterrupt:
+    #     observer.stop()
+    #     observer.join()
+monitor_host()
