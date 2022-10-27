@@ -52,9 +52,9 @@ class Handler(FileSystemEventHandler):
             print("Watchdog received created event - % s." % event.src_path)
         elif event.event_type == 'modified':
             # Event is modified, you can process it now
-            print("Watchdog received modified event - % s." % event.src_path)
-
-        print(event.src_path.split("/")[-2]+event.src_path.split("/")[-1])
+            # print("Watchdog received modified event - % s." % event.src_path)
+            print(event.src_path.split("/")
+                  [-2]+"/"+event.src_path.split("/")[-1])
 
 
 def monitor_host():
