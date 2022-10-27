@@ -32,12 +32,12 @@ Nclient = GraphDatabase.driver(
 #     session.execute_write(
 #         function, param1,param2,...)
 
-
-def search_Evo(tx, id):
-    tx.run("MATCH(p:Pokemon)-[evo*]->(p2)"
-           "WHERE p.id = $id"
-           "RETURN p, evo, p2", id=id)
-    print("")
+#Unused search function
+#def search_Evo(tx, id):
+#    tx.run("MATCH(p:Pokemon)-[evo*]->(p2)"
+#           "WHERE p.id = $id"
+#           "RETURN p, evo, p2", id=id)
+#    print("")
 
 
 # Apach Ignite part
