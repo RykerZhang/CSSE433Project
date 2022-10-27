@@ -257,21 +257,21 @@ def Del(id=''):
 @app.route('/detail/NEXTEVO/<id>', methods=["GET"])
 def getNextEvo(id):
     # get name
-    evoNameResult = graph.run("MATCH ((n)-[]->(m)) "
+    evoNameResult = Nclient.run("MATCH ((n)-[]->(m)) "
                               "WHERE n.id = $id "
                               "return m.name", id=id)
     evoNameArray = []
     for e in evoNameResult:
         evoNameArray.append(e["m.name"])
     # get id
-    evoIdResult = graph.run("MATCH ((n)-[]->(m)) "
+    evoIdResult = Nclient.run("MATCH ((n)-[]->(m)) "
                             "WHERE n.id = $id "
                             "return m.id", id=id)
     evoIdArray = []
     for e in evoIdResult:
         evoIdArray.append(e["m.id"])
     # get img link string
-    evoImgResult = graph.run("MATCH ((n)-[]->(m)) "
+    evoImgResult = Nclient.run("MATCH ((n)-[]->(m)) "
                              "WHERE n.id = $id "
                              "return m.img", id=id)
     evoImgArray = []
@@ -290,21 +290,21 @@ def getNextEvo(id):
 @app.route('/detail/PREVEVO/<id>', methods=["GET"])
 def getPrevEvo(id):
     # get name
-    evoNameResult = graph.run("MATCH ((n)-[]->(m)) "
+    evoNameResult = Nclient.run("MATCH ((n)-[]->(m)) "
                               "WHERE m.id = $id "
                               "return n.name", id=id)
     evoNameArray = []
     for e in evoNameResult:
         evoNameArray.append(e["n.name"])
     # get id
-    evoIdResult = graph.run("MATCH ((n)-[]->(m)) "
+    evoIdResult = Nclient.run("MATCH ((n)-[]->(m)) "
                             "WHERE m.id = $id "
                             "return n.id", id=id)
     evoIdArray = []
     for e in evoIdResult:
         evoIdArray.append(e["n.id"])
     # get img link string
-    evoImgResult = graph.run("MATCH ((n)-[]->(m)) "
+    evoImgResult = Nclient.run("MATCH ((n)-[]->(m)) "
                              "WHERE m.id = $id "
                              "return n.img", id=id)
     evoImgArray = []
@@ -322,7 +322,7 @@ def getPrevEvo(id):
 
 def createNode(name, id, img):
     # check if the node exist:
-    oldResult = graph.run("MATCH (p:Pokemon { id : $id }) "
+    oldResult = Nclient.run("MATCH (p:Pokemon { id : $id }) "
                           "return p.id", id=id)
     for e in oldResult:
         if (e["p.id"] != None):
@@ -330,7 +330,7 @@ def createNode(name, id, img):
             print("This node already exist")
             return "This node already exist"
     else:
-        result = graph.run("CREATE (p:Pokemon { name: $name , id : $id, img : $img }) "
+        result = Nclient.run("CREATE (p:Pokemon { name: $name , id : $id, img : $img }) "
                            "RETURN p", name=name, id=id, img=img)
         print(result)
         return "Node created!"
@@ -338,7 +338,7 @@ def createNode(name, id, img):
 
 def addEVO(lowId, highId):
     # check if the relationship exist:
-    oldResult = graph.run("MATCH (low:Pokemon { id : $lowId }) "
+    oldResult = Nclient.run("MATCH (low:Pokemon { id : $lowId }) "
                           "MATCH (high:Pokemon {id : $highId }) "
                           "WHERE (low)-[]->(high) "
                           "RETURN low.id", lowId=lowId, highId=highId)
@@ -347,7 +347,7 @@ def addEVO(lowId, highId):
             print("Relation already exists")
             return "Relation already exists"
     else:
-        result = graph.run("MATCH (low:Pokemon { id : $lowId }) "
+        result = Nclient.run("MATCH (low:Pokemon { id : $lowId }) "
                            "MATCH (high:Pokemon {id : $highId }) "
                            "CREATE (low)-[:evolution]->(high)", lowId=lowId, highId=highId)
         print(result)
@@ -356,7 +356,7 @@ def addEVO(lowId, highId):
 
 
 def deleteNode(id):
-    result = graph.run("MATCH (p:Pokemon {id : $id}) "
+    result = Nclient.run("MATCH (p:Pokemon {id : $id}) "
                        "DETACH DELETE p", id=id)
     print(result)
     return "delete success"

@@ -6,8 +6,8 @@ graph = Graph("bolt://433-34.csse.rose-hulman.edu:7687",
 
 results = graph.run("MATCH(n) return n")
 
-results = graph.run(
-    "MATCH path=(b: Pokemon{b})-[e*] -> (a)) WHERE b.id=10 AND WHERE NOT (a)-->() return DISTINCT e")
+#results = graph.run(
+#   "MATCH path=(b: Pokemon{b})-[e*] -> (a)) WHERE b.id=10 AND WHERE NOT (a)-->() return DISTINCT e")
 # print(results)
 
 
