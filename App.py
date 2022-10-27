@@ -11,9 +11,12 @@ from bson import json_util
 from flask import Flask, render_template, request, redirect, url_for, jsonify
 from neo4j import GraphDatabase
 from flask_pymongo import PyMongo
-
 import os
+from py2neo import Graph
 
+# neo4j graph connect
+graph = Graph("bolt://433-34.csse.rose-hulman.edu:7687",
+              auth=("neo4j", "neo4j"))
 # import Router as router
 app = Flask(__name__)
 # MClient is for mongodb
@@ -250,6 +253,65 @@ def Del(id=''):
                     else:
                         return 'deletion failed'
 
+#neo4j detail page next evo check
+@app.route('/detail/NEXTEVO/<id>', methods=["GET"])
+def getNextEvo(id):
+    #get name
+    evoNameResult = graph.run("MATCH ((n)-[]->(m)) "
+                          "WHERE n.id = $id " 
+                          "return m.name", id=id)
+    evoNameArray = []
+    for e in evoNameResult:
+        evoNameArray.append(e["m.name"])
+    #get id
+    evoIdResult = graph.run("MATCH ((n)-[]->(m)) "
+                          "WHERE n.id = $id " 
+                          "return m.id", id=id)
+    evoIdArray = []
+    for e in evoIdResult:
+        evoIdArray.append(e["m.id"])
+    #get img link string
+    evoImgResult = graph.run("MATCH ((n)-[]->(m)) "
+                          "WHERE n.id = $id " 
+                          "return m.img", id=id)
+    evoImgArray = []
+    for e in evoImgResult:
+        evoImgArray.append(e["m.img"])
+    dict = {}
+    dict["name"] = evoNameArray
+    dict["id"] = evoIdArray
+    dict["img"] = evoImgArray
+    print(dict)
+
+#get previous Evo
+@app.route('/detail/PREVEVO/<id>', methods=["GET"])
+def getPrevEvo(id):
+    #get name
+    evoNameResult = graph.run("MATCH ((n)-[]->(m)) "
+                          "WHERE m.id = $id " 
+                          "return n.name", id=id)
+    evoNameArray = []
+    for e in evoNameResult:
+        evoNameArray.append(e["n.name"])
+    #get id
+    evoIdResult = graph.run("MATCH ((n)-[]->(m)) "
+                          "WHERE m.id = $id " 
+                          "return n.id", id=id)
+    evoIdArray = []
+    for e in evoIdResult:
+        evoIdArray.append(e["n.id"])
+    #get img link string
+    evoImgResult = graph.run("MATCH ((n)-[]->(m)) "
+                          "WHERE m.id = $id " 
+                          "return n.img", id=id)
+    evoImgArray = []
+    for e in evoImgResult:
+        evoImgArray.append(e["n.img"])
+    dict = {}
+    dict["name"] = evoNameArray
+    dict["id"] = evoIdArray
+    dict["img"] = evoImgArray
+    print(dict)
 
 if __name__ == "__main__":
     app.run(debug=True)
