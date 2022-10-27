@@ -31,3 +31,12 @@ def read_log(file_name):
 
 
 read_log(tp)
+
+
+def parse_command(tp, fields):
+    if tp == insert:
+        return "db.insert(" + str(fields) + ")"
+    if tp == update:
+        return "db.update(" + str(fields) + ")"
+    if tp == delete:
+        return "db.deleteOne(" + str(fields) + ")"
