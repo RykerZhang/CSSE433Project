@@ -10,6 +10,7 @@ import json
 import os
 
 
+#generate a json file using dictionaries
 def write_to_log(type, fields, fields2):
     timestamp = time.time()
     tp = timestamp
@@ -23,6 +24,7 @@ def write_to_log(type, fields, fields2):
     return timestamp
 
 
+# read a json log file
 def read_log(file_name):
     f = open("log/" + str(file_name), 'r', encoding='utf-8')
     data = json.load(f)
@@ -39,6 +41,7 @@ def read_log(file_name):
     return tp, fields, fields2, timestamp
 
 
+# generate a command based on the fields
 def parse_command(db, tp, fields, fields2):
     if tp == "insert":
         db.insert_one(fields)
@@ -51,6 +54,7 @@ def parse_command(db, tp, fields, fields2):
         return "db.delete_one(" + str(fields) + ")"
 
 
+# testing purposes: generate some data when the mongodb server is down
 def gen_commands():
     data1 = {'id': 9990, 'name-form': "New", 'type_1': "Grass", 'type_2': "Bug", 'data_species': "New Pokemon", 'img': ""}
     write_to_log("insert", data1, None)
@@ -133,6 +137,7 @@ def monitor_host():
     # change first parameter to allow longer period
     threading.Timer(20, monitor_host).start()
     # TODO: add function to read and manipulate logs
+    # testing purposes: generate some data when the mongodb server is down
     if (not mongo):
         gen_commands()
     if (mongo):
@@ -141,7 +146,9 @@ def monitor_host():
         testCol = db['test']
         path_list = os.listdir('log/')
         #path_list.remove('.DS_Store')
+        #sort to ensure that all json files are read by time order
         path_list.sort()
+        #read all files in the folder
         for dir in path_list:
             #print(dir)
             with open('log/' + dir) as file:
@@ -151,6 +158,8 @@ def monitor_host():
                 #exec(cmd)
                 os.remove('log/' + dir)
                 res = testCol.find({})
+                #testing purposes: print out the data in the database
+                print("New Data after restoring a log:")
                 for r in res:
                     print(r)
         # with open('mongo.log') as f:
