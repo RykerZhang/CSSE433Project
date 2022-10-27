@@ -1,0 +1,2 @@
+db.pokedex.insert_one({'id': 1, 'name-form': 100})
+db.pokedex.insert_one({'test':'aa'})

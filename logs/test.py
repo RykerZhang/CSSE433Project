@@ -3,6 +3,9 @@ import time
 import threading
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
+from pymongo import MongoClient
+from pyignite import Client
+from neo4j import GraphDatabase
 
 
 def isOpen(ip, port):
@@ -15,50 +18,80 @@ def isOpen(ip, port):
         return False
 
 
-# print(isOpen("433-34.csse.rose-hulman.edu", 10800))
+class OnMyWatch:
+    # Set the directory on watch
+    watchDirectory = "."
+
+    def __init__(self):
+        self.observer = Observer()
+
+    def run(self):
+        event_handler = Handler()
+        self.observer.schedule(
+            event_handler, self.watchDirectory, recursive=True)
+        self.observer.start()
+        try:
+            while True:
+                time.sleep(5)
+        except:
+            self.observer.stop()
+            print("Observer Stopped")
+
+        self.observer.join()
+
+
+class Handler(FileSystemEventHandler):
+
+    @staticmethod
+    def on_any_event(event):
+        if event.is_directory:
+            return None
+
+        elif event.event_type == 'created':
+            # Event is created, you can process it now
+            print("Watchdog received created event - % s." % event.src_path)
+        elif event.event_type == 'modified':
+            # Event is modified, you can process it now
+            print("Watchdog received modified event - % s." % event.src_path)
+
+        print(event.src_path.split("/")[-2]+event.src_path.split("/")[-1])
+
+
 def monitor_host():
     mongo = isOpen("433-34.csse.rose-hulman.edu", 27017)
     ignite = isOpen("433-34.csse.rose-hulman.edu", 10800)
     neo = isOpen("433-34.csse.rose-hulman.edu", 7474)
+    p = ""
     if neo:
-        print("neo4j is running")
+        p += "neo4j is running | "
     else:
-        print("neo4j is down")
+        p += "neo4j is down | "
     if mongo:
-        print("mongo is running")
+        p += "mongo is running | "
     else:
-        print("mongo is down")
+        p += "mongo is down | "
     if ignite:
-        print("ignite is running")
+        p += "ignite is running"
     else:
-        print("ignite is down")
-    print("---------------------------------")
-    threading.Timer(2, monitor_host).start()
+        p += "ignite is down"
+    print(p)
+    # change first parameter to allow longer period
+    threading.Timer(20, monitor_host).start()
+    # TODO: add function to read and manipulate logs
+    if (mongo):
+        Mclient = MongoClient("mongodb://433-34.csse.rose-hulman.edu:27017")
+        db = Mclient['test']
+        with open('mongo.log') as f:
+            lines = f.readlines()
+            for command in lines:
+                exec(command)
+                # TODO: add code to remove command from mongo.log
 
 
-class MyHandler(FileSystemEventHandler):
-    def on_modified(self,  event):
-        print(f'event type: {event.event_type} path : {event.src_path}')
-
-    def on_created(self,  event):
-        print(f'event type: {event.event_type} path : {event.src_path}')
-
-    def on_deleted(self,  event):
-        print(f'event type: {event.event_type} path : {event.src_path}')
-
-
-if __name__ == "__main__":
-
-    event_handler = MyHandler()
-    observer = Observer()
-    observer.schedule(
-        event_handler,  path='/Users/IscoJ/Desktop/CSSE433Project/logs/tmp.log',  recursive=False)
-    observer.start()
-
-    # try:
-    #     while True:
-    #         time.sleep(1)
-    # except KeyboardInterrupt:
-    #     observer.stop()
-    #     observer.join()
-monitor_host()
+# monitor_host()
+# # print(isOpen("433-34.csse.rose-hulman.edu", 10800))
+if __name__ == '__main__':
+    watch = OnMyWatch()
+    monitor = threading.Thread(target=monitor_host, args=())
+    monitor.start()
+    watch.run()

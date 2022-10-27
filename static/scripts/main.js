@@ -1,3 +1,4 @@
+// const fs = require("fs");
 var pokemondb = pokemondb || {};
 pokemondb.indexPageController = null;
 pokemondb.mainPageController = null;

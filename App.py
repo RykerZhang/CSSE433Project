@@ -5,11 +5,11 @@ from pyexpat.errors import messages
 from time import clock_getres
 from pymongo import MongoClient
 from pyignite import Client
+from neo4j import GraphDatabase
 import pymongo
 import json
 from bson import json_util
 from flask import Flask, render_template, request, redirect, url_for, jsonify
-from neo4j import GraphDatabase
 from flask_pymongo import PyMongo
 import os
 import router
@@ -45,7 +45,7 @@ def search_Evo(tx, id):
 attributeNo = Iclient.get_or_create_cache("attributeNo")
 # fill the attributeNo map.
 attributeArray = ["id", "name-from", "type_1", "type_2", "species", "height", "weight", "abilities", "training_catch_rate", "training_base_exp", "training_growth_rate",
-                "breeding_gender_male", "breeding_gender_female", "stats_hp", "stats_attack", "stats_defense", "stats_sp_atk", "stats_sp_def", "stats_speed", "stats_total", "img"]
+                  "breeding_gender_male", "breeding_gender_female", "stats_hp", "stats_attack", "stats_defense", "stats_sp_atk", "stats_sp_def", "stats_speed", "stats_total", "img"]
 for i in range(len(attributeArray)):
     attributeNo.put(i, attributeArray[i])
 # create a map for pokemon. Key is the id (without #) and the value is an array of attributes.
@@ -105,6 +105,8 @@ def detailPage():
             css = os.path.join(app.config['CSS_FOLDER'], 'main.css')
             js = os.path.join(app.config["SCRIPT_FOLDER"], 'main.js')
             return render_template("detail.html", style=css, script=js, pokemon=output)
+        else:
+            return redirect('/main')
     else:
         css = os.path.join(app.config['CSS_FOLDER'], 'main.css')
         js = os.path.join(app.config["SCRIPT_FOLDER"], 'main.js')
