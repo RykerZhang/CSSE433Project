@@ -281,7 +281,8 @@ def getNextEvo(id):
     dict["name"] = evoNameArray
     dict["id"] = evoIdArray
     dict["img"] = evoImgArray
-    print(dict)
+    #print(dict)
+    return dict
 
 #get previous Evo
 @app.route('/detail/PREVEVO/<id>', methods=["GET"])
@@ -311,7 +312,8 @@ def getPrevEvo(id):
     dict["name"] = evoNameArray
     dict["id"] = evoIdArray
     dict["img"] = evoImgArray
-    print(dict)
+   # print(dict)
+    return dict
 
 if __name__ == "__main__":
     app.run(debug=True)
