@@ -315,5 +315,47 @@ def getPrevEvo(id):
    # print(dict)
     return dict
 
+#Function haven't been routed yet: (neo4j create node , relation and delete node with repetition check )
+def createNode(name, id, img):
+    #check if the node exist:
+    oldResult = graph.run("MATCH (p:Pokemon { id : $id }) "
+                          "return p.id", id = id)
+    for e in oldResult:
+        if(e["p.id"]!=None):
+            print(oldResult)
+            print("This node already exist")
+            return "This node already exist"
+    else:
+        result = graph.run("CREATE (p:Pokemon { name: $name , id : $id, img : $img }) "
+                        "RETURN p", name = name, id = id, img = img)
+        print(result)
+        return "Node created!"
+       
+        
+
+def addEVO(lowId, highId):
+    #check if the relationship exist:
+    oldResult = graph.run("MATCH (low:Pokemon { id : $lowId }) "
+                          "MATCH (high:Pokemon {id : $highId }) "
+                          "WHERE (low)-[]->(high) "
+                          "RETURN low.id", lowId = lowId, highId = highId)
+    for e in oldResult:
+        if(e["low.id"]!=None):
+            print("Relation already exists")
+            return "Relation already exists"
+    else:
+            result = graph.run("MATCH (low:Pokemon { id : $lowId }) "
+                            "MATCH (high:Pokemon {id : $highId }) "
+                            "CREATE (low)-[:evolution]->(high)", lowId = lowId, highId = highId)
+            print(result)
+            print("Relation created")
+            return "Relation created"
+  
+def deleteNode(id):
+    result = graph.run("MATCH (p:Pokemon {id : $id}) "
+                       "DETACH DELETE p", id = id)
+    print(result)
+    return "delete success"
+
 if __name__ == "__main__":
     app.run(debug=True)

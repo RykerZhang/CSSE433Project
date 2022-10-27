@@ -1,3 +1,4 @@
+from xml.dom import NoDataAllowedErr
 from py2neo import Graph
 
 graph = Graph("bolt://433-34.csse.rose-hulman.edu:7687",
@@ -6,7 +7,8 @@ graph = Graph("bolt://433-34.csse.rose-hulman.edu:7687",
 results = graph.run("MATCH (n:Pokemon) return n")
 #results = graph.run(
     #"MATCH path=(b: Pokemon{b})-[e*] -> (a) WHERE b.id=10 AND WHERE ！(a)-->() return DISTINCT e")
-#print(results)
+for e in results:
+    print(e)
 
 #for e in results:
    # print("  ")
@@ -71,39 +73,47 @@ def getPrevEvo(id):
     
 def createNode(name, id, img):
     #check if the node exist:
-    oldResult = graph.run("MATCH (p:Pokemon { id : $id})"
-                          "RETUNR p")
-    if(oldResult != None):
-        return "This node does not exist"
+    oldResult = graph.run("MATCH (p:Pokemon { id : $id }) "
+                          "return p.id", id = id)
+    for e in oldResult:
+        if(e["p.id"]!=None):
+            print(oldResult)
+            print("This node already exist")
+            return "This node already exist"
     else:
         result = graph.run("CREATE (p:Pokemon { name: $name , id : $id, img : $img }) "
                         "RETURN p", name = name, id = id, img = img)
         print(result)
         return "Node created!"
+       
+        
 
 def addEVO(lowId, highId):
     #check if the relationship exist:
-    oldResult = graph.run("MATCH (low:Pokemon { id : $lowId })"
-                          "MATCH (high:Pokemon {id : $highId })"
-                          "WHERE (low)-[]->(high)"
-                          "RETURN lowId", lowId = lowId, highId = highId)
-    if(oldResult!=None):
-        result = graph.run("MATCH (low:Pokemon { id : $lowId })"
-                        "MATCH (high:Pokemon {id : $highId })"
-                        "CREATE (low)-[:evolution]->(high)", lowId = lowId, highId = highId)
-        print(result)
-        return "Relation created"
+    oldResult = graph.run("MATCH (low:Pokemon { id : $lowId }) "
+                          "MATCH (high:Pokemon {id : $highId }) "
+                          "WHERE (low)-[]->(high) "
+                          "RETURN low.id", lowId = lowId, highId = highId)
+    for e in oldResult:
+        if(e["low.id"]!=None):
+            print("Relation already exists")
+            return "Relation already exists"
     else:
-        return "Relation already exists"
-    
+            result = graph.run("MATCH (low:Pokemon { id : $lowId }) "
+                            "MATCH (high:Pokemon {id : $highId }) "
+                            "CREATE (low)-[:evolution]->(high)", lowId = lowId, highId = highId)
+            print(result)
+            print("Relation created")
+            return "Relation created"
+  
 def deleteNode(id):
-    result = graph.run("MATCH (p:Pokemon {id : $id})"
+    result = graph.run("MATCH (p:Pokemon {id : $id}) "
                        "DETACH DELETE p", id = id)
     print(result)
     return "delete success"
       
-#createNode("test1", 99999, "http://www.google.com")
+createNode("test1", 99999, "http://www.google.com")
 #createNode("test2", 99998, "http://www.youtube.com")
-#ddEVO(99999,99998)
+#addEVO(99999,99998)
+getPrevEvo(99999)
 #deleteNode(99998)
-#getEvo(99999)
