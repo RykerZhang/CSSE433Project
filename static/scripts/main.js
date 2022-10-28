@@ -19,8 +19,9 @@ pokemondb.indexPageController = class {
     };
   }
   login() {
-    username = document.querySelector("#username").value;
-    password = document.querySelector("#password").value;
+    console.log("btn");
+    const username = document.querySelector("#username").value;
+    const password = document.querySelector("#password").value;
     fetch("/login?username=" + username + "&password=" + password, {
       method: "GET",
     }).then((response) => {
