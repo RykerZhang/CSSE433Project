@@ -2,6 +2,7 @@ from email import message
 from enum import auto
 from pickle import FALSE
 from pyexpat.errors import messages
+from re import I
 #from time import clock_getres
 from pymongo import MongoClient
 from pyignite import Client
@@ -273,27 +274,24 @@ def allPokemon():
 # insert part of data to mongodb and all the data to ignite
 
 
-@app.route('/Insert/<id>/<name>/<type_1>/<type_2>/<species>/<height>/<weight>/<abilities>/<training_catch_rate>/<training_base_exp>/<training_growth_rate>/<breeding_gender_male>/<breeding_gender_female>/<stats_hp>/<stats_attack>/<stats_defense>/<stats_sp_atk>/<stats_sp_def>/<stats_speed>/<stats_total>/<img>', methods=["GET", "POST"])
 @app.route('/insert', methods=["POST"])
-def insertPokemon(id=0, name="-", type_1="-", type_2="-", species="-", height="0", weight="0", abilities="-", training_catch_rate="0", training_base_exp="0", training_growth_rate="0", breeding_gender_male="0", breeding_gender_female="0", stats_hp="0", stats_attack="0", stats_defense="0", stats_sp_atk="0", stats_sp_def="0", stats_speed="0", stats_total="0", img="-"):
+def insertPokemon():
     if request.method == "POST":
-        data = request.data
-        print(data)
-        return data
-    if request.method == "GET":
-        # Ignite insert
-        INameAndId.put(name, id)
-        Ipokedex.put(id, [id, name, type_1, type_2, species, height, weight, abilities, training_catch_rate, training_base_exp, training_growth_rate,
-                          breeding_gender_male, breeding_gender_female, stats_hp, stats_attack, stats_defense, stats_sp_atk, stats_sp_def, stats_speed, stats_total, img])
+        p = request.json
+        INameAndId.put(p[1], p[0])
+        tmp = [None]*21
+        for t in range(len(p)):
+            tmp[t] = str(p[t])
+        print(tmp)
+        Ipokedex.put(p[0], t)
 
-        # Mongodb insert
         data = {
-            'id': id,
-            'name-form': name,
-            'type_1': type_1,
-            'type_2': type_2,
-            'data_species': species,
-            'img': img
+            'id': p[0],
+            'name-form': p[1],
+            'type_1': p[2],
+            'type_2': p[3],
+            'data_species': p[4],
+            'img': p[20]
         }
         print("write!!!\n")
         write_to_log("insert", data, None)
@@ -301,9 +299,6 @@ def insertPokemon(id=0, name="-", type_1="-", type_2="-", species="-", height="0
         # log = "db.pokedex.insert_one("+str(data)+")"
         pushToMongo()
         return "insertion added to logs"
-        # return json.loads(json_util.dumps(data))
-    else:
-        return ''
 
 # search for the search page, use mongodb to search
 
@@ -328,42 +323,45 @@ def Search(InfoType, info):
 # mongodb and ignite update
 
 
-@app.route('/Update/<id>/<name>/<type_1>/<type_2>/<species>/<height>/<weight>/<abilities>/<training_catch_rate>/<training_base_exp>/<training_growth_rate>/<breeding_gender_male>/<breeding_gender_female>/<stats_hp>/<stats_attack>/<stats_defense>/<stats_sp_atk>/<stats_sp_def>/<stats_speed>/<stats_total>/<img>', methods=["GET", "POST"])
-def Update(id="-", name="-", type_1="-", type_2="-", species="-", height="0", weight="0", abilities="0", training_catch_rate="0", training_base_exp="0", training_growth_rate="0", breeding_gender_male="0", breeding_gender_female="0", stats_hp="0", stats_attack="0", stats_defense="0", stats_sp_atk="0", stats_sp_def="0", stats_speed="0", stats_total="0", img="-"):
-    # Mongodb Update
-    if (request.method == "GET"):
+@app.route('/Update', methods=["POST"])
+def Update():
+    if (request.method == "POST"):
+        p = request.json
+        id = p[0]
         if Ipokedex.get(id) == None or len(list(db.pokedex.find({'id': id}))) == 0:
             print("id not exists")
             return "id not exists"
         else:
-            tmp = Ipokedex.get(id)[0]
+            tmp = Ipokedex.get(id)[1]
             if INameAndId.get(tmp) == None:
                 print("id not exists")
                 return "id not exists"
             else:
-                db.pokedex.update_one(
-                    {"id": id},
-                    {"$set": {"name-form": name,
-                              "type_1": type_1,
-                              "type_2": type_2,
-                              "data_species": species,
-                              "img": img}
-                     }
-                )
-                # ignite update
-                INameAndId.remove_key(tmp)
-                Ipokedex.put(id, [id, name, type_1, type_2, species, height, weight, abilities, training_catch_rate, training_base_exp, training_growth_rate,
-                                  breeding_gender_male, breeding_gender_female, stats_hp, stats_attack, stats_defense, stats_sp_atk, stats_sp_def, stats_speed, stats_total, img])
-                INameAndId.put(name, id)
-                print(INameAndId.get(name))
-                cursor = db.pokedex.find({'id': id})
-                x = {}
-                for i in cursor:
-                    x.update(i)
-                print(x)
-                print(Ipokedex.get(id))
-                print(INameAndId.get(name))
-                return "update succeed"
+                pokemon = [None]*21
+                for t in range(len(p)):
+                    pokemon[t] = str(p[t])
+                print(pokemon)
+                tmp = Ipokedex.get(id)[1]
+                if INameAndId.get(tmp) == None:
+                    print("id not exists")
+                    return "id not exists"
+                else:
+                    db.pokedex.update_one(
+                        {"id": pokemon[0]},
+                        {"$set": {"name-form": pokemon[1],
+                                  "type_1": pokemon[2],
+                                  "type_2": pokemon[3],
+                                  "data_species": pokemon[4],
+                                  "img": pokemon[20]}
+                         }
+                    )
+                    # ignite update
+                    INameAndId.remove_key(tmp)
+                    Ipokedex.put(pokemon[0], pokemon)
+                    INameAndId.put(pokemon[1], pokemon[0])
+                    print(INameAndId.get(pokemon[1]))
+                    print(Ipokedex.get(pokemon[0]))
+                    return "update succeed"
 
 
 @ app.route('/Delete/<id>', methods=["DELETE"])

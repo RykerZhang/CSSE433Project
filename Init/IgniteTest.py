@@ -19,11 +19,11 @@ INameAndId = client.get_or_create_cache("INameAndId")
 # my_cache.put(2, "This is example for CSSE433 class222222")
 
 # Get value from cache
-# Ipokedex.remove_key("9080")
-# INameAndId.remove_key("a")
-result0 = INameAndId.get("a")
+# Ipokedex.remove_key("9100")
+# INameAndId.remove_key("c")
+result0 = INameAndId.get("Charizard-Test")
 # result0 = Ipokedex.get("9060")
-result1 = Ipokedex.get("9080")
+result1 = Ipokedex.get("61")
 # INameAndId.remove_all()
 # Ipokedex.remove_all()
 

@@ -233,78 +233,44 @@
             console.log(document.querySelector("#submitUpdate"));
         };
         document.querySelector("#submitUpdate").onclick = (event) => {
-            var name_form = document.querySelector("#name").value || "-";
-            var type1 = document.querySelector("#type1").value || "-";
-            var type2 = document.querySelector("#type2").value || "-";
-            var species = document.querySelector("#species").value || "-";
-            var height = document.querySelector("#height").value || "0";
-            var weight = document.querySelector("#weight").value || "0";
-            var ability = document.querySelector("#abilities").value || "-";
-            var catch_rate = document.querySelector("#catch_rate").value || "0";
-            var base_exp = document.querySelector("#base_exp").value || "0";
-            var grow_rate = document.querySelector("#grow_rate").value || "0";
-            var male_rate = document.querySelector("#male").value || "0";
-            var female_rate = document.querySelector("#female").value || "0";
-            var hp = document.querySelector("#hp").value || "0";
-            var attack = document.querySelector("#attack").value || "0";
-            var defense = document.querySelector("#defense").value || "0";
-            var sp_atk = document.querySelector("#sp_atk").value || "0";
-            var sp_def = document.querySelector("#sp_def").value || "0";
-            var speed = document.querySelector("#speed").value || "0";
-            var total =
+            const data = [];
+            data[0] = id;
+            data[1] = document.querySelector("#name").value;
+            if (!data[1]) {
+                window.alert("name can't be null");
+            }
+            data[2] = document.querySelector("#type1").value || "-";
+            data[3] = document.querySelector("#type2").value || "-";
+            data[4] = document.querySelector("#species").value || "-";
+            data[5] = document.querySelector("#height").value || "0";
+            data[6] = document.querySelector("#weight").value || "0";
+            data[7] = document.querySelector("#abilities").value || "-";
+            data[8] = document.querySelector("#catch_rate").value || "0";
+            data[9] = document.querySelector("#base_exp").value || "0";
+            data[10] = document.querySelector("#grow_rate").value || "0";
+            data[11] = document.querySelector("#male").value || "0";
+            data[12] = document.querySelector("#female").value || "0";
+            data[13] = document.querySelector("#hp").value || "0";
+            data[14] = document.querySelector("#attack").value || "0";
+            data[15] = document.querySelector("#defense").value || "0";
+            data[16] = document.querySelector("#sp_atk").value || "0";
+            data[17] = document.querySelector("#sp_def").value || "0";
+            data[18] = document.querySelector("#speed").value || "0";
+            data[19] = String(
                 Number(hp) +
                 Number(attack) +
                 Number(defense) +
                 Number(sp_atk) +
                 Number(sp_def) +
-                Number(speed);
-            var img = document.querySelector("img").src || "-";
-            var url =
-                "/Update/" +
-                id +
-                "/" +
-                name_form +
-                "/" +
-                type1 +
-                "/" +
-                type2 +
-                "/" +
-                species +
-                "/" +
-                height +
-                "/" +
-                weight +
-                "/" +
-                ability +
-                "/" +
-                catch_rate +
-                "/" +
-                base_exp +
-                "/" +
-                grow_rate +
-                "/" +
-                male_rate +
-                "/" +
-                female_rate +
-                "/" +
-                hp +
-                "/" +
-                attack +
-                "/" +
-                defense +
-                "/" +
-                sp_atk +
-                "/" +
-                sp_def +
-                "/" +
-                speed +
-                "/" +
-                String(total) +
-                "/" +
-                img;
-            console.log(url);
-            fetch(url, { method: "GET" }).then((response) => {
-                // window.location.reload();
+                Number(speed)
+            );
+            data[20] = document.querySelector("#img").src || "-";
+            fetch("/Update", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data),
+            }).then((response) => {
+                window.location.reload();
             });
         };
         document.querySelector("#deleteBtn").onclick = (event) => {
