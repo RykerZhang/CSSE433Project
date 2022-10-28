@@ -132,7 +132,7 @@ def insertPokemon(id=0, name="-", type_1="-", type_2="-", species="-", height="0
             return 'Insert failed, id already exists'
         else:
             INameAndId.put(name, id)
-            Ipokedex.put(id, [name, type_1, type_2, species, height, weight, abilities, training_catch_rate, training_base_exp, training_growth_rate,
+            Ipokedex.put(id, [id, name, type_1, type_2, species, height, weight, abilities, training_catch_rate, training_base_exp, training_growth_rate,
                               breeding_gender_male, breeding_gender_female, stats_hp, stats_attack, stats_defense, stats_sp_atk, stats_sp_def, stats_speed, stats_total, img])
 
             # Mongodb insert
@@ -175,8 +175,8 @@ def Search(InfoType, info):
 # mongodb and ignite update
 
 
-@ app.route('/Update/<id>/<name>/<type_1>', methods=["GET", "POST", "PATCH"])
-def Update(id="-", name="-", type_1="-", type_2="-", link="-", species="-", height="0", weight="0", abilities="0", training_catch_rate="0", training_base_exp="0", training_growth_rate="0", breeding_gender_male="0", breeding_gender_female="0", stats_hp="0", stats_attack="0", stats_defense="0", stats_sp_atk="0", stats_sp_def="0", stats_speed="0", stats_total="0", img="-"):
+@ app.route('/Update/<id>/<name>/<type_1>/<type_2>/<species>/<height>/<weight>/<abilities>/<training_catch_rate>/<training_base_exp>/<training_growth_rate>/<breeding_gender_male>/<breeding_gender_female>/<stats_hp>/<stats_attack>/<stats_defense>/<stats_sp_atk>/<stats_sp_def>/<stats_speed>/<stats_total>/<img>', methods=["GET", "POST"])
+def Update(id="-", name="-", type_1="-", type_2="-", species="-", height="0", weight="0", abilities="0", training_catch_rate="0", training_base_exp="0", training_growth_rate="0", breeding_gender_male="0", breeding_gender_female="0", stats_hp="0", stats_attack="0", stats_defense="0", stats_sp_atk="0", stats_sp_def="0", stats_speed="0", stats_total="0", img="-"):
     # Mongodb Update
     if (request.method == "GET"):
         if Ipokedex.get(id) == None or len(list(db.pokedex.find({'id': id}))) == 0:
@@ -199,7 +199,7 @@ def Update(id="-", name="-", type_1="-", type_2="-", link="-", species="-", heig
                 )
                 # ignite update
                 INameAndId.remove_key(tmp)
-                Ipokedex.put(id, [name, type_1, type_2, link, species, height, weight, abilities, training_catch_rate, training_base_exp, training_growth_rate,
+                Ipokedex.put(id, [id, name, type_1, type_2, species, height, weight, abilities, training_catch_rate, training_base_exp, training_growth_rate,
                                   breeding_gender_male, breeding_gender_female, stats_hp, stats_attack, stats_defense, stats_sp_atk, stats_sp_def, stats_speed, stats_total, img])
                 INameAndId.put(name, id)
                 print(INameAndId.get(name))
@@ -224,7 +224,7 @@ def Del(id=''):
                 print("id not exists")
                 return "id not exists"
             else:
-                name = Ipokedex.get(id)[0]
+                name = Ipokedex.get(id)[1]
                 print(name)
                 if INameAndId.get(name) == None:
                     print("id not exists")

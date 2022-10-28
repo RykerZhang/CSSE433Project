@@ -14,7 +14,7 @@ INameAndId = client.get_or_create_cache("INameAndId")
 db = pd.read_csv('./ignite.csv')
 for tmp in db.iterrows():
     data = list(list(tmp)[1])
-    id = str(data.pop(0))
+    id = str(data[0])
     for k in range(len(data)):
         data[k] = str(data[k])
         # print(type(data[k]))

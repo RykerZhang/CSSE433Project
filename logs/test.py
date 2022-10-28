@@ -76,7 +76,7 @@ def monitor_host():
         p += "ignite is down"
     print(p)
     # change first parameter to allow longer period
-    threading.Timer(20, monitor_host).start()
+    threading.Timer(2, monitor_host).start()
     # TODO: add function to read and manipulate logs
     if (mongo):
         Mclient = MongoClient("mongodb://433-34.csse.rose-hulman.edu:27017")
@@ -90,8 +90,16 @@ def monitor_host():
 
 # monitor_host()
 # # print(isOpen("433-34.csse.rose-hulman.edu", 10800))
-if __name__ == '__main__':
+
+def watch_file():
     watch = OnMyWatch()
+    watch.run()
+
+
+if __name__ == '__main__':
+
     monitor = threading.Thread(target=monitor_host, args=())
     monitor.start()
-    watch.run()
+
+    watch = threading.Thread(target=watch_file, args=())
+    watch.start()
