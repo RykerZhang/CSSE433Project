@@ -177,7 +177,7 @@
         var data = {{ pokemon| tojson }};
         console.log(data);
         var id = data[0];
-        var name = data[1];
+        var name_form = data[1];
         var type1 = data[2];
         var type2 = data[3];
         var species = data[4];
@@ -200,7 +200,7 @@
         // var
 
         document.querySelector("#img").src = img;
-        document.querySelector("#name").value = name;
+        document.querySelector("#name").value = name_form;
         document.querySelector("#type1").value = type1;
         document.querySelector("#type2").value = type2;
         document.querySelector("#species").value = species;
@@ -233,6 +233,7 @@
             console.log(document.querySelector("#submitUpdate"));
         };
         document.querySelector("#submitUpdate").onclick = (event) => {
+            var name_form = document.querySelector("#name").value || "-";
             var type1 = document.querySelector("#type1").value || "-";
             var type2 = document.querySelector("#type2").value || "-";
             var species = document.querySelector("#species").value || "-";
@@ -259,10 +260,10 @@
                 Number(speed);
             var img = document.querySelector("img").src || "-";
             var url =
-                "/Insert/" +
+                "/Update/" +
                 id +
                 "/" +
-                name +
+                name_form +
                 "/" +
                 type1 +
                 "/" +
@@ -303,14 +304,14 @@
                 img;
             console.log(url);
             fetch(url, { method: "GET" }).then((response) => {
-                window.location.reload();
+                // window.location.reload();
             });
         };
         document.querySelector("#deleteBtn").onclick = (event) => {
             if (document.querySelector("#deleteIn").value == "DELETE") {
                 var url = "/Delete/" + String(id);
                 console.log(url);
-                fetch("/Delete/" + String(id), { method: "GET" }).then((response) => {
+                fetch("/Delete/" + id, { method: "DELETE" }).then((response) => {
                     window.location.href = "/main";
                 })
             }

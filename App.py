@@ -12,7 +12,6 @@ from bson import json_util
 from flask import Flask, render_template, request, redirect, url_for, jsonify
 from flask_pymongo import PyMongo
 import os
-import router
 import socket
 import time
 import threading
@@ -58,6 +57,7 @@ def write_to_log(type, fields, fields2):
     timestamp = time.time()
     tp = timestamp
     data_dict = {}
+    print("test")
     if fields2 is None:
         data_dict = {"type": type, "fields": fields, "timestamp": timestamp}
     if fields2 is not None:
@@ -148,8 +148,34 @@ class Handler(FileSystemEventHandler):
         elif event.event_type == 'modified':
             # Event is modified, you can process it now
             # print("Watchdog received modified event - % s." % event.src_path)
-            print(event.src_path.split("/")
-                  [-2]+"/"+event.src_path.split("/")[-1])
+            # print(event.src_path.split("/")
+            # [-2]+"/"+event.src_path.split("/")[-1])
+            print(" ")
+
+
+def pushToMongo():
+    mongo = isOpen("433-34.csse.rose-hulman.edu", 27017)
+    if mongo:
+        Mclient = MongoClient("mongodb://433-34.csse.rose-hulman.edu:27017")
+        db = Mclient['pokemon']
+        testCol = db['pokedex']
+
+        path_list = os.listdir('log/')
+        path_list.sort()
+
+        # read all files in the folder
+        for dir in path_list:
+            with open('log/' + dir) as file:
+                tp, fields, fields2, timestamp = read_log(dir)
+                cmd = parse_command(testCol, tp, fields, fields2)
+                # print(cmd)
+                # exec(cmd)
+                os.remove('log/' + dir)
+                res = testCol.find({})
+                # testing purposes: print out the data in the database
+                print("New Data after restoring a log:")
+                # for r in res:
+                #     print(r)
 
 
 def monitor_host():
@@ -170,8 +196,9 @@ def monitor_host():
     else:
         p += "ignite is down"
     print(p)
+    pushToMongo()
     # change first parameter to allow longer period
-    threading.Timer(20, monitor_host).start()
+    threading.Timer(10, monitor_host).start()
 
 
 app.config['IMAGE_FOLDER'] = os.path.join('static', 'images')
@@ -212,37 +239,6 @@ def login():
 def mainPage():
     css = os.path.join(app.config['CSS_FOLDER'], 'main.css')
     js = os.path.join(app.config["SCRIPT_FOLDER"], 'main.js')
-    ismongo = isOpen("433-34.csse.rose-hulman.edu", 27017)
-    if (ismongo):
-        Mclient = MongoClient("mongodb://433-34.csse.rose-hulman.edu:27017")
-        db = Mclient['pokemon']
-        testCol = db['pokedex']
-        print("2\n")
-
-        path_list = os.listdir('log/')
-        print("3\n")
-
-        # path_list.remove('.DS_Store')
-        # sort to ensure that all json files are read by time order
-        path_list.sort()
-        print("4\n")
-
-        # read all files in the folder
-        for dir in path_list:
-            print("5\n")
-
-            # print(dir)
-            with open('log/' + dir) as file:
-                tp, fields, fields2, timestamp = read_log(dir)
-                cmd = parse_command(testCol, tp, fields, fields2)
-                print(cmd)
-                # exec(cmd)
-                os.remove('log/' + dir)
-                res = testCol.find({})
-                # testing purposes: print out the data in the database
-                print("New Data after restoring a log:")
-                for r in res:
-                    print(r)
     return render_template("main.html", style=css, script=js)
 
 # detailPage return an array, in the sequence of ["id", "name", "type_1", "type_2", "link", "species", "height", "weight", "abilities", "training_catch_rate", "breeding_gender_male", "breeding_gender_male", "breeding_gender_female", "stats_hp", "stats_attack", "stats_defense", "stats_sp_atk", "stats_sp_def", "stats_speed", "stats_total", "iamgeurl"]
@@ -278,7 +274,6 @@ def allPokemon():
 
 
 @app.route('/Insert/<id>/<name>/<type_1>/<type_2>/<species>/<height>/<weight>/<abilities>/<training_catch_rate>/<training_base_exp>/<training_growth_rate>/<breeding_gender_male>/<breeding_gender_female>/<stats_hp>/<stats_attack>/<stats_defense>/<stats_sp_atk>/<stats_sp_def>/<stats_speed>/<stats_total>/<img>', methods=["GET", "POST"])
-# @app.route('/Insert/<id>/<name>', methods=["GET", "POST"])
 @app.route('/insert', methods=["POST"])
 def insertPokemon(id=0, name="-", type_1="-", type_2="-", species="-", height="0", weight="0", abilities="-", training_catch_rate="0", training_base_exp="0", training_growth_rate="0", breeding_gender_male="0", breeding_gender_female="0", stats_hp="0", stats_attack="0", stats_defense="0", stats_sp_atk="0", stats_sp_def="0", stats_speed="0", stats_total="0", img="-"):
     if request.method == "POST":
@@ -287,35 +282,33 @@ def insertPokemon(id=0, name="-", type_1="-", type_2="-", species="-", height="0
         return data
     if request.method == "GET":
         # Ignite insert
-        if Ipokedex.get(id) != None or len(list(db.pokedex.find({'id': id}))):
-            print('already exists')
-            return 'Insert failed, id already exists'
-        else:
-            INameAndId.put(name, id)
-            Ipokedex.put(id, [name, type_1, type_2, species, height, weight, abilities, training_catch_rate, training_base_exp, training_growth_rate,
-                              breeding_gender_male, breeding_gender_female, stats_hp, stats_attack, stats_defense, stats_sp_atk, stats_sp_def, stats_speed, stats_total, img])
+        INameAndId.put(name, id)
+        Ipokedex.put(id, [id, name, type_1, type_2, species, height, weight, abilities, training_catch_rate, training_base_exp, training_growth_rate,
+                          breeding_gender_male, breeding_gender_female, stats_hp, stats_attack, stats_defense, stats_sp_atk, stats_sp_def, stats_speed, stats_total, img])
 
-            # Mongodb insert
-            data = {
-                'id': id,
-                'name-form': name,
-                'type_1': type_1,
-                'type_2': type_2,
-                'data_species': species,
-                'img': img
-            }
-            db.pokedex.insert_one(data)
-            # log = "db.pokedex.insert_one("+str(data)+")"
-            # TODO: add log to log file.
-            return "insertion added to logs"
-            # return json.loads(json_util.dumps(data))
+        # Mongodb insert
+        data = {
+            'id': id,
+            'name-form': name,
+            'type_1': type_1,
+            'type_2': type_2,
+            'data_species': species,
+            'img': img
+        }
+        print("write!!!\n")
+        write_to_log("insert", data, None)
+        # db.pokedex.insert_one(data)
+        # log = "db.pokedex.insert_one("+str(data)+")"
+        pushToMongo()
+        return "insertion added to logs"
+        # return json.loads(json_util.dumps(data))
     else:
         return ''
 
 # search for the search page, use mongodb to search
 
 
-@ app.route('/HomeSearch/<InfoType>/<info>', methods=["GET"])
+@app.route('/HomeSearch/<InfoType>/<info>', methods=["GET"])
 # if the result is not found, it will return "No such result". If the result is found, it will return the result of the find_one function.
 def Search(InfoType, info):
     if InfoType == "type":
@@ -335,8 +328,8 @@ def Search(InfoType, info):
 # mongodb and ignite update
 
 
-@ app.route('/Update/<id>/<name>/<type_1>/<type_2>/<species>/<height>/<weight>/<abilities>/<training_catch_rate>/<training_base_exp>/<training_growth_rate>/<breeding_gender_male>/<breeding_gender_female>/<stats_hp>/<stats_attack>/<stats_defense>/<stats_sp_atk>/<stats_sp_def>/<stats_speed>/<stats_total>/<img>', methods=["GET", "POST"])
-def Update(id="-", name="-", type_1="-", type_2="-", link="-", species="-", height="0", weight="0", abilities="0", training_catch_rate="0", training_base_exp="0", training_growth_rate="0", breeding_gender_male="0", breeding_gender_female="0", stats_hp="0", stats_attack="0", stats_defense="0", stats_sp_atk="0", stats_sp_def="0", stats_speed="0", stats_total="0", img="-"):
+@app.route('/Update/<id>/<name>/<type_1>/<type_2>/<species>/<height>/<weight>/<abilities>/<training_catch_rate>/<training_base_exp>/<training_growth_rate>/<breeding_gender_male>/<breeding_gender_female>/<stats_hp>/<stats_attack>/<stats_defense>/<stats_sp_atk>/<stats_sp_def>/<stats_speed>/<stats_total>/<img>', methods=["GET", "POST"])
+def Update(id="-", name="-", type_1="-", type_2="-", species="-", height="0", weight="0", abilities="0", training_catch_rate="0", training_base_exp="0", training_growth_rate="0", breeding_gender_male="0", breeding_gender_female="0", stats_hp="0", stats_attack="0", stats_defense="0", stats_sp_atk="0", stats_sp_def="0", stats_speed="0", stats_total="0", img="-"):
     # Mongodb Update
     if (request.method == "GET"):
         if Ipokedex.get(id) == None or len(list(db.pokedex.find({'id': id}))) == 0:
@@ -359,7 +352,7 @@ def Update(id="-", name="-", type_1="-", type_2="-", link="-", species="-", heig
                 )
                 # ignite update
                 INameAndId.remove_key(tmp)
-                Ipokedex.put(id, [name, type_1, type_2, link, species, height, weight, abilities, training_catch_rate, training_base_exp, training_growth_rate,
+                Ipokedex.put(id, [id, name, type_1, type_2, species, height, weight, abilities, training_catch_rate, training_base_exp, training_growth_rate,
                                   breeding_gender_male, breeding_gender_female, stats_hp, stats_attack, stats_defense, stats_sp_atk, stats_sp_def, stats_speed, stats_total, img])
                 INameAndId.put(name, id)
                 print(INameAndId.get(name))
@@ -384,20 +377,21 @@ def Del(id=''):
                 print("id not exists")
                 # return "id not exists"
             else:
-                name = Ipokedex.get(id)[0]
+                name = Ipokedex.get(id)[1]
                 print(name)
                 if INameAndId.get(name) == None:
                     print("id not exists")
-                    # return "id not exists"
                 else:
                     # Ignite delete
                     Ipokedex.remove_key(id)
                     INameAndId.remove_key(name)
-            ismongo = monitor_host()
-            # if (not ismongo):
-            # write to json, create fields
-            write_to_log("delete", {"id": id}, None)
-            print("write!!!\n")
+                    print(id)
+                    print(name)
+                    # if (not ismongo):
+                    # write to json, create fields
+                    write_to_log("delete", {"id": id}, None)
+                    print("write!!!\n")
+                    pushToMongo()
             # else:
             # print("aaaaa\n")
             # db.pokedex.delete_one({"id":id})
@@ -515,10 +509,9 @@ def deleteNode(id):
 
 
 if __name__ == "__main__":
-    watch = OnMyWatch()
+    # watch = OnMyWatch()
     monitor = threading.Thread(target=monitor_host, args=())
-    watch1 = threading.Thread(target=watch.run, args=())
+    # watch1 = threading.Thread(target=watch.run, args=())
     monitor.start()
-    watch1.start()
-
+    # watch1.start()
     app.run(debug=True)
