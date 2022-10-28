@@ -2,7 +2,7 @@ from email import message
 from enum import auto
 from pickle import FALSE
 from pyexpat.errors import messages
-from time import clock_getres
+#from time import clock_getres
 from pymongo import MongoClient
 from pyignite import Client
 from neo4j import GraphDatabase
@@ -13,6 +13,11 @@ from flask import Flask, render_template, request, redirect, url_for, jsonify
 from flask_pymongo import PyMongo
 import os
 import router
+import socket
+import time
+import threading
+from watchdog.observers import Observer
+from watchdog.events import FileSystemEventHandler
 
 app = Flask(__name__)
 
@@ -44,6 +49,131 @@ for i in range(len(attributeArray)):
 # create a map for pokemon. Key is the id (without #) and the value is an array of attributes.
 Ipokedex = Iclient.get_or_create_cache("Ipokedex")
 INameAndId = Iclient.get_or_create_cache("INameAndId")
+
+# intermediate files pre setting
+# generate a json file using dictionaries
+
+
+def write_to_log(type, fields, fields2):
+    timestamp = time.time()
+    tp = timestamp
+    data_dict = {}
+    if fields2 is None:
+        data_dict = {"type": type, "fields": fields, "timestamp": timestamp}
+    if fields2 is not None:
+        data_dict = {"type": type, "fields": fields,
+                     "fields2": fields2, "timestamp": timestamp}
+    with open("log/" + str(timestamp) + '.json', 'w', encoding='utf-8') as json_file:
+        json.dump(data_dict, json_file, ensure_ascii=False, indent=4)
+    return timestamp
+
+
+# read a json log file
+def read_log(file_name):
+    f = open("log/" + str(file_name), 'r', encoding='utf-8')
+    data = json.load(f)
+    tp = data['type']
+    fields = data['fields']
+    timestamp = data['timestamp']
+    # print(tp)
+    # print(fields)
+    # print(timestamp)
+    if tp == "update":
+        fields2 = data['fields2']
+    else:
+        fields2 = None
+    return tp, fields, fields2, timestamp
+
+
+# generate a command based on the fields
+def parse_command(db, tp, fields, fields2):
+    if tp == "insert":
+        db.insert_one(fields)
+        return "db.insert_one(" + str(fields) + ")"
+    if tp == "update":
+        db.update_one(fields, {'$set': fields2})
+        return "db.update_one(" + str(fields) + "," + "{'$set':" + str(fields2) + "})"
+    if tp == "delete":
+        # check validation
+        # if len(list(db.find({'id': id}))) == 0:
+        #print("id not exists")
+        # return "id not exists"
+        # else:
+        db.delete_one(fields)
+        return "db.delete_one(" + str(fields) + ")"
+
+
+def isOpen(ip, port):
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    try:
+        s.connect((ip, int(port)))
+        s.shutdown(2)
+        return True
+    except:
+        return False
+
+
+class OnMyWatch:
+    # Set the directory on watch
+    watchDirectory = "."
+
+    def __init__(self):
+        self.observer = Observer()
+
+    def run(self):
+        event_handler = Handler()
+        self.observer.schedule(
+            event_handler, self.watchDirectory, recursive=True)
+        self.observer.start()
+        try:
+            while True:
+                time.sleep(5)
+        except:
+            self.observer.stop()
+            print("Observer Stopped")
+
+        self.observer.join()
+
+
+class Handler(FileSystemEventHandler):
+
+    @staticmethod
+    def on_any_event(event):
+        if event.is_directory:
+            return None
+
+        elif event.event_type == 'created':
+            # Event is created, you can process it now
+            print("Watchdog received created event - % s." % event.src_path)
+        elif event.event_type == 'modified':
+            # Event is modified, you can process it now
+            # print("Watchdog received modified event - % s." % event.src_path)
+            print(event.src_path.split("/")
+                  [-2]+"/"+event.src_path.split("/")[-1])
+
+
+def monitor_host():
+    mongo = isOpen("433-34.csse.rose-hulman.edu", 27017)
+    ignite = isOpen("433-34.csse.rose-hulman.edu", 10800)
+    neo = isOpen("433-34.csse.rose-hulman.edu", 7474)
+    p = ""
+    if neo:
+        p += "neo4j is running | "
+    else:
+        p += "neo4j is down | "
+    if mongo:
+        p += "mongo is running | "
+    else:
+        p += "mongo is down | "
+    if ignite:
+        p += "ignite is running"
+    else:
+        p += "ignite is down"
+    print(p)
+    # change first parameter to allow longer period
+    threading.Timer(20, monitor_host).start()
+    return mongo
+
 
 app.config['IMAGE_FOLDER'] = os.path.join('static', 'images')
 app.config['CSS_FOLDER'] = os.path.join('static', 'styles')
@@ -83,6 +213,41 @@ def login():
 def mainPage():
     css = os.path.join(app.config['CSS_FOLDER'], 'main.css')
     js = os.path.join(app.config["SCRIPT_FOLDER"], 'main.js')
+    print("ismongo333333")
+    ismongo = monitor_host()
+    print("ismongo1111")
+    if (ismongo):
+        print("ismongo2222")
+        Mclient = MongoClient("mongodb://433-34.csse.rose-hulman.edu:27017")
+        print("1\n")
+        db = Mclient['pokemon']
+        testCol = db['pokedex']
+        print("2\n")
+
+        path_list = os.listdir('log/')
+        print("3\n")
+
+        # path_list.remove('.DS_Store')
+        # sort to ensure that all json files are read by time order
+        path_list.sort()
+        print("4\n")
+
+        # read all files in the folder
+        for dir in path_list:
+            print("5\n")
+
+            # print(dir)
+            with open('log/' + dir) as file:
+                tp, fields, fields2, timestamp = read_log(dir)
+                cmd = parse_command(testCol, tp, fields, fields2)
+                print(cmd)
+                # exec(cmd)
+                os.remove('log/' + dir)
+                res = testCol.find({})
+                # testing purposes: print out the data in the database
+                print("New Data after restoring a log:")
+                for r in res:
+                    print(r)
     return render_template("main.html", style=css, script=js)
 
 # detailPage return an array, in the sequence of ["id", "name", "type_1", "type_2", "link", "species", "height", "weight", "abilities", "training_catch_rate", "breeding_gender_male", "breeding_gender_male", "breeding_gender_female", "stats_hp", "stats_attack", "stats_defense", "stats_sp_atk", "stats_sp_def", "stats_speed", "stats_total", "iamgeurl"]
@@ -220,26 +385,57 @@ def Del(id=''):
         if (id == ""):
             return 'id can not be empty'
         else:
-            if Ipokedex.get(id) == None or len(list(db.pokedex.find({'id': id}))) == 0:
+            if Ipokedex.get(id) == None:
                 print("id not exists")
-                return "id not exists"
+                # return "id not exists"
             else:
                 name = Ipokedex.get(id)[1]
                 print(name)
                 if INameAndId.get(name) == None:
                     print("id not exists")
-                    return "id not exists"
+                    # return "id not exists"
                 else:
                     # Ignite delete
                     Ipokedex.remove_key(id)
                     INameAndId.remove_key(name)
-                    # # Mongodb delete
-                    result = db.pokedex.delete_one({'id': id})
-                    if (result.deleted_count >= 1 and Ipokedex.get(id) == None and INameAndId.get(name) == None):
-                        print(id+' deleted')
-                        return 'deletion succeed'
-                    else:
-                        return 'deletion failed'
+            ismongo = monitor_host()
+            if (not ismongo):
+                # write to json, create fields
+                write_to_log("delete", {"id": id}, None)
+                print("write!!!\n")
+            if (ismongo):
+                Mclient = MongoClient(
+                    "mongodb://433-34.csse.rose-hulman.edu:27017")
+                print("1\n")
+                db = Mclient['pokemon']
+                testCol = db['pokedex']
+                print("2\n")
+
+                path_list = os.listdir('log/')
+                print("3\n")
+
+                # path_list.remove('.DS_Store')
+                # sort to ensure that all json files are read by time order
+                path_list.sort()
+                print("4\n")
+
+                # read all files in the folder
+                for dir in path_list:
+                    print("5\n")
+
+                    # print(dir)
+                    with open('log/' + dir) as file:
+                        tp, fields, fields2, timestamp = read_log(dir)
+                        cmd = parse_command(testCol, tp, fields, fields2)
+                        print(cmd)
+                        # exec(cmd)
+                        os.remove('log/' + dir)
+                        res = testCol.find({})
+                        # testing purposes: print out the data in the database
+                        print("New Data after restoring a log:")
+                        for r in res:
+                            print(r)
+
 
 # neo4j detail page next evo check
 
@@ -353,4 +549,10 @@ def deleteNode(id):
 
 
 if __name__ == "__main__":
+    watch = OnMyWatch()
+    monitor = threading.Thread(target=monitor_host, args=())
+    watch1 = threading.Thread(target=watch.run, args=())
+    monitor.start()
+    watch1.start()
+
     app.run(debug=True)
