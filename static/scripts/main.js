@@ -97,6 +97,9 @@ pokemondb.mainPageController = class {
             for (var key in data) {
               var pokemon = data[key];
               var card = this.create_card(pokemon);
+              card.onclick = (event) => {
+                window.location.href = "detail?id=" + pokemon["id"];
+              };
               document.querySelector("#main").append(card);
             }
           }
