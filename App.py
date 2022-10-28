@@ -32,13 +32,6 @@ Nclient = GraphDatabase.driver(
 #     session.execute_write(
 #         function, param1,param2,...)
 
-#Unused search function
-#def search_Evo(tx, id):
-#    tx.run("MATCH(p:Pokemon)-[evo*]->(p2)"
-#           "WHERE p.id = $id"
-#           "RETURN p, evo, p2", id=id)
-#    print("")
-
 
 # Apach Ignite part
 # create a attribute number map for storing the sequence of attributes. Key is the attribute name, value is No.
@@ -101,7 +94,6 @@ def detailPage():
         id = request.args.get('id')
         output = Ipokedex.get(id)
         if (output != None):
-            # print(output)
             css = os.path.join(app.config['CSS_FOLDER'], 'main.css')
             js = os.path.join(app.config["SCRIPT_FOLDER"], 'main.js')
             return render_template("detail.html", style=css, script=js, pokemon=output)
@@ -125,7 +117,8 @@ def allPokemon():
 # insert part of data to mongodb and all the data to ignite
 
 
-@app.route('/Insert/<id>/<name>', methods=["GET", "POST"])
+@app.route('/Insert/<id>/<name>/<type_1>/<type_2>/<species>/<height>/<weight>/<abilities>/<training_catch_rate>/<training_base_exp>/<training_growth_rate>/<breeding_gender_male>/<breeding_gender_female>/<stats_hp>/<stats_attack>/<stats_defense>/<stats_sp_atk>/<stats_sp_def>/<stats_speed>/<stats_total>/<img>', methods=["GET", "POST"])
+# @app.route('/Insert/<id>/<name>', methods=["GET", "POST"])
 @app.route('/insert', methods=["POST"])
 def insertPokemon(id=0, name="-", type_1="-", type_2="-", species="-", height="0", weight="0", abilities="-", training_catch_rate="0", training_base_exp="0", training_growth_rate="0", breeding_gender_male="0", breeding_gender_female="0", stats_hp="0", stats_attack="0", stats_defense="0", stats_sp_atk="0", stats_sp_def="0", stats_speed="0", stats_total="0", img="-"):
     if request.method == "POST":
@@ -152,14 +145,9 @@ def insertPokemon(id=0, name="-", type_1="-", type_2="-", species="-", height="0
                 'img': img
             }
             db.pokedex.insert_one(data)
-            cursor = db.pokedex.find({'name-form': name})
-            x = {}
-            for i in cursor:
-                x.update(i)
-            print(x)
-            print(INameAndId.get(name))
-            print(Ipokedex.get(id))
-            return "insert succeed"
+            # log = "db.pokedex.insert_one("+str(data)+")"
+            # TODO: add log to log file.
+            return "insertion added to logs"
             # return json.loads(json_util.dumps(data))
     else:
         return ''
@@ -260,22 +248,22 @@ def Del(id=''):
 def getNextEvo(id):
     # get name
     evoNameResult = Nclient.run("MATCH ((n)-[]->(m)) "
-                              "WHERE n.id = $id "
-                              "return m.name", id=id)
+                                "WHERE n.id = $id "
+                                "return m.name", id=id)
     evoNameArray = []
     for e in evoNameResult:
         evoNameArray.append(e["m.name"])
     # get id
     evoIdResult = Nclient.run("MATCH ((n)-[]->(m)) "
-                            "WHERE n.id = $id "
-                            "return m.id", id=id)
+                              "WHERE n.id = $id "
+                              "return m.id", id=id)
     evoIdArray = []
     for e in evoIdResult:
         evoIdArray.append(e["m.id"])
     # get img link string
     evoImgResult = Nclient.run("MATCH ((n)-[]->(m)) "
-                             "WHERE n.id = $id "
-                             "return m.img", id=id)
+                               "WHERE n.id = $id "
+                               "return m.img", id=id)
     evoImgArray = []
     for e in evoImgResult:
         evoImgArray.append(e["m.img"])
@@ -293,22 +281,22 @@ def getNextEvo(id):
 def getPrevEvo(id):
     # get name
     evoNameResult = Nclient.run("MATCH ((n)-[]->(m)) "
-                              "WHERE m.id = $id "
-                              "return n.name", id=id)
+                                "WHERE m.id = $id "
+                                "return n.name", id=id)
     evoNameArray = []
     for e in evoNameResult:
         evoNameArray.append(e["n.name"])
     # get id
     evoIdResult = Nclient.run("MATCH ((n)-[]->(m)) "
-                            "WHERE m.id = $id "
-                            "return n.id", id=id)
+                              "WHERE m.id = $id "
+                              "return n.id", id=id)
     evoIdArray = []
     for e in evoIdResult:
         evoIdArray.append(e["n.id"])
     # get img link string
     evoImgResult = Nclient.run("MATCH ((n)-[]->(m)) "
-                             "WHERE m.id = $id "
-                             "return n.img", id=id)
+                               "WHERE m.id = $id "
+                               "return n.img", id=id)
     evoImgArray = []
     for e in evoImgResult:
         evoImgArray.append(e["n.img"])
@@ -325,7 +313,7 @@ def getPrevEvo(id):
 def createNode(name, id, img):
     # check if the node exist:
     oldResult = Nclient.run("MATCH (p:Pokemon { id : $id }) "
-                          "return p.id", id=id)
+                            "return p.id", id=id)
     for e in oldResult:
         if (e["p.id"] != None):
             print(oldResult)
@@ -333,7 +321,7 @@ def createNode(name, id, img):
             return "This node already exist"
     else:
         result = Nclient.run("CREATE (p:Pokemon { name: $name , id : $id, img : $img }) "
-                           "RETURN p", name=name, id=id, img=img)
+                             "RETURN p", name=name, id=id, img=img)
         print(result)
         return "Node created!"
 
@@ -341,17 +329,17 @@ def createNode(name, id, img):
 def addEVO(lowId, highId):
     # check if the relationship exist:
     oldResult = Nclient.run("MATCH (low:Pokemon { id : $lowId }) "
-                          "MATCH (high:Pokemon {id : $highId }) "
-                          "WHERE (low)-[]->(high) "
-                          "RETURN low.id", lowId=lowId, highId=highId)
+                            "MATCH (high:Pokemon {id : $highId }) "
+                            "WHERE (low)-[]->(high) "
+                            "RETURN low.id", lowId=lowId, highId=highId)
     for e in oldResult:
         if (e["low.id"] != None):
             print("Relation already exists")
             return "Relation already exists"
     else:
         result = Nclient.run("MATCH (low:Pokemon { id : $lowId }) "
-                           "MATCH (high:Pokemon {id : $highId }) "
-                           "CREATE (low)-[:evolution]->(high)", lowId=lowId, highId=highId)
+                             "MATCH (high:Pokemon {id : $highId }) "
+                             "CREATE (low)-[:evolution]->(high)", lowId=lowId, highId=highId)
         print(result)
         print("Relation created")
         return "Relation created"
@@ -359,7 +347,7 @@ def addEVO(lowId, highId):
 
 def deleteNode(id):
     result = Nclient.run("MATCH (p:Pokemon {id : $id}) "
-                       "DETACH DELETE p", id=id)
+                         "DETACH DELETE p", id=id)
     print(result)
     return "delete success"
 

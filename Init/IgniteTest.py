@@ -19,10 +19,10 @@ INameAndId = client.get_or_create_cache("INameAndId")
 # my_cache.put(2, "This is example for CSSE433 class222222")
 
 # Get value from cache
-# Ipokedex.remove_key("10000")
+# Ipokedex.remove_key("9060")
 # INameAndId.remove_key("pp-pp")
-result0 = INameAndId.get("Bulbasaur-Bulbasaur")
-result1 = Ipokedex.get("10")
+result0 = INameAndId.get("pp-pp")
+result1 = Ipokedex.get("9060")
 # INameAndId.remove_all()
 # Ipokedex.remove_all()
 
@@ -31,6 +31,6 @@ result3 = Ipokedex.get_size()
 
 print(result0)
 print(result1)
-print('name to id', result2)
-print('id to detail', result3)
+# print('name to id', result2)
+# print('id to detail', result3)
 # print(my_cache.get(2))

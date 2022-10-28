@@ -50,6 +50,9 @@ pokemondb.mainPageController = class {
     document.querySelector("#deleteBtn").onclick = (event) => {
       this.delete(document.querySelector("#deleteInput").value);
     };
+    document.querySelector("#addbtn").onclick = (event) => {
+      this.add();
+    };
   }
   init() {
     fetch("/getall", { method: "GET" })
@@ -102,9 +105,12 @@ pokemondb.mainPageController = class {
   delete(info) {
     // console.log(pokemondb.db);
     var finded = false;
+    var pokemon;
     for (var key in pokemondb.db) {
-      var pokemon = pokemondb.db[key];
-      if (pokemon["name-form"] == info) {
+      var tmp = pokemondb.db[key];
+      // var pokemon = key;
+      if (tmp["name-form"] == info) {
+        pokemon = tmp;
         finded = true;
       }
     }
@@ -113,9 +119,91 @@ pokemondb.mainPageController = class {
     } else {
       console.log("deleted");
       fetch("/Delete/" + pokemon["id"], { method: "DELETE" }).then((data) => {
-        // console.log(data);
+        window.location.reload();
       });
     }
+  }
+  add() {
+    var id = String(
+      Number(Object.keys(pokemondb.db)[Object.keys(pokemondb.db).length - 1]) +
+        10
+    );
+    var name = document.querySelector("#name_form").value;
+    if (!name) {
+      window.alert("name can't be null");
+    }
+    var type1 = document.querySelector("#type1").value || "-";
+    var type2 = document.querySelector("#type2").value || "-";
+    var species = document.querySelector("#species").value || "-";
+    var height = document.querySelector("#height").value || "0";
+    var weight = document.querySelector("#weight").value || "0";
+    var ability = document.querySelector("#ability").value || "-";
+    var catch_rate = document.querySelector("#catch_rate").value || "0";
+    var base_exp = document.querySelector("#base_exp").value || "0";
+    var grow_rate = document.querySelector("#grow_rate").value || "0";
+    var male_rate = document.querySelector("#male_rate").value || "0";
+    var female_rate = document.querySelector("#female_rate").value || "0";
+    var hp = document.querySelector("#hp").value || "0";
+    var attack = document.querySelector("#attack").value || "0";
+    var defense = document.querySelector("#defense").value || "0";
+    var sp_atk = document.querySelector("#sp_atk").value || "0";
+    var sp_def = document.querySelector("#sp_def").value || "0";
+    var speed = document.querySelector("#speed").value || "0";
+    var total =
+      Number(hp) +
+      Number(attack) +
+      Number(defense) +
+      Number(sp_atk) +
+      Number(sp_def) +
+      Number(speed);
+    var img = document.querySelector("#img").value || "-";
+    var url =
+      "/Insert/" +
+      id +
+      "/" +
+      name +
+      "/" +
+      type1 +
+      "/" +
+      type2 +
+      "/" +
+      species +
+      "/" +
+      height +
+      "/" +
+      weight +
+      "/" +
+      ability +
+      "/" +
+      catch_rate +
+      "/" +
+      base_exp +
+      "/" +
+      grow_rate +
+      "/" +
+      male_rate +
+      "/" +
+      female_rate +
+      "/" +
+      hp +
+      "/" +
+      attack +
+      "/" +
+      defense +
+      "/" +
+      sp_atk +
+      "/" +
+      sp_def +
+      "/" +
+      speed +
+      "/" +
+      String(total) +
+      "/" +
+      img;
+    console.log(url);
+    fetch(url, { method: "GET" }).then((response) => {
+      window.location.reload();
+    });
   }
 };
 

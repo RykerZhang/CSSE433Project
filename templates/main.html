@@ -99,113 +99,52 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Sign Up</h1>
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Add Pokemon</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <!-- <div>
-                            <div class="row g-3 align-items-center">
-                                <div class="col-auto">
-                                    <label for="name-form" class="col-form-label">name</label>
-                                </div>
-                                <div class="col-auto">
-                                    <input type="text" id="name-forn" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row g-3 align-items-center">
-                                <div class="col-auto">
-                                    <label for="type_1" class="col-form-label">type1</label>
-                                </div>
-                                <div class="col-auto">
-                                    <input type="text" id="type_1" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row g-3 align-items-center">
-                                <div class="col-auto">
-                                    <label for="type_2" class="col-form-label">type2</label>
-                                </div>
-                                <div class="col-auto">
-                                    <input type="text" id="type_2" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row g-3 align-items-center">
-                                <div class="col-auto">
-                                    <label for="type_1" class="col-form-label">type1</label>
-                                </div>
-                                <div class="col-auto">
-                                    <input type="text" id="type_1" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row g-3 align-items-center">
-                                <div class="col-auto">
-                                    <label for="link" class="col-form-label">link</label>
-                                </div>
-                                <div class="col-auto">
-                                    <input type="text" id="link" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row g-3 align-items-center">
-                                <div class="col-auto">
-                                    <label for="species" class="col-form-label">species</label>
-                                </div>
-                                <div class="col-auto">
-                                    <input type="text" id="species" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row g-3 align-items-center">
-                                <div class="col-auto">
-                                    <label for="height" class="col-form-label">height</label>
-                                </div>
-                                <div class="col-auto">
-                                    <input type="text" id="height" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row g-3 align-items-center">
-                                <div class="col-auto">
-                                    <label for="weight" class="col-form-label">weight</label>
-                                </div>
-                                <div class="col-auto">
-                                    <input type="text" id="weight" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row g-3 align-items-center">
-                                <div class="col-auto">
-                                    <label for="abilities" class="col-form-label">abilities</label>
-                                </div>
-                                <div class="col-auto">
-                                    <input type="text" id="abilities" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row g-3 align-items-center">
-                                <div class="col-auto">
-                                    <label for="training_catch_rate" class="col-form-label">training_catch_rate</label>
-                                </div>
-                                <div class="col-auto">
-                                    <input type="text" id="training_catch_rate" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row g-3 align-items-center">
-                                <div class="col-auto">
-                                    <label for="training_base_exp" class="col-form-label">training_base_exp</label>
-                                </div>
-                                <div class="col-auto">
-                                    <input type="text" id="training_base_exp" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row g-3 align-items-center">
-                                <div class="col-auto">
-                                    <label for="training_growth_rate"
-                                        class="col-form-label">training_growth_rate</label>
-                                </div>
-                                <div class="col-auto">
-                                    <input type="text" id="training_growth_rate" class="form-control">
-                                </div>
-                            </div>
-                        </div> -->
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="name-form" aria-label="name_form"
+                            id="name_form">
+                        <input type="text" class="form-control" placeholder="type1" aria-label="type1" id="type1">
+                        <input type="text" class="form-control" placeholder="type2" aria-label="type2" id="type2">
+                        <input type="text" class="form-control" placeholder="species" aria-label="species" id="species">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="height" aria-label="height" id="height">
+                        <input type="text" class="form-control" placeholder="weight" aria-label="weight" id="weight">
+                        <input type="text" class="form-control" placeholder="ability" aria-label="ability" id="ability">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="catch rate" aria-label="catch_rate"
+                            id="catch_rate">
+                        <input type="text" class="form-control" placeholder="base exp" aria-label="base_exp"
+                            id="base_exp">
+                        <input type="text" class="form-control" placeholder="growth rate" aria-label="grow_rate"
+                            id="grow_rate">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="male rate" aria-label="male_rate"
+                            id="male_rate">
+                        <input type="text" class="form-control" placeholder="female rate" aria-label="female_rate"
+                            id="female_rate">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="hp" aria-label="hp" id="hp">
+                        <input type="text" class="form-control" placeholder="attack" aria-label="attack" id="attack">
+                        <input type="text" class="form-control" placeholder="defense" aria-label="defense" id="defense">
+                        <input type="text" class="form-control" placeholder="sp atk" aria-label="sp_atk" id="sp_atk">
+                        <input type="text" class="form-control" placeholder="sp defense" aria-label="sp_def"
+                            id="sp_def">
+                        <input type="text" class="form-control" placeholder="speed" aria-label="speed" id="speed">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="image url" aria-label="img" id="img">
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-light">Add</button>
+                    <button type="button" class="btn btn-light" id="addbtn">Add</button>
                 </div>
             </div>
         </div>
