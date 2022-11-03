@@ -14,21 +14,23 @@ Ipokedex = client.get_or_create_cache("Ipokedex")
 INameAndId = client.get_or_create_cache("INameAndId")
 
 # Put value in cache
-# my_cache.put(1, 'Hello World')
+my_cache.put(1, 'Hello World')
+result = my_cache.get(1)
+print(result)
 # my_cache.put(2, ['pp-pp',  1, '-'])
 # my_cache.put(2, "This is example for CSSE433 class222222")
 
 # Get value from cache
-# Ipokedex.remove_key("9100")
-# INameAndId.remove_key("c")
-result0 = INameAndId.get("Charizard-Test")
+# Ipokedex.remove_key("9120")
+# INameAndId.remove_key("b")
+# result0 = INameAndId.get("b")
 # result0 = Ipokedex.get("9060")
-result1 = Ipokedex.get("61")
+# result1 = Ipokedex.get("30")
 # INameAndId.remove_all()
 # Ipokedex.remove_all()
 
-# result2 = INameAndId.get_size()
-# result3 = Ipokedex.get_size()
+result0 = INameAndId.get_size()
+result1 = Ipokedex.get_size()
 
 print(result0)
 print(result1)

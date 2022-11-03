@@ -264,11 +264,15 @@ def detailPage():
 
 @app.route('/getall', methods=["GET"])
 def allPokemon():
+    if not isOpen("433-34.csse.rose-hulman.edu", 27017):
+        print("down")
+        return {"message": "down"}
     cursor = db.pokedex.find()
     re = {}
     for data in cursor:
         data.pop("_id")
         re[data['id']] = data
+    print(re)
     return re
 
 # insert part of data to mongodb and all the data to ignite
@@ -283,7 +287,7 @@ def insertPokemon():
         for t in range(len(p)):
             tmp[t] = str(p[t])
         print(tmp)
-        Ipokedex.put(p[0], t)
+        Ipokedex.put(p[0], tmp)
 
         data = {
             'id': p[0],
