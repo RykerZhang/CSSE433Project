@@ -45,7 +45,6 @@
     </nav>
 
     <div id="main">
-
         <img id=img>
         <fieldset disabled>
             <div class="row g-3 justify-content-center" disabled>
@@ -208,8 +207,8 @@
         document.querySelector("#height").value = height;
         document.querySelector("#weight").value = weight;
         document.querySelector("#catch_rate").value = training_catch_rate;
-        document.querySelector("#base_exp").value = training_catch_rate;
-        document.querySelector("#grow_rate").value = training_catch_rate;
+        document.querySelector("#base_exp").value = training_base_exp;
+        document.querySelector("#grow_rate").value = training_growth_rate;
         document.querySelector("#male").value = breeding_gender_male;
         document.querySelector("#female").value = breeding_gender_female;
         document.querySelector("#hp").value = stats_hp;
@@ -230,7 +229,6 @@
             } else {
                 document.querySelector("#submitUpdate").classList.add("invisible");
             }
-            console.log(document.querySelector("#submitUpdate"));
         };
         document.querySelector("#submitUpdate").onclick = (event) => {
             const data = [];

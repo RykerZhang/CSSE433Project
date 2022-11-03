@@ -59,14 +59,29 @@ pokemondb.mainPageController = class {
     fetch("/getall", { method: "GET" })
       .then((respnse) => respnse.json())
       .then((data) => {
-        pokemondb.db = data;
-        for (var key in data) {
-          let pokemon = data[key];
-          var card = this.create_card(pokemon);
-          card.onclick = (event) => {
-            window.location.href = "detail?id=" + pokemon["id"];
-          };
-          document.querySelector("#main").append(card);
+        // pokemondb.db = data;
+        // console.log(data);
+        if (data.message == "down") {
+          const d = JSON.parse(localStorage.getItem("db"));
+          for (var key in d) {
+            let pokemon = d[key];
+            var card = this.create_card(pokemon);
+            card.onclick = (event) => {
+              window.location.href = "detail?id=" + pokemon["id"];
+            };
+            document.querySelector("#main").append(card);
+          }
+        } else {
+          localStorage.setItem("db", JSON.stringify(data));
+          const d = JSON.parse(localStorage.getItem("db"));
+          for (var key in data) {
+            let pokemon = data[key];
+            var card = this.create_card(pokemon);
+            card.onclick = (event) => {
+              window.location.href = "detail?id=" + pokemon["id"];
+            };
+            document.querySelector("#main").append(card);
+          }
         }
       });
   }
@@ -110,8 +125,9 @@ pokemondb.mainPageController = class {
     // console.log(pokemondb.db);
     var finded = false;
     var pokemon;
-    for (var key in pokemondb.db) {
-      var tmp = pokemondb.db[key];
+    var k = JSON.parse(localStorage.getItem("db"));
+    for (var key in k) {
+      var tmp = k[key];
       // var pokemon = key;
       if (tmp["name-form"] == info) {
         pokemon = tmp;
@@ -129,8 +145,11 @@ pokemondb.mainPageController = class {
   }
   add() {
     var id = String(
-      Number(Object.keys(pokemondb.db)[Object.keys(pokemondb.db).length - 1]) +
-        10
+      Number(
+        Object.keys(JSON.parse(localStorage.getItem("db")))[
+          Object.keys(JSON.parse(localStorage.getItem("db"))).length - 1
+        ]
+      ) + 10
     );
     const data = [];
     data[0] = id;
@@ -164,10 +183,15 @@ pokemondb.mainPageController = class {
         Number(speed)
     );
     data[20] = document.querySelector("#img").value || "-";
+    const temp = JSON.parse(localStorage.getItem("db"));
+    temp[data[0]] = data;
+    localStorage.setItem("db", JSON.stringify(temp));
     fetch("/insert", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
+    }).then((respnse) => {
+      window.location.reload();
     });
   }
 };
