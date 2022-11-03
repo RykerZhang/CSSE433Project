@@ -53,7 +53,30 @@ INameAndId = Iclient.get_or_create_cache("INameAndId")
 # intermediate files pre setting
 # generate a json file using dictionaries
 
+#create node when pokemon added
+def createNode(name, id, img):
+    # check if the node exist:
+    oldResult = Nclient.run("MATCH (p:Pokemon { id : $id }) "
+                            "return p.id", id=id)
+    for e in oldResult:
+        if (e["p.id"] != None):
+            print(oldResult)
+            print("This node already exist")
+            return "This node already exist"
+    else:
+        result = Nclient.run("CREATE (p:Pokemon { name: $name , id : $id, img : $img }) "
+                             "RETURN p", name=name, id=id, img=img)
+        print(result)
+        return "Node created!"
 
+#delete node when pokemon is deleted.
+def deleteNode(id):
+    result = Nclient.run("MATCH (p:Pokemon {id : $id}) "
+                         "DETACH DELETE p", id=id)
+    print(result)
+    return "delete success"
+
+    
 def write_to_log(type, fields, fields2):
     timestamp = time.time()
     tp = timestamp
@@ -288,7 +311,10 @@ def insertPokemon():
             tmp[t] = str(p[t])
         print(tmp)
         Ipokedex.put(p[0], tmp)
-
+        
+        #neo4j add node
+        createNode(p[1], p[0], p[20])
+        
         data = {
             'id': p[0],
             'name-form': p[1],
@@ -387,6 +413,8 @@ def Del(id=''):
                     # Ignite delete
                     Ipokedex.remove_key(id)
                     INameAndId.remove_key(name)
+                    #delete node
+                    deleteNode(id)
                     print(id)
                     print(name)
                     # if (not ismongo):
@@ -468,22 +496,7 @@ def getPrevEvo(id):
 # Function haven't been routed yet: (neo4j create node , relation and delete node with repetition check )
 
 
-def createNode(name, id, img):
-    # check if the node exist:
-    oldResult = Nclient.run("MATCH (p:Pokemon { id : $id }) "
-                            "return p.id", id=id)
-    for e in oldResult:
-        if (e["p.id"] != None):
-            print(oldResult)
-            print("This node already exist")
-            return "This node already exist"
-    else:
-        result = Nclient.run("CREATE (p:Pokemon { name: $name , id : $id, img : $img }) "
-                             "RETURN p", name=name, id=id, img=img)
-        print(result)
-        return "Node created!"
-
-
+@app.route('/EVO/CREATE/<lowId>', methods=["POST"])
 def addEVO(lowId, highId):
     # check if the relationship exist:
     oldResult = Nclient.run("MATCH (low:Pokemon { id : $lowId }) "
@@ -502,12 +515,6 @@ def addEVO(lowId, highId):
         print("Relation created")
         return "Relation created"
 
-
-def deleteNode(id):
-    result = Nclient.run("MATCH (p:Pokemon {id : $id}) "
-                         "DETACH DELETE p", id=id)
-    print(result)
-    return "delete success"
 
 
 if __name__ == "__main__":
