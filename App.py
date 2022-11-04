@@ -81,6 +81,15 @@ def deleteNode(id):
     return "delete success"
 
 
+<< << << < HEAD
+
+== == == =
+# def write_to_log_Ignite(type)
+
+
+>>>>>> > b30d743100eb5a6425236c51b626eeab8f20401a
+
+
 def write_to_log(type, fields, fields2):
     timestamp = time.time()
     tp = timestamp
@@ -357,22 +366,34 @@ def Update():
                 for t in range(len(p)):
                     pokemon[t] = str(p[t])
                 print(pokemon)
-                db.pokedex.update_one(
-                    {"id": pokemon[0]},
-                    {"$set": {"name-form": pokemon[1],
-                              "type_1": pokemon[2],
-                              "type_2": pokemon[3],
-                              "data_species": pokemon[4],
-                              "img": pokemon[20]}
-                     }
-                )
-                # ignite update
-                INameAndId.remove_key(tmp)
-                Ipokedex.put(pokemon[0], pokemon)
-                INameAndId.put(pokemon[1], pokemon[0])
-                print(INameAndId.get(pokemon[1]))
-                print(Ipokedex.get(pokemon[0]))
-                return "update succeed"
+                tmp = Ipokedex.get(id)[1]
+                if INameAndId.get(tmp) == None:
+                    print("id not exists")
+                    return "id not exists"
+                else:
+                    data1 = {"name-form": pokemon[1],
+                             "type_1": pokemon[2],
+                             "type_2": pokemon[3],
+                             "data_species": pokemon[4],
+                             "img": pokemon[20]}
+
+                    # db.pokedex.update_one(
+                    #     {"id": pokemon[0]},
+                    #     {"$set": {"name-form": pokemon[1],
+                    #               "type_1": pokemon[2],
+                    #               "type_2": pokemon[3],
+                    #               "data_species": pokemon[4],
+                    #               "img": pokemon[20]}
+                    #      }
+                    # )
+                    write_to_log(db, {"id": pokemon[0]}, data1)
+                    # ignite update
+                    INameAndId.remove_key(tmp)
+                    Ipokedex.put(pokemon[0], pokemon)
+                    INameAndId.put(pokemon[1], pokemon[0])
+                    print(INameAndId.get(pokemon[1]))
+                    print(Ipokedex.get(pokemon[0]))
+                    return "update succeed"
 
 
 @ app.route('/Delete/<id>', methods=["DELETE"])
