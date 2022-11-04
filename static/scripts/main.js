@@ -71,6 +71,36 @@ pokemondb.mainPageController = class {
             };
             document.querySelector("#main").append(card);
           }
+
+          const ch = document.querySelector("#main").childNodes;
+          for (var t = 1; t <= 50; t++) {
+            if (ch[t] != undefined) {
+              ch[t].classList.remove("d-none");
+            }
+          }
+          const num = Math.ceil(Object.keys(d).length / 50);
+          for (let k = 1; k <= num; k++) {
+            let li = this.create_list(k);
+            li.onclick = (event) => {
+              const ch = document.querySelector("#main").childNodes;
+              for (var tm = 0; tm <= (k - 1) * 50; tm++) {
+                if (ch[tm].classList != undefined) {
+                  ch[tm].classList.add("d-none");
+                }
+              }
+              for (var t = (k - 1) * 50 + 1; t <= k * 50; t++) {
+                if (ch[t] != undefined) {
+                  ch[t].classList.remove("d-none");
+                }
+              }
+              for (var t = k * 50 + 1; t <= Object.keys(d).length; t++) {
+                if (ch[t] != undefined) {
+                  ch[t].classList.add("d-none");
+                }
+              }
+            };
+            document.querySelector(".list-group-horizontal").append(li);
+          }
         } else {
           localStorage.setItem("db", JSON.stringify(data));
           const d = JSON.parse(localStorage.getItem("db"));
@@ -82,18 +112,30 @@ pokemondb.mainPageController = class {
             };
             document.querySelector("#main").append(card);
           }
+          const ch = document.querySelector("#main").childNodes;
+          for (var t = 1; t <= 50; t++) {
+            if (ch[t] != undefined) {
+              ch[t].classList.remove("d-none");
+            }
+          }
           const num = Math.ceil(Object.keys(d).length / 50);
           for (let k = 1; k <= num; k++) {
             let li = this.create_list(k);
-            console.log("aa");
-
             li.onclick = (event) => {
               const ch = document.querySelector("#main").childNodes;
-              console.log(document.querySelector("#main").childNodes);
-              for (var t = (k - 1) * 50 + 1; t <= k * 50; k++) {
-                if (ch[t]) {
-                  ch[t].style.display = "none";
-                  // console.log(ch[t]);
+              for (var tm = 0; tm <= (k - 1) * 50; tm++) {
+                if (ch[tm].classList != undefined) {
+                  ch[tm].classList.add("d-none");
+                }
+              }
+              for (var t = (k - 1) * 50 + 1; t <= k * 50; t++) {
+                if (ch[t] != undefined) {
+                  ch[t].classList.remove("d-none");
+                }
+              }
+              for (var t = k * 50 + 1; t <= Object.keys(d).length; t++) {
+                if (ch[t] != undefined) {
+                  ch[t].classList.add("d-none");
                 }
               }
             };
@@ -107,7 +149,7 @@ pokemondb.mainPageController = class {
     window.location.href = "/index";
   }
   create_card(data) {
-    return htmlToElement(` <span class="picContainer d-inline-block">
+    return htmlToElement(` <span class="picContainer d-inline-block d-none">
             <img src="${data.img}">
             <p class=caption>${data["name-form"]}</p>
         </span>`);
@@ -137,6 +179,7 @@ pokemondb.mainPageController = class {
               card.onclick = (event) => {
                 window.location.href = "detail?id=" + pokemon["id"];
               };
+              card.classList.remove("d-none");
               document.querySelector("#main").append(card);
             }
           }
