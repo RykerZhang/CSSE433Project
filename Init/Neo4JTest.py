@@ -6,17 +6,13 @@ graph = Graph("bolt://433-34.csse.rose-hulman.edu:7687",
 
 results = graph.run("MATCH(n) return n")
 
-#results = graph.run(
-#   "MATCH path=(b: Pokemon{b})-[e*] -> (a)) WHERE b.id=10 AND WHERE NOT (a)-->() return DISTINCT e")
+k = "10"
+results = graph.run(
+    "MATCH ((n)-[]->(m)) WHERE n.id = $id return m", id=k)
 # print(results)
 
 
 for e in results:
-    # print(b)
-    print("  ")
-    print(e)
-    print("  ")
-    # print(a)
-    print("  ")
-    print("  ")
-    print("  ")
+    print(e[0]['img'])
+    print(e[0]['id'])
+    print(e[0]['name'])

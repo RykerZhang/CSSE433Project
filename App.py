@@ -254,21 +254,21 @@ def pushToIgnite():
                 if tp == "insert_Ipokedex":
                     db = Ipokedex
                     db.put(key, value)
-                    return "db.put(" + key + ","+str(value) + ")"
+                    # return "db.put(" + key + ","+str(value) + ")"
                 if tp == "update_Ipokedex":
                     db = Ipokedex
                     name = Ipokedex.get(key)[1]
                     db.put(key, value)
                     INameAndId.remove_key(name)
-                    return "ipokedex update"
+                    # return "ipokedex update"
                 if tp == "delete_Ipokedex":
                     db = Ipokedex
                     db.remove_key(key)
-                    return "ipokedex remove"
+                    # return "ipokedex remove"
                 if tp == "insert_INameAndId":
                     db = INameAndId
                     db.put(key, value)
-                    return "INameAndId insert"
+                    # return "INameAndId insert"
                 if tp == "update_INameAndId":
                     db = INameAndId
                     db.put(key, value)
@@ -547,34 +547,21 @@ def Del(id=''):
 @app.route('/detail/NEXTEVO/<id>', methods=["GET"])
 def getNextEvo(id):
     # get name
-    print(id)
-    evoNameResult = Nclient.run("MATCH ((n)-[]->(m)) "
-                                "WHERE n.id = $id "
-                                "return m.name", id=id)
+    id = int(id)
+    evo = Nclient.run(
+        "MATCH ((n)-[]->(m)) WHERE n.id = $id return m", id=id)
     evoNameArray = []
-    print(evoNameResult)
-    for e in evoNameResult:
-        print(e)
-        evoNameArray.append(e["m.name"])
-    # get id
-    evoIdResult = Nclient.run("MATCH ((n)-[]->(m)) "
-                              "WHERE n.id = $id "
-                              "return m.id", id=id)
-    evoIdArray = []
-    for e in evoIdResult:
-        evoIdArray.append(e["m.id"])
-    # get img link string
-    evoImgResult = Nclient.run("MATCH ((n)-[]->(m)) "
-                               "WHERE n.id = $id "
-                               "return m.img", id=id)
     evoImgArray = []
-    for e in evoImgResult:
-        evoImgArray.append(e["m.img"])
+    evoIdArray = []
+    for e in evo:
+        evoIdArray.append(e[0]["id"])
+        evoNameArray.append(e[0]['name'])
+        evoImgArray.append(e[0]["img"])
     dict = {}
     dict["name"] = evoNameArray
     dict["id"] = evoIdArray
     dict["img"] = evoImgArray
-    # print(dict)
+    print(dict)
     return dict
 
 # get previous Evo
@@ -582,32 +569,22 @@ def getNextEvo(id):
 
 @app.route('/detail/PREVEVO/<id>', methods=["GET"])
 def getPrevEvo(id):
-    # get name
-    evoNameResult = Nclient.run("MATCH ((n)-[]->(m)) "
-                                "WHERE m.id = $id "
-                                "return n.name", id=id)
+    id = int(id)
+    evo = Nclient.run("MATCH ((n)-[]->(m)) "
+                      "WHERE m.id = $id "
+                      "return n", id=id)
     evoNameArray = []
-    for e in evoNameResult:
-        evoNameArray.append(e["n.name"])
-    # get id
-    evoIdResult = Nclient.run("MATCH ((n)-[]->(m)) "
-                              "WHERE m.id = $id "
-                              "return n.id", id=id)
     evoIdArray = []
-    for e in evoIdResult:
-        evoIdArray.append(e["n.id"])
-    # get img link string
-    evoImgResult = Nclient.run("MATCH ((n)-[]->(m)) "
-                               "WHERE m.id = $id "
-                               "return n.img", id=id)
     evoImgArray = []
-    for e in evoImgResult:
-        evoImgArray.append(e["n.img"])
+    for e in evo:
+        evoIdArray.append(e[0]["id"])
+        evoNameArray.append(e[0]['name'])
+        evoImgArray.append(e[0]["img"])
     dict = {}
     dict["name"] = evoNameArray
     dict["id"] = evoIdArray
     dict["img"] = evoImgArray
-   # print(dict)
+    print(dict)
     return dict
 
 # Function haven't been routed yet: (neo4j create node , relation and delete node with repetition check )
