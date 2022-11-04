@@ -82,6 +82,58 @@ def deleteNode(id):
     return "delete success"
 
 
+def write_to_log_Ignite(type, key, value):
+    timestamp = time.time()
+    tp = timestamp
+    data_dict = {}
+    print("test")
+    data_dict = {"type": type, "key": key,
+                 "value": value, "timestamp": timestamp}
+    with open("IgniteLog/" + str(timestamp) + '.json', 'w', encoding='utf-8') as json_file:
+        json.dump(data_dict, json_file, ensure_ascii=False, indent=4)
+    return timestamp
+
+
+def read_log_Ignite(file_name):
+    f = open("IgniteLog/" + str(file_name), 'r', encoding='utf-8')
+    data = json.load(f)
+    tp = data['type']
+    key = data['key']
+    value = data['value']
+    timestamp = data['timestamp']
+    # print(tp)
+    # print(fields)
+    # print(timestamp)
+    return tp, key, value, timestamp
+
+
+def parse_command_Ignite(tp, key, value):
+    if tp == "insert_Ipokedex":
+        db = Ipokedex
+        db.put(key, value)
+        return "db.put(" + key + ","+str(value) + ")"
+    if tp == "update_Ipokedex":
+        db = Ipokedex
+        name = Ipokedex.get(key)[1]
+        db.put(key, value)
+        INameAndId.remove_key(name)
+        return "ipokedex update"
+    if tp == "delete_Ipokedex":
+        db = Ipokedex
+        db.remove_key(key)
+        return "ipokedex remove"
+    if tp == "insert_INameAndId":
+        db = INameAndId
+        db.put(key, value)
+        return "INameAndId insert"
+    if tp == "update_INameAndId":
+        db = INameAndId
+        db.put(key, value)
+    if tp == "delete_INameAndId":
+        db = INameAndId
+        db.remove_key(key)
+
+
 def write_to_log(type, fields, fields2):
     timestamp = time.time()
     tp = timestamp
@@ -182,6 +234,60 @@ class Handler(FileSystemEventHandler):
             print(" ")
 
 
+def pushToIgnite():
+    ignite = isOpen("433-34.csse.rose-hulman.edu", 10800)
+    if ignite:
+        Iclient = Client()
+        Iclient.connect('433-34.csse.rose-hulman.edu', 10800)
+
+        Ipokedex = Iclient.get_or_create_cache("Ipokedex")
+        INameAndId = Iclient.get_or_create_cache("INameAndId")
+
+        path_list = os.listdir('IgniteLog/')
+        path_list.sort()
+        # read all files in the folder
+        for dir in path_list:
+            with open('IgniteLog/' + dir) as file:
+                tp, key, value, timestamp = read_log_Ignite(dir)
+                #parse_command_Ignite(tp, key, value)
+                # parse_command_Ignite(tp, key, value):
+                if tp == "insert_Ipokedex":
+                    db = Ipokedex
+                    db.put(key, value)
+                    return "db.put(" + key + ","+str(value) + ")"
+                if tp == "update_Ipokedex":
+                    db = Ipokedex
+                    name = Ipokedex.get(key)[1]
+                    db.put(key, value)
+                    INameAndId.remove_key(name)
+                    return "ipokedex update"
+                if tp == "delete_Ipokedex":
+                    db = Ipokedex
+                    db.remove_key(key)
+                    return "ipokedex remove"
+                if tp == "insert_INameAndId":
+                    db = INameAndId
+                    db.put(key, value)
+                    return "INameAndId insert"
+                if tp == "update_INameAndId":
+                    db = INameAndId
+                    db.put(key, value)
+                if tp == "delete_INameAndId":
+                    db = INameAndId
+                    db.remove_key(key)
+
+                os.remove('IgniteLog/' + dir)
+
+                # print(cmd)
+                # exec(cmd)
+                #os.remove('log/' + dir)
+                #res = testCol.find({})
+                # testing purposes: print out the data in the database
+                print("New Data after restoring a log:")
+                # for r in res:
+                #     print(r)
+
+
 def pushToMongo():
     mongo = isOpen("433-34.csse.rose-hulman.edu", 27017)
     if mongo:
@@ -200,7 +306,7 @@ def pushToMongo():
                 # print(cmd)
                 # exec(cmd)
                 os.remove('log/' + dir)
-                res = testCol.find({})
+                #res = testCol.find({})
                 # testing purposes: print out the data in the database
                 print("New Data after restoring a log:")
                 # for r in res:
@@ -225,7 +331,9 @@ def monitor_host():
     else:
         p += "ignite is down"
     print(p)
+    pushToIgnite()
     pushToMongo()
+
     # change first parameter to allow longer period
     threading.Timer(10, monitor_host).start()
 
@@ -288,12 +396,16 @@ def allPokemon():
 def insertPokemon():
     if request.method == "POST":
         p = request.json
-        INameAndId.put(p[1], p[0])
+        # ignite insert
         tmp = [None]*21
         for t in range(len(p)):
             tmp[t] = str(p[t])
         print(tmp)
-        Ipokedex.put(p[0], tmp)
+
+        #Ipokedex.put(p[0], tmp)
+        #INameAndId.put(p[1], p[0])
+        write_to_log_Ignite("insert_Ipokedex", p[0], tmp)
+        write_to_log_Ignite("insert_INameAndId", p[1], p[0])
 
         # neo4j add node
         createNode(p[1], p[0], p[20])
@@ -310,6 +422,7 @@ def insertPokemon():
         write_to_log("insert", data, None)
         # db.pokedex.insert_one(data)
         # log = "db.pokedex.insert_one("+str(data)+")"
+        pushToIgnite()
         pushToMongo()
         return "insertion added to logs"
 
@@ -341,51 +454,55 @@ def Update():
     if (request.method == "POST"):
         p = request.json
         id = p[0]
-        print(Ipokedex.get(id))
-        print(len(list(db.pokedex.find({'id': id}))))
-        print(Ipokedex.get(id)[1])
-        print(INameAndId.get(Ipokedex.get(id)[1]))
-        if Ipokedex.get(id) == None or len(list(db.pokedex.find({'id': id}))) == 0:
-            print("id not exists")
-            return "id not exists"
-        else:
-            tmp = Ipokedex.get(id)[1]
-            if INameAndId.get(tmp) == None:
-                print("id not existsaaaaaa")
-                return "id not exists"
-            else:
-                pokemon = [None]*21
-                for t in range(len(p)):
-                    pokemon[t] = str(p[t])
-                print(pokemon)
-                tmp = Ipokedex.get(id)[1]
-                if INameAndId.get(tmp) == None:
-                    print("id not exists")
-                    return "id not exists"
-                else:
-                    data1 = {"name-form": pokemon[1],
-                             "type_1": pokemon[2],
-                             "type_2": pokemon[3],
-                             "data_species": pokemon[4],
-                             "img": pokemon[20]}
+       # print(Ipokedex.get(id))
+       # print(len(list(db.pokedex.find({'id': id}))))
+       # print(Ipokedex.get(id)[1])
+       # print(INameAndId.get(Ipokedex.get(id)[1]))
+       # if Ipokedex.get(id) == None or len(list(db.pokedex.find({'id': id}))) == 0:
+        #    print("id not exists")
+       #     return "id not exists"
+       # else:
+        #tmp = Ipokedex.get(id)[1]
+        # if INameAndId.get(tmp) == None:
+        #    print("id not existsaaaaaa")
+        #     return "id not exists"
+        # else:
+        pokemon = [None]*21
+        for t in range(len(p)):
+            pokemon[t] = str(p[t])
+        print(pokemon)
+        #tmp = Ipokedex.get(id)[1]
+        # if INameAndId.get(tmp) == None:
+        #        print("id not exists")
+        #        return "id not exists"
+        # else:
+        data1 = {"name-form": pokemon[1],
+                 "type_1": pokemon[2],
+                 "type_2": pokemon[3],
+                 "data_species": pokemon[4],
+                 "img": pokemon[20]}
 
-                    db.pokedex.update_one(
-                        {"id": pokemon[0]},
-                        {"$set": {"name-form": pokemon[1],
-                                  "type_1": pokemon[2],
-                                  "type_2": pokemon[3],
-                                  "data_species": pokemon[4],
-                                  "img": pokemon[20]}
-                         }
-                    )
-                    write_to_log("update", {"id": pokemon[0]}, data1)
-                    # ignite update
-                    INameAndId.remove_key(tmp)
-                    Ipokedex.put(pokemon[0], pokemon)
-                    INameAndId.put(pokemon[1], pokemon[0])
-                    print(INameAndId.get(pokemon[1]))
-                    print(Ipokedex.get(pokemon[0]))
-                    return "update succeed"
+        db.pokedex.update_one(
+            {"id": pokemon[0]},
+            {"$set": {"name-form": pokemon[1],
+                      "type_1": pokemon[2],
+                      "type_2": pokemon[3],
+                      "data_species": pokemon[4],
+                      "img": pokemon[20]}
+             }
+        )
+        write_to_log("update", {"id": pokemon[0]}, data1)
+        # ignite update
+        write_to_log_Ignite("update_Ipokedex", pokemon[0], pokemon)
+        write_to_log_Ignite("update_INameAndId", pokemon[1], pokemon[0])
+        # INameAndId.remove_key(tmp)
+        #Ipokedex.put(pokemon[0], pokemon)
+        #INameAndId.put(pokemon[1], pokemon[0])
+        # print(INameAndId.get(pokemon[1]))
+        # print(Ipokedex.get(pokemon[0]))
+        pushToIgnite()
+        pushToMongo()
+        return "update succeed"
 
 
 @ app.route('/Delete/<id>', methods=["DELETE"])
@@ -405,8 +522,10 @@ def Del(id=''):
                     print("id not exists")
                 else:
                     # Ignite delete
-                    Ipokedex.remove_key(id)
-                    INameAndId.remove_key(name)
+                    # Ipokedex.remove_key(id)
+                    # INameAndId.remove_key(name)
+                    write_to_log_Ignite("delete_Ipokedex", id, None)
+                    write_to_log_Ignite("delete_INameAndId", name, None)
                     # delete node
                     deleteNode(id)
                     print(id)
@@ -415,6 +534,7 @@ def Del(id=''):
                     # write to json, create fields
                     write_to_log("delete", {"id": id}, None)
                     print("write!!!\n")
+                    pushToIgnite()
                     pushToMongo()
             # else:
             # print("aaaaa\n")
