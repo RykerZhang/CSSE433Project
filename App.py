@@ -587,7 +587,7 @@ def getPrevEvo(id):
     # get name
     evoNameResult = Nclient.run("MATCH ((n)-[]->(m)) "
                                 "WHERE m.id = $id "
-                                "return n.name", id=id)
+                                "return n", id=id)
     evoNameArray = []
     evoIdArray = []
     evoImgArray = []
