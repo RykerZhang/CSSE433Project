@@ -368,16 +368,16 @@ def Update():
                              "data_species": pokemon[4],
                              "img": pokemon[20]}
 
-                    # db.pokedex.update_one(
-                    #     {"id": pokemon[0]},
-                    #     {"$set": {"name-form": pokemon[1],
-                    #               "type_1": pokemon[2],
-                    #               "type_2": pokemon[3],
-                    #               "data_species": pokemon[4],
-                    #               "img": pokemon[20]}
-                    #      }
-                    # )
-                    write_to_log(db, {"id": pokemon[0]}, data1)
+                    db.pokedex.update_one(
+                        {"id": pokemon[0]},
+                        {"$set": {"name-form": pokemon[1],
+                                  "type_1": pokemon[2],
+                                  "type_2": pokemon[3],
+                                  "data_species": pokemon[4],
+                                  "img": pokemon[20]}
+                         }
+                    )
+                    write_to_log("update", {"id": pokemon[0]}, data1)
                     # ignite update
                     INameAndId.remove_key(tmp)
                     Ipokedex.put(pokemon[0], pokemon)
