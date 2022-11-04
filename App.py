@@ -68,11 +68,10 @@ def createNode(name, id, img):
             print(oldResult)
             print("This node already exist")
             return "This node already exist"
-    else:
-        result = Nclient.run("CREATE (p:Pokemon { name: $name , id : $id, img : $img }) "
-                             "RETURN p", name=name, id=id, img=img)
-        print(result)
-        return "Node created!"
+    result = Nclient.run("CREATE (p:Pokemon { name: $name , id : $id, img : $img }) "
+                         "RETURN p", name=name, id=id, img=img)
+    print(result)
+    return "Node created!"
 
 # delete node when pokemon is deleted.
 
@@ -545,24 +544,29 @@ def getNextEvo(id):
     # get name
     evoNameResult = Nclient.run("MATCH ((n)-[]->(m)) "
                                 "WHERE n.id = $id "
-                                "return m.name", id=id)
+                                "return m", id=id)
     evoNameArray = []
-    for e in evoNameResult:
-        evoNameArray.append(e["m.name"])
-    # get id
-    evoIdResult = Nclient.run("MATCH ((n)-[]->(m)) "
-                              "WHERE n.id = $id "
-                              "return m.id", id=id)
     evoIdArray = []
-    for e in evoIdResult:
-        evoIdArray.append(e["m.id"])
-    # get img link string
-    evoImgResult = Nclient.run("MATCH ((n)-[]->(m)) "
-                               "WHERE n.id = $id "
-                               "return m.img", id=id)
     evoImgArray = []
-    for e in evoImgResult:
-        evoImgArray.append(e["m.img"])
+
+
+    for e in evoNameResult:
+        for ee in e:
+            evoNameArray.append(ee["name"])
+            evoIdArray.append(ee["id"])
+            evoImgArray.append(ee["img"])
+    # # get id
+    # evoIdResult = Nclient.run("MATCH ((n)-[]->(m)) "
+    #                           "WHERE n.id = $id "
+    #                           "return m.id", id=id)
+    # for e in evoIdResult:
+    #     evoIdArray.append(e["m.id"])
+    # # get img link string
+    # evoImgResult = Nclient.run("MATCH ((n)-[]->(m)) "
+    #                            "WHERE n.id = $id "
+    #                            "return m.img", id=id)
+    # for e in evoImgResult:
+    #     evoImgArray.append(e["m.img"])
     dict = {}
     dict["name"] = evoNameArray
     dict["id"] = evoIdArray
@@ -580,22 +584,13 @@ def getPrevEvo(id):
                                 "WHERE m.id = $id "
                                 "return n.name", id=id)
     evoNameArray = []
-    for e in evoNameResult:
-        evoNameArray.append(e["n.name"])
-    # get id
-    evoIdResult = Nclient.run("MATCH ((n)-[]->(m)) "
-                              "WHERE m.id = $id "
-                              "return n.id", id=id)
     evoIdArray = []
-    for e in evoIdResult:
-        evoIdArray.append(e["n.id"])
-    # get img link string
-    evoImgResult = Nclient.run("MATCH ((n)-[]->(m)) "
-                               "WHERE m.id = $id "
-                               "return n.img", id=id)
     evoImgArray = []
-    for e in evoImgResult:
-        evoImgArray.append(e["n.img"])
+    for e in evoNameResult:
+        for ee in e:
+            evoNameArray.append(ee["name"])
+            evoIdArray.append(ee["id"])
+            evoImgArray.append(ee["img"])
     dict = {}
     dict["name"] = evoNameArray
     dict["id"] = evoIdArray
@@ -617,13 +612,12 @@ def addEVO(lowId, highId):
         if (e["low.id"] != None):
             print("Relation already exists")
             return "Relation already exists"
-    else:
-        result = Nclient.run("MATCH (low:Pokemon { id : $lowId }) "
+    result = Nclient.run("MATCH (low:Pokemon { id : $lowId }) "
                              "MATCH (high:Pokemon {id : $highId }) "
                              "CREATE (low)-[:evolution]->(high)", lowId=lowId, highId=highId)
-        print(result)
-        print("Relation created")
-        return "Relation created"
+    print(result)
+    print("Relation created")
+    return "Relation created"
 
 
 if __name__ == "__main__":
