@@ -28,11 +28,11 @@ print(my_cache.get_size())
 # my_cache.put(2, "This is example for CSSE433 class222222")
 
 # Get value from cache
-# Ipokedex.remove_key("9120")
-# INameAndId.remove_key("b")
-# result0 = INameAndId.get("b")
+# Ipokedex.remove_key("9100")
+# INameAndId.remove_key("c")
+#result0 = INameAndId.get("Charizard-Test")
 # result0 = Ipokedex.get("9060")
-# result1 = Ipokedex.get("30")
+result1 = Ipokedex.get("61")
 # INameAndId.remove_all()
 # Ipokedex.remove_all()
 
@@ -44,3 +44,16 @@ print(my_cache.get_size())
 # print('name to id', result2)
 # print('id to detail', result3)
 # print(my_cache.get(2))
+
+
+# def add(name, number):
+#     # if(my_cache.get(name) != None):
+#     print(type(number))
+#     array = [name, number]
+#     dict = {}
+#     dict[]
+#     my_cache.put(name, ['t1'])
+#     print(my_cache.get(name))
+
+
+# add(1, ["a1", "a2"])
