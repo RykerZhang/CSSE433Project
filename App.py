@@ -53,7 +53,9 @@ INameAndId = Iclient.get_or_create_cache("INameAndId")
 # intermediate files pre setting
 # generate a json file using dictionaries
 
-#create node when pokemon added
+# create node when pokemon added
+
+
 def createNode(name, id, img):
     # check if the node exist:
     oldResult = Nclient.run("MATCH (p:Pokemon { id : $id }) "
@@ -69,14 +71,16 @@ def createNode(name, id, img):
         print(result)
         return "Node created!"
 
-#delete node when pokemon is deleted.
+# delete node when pokemon is deleted.
+
+
 def deleteNode(id):
     result = Nclient.run("MATCH (p:Pokemon {id : $id}) "
                          "DETACH DELETE p", id=id)
     print(result)
     return "delete success"
 
-    
+
 def write_to_log(type, fields, fields2):
     timestamp = time.time()
     tp = timestamp
@@ -237,28 +241,6 @@ def icon():
 
 @app.route('/', methods=["GET"])
 @app.route('/index', methods=["GET"])
-def indexPage():
-    # fail = False
-    elep = os.path.join(app.config['IMAGE_FOLDER'], 'elep.png')
-    css = os.path.join(app.config['CSS_FOLDER'], 'main.css')
-    js = os.path.join(app.config["SCRIPT_FOLDER"], 'main.js')
-    return render_template("index.html", logo=elep, style=css, script=js)
-
-
-@app.route('/login', methods=["GET"])
-def login():
-    # data = json.loads(request.data.decode(utf-8"))
-    username = request.args.get('username')
-    password = request.args.get('password')
-    print('username: ', username)
-    print('password: ', password)
-    # TODO: add authentication
-    if username == "1":
-        return redirect('/main')
-    else:
-        return "login failed"
-
-
 @app.route('/main', methods=["GET"])
 def mainPage():
     css = os.path.join(app.config['CSS_FOLDER'], 'main.css')
@@ -295,7 +277,7 @@ def allPokemon():
     for data in cursor:
         data.pop("_id")
         re[data['id']] = data
-    print(re)
+    # print(re)
     return re
 
 # insert part of data to mongodb and all the data to ignite
@@ -311,10 +293,10 @@ def insertPokemon():
             tmp[t] = str(p[t])
         print(tmp)
         Ipokedex.put(p[0], tmp)
-        
-        #neo4j add node
+
+        # neo4j add node
         createNode(p[1], p[0], p[20])
-        
+
         data = {
             'id': p[0],
             'name-form': p[1],
@@ -358,40 +340,39 @@ def Update():
     if (request.method == "POST"):
         p = request.json
         id = p[0]
+        print(Ipokedex.get(id))
+        print(len(list(db.pokedex.find({'id': id}))))
+        print(Ipokedex.get(id)[1])
+        print(INameAndId.get(Ipokedex.get(id)[1]))
         if Ipokedex.get(id) == None or len(list(db.pokedex.find({'id': id}))) == 0:
             print("id not exists")
             return "id not exists"
         else:
             tmp = Ipokedex.get(id)[1]
             if INameAndId.get(tmp) == None:
-                print("id not exists")
+                print("id not existsaaaaaa")
                 return "id not exists"
             else:
                 pokemon = [None]*21
                 for t in range(len(p)):
                     pokemon[t] = str(p[t])
                 print(pokemon)
-                tmp = Ipokedex.get(id)[1]
-                if INameAndId.get(tmp) == None:
-                    print("id not exists")
-                    return "id not exists"
-                else:
-                    db.pokedex.update_one(
-                        {"id": pokemon[0]},
-                        {"$set": {"name-form": pokemon[1],
-                                  "type_1": pokemon[2],
-                                  "type_2": pokemon[3],
-                                  "data_species": pokemon[4],
-                                  "img": pokemon[20]}
-                         }
-                    )
-                    # ignite update
-                    INameAndId.remove_key(tmp)
-                    Ipokedex.put(pokemon[0], pokemon)
-                    INameAndId.put(pokemon[1], pokemon[0])
-                    print(INameAndId.get(pokemon[1]))
-                    print(Ipokedex.get(pokemon[0]))
-                    return "update succeed"
+                db.pokedex.update_one(
+                    {"id": pokemon[0]},
+                    {"$set": {"name-form": pokemon[1],
+                              "type_1": pokemon[2],
+                              "type_2": pokemon[3],
+                              "data_species": pokemon[4],
+                              "img": pokemon[20]}
+                     }
+                )
+                # ignite update
+                INameAndId.remove_key(tmp)
+                Ipokedex.put(pokemon[0], pokemon)
+                INameAndId.put(pokemon[1], pokemon[0])
+                print(INameAndId.get(pokemon[1]))
+                print(Ipokedex.get(pokemon[0]))
+                return "update succeed"
 
 
 @ app.route('/Delete/<id>', methods=["DELETE"])
@@ -413,7 +394,7 @@ def Del(id=''):
                     # Ignite delete
                     Ipokedex.remove_key(id)
                     INameAndId.remove_key(name)
-                    #delete node
+                    # delete node
                     deleteNode(id)
                     print(id)
                     print(name)
@@ -514,7 +495,6 @@ def addEVO(lowId, highId):
         print(result)
         print("Relation created")
         return "Relation created"
-
 
 
 if __name__ == "__main__":

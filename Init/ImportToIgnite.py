@@ -19,6 +19,6 @@ for tmp in db.iterrows():
         data[k] = str(data[k])
         # print(type(data[k]))
     Ipokedex.put(id, data)
-    INameAndId.put(data[0], id)
+    INameAndId.put(data[1], id)
 
 print("done")

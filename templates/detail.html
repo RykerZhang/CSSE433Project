@@ -263,6 +263,7 @@
                 Number(speed)
             );
             data[20] = document.querySelector("#img").src || "-";
+            console.log(data);
             fetch("/Update", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
