@@ -31,8 +31,9 @@ Iclient = Client()
 Iclient.connect('433-34.csse.rose-hulman.edu', 10800)
 
 # Nclient is for neo4j
-Nclient = GraphDatabase.driver(
+driver = GraphDatabase.driver(
     'bolt://433-34.csse.rose-hulman.edu:7687', auth=('neo4j', 'neo4j'))
+Nclient = driver.session()
 # with Nclient.session() as session:
 #     session.execute_write(
 #         function, param1,param2,...)
@@ -426,11 +427,14 @@ def Del(id=''):
 @app.route('/detail/NEXTEVO/<id>', methods=["GET"])
 def getNextEvo(id):
     # get name
+    print(id)
     evoNameResult = Nclient.run("MATCH ((n)-[]->(m)) "
                                 "WHERE n.id = $id "
                                 "return m.name", id=id)
     evoNameArray = []
+    print(evoNameResult)
     for e in evoNameResult:
+        print(e)
         evoNameArray.append(e["m.name"])
     # get id
     evoIdResult = Nclient.run("MATCH ((n)-[]->(m)) "
