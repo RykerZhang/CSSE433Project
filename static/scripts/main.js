@@ -82,6 +82,23 @@ pokemondb.mainPageController = class {
             };
             document.querySelector("#main").append(card);
           }
+          const num = Math.ceil(Object.keys(d).length / 50);
+          for (let k = 1; k <= num; k++) {
+            let li = this.create_list(k);
+            console.log("aa");
+
+            li.onclick = (event) => {
+              const ch = document.querySelector("#main").childNodes;
+              console.log(document.querySelector("#main").childNodes);
+              for (var t = (k - 1) * 50 + 1; t <= k * 50; k++) {
+                if (ch[t]) {
+                  ch[t].style.display = "none";
+                  // console.log(ch[t]);
+                }
+              }
+            };
+            document.querySelector(".list-group-horizontal").append(li);
+          }
         }
       });
   }
@@ -94,6 +111,11 @@ pokemondb.mainPageController = class {
             <img src="${data.img}">
             <p class=caption>${data["name-form"]}</p>
         </span>`);
+  }
+  create_list(data) {
+    return htmlToElement(
+      `<li class="list-group-item" id="list${data}">${data}</li>`
+    );
   }
   search(InfoType, info) {
     var node = document.querySelector("#main");

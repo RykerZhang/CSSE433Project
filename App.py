@@ -81,15 +81,6 @@ def deleteNode(id):
     return "delete success"
 
 
-<< << << < HEAD
-
-== == == =
-# def write_to_log_Ignite(type)
-
-
->>>>>> > b30d743100eb5a6425236c51b626eeab8f20401a
-
-
 def write_to_log(type, fields, fields2):
     timestamp = time.time()
     tp = timestamp
