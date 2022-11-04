@@ -66,11 +66,10 @@ def createNode(name, id, img):
             print(oldResult)
             print("This node already exist")
             return "This node already exist"
-    else:
-        result = Nclient.run("CREATE (p:Pokemon { name: $name , id : $id, img : $img }) "
-                             "RETURN p", name=name, id=id, img=img)
-        print(result)
-        return "Node created!"
+    result = Nclient.run("CREATE (p:Pokemon { name: $name , id : $id, img : $img }) "
+                         "RETURN p", name=name, id=id, img=img)
+    print(result)
+    return "Node created!"
 
 # delete node when pokemon is deleted.
 
@@ -557,6 +556,7 @@ def getNextEvo(id):
         evoIdArray.append(e[0]["id"])
         evoNameArray.append(e[0]['name'])
         evoImgArray.append(e[0]["img"])
+
     dict = {}
     dict["name"] = evoNameArray
     dict["id"] = evoIdArray
@@ -601,13 +601,12 @@ def addEVO(lowId, highId):
         if (e["low.id"] != None):
             print("Relation already exists")
             return "Relation already exists"
-    else:
-        result = Nclient.run("MATCH (low:Pokemon { id : $lowId }) "
-                             "MATCH (high:Pokemon {id : $highId }) "
-                             "CREATE (low)-[:evolution]->(high)", lowId=lowId, highId=highId)
-        print(result)
-        print("Relation created")
-        return "Relation created"
+    result = Nclient.run("MATCH (low:Pokemon { id : $lowId }) "
+                         "MATCH (high:Pokemon {id : $highId }) "
+                         "CREATE (low)-[:evolution]->(high)", lowId=lowId, highId=highId)
+    print(result)
+    print("Relation created")
+    return "Relation created"
 
 
 if __name__ == "__main__":
