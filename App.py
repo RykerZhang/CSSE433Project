@@ -76,7 +76,9 @@ def deleteNode(id):
     print(result)
     return "delete success"
 
-    
+#def write_to_log_Ignite(type)
+
+   
 def write_to_log(type, fields, fields2):
     timestamp = time.time()
     tp = timestamp
@@ -376,15 +378,22 @@ def Update():
                     print("id not exists")
                     return "id not exists"
                 else:
-                    db.pokedex.update_one(
-                        {"id": pokemon[0]},
-                        {"$set": {"name-form": pokemon[1],
+                    data1 = {"name-form": pokemon[1],
                                   "type_1": pokemon[2],
                                   "type_2": pokemon[3],
                                   "data_species": pokemon[4],
                                   "img": pokemon[20]}
-                         }
-                    )
+                    
+                    # db.pokedex.update_one(
+                    #     {"id": pokemon[0]},
+                    #     {"$set": {"name-form": pokemon[1],
+                    #               "type_1": pokemon[2],
+                    #               "type_2": pokemon[3],
+                    #               "data_species": pokemon[4],
+                    #               "img": pokemon[20]}
+                    #      }
+                    # )
+                    write_to_log(db, {"id": pokemon[0]}, data1)
                     # ignite update
                     INameAndId.remove_key(tmp)
                     Ipokedex.put(pokemon[0], pokemon)
