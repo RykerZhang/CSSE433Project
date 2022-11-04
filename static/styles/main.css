@@ -8,7 +8,7 @@ body{
     text-align: center;
 }
 #main{
-    margin-top: 2vh;
+    margin-top: 0vh;
     width: 100vw;
     text-align: center;
 }
@@ -17,7 +17,7 @@ body{
 }
 .picContainer{
     margin-inline: 1vw;
-    margin-top:67px;
+    margin-top:10px;
     text-align: center;
     width:14vw;
 }
@@ -32,4 +32,8 @@ body{
 }
 
 #detailPage row{
+}
+.getPage{
+    margin-top: 70px;
+    margin-bottom: 0px;
 }
