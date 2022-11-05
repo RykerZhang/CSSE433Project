@@ -73,27 +73,27 @@ pokemondb.mainPageController = class {
           }
 
           const ch = document.querySelector("#main").childNodes;
-          for (var t = 1; t <= 50; t++) {
+          for (var t = 1; t <= 48; t++) {
             if (ch[t] != undefined) {
               ch[t].classList.remove("d-none");
             }
           }
-          const num = Math.ceil(Object.keys(d).length / 50);
+          const num = Math.ceil(Object.keys(d).length / 48);
           for (let k = 1; k <= num; k++) {
             let li = this.create_list(k);
             li.onclick = (event) => {
               const ch = document.querySelector("#main").childNodes;
-              for (var tm = 0; tm <= (k - 1) * 50; tm++) {
+              for (var tm = 0; tm <= (k - 1) * 48; tm++) {
                 if (ch[tm].classList != undefined) {
                   ch[tm].classList.add("d-none");
                 }
               }
-              for (var t = (k - 1) * 50 + 1; t <= k * 50; t++) {
+              for (var t = (k - 1) * 48 + 1; t <= k * 48; t++) {
                 if (ch[t] != undefined) {
                   ch[t].classList.remove("d-none");
                 }
               }
-              for (var t = k * 50 + 1; t <= Object.keys(d).length; t++) {
+              for (var t = k * 48 + 1; t <= Object.keys(d).length; t++) {
                 if (ch[t] != undefined) {
                   ch[t].classList.add("d-none");
                 }
@@ -113,27 +113,27 @@ pokemondb.mainPageController = class {
             document.querySelector("#main").append(card);
           }
           const ch = document.querySelector("#main").childNodes;
-          for (var t = 1; t <= 50; t++) {
+          for (var t = 1; t <= 48; t++) {
             if (ch[t] != undefined) {
               ch[t].classList.remove("d-none");
             }
           }
-          const num = Math.ceil(Object.keys(d).length / 50);
+          const num = Math.ceil(Object.keys(d).length / 48);
           for (let k = 1; k <= num; k++) {
             let li = this.create_list(k);
             li.onclick = (event) => {
               const ch = document.querySelector("#main").childNodes;
-              for (var tm = 0; tm <= (k - 1) * 50; tm++) {
+              for (var tm = 0; tm <= (k - 1) * 48; tm++) {
                 if (ch[tm].classList != undefined) {
                   ch[tm].classList.add("d-none");
                 }
               }
-              for (var t = (k - 1) * 50 + 1; t <= k * 50; t++) {
+              for (var t = (k - 1) * 48 + 1; t <= k * 48; t++) {
                 if (ch[t] != undefined) {
                   ch[t].classList.remove("d-none");
                 }
               }
-              for (var t = k * 50 + 1; t <= Object.keys(d).length; t++) {
+              for (var t = k * 48 + 1; t <= Object.keys(d).length; t++) {
                 if (ch[t] != undefined) {
                   ch[t].classList.add("d-none");
                 }

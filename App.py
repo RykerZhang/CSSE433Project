@@ -16,11 +16,13 @@ import os
 import socket
 import time
 import threading
+import pandas as pd
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
 app = Flask(__name__)
 
+igniteDown = False
 
 # MClient is for mongodb
 Mclient = MongoClient("mongodb://433-34.csse.rose-hulman.edu:27017")
@@ -49,7 +51,6 @@ for i in range(len(attributeArray)):
     attributeNo.put(i, attributeArray[i])
 # create a map for pokemon. Key is the id (without #) and the value is an array of attributes.
 Ipokedex = Iclient.get_or_create_cache("Ipokedex")
-INameAndId = Iclient.get_or_create_cache("INameAndId")
 
 # intermediate files pre setting
 # generate a json file using dictionaries
@@ -113,24 +114,12 @@ def parse_command_Ignite(tp, key, value):
         return "db.put(" + key + ","+str(value) + ")"
     if tp == "update_Ipokedex":
         db = Ipokedex
-        name = Ipokedex.get(key)[1]
         db.put(key, value)
-        INameAndId.remove_key(name)
         return "ipokedex update"
     if tp == "delete_Ipokedex":
         db = Ipokedex
         db.remove_key(key)
         return "ipokedex remove"
-    if tp == "insert_INameAndId":
-        db = INameAndId
-        db.put(key, value)
-        return "INameAndId insert"
-    if tp == "update_INameAndId":
-        db = INameAndId
-        db.put(key, value)
-    if tp == "delete_INameAndId":
-        db = INameAndId
-        db.remove_key(key)
 
 
 def write_to_log(type, fields, fields2):
@@ -216,7 +205,6 @@ class OnMyWatch:
 
 
 class Handler(FileSystemEventHandler):
-
     @staticmethod
     def on_any_event(event):
         if event.is_directory:
@@ -233,14 +221,33 @@ class Handler(FileSystemEventHandler):
             print(" ")
 
 
+def importToIgnite():
+    client = Client()
+    client.connect('433-34.csse.rose-hulman.edu', 10800)
+    Ipokedex = client.get_or_create_cache("Ipokedex")
+
+    db = pd.read_csv('./Init/ignite.csv')
+    for tmp in db.iterrows():
+        data = list(list(tmp)[1])
+        id = str(data[0])
+        for k in range(len(data)):
+            data[k] = str(data[k])
+            # print(type(data[k]))
+        Ipokedex.put(id, data)
+
+
 def pushToIgnite():
     ignite = isOpen("433-34.csse.rose-hulman.edu", 10800)
+    global igniteDown
+    if igniteDown and ignite:
+        importToIgnite()
+        # global igniteDown
+        igniteDown = False
     if ignite:
         Iclient = Client()
         Iclient.connect('433-34.csse.rose-hulman.edu', 10800)
 
         Ipokedex = Iclient.get_or_create_cache("Ipokedex")
-        INameAndId = Iclient.get_or_create_cache("INameAndId")
 
         path_list = os.listdir('IgniteLog/')
         path_list.sort()
@@ -256,35 +263,14 @@ def pushToIgnite():
                     # return "db.put(" + key + ","+str(value) + ")"
                 if tp == "update_Ipokedex":
                     db = Ipokedex
-                    name = Ipokedex.get(key)[1]
                     db.put(key, value)
-                    INameAndId.remove_key(name)
                     # return "ipokedex update"
                 if tp == "delete_Ipokedex":
                     db = Ipokedex
                     db.remove_key(key)
                     # return "ipokedex remove"
-                if tp == "insert_INameAndId":
-                    db = INameAndId
-                    db.put(key, value)
-                    # return "INameAndId insert"
-                if tp == "update_INameAndId":
-                    db = INameAndId
-                    db.put(key, value)
-                if tp == "delete_INameAndId":
-                    db = INameAndId
-                    db.remove_key(key)
 
-                os.remove('IgniteLog/' + dir)
-
-                # print(cmd)
-                # exec(cmd)
-                #os.remove('log/' + dir)
-                #res = testCol.find({})
-                # testing purposes: print out the data in the database
-                print("New Data after restoring a log:")
-                # for r in res:
-                #     print(r)
+                # os.remove('IgniteLog/' + dir)
 
 
 def pushToMongo():
@@ -328,6 +314,8 @@ def monitor_host():
     if ignite:
         p += "ignite is running"
     else:
+        global igniteDown
+        igniteDown = True
         p += "ignite is down"
     print(p)
     pushToIgnite()
@@ -402,9 +390,7 @@ def insertPokemon():
         print(tmp)
 
         #Ipokedex.put(p[0], tmp)
-        #INameAndId.put(p[1], p[0])
         write_to_log_Ignite("insert_Ipokedex", p[0], tmp)
-        write_to_log_Ignite("insert_INameAndId", p[1], p[0])
 
         # neo4j add node
         createNode(p[1], p[0], p[20])
@@ -456,25 +442,17 @@ def Update():
        # print(Ipokedex.get(id))
        # print(len(list(db.pokedex.find({'id': id}))))
        # print(Ipokedex.get(id)[1])
-       # print(INameAndId.get(Ipokedex.get(id)[1]))
        # if Ipokedex.get(id) == None or len(list(db.pokedex.find({'id': id}))) == 0:
         #    print("id not exists")
        #     return "id not exists"
        # else:
         #tmp = Ipokedex.get(id)[1]
-        # if INameAndId.get(tmp) == None:
-        #    print("id not existsaaaaaa")
-        #     return "id not exists"
-        # else:
         pokemon = [None]*21
         for t in range(len(p)):
             pokemon[t] = str(p[t])
         print(pokemon)
         #tmp = Ipokedex.get(id)[1]
-        # if INameAndId.get(tmp) == None:
-        #        print("id not exists")
-        #        return "id not exists"
-        # else:
+
         data1 = {"name-form": pokemon[1],
                  "type_1": pokemon[2],
                  "type_2": pokemon[3],
@@ -493,11 +471,7 @@ def Update():
         write_to_log("update", {"id": pokemon[0]}, data1)
         # ignite update
         write_to_log_Ignite("update_Ipokedex", pokemon[0], pokemon)
-        write_to_log_Ignite("update_INameAndId", pokemon[1], pokemon[0])
-        # INameAndId.remove_key(tmp)
         #Ipokedex.put(pokemon[0], pokemon)
-        #INameAndId.put(pokemon[1], pokemon[0])
-        # print(INameAndId.get(pokemon[1]))
         # print(Ipokedex.get(pokemon[0]))
         pushToIgnite()
         pushToMongo()
@@ -507,34 +481,27 @@ def Update():
 @ app.route('/Delete/<id>', methods=["DELETE"])
 def Del(id=''):
     if request.method == "DELETE":
-        print(Ipokedex.get(id))
+        # print(Ipokedex.get(id))
         if (id == ""):
             return 'id can not be empty'
         else:
-            if Ipokedex.get(id) == None:
-                print("id not exists")
-                # return "id not exists"
-            else:
-                name = Ipokedex.get(id)[1]
-                print(name)
-                if INameAndId.get(name) == None:
-                    print("id not exists")
-                else:
-                    # Ignite delete
-                    # Ipokedex.remove_key(id)
-                    # INameAndId.remove_key(name)
-                    write_to_log_Ignite("delete_Ipokedex", id, None)
-                    write_to_log_Ignite("delete_INameAndId", name, None)
-                    # delete node
-                    deleteNode(id)
-                    print(id)
-                    print(name)
-                    # if (not ismongo):
-                    # write to json, create fields
-                    write_to_log("delete", {"id": id}, None)
-                    print("write!!!\n")
-                    pushToIgnite()
-                    pushToMongo()
+            # if Ipokedex.get(id) == None:
+            #     print("id not exists")
+            #     # return "id not exists"
+            # else:
+            # name = Ipokedex.get(id)[1]
+            # print(name)
+            write_to_log_Ignite("delete_Ipokedex", id, None)
+            # delete node
+            deleteNode(id)
+            print(id)
+            # print(name)
+            # if (not ismongo):
+            # write to json, create fields
+            write_to_log("delete", {"id": id}, None)
+            print("write!!!\n")
+            pushToIgnite()
+            pushToMongo()
             # else:
             # print("aaaaa\n")
             # db.pokedex.delete_one({"id":id})
@@ -548,19 +515,22 @@ def getNextEvo(id):
     # get name
     id = int(id)
     evo = Nclient.run(
-        "MATCH ((n)-[]->(m)) WHERE n.id = $id return m", id=id)
+        "MATCH ((n)-[r]->(m)) WHERE n.id = $id return m,r", id=id)
     evoNameArray = []
     evoImgArray = []
     evoIdArray = []
+    methodArray = []
+
     for e in evo:
         evoIdArray.append(e[0]["id"])
         evoNameArray.append(e[0]['name'])
         evoImgArray.append(e[0]["img"])
-
+        methodArray.append(e[1]['method'])
     dict = {}
     dict["name"] = evoNameArray
     dict["id"] = evoIdArray
     dict["img"] = evoImgArray
+    dict['method'] = methodArray
     print(dict)
     return dict
 
@@ -570,43 +540,75 @@ def getNextEvo(id):
 @app.route('/detail/PREVEVO/<id>', methods=["GET"])
 def getPrevEvo(id):
     id = int(id)
-    evo = Nclient.run("MATCH ((n)-[]->(m)) "
+    evo = Nclient.run("MATCH ((n)-[r]->(m)) "
                       "WHERE m.id = $id "
-                      "return n", id=id)
+                      "return n,r", id=id)
     evoNameArray = []
     evoIdArray = []
     evoImgArray = []
+    methodArray = []
     for e in evo:
         evoIdArray.append(e[0]["id"])
         evoNameArray.append(e[0]['name'])
         evoImgArray.append(e[0]["img"])
+        methodArray.append(e[1]['method'])
     dict = {}
     dict["name"] = evoNameArray
     dict["id"] = evoIdArray
     dict["img"] = evoImgArray
+    dict['method'] = methodArray
     print(dict)
     return dict
 
 # Function haven't been routed yet: (neo4j create node , relation and delete node with repetition check )
 
 
-@app.route('/EVO/CREATE/<lowId>', methods=["POST"])
-def addEVO(lowId, highId):
+@app.route('/EVO/CREATE/<lowId>/<highId>/<way>', methods=["POST"])
+def addEVO(lowId, highId, way):
+    lowId = int(lowId)
+    highId = int(highId)
     # check if the relationship exist:
     oldResult = Nclient.run("MATCH (low:Pokemon { id : $lowId }) "
                             "MATCH (high:Pokemon {id : $highId }) "
                             "WHERE (low)-[]->(high) "
-                            "RETURN low.id", lowId=lowId, highId=highId)
+                            "RETURN low", lowId=lowId, highId=highId)
     for e in oldResult:
-        if (e["low.id"] != None):
+        if (e[0] != None):
             print("Relation already exists")
             return "Relation already exists"
     result = Nclient.run("MATCH (low:Pokemon { id : $lowId }) "
                          "MATCH (high:Pokemon {id : $highId }) "
-                         "CREATE (low)-[:evolution]->(high)", lowId=lowId, highId=highId)
+                         "CREATE (low)-[r:evolution]->(high) "
+                         "set r.method = $way "
+                         "return count(r)", lowId=lowId, highId=highId, way=way)
+    for e in result:
+        print(e[0])
     print(result)
     print("Relation created")
     return "Relation created"
+
+
+@app.route('/EVO/DELETE/<lowId>/<highId>', methods=["POST"])
+def delEvo(lowId, highId):
+    lowId = int(lowId)
+    highId = int(highId)
+    # check if the relationship exist:
+    oldResult = Nclient.run("MATCH (low:Pokemon { id : $lowId }) "
+                            "MATCH (high:Pokemon {id : $highId }) "
+                            "WHERE (low)-[]->(high) "
+                            "RETURN count(low)", lowId=lowId, highId=highId)
+    for e in oldResult:
+        if (e[0] == 0):
+            print("Relation doesn't exists")
+            return "Relation doesn't exists"
+    result = Nclient.run("MATCH (low:Pokemon { id : $lowId }) "
+                         "MATCH (high:Pokemon {id : $highId }) "
+                         "MATCH (low)-[r:evolution]->(high) "
+                         "DELETE r "
+                         "return count(r)", lowId=lowId, highId=highId)
+    print(result)
+    print("Relation deleted")
+    return "Relation deleted"
 
 
 if __name__ == "__main__":

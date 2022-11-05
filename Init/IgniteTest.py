@@ -18,9 +18,19 @@ my_cache = client.get_or_create_cache('my cache')
 
 Ipokedex = client.get_or_create_cache("Ipokedex")
 INameAndId = client.get_or_create_cache("INameAndId")
-
+a = "1"
+b = "2"
+x = [a, b]
 # Put value in cache
-# my_cache.put(2, 'Hello2')
+my_cache.put(1, x)
+# print(my_cache.get(1))
+k = my_cache.get(1)
+print(type(k))
+print(k)
+k.remove('1')
+k.append("3")
+print(k)
+
 # result = my_cache.get(2)
 # print(result)
 # print(my_cache.get_size())
@@ -30,16 +40,16 @@ INameAndId = client.get_or_create_cache("INameAndId")
 # Get value from cache
 # Ipokedex.remove_key("9100")
 # INameAndId.remove_key("c")
-result1 = INameAndId.get("Bulbasaur-Bulbasaur")
-result0 = Ipokedex.get("10")
+# result1 = INameAndId.get("Bulbasaur-Bulbasaur")
+# result0 = Ipokedex.get("10")
 # result1 = Ipokedex.get("61")
 # INameAndId.remove_all()
 # Ipokedex.remove_all()
 
 # result0 = INameAndId.get_size()
-# result1 = Ipokedex.get_size()
+result1 = Ipokedex.get_size()
 
-print(result0)
+# print(result0)
 print(result1)
 # print('name to id', result2)
 # print('id to detail', result3)
