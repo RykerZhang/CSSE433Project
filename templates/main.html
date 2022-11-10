@@ -31,6 +31,11 @@
                                 <i class="material-icons">search</i> Search</button></a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#"><button class="bg-dark text-white border-0" id="sortButton"
+                                type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#sort">
+                                <i class="material-icons">sort</i> Sort</button></a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#"><button class="bg-dark text-white border-0" id="addButton"
                                 type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#add">
                                 <i class="material-icons">add</i> Add</button></a>
@@ -84,7 +89,6 @@
                         <input type="text" class="form-control" id="condition">
                         <select class="form-select d-none" aria-label="Default select example" id="condition">
                             <option selected>Open this select menu</option>
-
                         </select>
                     </div>
                 </div>
@@ -95,7 +99,30 @@
             </div>
         </div>
     </div>
-
+    <!-- Sort modal -->
+    <div class="modal fade" id="sort" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Sort</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <select class="form-select" aria-label="Select Search" id="selectSearch">
+                        <option selected disabled>Select Category</option>
+                        <option value="name-form">Name</option>
+                        <option value="type">Type</option>
+                        <option value="data_species">Species</option>
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-light" id="sortBtn" data-bs-dismiss="modal">Sort</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- add modal -->
     <div class="modal fade" id="add" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">

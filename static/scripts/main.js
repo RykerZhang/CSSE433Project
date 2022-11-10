@@ -48,6 +48,9 @@ pokemondb.mainPageController = class {
       console.log(info);
       this.search(InfoType, info);
     };
+    document.querySelector("#sortBtn").onclick = (event) => {
+      this.sort();
+    };
     document.querySelector("#homeButton").onclick = (event) => {
       window.location.href = "/main";
     };
@@ -243,6 +246,7 @@ pokemondb.mainPageController = class {
       `<li class="list-group-item" id="list${data}">${data}</li>`
     );
   }
+
   search(InfoType, info) {
     var node = document.querySelector("#main");
     while (node.firstChild) {
@@ -252,6 +256,33 @@ pokemondb.mainPageController = class {
       window.alert("condition can't be null");
     } else {
       fetch("/HomeSearch/" + InfoType + "/" + info, { method: "GET" })
+        .then((respnse) => respnse.json())
+        .then((data) => {
+          if (Object.keys(data).length == 0) {
+            window.alert("No such result.");
+          } else {
+            for (var key in data) {
+              var pokemon = data[key];
+              var card = this.create_card(pokemon);
+              card.onclick = (event) => {
+                window.location.href = "detail?id=" + pokemon["id"];
+              };
+              card.classList.remove("d-none");
+              document.querySelector("#main").append(card);
+            }
+          }
+        });
+    }
+  }
+  sort(infoType) {
+    var node = document.querySelector("#main");
+    while (node.firstChild) {
+      node.removeChild(node.firstChild);
+    }
+    if (info == "" && info == "Open this select menu") {
+      window.alert("condition can't be null");
+    } else {
+      fetch("/Sort/" + InfoType, { method: "GET" })
         .then((respnse) => respnse.json())
         .then((data) => {
           if (Object.keys(data).length == 0) {
