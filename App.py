@@ -438,7 +438,8 @@ def Search(InfoType, info):
 @app.route('/Sort/<InfoType>', methods=["GET"])
 # if the result is not found, it will return "No such result". If the result is found, it will return the result of the find_one function.
 def Sort(InfoType):
-    return 0
+    print(InfoType)
+    return ""
 
 
 # mongodb and ignite update

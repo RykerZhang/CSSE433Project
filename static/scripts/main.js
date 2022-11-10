@@ -45,11 +45,11 @@ pokemondb.mainPageController = class {
       if (document.querySelectorAll("#condition")[0].value == "") {
         info = document.querySelectorAll("#condition")[1].value;
       }
-      console.log(info);
       this.search(InfoType, info);
     };
     document.querySelector("#sortBtn").onclick = (event) => {
-      this.sort();
+      var InfoType = document.querySelector("#selectSort").value;
+      this.sort(InfoType);
     };
     document.querySelector("#homeButton").onclick = (event) => {
       window.location.href = "/main";
@@ -279,27 +279,23 @@ pokemondb.mainPageController = class {
     while (node.firstChild) {
       node.removeChild(node.firstChild);
     }
-    if (info == "" && info == "Open this select menu") {
-      window.alert("condition can't be null");
-    } else {
-      fetch("/Sort/" + InfoType, { method: "GET" })
-        .then((respnse) => respnse.json())
-        .then((data) => {
-          if (Object.keys(data).length == 0) {
-            window.alert("No such result.");
-          } else {
-            for (var key in data) {
-              var pokemon = data[key];
-              var card = this.create_card(pokemon);
-              card.onclick = (event) => {
-                window.location.href = "detail?id=" + pokemon["id"];
-              };
-              card.classList.remove("d-none");
-              document.querySelector("#main").append(card);
-            }
+    fetch("/Sort/" + infoType, { method: "GET" })
+      .then((respnse) => respnse.json())
+      .then((data) => {
+        if (Object.keys(data).length == 0) {
+          window.alert("No such result.");
+        } else {
+          for (var key in data) {
+            var pokemon = data[key];
+            var card = this.create_card(pokemon);
+            card.onclick = (event) => {
+              window.location.href = "detail?id=" + pokemon["id"];
+            };
+            card.classList.remove("d-none");
+            document.querySelector("#main").append(card);
           }
-        });
-    }
+        }
+      });
   }
   delete(info) {
     var finded = false;
