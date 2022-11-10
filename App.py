@@ -508,6 +508,21 @@ def Del(id=''):
 
 
 # neo4j detail page next evo check
+@app.route('/detail/all', methods=["GET"])
+def getCandidates():
+    all = Nclient.run("MATCH (n) return n")
+    evoNameArray = []
+    evoImgArray = []
+    evoIdArray = []
+    for e in all:
+        evoIdArray.append(e[0]["id"])
+        evoNameArray.append(e[0]['name'])
+        evoImgArray.append(e[0]["img"])
+    dict = {}
+    dict["name"] = evoNameArray
+    dict["id"] = evoIdArray
+    dict["img"] = evoImgArray
+    return dict
 
 
 @app.route('/detail/NEXTEVO/<id>', methods=["GET"])

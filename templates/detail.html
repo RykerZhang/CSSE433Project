@@ -177,21 +177,90 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" aria-label="Default select example" id="selP">
                         <option selected>Open this select menu</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+
                     </select>
                     <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">method</span>
+                        <span class="input-group-text" id="prevMethodL">method</span>
                         <input type="text" class="form-control" placeholder="method" aria-label="method"
-                            aria-describedby="basic-addon1">
+                            aria-describedby="prevMethodL" id="prevMethod">
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-light" id="deleteBtn">Add</button>
+                    <button type="button" class="btn btn-light" id="addPrevBtn">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="addN" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Add Next Evoluion</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <select class="form-select" aria-label="Default select example" id="selN">
+                        <option selected>Open this select menu</option>
+
+                    </select>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="nextMethodL">method</span>
+                        <input type="text" class="form-control" placeholder="method" aria-label="method"
+                            aria-describedby="nextMethodL" id="nextMethod">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-light" id="addNextBtn">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="delP" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Delete Previous Evoluion</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <select class="form-select" aria-label="Default select example" id="seldelP">
+                        <option selected>Open this select menu</option>
+
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-light" id="delPrevBtn">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="delN" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Delete Previous Evoluion</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <select class="form-select" aria-label="Default select example" id="seldelN">
+                        <option selected>Open this select menu</option>
+
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-light" id="delNextBtn">Delete</button>
                 </div>
             </div>
         </div>
@@ -235,7 +304,6 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-light" id="deleteBtn">update</button>
                 </div>
             </div>
         </div>
@@ -253,7 +321,6 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-light" id="deleteBtn">update</button>
                 </div>
             </div>
         </div>
@@ -289,6 +356,9 @@
         var stats_speed = data[18];
         var stats_total = data[19];
         var img = data[20];
+
+        var allId;
+        var allName;
         // var
 
         document.querySelector("#img").src = img;
@@ -311,19 +381,11 @@
         document.querySelector("#sp_def").value = stats_sp_def;
         document.querySelector("#speed").value = stats_speed;
 
-
-
-
-
         document.querySelector("#updateButton").onclick = (event) => {
             document.querySelector("fieldset").disabled = !document.querySelector("fieldset").disabled
             document.querySelector("#submitUpdate").disabled = !document.querySelector("#submitUpdate").disabled
-            // if (document.querySelector("#submitUpdate").classList.contains("d-none")) {
-            //     document.querySelector("#submitUpdate").classList.remove("d-none");
-            // } else {
-            //     document.querySelector("#submitUpdate").classList.add("d-none");
-            // }
         };
+
         document.querySelector("#submitUpdate").onclick = (event) => {
             const data = [];
             data[0] = id;
@@ -376,6 +438,127 @@
             }
         };
 
+        document.querySelector("#addPrev").onclick = (event) => {
+            fetch("/detail/all", { method: "GET" })
+                .then(response => response.json())
+                .then((data) => {
+                    console.log(data);
+                    allId = data['id'];
+                    allName = data['name'];
+                    while (document.querySelector("#selP").options[1]) {
+                        document.querySelector("#selP").options.remove(1);
+                    }
+                    var tmp = document.querySelector("#selP");
+                    for (let x = 0; x < data.name.length; x++) {
+                        var option = document.createElement("option");
+                        option.text = data.name[x];
+                        var sel = tmp.options[x + 1];
+                        tmp.add(option, sel);
+                    }
+                })
+        };
+        document.querySelector("#addPrevBtn").onclick = (event) => {
+            let previd = allId[allName.indexOf(document.querySelector("#selP").value)];
+            let nextid = id;
+            let method = document.querySelector("#prevMethod").value;
+            fetch("/EVO/CREATE/" + previd + "/" + nextid + "/" + method, { method: "POST" })
+                .then((response) => response.json())
+                .then(window.location.reload());
+        }
+
+        document.querySelector("#addNext").onclick = (event) => {
+            fetch("/detail/all", { method: "GET" })
+                .then(response => response.json())
+                .then((data) => {
+                    console.log(data);
+                    allId = data['id'];
+                    allName = data['name'];
+                    while (document.querySelector("#selN").options[1]) {
+                        document.querySelector("#selN").options.remove(1);
+                    }
+                    var tmp = document.querySelector("#selN");
+                    for (let x = 0; x < data.name.length; x++) {
+                        var option = document.createElement("option");
+                        option.text = data.name[x];
+                        var sel = tmp.options[x + 1];
+                        tmp.add(option, sel);
+                    }
+                })
+        };
+        document.querySelector("#addNextBtn").onclick = (event) => {
+            let nextid = allId[allName.indexOf(document.querySelector("#selN").value)];
+            let previd = id;
+            let method = document.querySelector("#nextMethod").value;
+            fetch("/EVO/CREATE/" + previd + "/" + nextid + "/" + method, { method: "POST" })
+                .then((response) => response.json())
+                .then(window.location.reload());
+        }
+
+        document.querySelector("#delPrev").onclick = (event) => {
+            while (document.querySelector("#seldelP").options[1]) {
+                document.querySelector("#seldelP").options.remove(1);
+            }
+            fetch("detail/PREVEVO/" + id, {
+                method: "GET"
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    var tmp = document.querySelector("#seldelP");
+                    for (let x = 0; x < data.name.length; x++) {
+                        var option = document.createElement("option");
+                        option.text = data.name[x];
+                        var sel = tmp.options[x + 1];
+                        tmp.add(option, sel);
+                    }
+                })
+        }
+        document.querySelector("#delPrevBtn").onclick = (event) => {
+            fetch("/detail/all", { method: "GET" })
+                .then(response => response.json())
+                .then((data) => {
+                    allId = data['id'];
+                    allName = data['name'];
+                    let previd = allId[allName.indexOf(document.querySelector("#seldelP").value)];
+                    let nextid = id;
+                    fetch("/EVO/DELETE/" + previd + "/" + nextid, { method: "POST" })
+                        .then((response) => response.json())
+                        .then(window.location.reload());
+                })
+        }
+
+        document.querySelector("#delNext").onclick = (event) => {
+            while (document.querySelector("#seldelN").options[1]) {
+                document.querySelector("#seldelN").options.remove(1);
+            }
+            fetch("detail/NEXTEVO/" + id, {
+                method: "GET"
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    var tmp = document.querySelector("#seldelN");
+                    for (let x = 0; x < data.name.length; x++) {
+                        var option = document.createElement("option");
+                        option.text = data.name[x];
+                        var sel = tmp.options[x + 1];
+                        tmp.add(option, sel);
+                    }
+                })
+        }
+        document.querySelector("#delNextBtn").onclick = (event) => {
+            fetch("/detail/all", { method: "GET" })
+                .then(response => response.json())
+                .then((data) => {
+                    allId = data['id'];
+                    allName = data['name'];
+                    let nextid = allId[allName.indexOf(document.querySelector("#seldelN").value)];
+                    let previd = id;
+                    fetch("/EVO/DELETE/" + previd + "/" + nextid, { method: "POST" })
+                        .then((response) => response.json())
+                        .then(window.location.reload());
+                })
+        }
+
+
         document.querySelector("#prevevolution").onclick = (event) => {
             while (document.querySelector("#prev").firstChild) {
                 document.querySelector("#prev").removeChild(document.querySelector("#prev").firstChild);
@@ -385,13 +568,11 @@
             })
                 .then((response) => response.json())
                 .then((data) => {
-                    console.log(data);
                     for (let x = 0; x < data.img.length; x++) {
                         let tmp = create_card(data.img[x], data.name[x], data.method[x]);
                         document.querySelector("#prev").append(tmp);
                     }
                 })
-
         };
         document.querySelector("#nextevolution").onclick = (event) => {
             while (document.querySelector("#next").firstChild) {
@@ -416,8 +597,9 @@
             <img src="${img}" >
             <p class=caption>${name}</p>
             <p class=caption>${method}</p>
-        </span>`);
+            </span>`);
         }
+
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
