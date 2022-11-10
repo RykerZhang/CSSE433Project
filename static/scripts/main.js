@@ -59,26 +59,41 @@ pokemondb.mainPageController = class {
     fetch("/getall", { method: "GET" })
       .then((respnse) => respnse.json())
       .then((data) => {
-        // pokemondb.db = data;
-        // console.log(data);
         if (data.message == "down") {
           const d = JSON.parse(localStorage.getItem("db"));
-          for (var key in d) {
-            let pokemon = d[key];
-            var card = this.create_card(pokemon);
-            card.onclick = (event) => {
-              window.location.href = "detail?id=" + pokemon["id"];
-            };
-            document.querySelector("#main").append(card);
+          if (document.querySelector("#passId").innerHTML) {
+            var rec = document.querySelector("#passId").innerHTML;
           }
-
+          rec = data[rec];
+          for (var key in data) {
+            let pokemon = data[key];
+            if (!rec) {
+              var card = this.create_card(pokemon);
+              card.onclick = (event) => {
+                window.location.href = "detail?id=" + pokemon["id"];
+              };
+              document.querySelector("#main").append(card);
+            } else if (
+              rec["data_species"] == pokemon["data_species"] &&
+              (rec["type_1"] == pokemon["type_1"] ||
+                rec["type_2"] == pokemon["type_1"] ||
+                rec["type_1"] == pokemon["type_2"] ||
+                rec["type_2"] == pokemon["type_2"])
+            ) {
+              var card = this.create_card(pokemon);
+              card.onclick = (event) => {
+                window.location.href = "detail?id=" + pokemon["id"];
+              };
+              document.querySelector("#main").append(card);
+            }
+          }
           const ch = document.querySelector("#main").childNodes;
           for (var t = 1; t <= 48; t++) {
             if (ch[t] != undefined) {
               ch[t].classList.remove("d-none");
             }
           }
-          const num = Math.ceil(Object.keys(d).length / 48);
+          const num = Math.ceil(ch.length / 48);
           for (let k = 1; k <= num; k++) {
             let li = this.create_list(k);
             li.onclick = (event) => {
@@ -93,7 +108,7 @@ pokemondb.mainPageController = class {
                   ch[t].classList.remove("d-none");
                 }
               }
-              for (var t = k * 48 + 1; t <= Object.keys(d).length; t++) {
+              for (var t = k * 48 + 1; t <= ch.length; t++) {
                 if (ch[t] != undefined) {
                   ch[t].classList.add("d-none");
                 }
@@ -104,13 +119,31 @@ pokemondb.mainPageController = class {
         } else {
           localStorage.setItem("db", JSON.stringify(data));
           const d = JSON.parse(localStorage.getItem("db"));
+          if (document.querySelector("#passId").innerHTML) {
+            var rec = document.querySelector("#passId").innerHTML;
+          }
+          rec = data[rec];
           for (var key in data) {
             let pokemon = data[key];
-            var card = this.create_card(pokemon);
-            card.onclick = (event) => {
-              window.location.href = "detail?id=" + pokemon["id"];
-            };
-            document.querySelector("#main").append(card);
+            if (!rec) {
+              var card = this.create_card(pokemon);
+              card.onclick = (event) => {
+                window.location.href = "detail?id=" + pokemon["id"];
+              };
+              document.querySelector("#main").append(card);
+            } else if (
+              rec["data_species"] == pokemon["data_species"] &&
+              (rec["type_1"] == pokemon["type_1"] ||
+                rec["type_2"] == pokemon["type_1"] ||
+                rec["type_1"] == pokemon["type_2"] ||
+                rec["type_2"] == pokemon["type_2"])
+            ) {
+              var card = this.create_card(pokemon);
+              card.onclick = (event) => {
+                window.location.href = "detail?id=" + pokemon["id"];
+              };
+              document.querySelector("#main").append(card);
+            }
           }
           const ch = document.querySelector("#main").childNodes;
           for (var t = 1; t <= 48; t++) {
@@ -118,7 +151,7 @@ pokemondb.mainPageController = class {
               ch[t].classList.remove("d-none");
             }
           }
-          const num = Math.ceil(Object.keys(d).length / 48);
+          const num = Math.ceil(ch.length / 48);
           for (let k = 1; k <= num; k++) {
             let li = this.create_list(k);
             li.onclick = (event) => {
@@ -133,7 +166,7 @@ pokemondb.mainPageController = class {
                   ch[t].classList.remove("d-none");
                 }
               }
-              for (var t = k * 48 + 1; t <= Object.keys(d).length; t++) {
+              for (var t = k * 48 + 1; t <= ch.length; t++) {
                 if (ch[t] != undefined) {
                   ch[t].classList.add("d-none");
                 }
@@ -143,10 +176,6 @@ pokemondb.mainPageController = class {
           }
         }
       });
-  }
-  logOut() {
-    // TODO: add log out
-    window.location.href = "/index";
   }
   create_card(data) {
     return htmlToElement(` <span class="picContainer d-inline-block d-none">

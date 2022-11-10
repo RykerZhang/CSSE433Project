@@ -50,6 +50,11 @@
                                 data-bs-target="#delN" id="delNext" type="button" class="btn btn-light">
                                 <i class="material-icons">delete</i> Del Next</button></a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><button class="bg-dark text-white border-0" id="recommend"
+                                type="button" class="btn btn-light">
+                                <i class="material-icons">recommend</i>Recommend</button></a>
+                    </li>
 
                 </ul>
 
@@ -591,6 +596,11 @@
                 })
 
         };
+
+        document.querySelector("#recommend").onclick = (event) => {
+            console.log("aaaaa");
+            window.location.href = "main?id=" + id;
+        }
 
         function create_card(img, name, method) {
             return htmlToElement(`<span class="picContainer justify-content-center">

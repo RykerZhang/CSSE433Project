@@ -336,12 +336,16 @@ def icon():
 
 
 @app.route('/', methods=["GET"])
-@app.route('/index', methods=["GET"])
 @app.route('/main', methods=["GET"])
+# @app.route('/recommend', methods=["GET"])
 def mainPage():
+    print(request.args.get('id'))
+    id = request.args.get('id')
+    if id is None:
+        id = -1
     css = os.path.join(app.config['CSS_FOLDER'], 'main.css')
     js = os.path.join(app.config["SCRIPT_FOLDER"], 'main.js')
-    return render_template("main.html", style=css, script=js)
+    return render_template("main.html", style=css, script=js, recommendId=id)
 
 # detailPage return an array, in the sequence of ["id", "name", "type_1", "type_2", "link", "species", "height", "weight", "abilities", "training_catch_rate", "breeding_gender_male", "breeding_gender_male", "breeding_gender_female", "stats_hp", "stats_attack", "stats_defense", "stats_sp_atk", "stats_sp_def", "stats_speed", "stats_total", "iamgeurl"]
 
