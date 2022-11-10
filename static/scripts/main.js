@@ -2,7 +2,8 @@
 var pokemondb = pokemondb || {};
 pokemondb.indexPageController = null;
 pokemondb.mainPageController = null;
-pokemondb.db = null;
+pokemondb.type = "";
+pokemondb.species = "";
 
 //From https://stackoverflow.com/questions/494143/creating-a-new-dom-element-from-an-html-string-using-built-in-dom-methods-or-pro/35385518#35385518
 function htmlToElement(html) {
@@ -39,7 +40,12 @@ pokemondb.mainPageController = class {
     this.init();
     document.querySelector("#searchBtn").onclick = (event) => {
       var InfoType = document.querySelector("#selectSearch").value;
-      var info = document.querySelector("#condition").value;
+      var info = document.querySelectorAll("#condition")[0].value;
+      console.log(info == "");
+      if (document.querySelectorAll("#condition")[0].value == "") {
+        info = document.querySelectorAll("#condition")[1].value;
+      }
+      console.log(info);
       this.search(InfoType, info);
     };
     document.querySelector("#homeButton").onclick = (event) => {
@@ -54,11 +60,46 @@ pokemondb.mainPageController = class {
     document.querySelector("#addbtn").onclick = (event) => {
       this.add();
     };
+    document.querySelector("#selectSearch").onchange = (event) => {
+      while (document.querySelectorAll("#condition")[1].options[1]) {
+        document.querySelectorAll("#condition")[1].remove(1);
+      }
+      if (document.querySelector("#selectSearch").value == "type") {
+        document.querySelectorAll("#condition")[0].classList.add("d-none");
+        document.querySelectorAll("#condition")[1].classList.remove("d-none");
+        var tmp = document.querySelectorAll("#condition")[1];
+        var x = 1;
+        for (var t of pokemondb.type) {
+          var option = document.createElement("option");
+          option.text = t;
+          var sel = tmp.options[x++];
+          tmp.add(option, sel);
+        }
+      } else if (
+        document.querySelector("#selectSearch").value == "data_species"
+      ) {
+        document.querySelectorAll("#condition")[0].classList.add("d-none");
+        document.querySelectorAll("#condition")[1].classList.remove("d-none");
+        var tmp = document.querySelectorAll("#condition")[1];
+        var x = 1;
+        for (var t of pokemondb.species) {
+          var option = document.createElement("option");
+          option.text = t;
+          var sel = tmp.options[x++];
+          tmp.add(option, sel);
+        }
+      } else {
+        document.querySelectorAll("#condition")[1].classList.add("d-none");
+        document.querySelectorAll("#condition")[0].classList.remove("d-none");
+      }
+    };
   }
   init() {
     fetch("/getall", { method: "GET" })
       .then((respnse) => respnse.json())
       .then((data) => {
+        pokemondb.species = "";
+        pokemondb.type = "";
         if (data.message == "down") {
           const d = JSON.parse(localStorage.getItem("db"));
           if (document.querySelector("#passId").innerHTML) {
@@ -66,6 +107,9 @@ pokemondb.mainPageController = class {
           }
           rec = data[rec];
           for (var key in data) {
+            pokemondb.species += pokemon["data_species"] + ",";
+            pokemondb.type += pokemon["type_1"] + ",";
+            pokemondb.type += pokemon["type_2"] + ",";
             let pokemon = data[key];
             if (!rec) {
               var card = this.create_card(pokemon);
@@ -87,6 +131,10 @@ pokemondb.mainPageController = class {
               document.querySelector("#main").append(card);
             }
           }
+          pokemondb.species = pokemondb.species.split(",");
+          pokemondb.species = new Set(pokemondb.species);
+          pokemondb.type = pokemondb.type.split(",");
+          pokemondb.type = new Set(pokemondb.type);
           const ch = document.querySelector("#main").childNodes;
           for (var t = 1; t <= 48; t++) {
             if (ch[t] != undefined) {
@@ -125,6 +173,9 @@ pokemondb.mainPageController = class {
           rec = data[rec];
           for (var key in data) {
             let pokemon = data[key];
+            pokemondb.species += pokemon["data_species"] + ",";
+            pokemondb.type += pokemon["type_1"] + ",";
+            pokemondb.type += pokemon["type_2"] + ",";
             if (!rec) {
               var card = this.create_card(pokemon);
               card.onclick = (event) => {
@@ -145,6 +196,10 @@ pokemondb.mainPageController = class {
               document.querySelector("#main").append(card);
             }
           }
+          pokemondb.species = pokemondb.species.split(",");
+          pokemondb.species = new Set(pokemondb.species);
+          pokemondb.type = pokemondb.type.split(",");
+          pokemondb.type = new Set(pokemondb.type);
           const ch = document.querySelector("#main").childNodes;
           for (var t = 1; t <= 48; t++) {
             if (ch[t] != undefined) {
@@ -193,7 +248,7 @@ pokemondb.mainPageController = class {
     while (node.firstChild) {
       node.removeChild(node.firstChild);
     }
-    if (info == "") {
+    if (info == "" && info == "Open this select menu") {
       window.alert("condition can't be null");
     } else {
       fetch("/HomeSearch/" + InfoType + "/" + info, { method: "GET" })
@@ -216,7 +271,6 @@ pokemondb.mainPageController = class {
     }
   }
   delete(info) {
-    // console.log(pokemondb.db);
     var finded = false;
     var pokemon;
     var k = JSON.parse(localStorage.getItem("db"));

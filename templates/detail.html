@@ -390,7 +390,6 @@
             document.querySelector("fieldset").disabled = !document.querySelector("fieldset").disabled
             document.querySelector("#submitUpdate").disabled = !document.querySelector("#submitUpdate").disabled
         };
-
         document.querySelector("#submitUpdate").onclick = (event) => {
             const data = [];
             data[0] = id;
@@ -599,7 +598,7 @@
 
         document.querySelector("#recommend").onclick = (event) => {
             console.log("aaaaa");
-            window.location.href = "main?id=" + id;
+            window.location.href = "recommend?id=" + id;
         }
 
         function create_card(img, name, method) {

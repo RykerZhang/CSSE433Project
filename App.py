@@ -69,7 +69,6 @@ def createNode(name, id, img):
             return "This node already exist"
     result = Nclient.run("CREATE (p:Pokemon { name: $name , id : $id, img : $img }) "
                          "RETURN p", name=name, id=id, img=img)
-    print(result)
     return "Node created!"
 
 # delete node when pokemon is deleted.
@@ -337,9 +336,8 @@ def icon():
 
 @app.route('/', methods=["GET"])
 @app.route('/main', methods=["GET"])
-# @app.route('/recommend', methods=["GET"])
+@app.route('/recommend', methods=["GET"])
 def mainPage():
-    print(request.args.get('id'))
     id = request.args.get('id')
     if id is None:
         id = -1
@@ -602,7 +600,6 @@ def addEVO(lowId, highId, way):
                          "return count(r)", lowId=lowId, highId=highId, way=way)
     for e in result:
         print(e[0])
-    print(result)
     print("Relation created")
     return "Relation created"
 
@@ -625,7 +622,6 @@ def delEvo(lowId, highId):
                          "MATCH (low)-[r:evolution]->(high) "
                          "DELETE r "
                          "return count(r)", lowId=lowId, highId=highId)
-    print(result)
     print("Relation deleted")
     return "Relation deleted"
 
