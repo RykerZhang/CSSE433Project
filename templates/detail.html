@@ -30,6 +30,26 @@
                                 data-bs-target="#delete" id="deleteButton" type="button" class="btn btn-light">
                                 <i class="material-icons">delete</i> Delete</button></a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><button class="bg-dark text-white border-0" data-bs-toggle="modal"
+                                data-bs-target="#addP" id="addPrev" type="button" class="btn btn-light">
+                                <i class="material-icons">add</i> Add Prev</button></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><button class="bg-dark text-white border-0" data-bs-toggle="modal"
+                                data-bs-target="#addN" id="addNext" type="button" class="btn btn-light">
+                                <i class="material-icons">add</i> Add Next</button></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><button class="bg-dark text-white border-0" data-bs-toggle="modal"
+                                data-bs-target="#delP" id="delPrev" type="button" class="btn btn-light">
+                                <i class="material-icons">delete</i> Del Prev</button></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><button class="bg-dark text-white border-0" data-bs-toggle="modal"
+                                data-bs-target="#delN" id="delNext" type="button" class="btn btn-light">
+                                <i class="material-icons">delete</i> Del Next</button></a>
+                    </li>
 
                 </ul>
 
@@ -137,7 +157,7 @@
                 disabled>update</button>
         </div>
         <div class="col-3">
-            <button type="button" class="btn btn-outline-primary" style="width:100%" id="evolution"
+            <button type="button" class="btn btn-outline-primary" style="width:100%" id="prevevolution"
                 data-bs-toggle="modal" data-bs-target="#prevEvo">Previous
                 Evolution</button>
         </div>
@@ -145,6 +165,35 @@
             <button type="button" class="btn btn-outline-primary" style="width:100%" id="nextevolution"
                 data-bs-toggle="modal" data-bs-target="#nextEvo">Next
                 Evolution</button>
+        </div>
+    </div>
+
+    <div class="modal fade" id="addP" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Add Previous Evoluion</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">method</span>
+                        <input type="text" class="form-control" placeholder="method" aria-label="method"
+                            aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-light" id="deleteBtn">Add</button>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -181,7 +230,8 @@
                     <h1 class="modal-title fs-5" id="staticBackdropLabel">previous evolution</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body justify-content-center" id="prev">
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
@@ -199,7 +249,7 @@
                     <h1 class="modal-title fs-5" id="staticBackdropLabel">next evolution</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body  justify-content-center" id="next">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
@@ -240,10 +290,6 @@
         var stats_total = data[19];
         var img = data[20];
         // var
-
-        document.querySelector("#evolution").onclick = (event) => {
-
-        }
 
         document.querySelector("#img").src = img;
         document.querySelector("#name").value = name_form;
@@ -329,6 +375,49 @@
                 })
             }
         };
+
+        document.querySelector("#prevevolution").onclick = (event) => {
+            while (document.querySelector("#prev").firstChild) {
+                document.querySelector("#prev").removeChild(document.querySelector("#prev").firstChild);
+            }
+            fetch("detail/PREVEVO/" + id, {
+                method: "GET"
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    console.log(data);
+                    for (let x = 0; x < data.img.length; x++) {
+                        let tmp = create_card(data.img[x], data.name[x], data.method[x]);
+                        document.querySelector("#prev").append(tmp);
+                    }
+                })
+
+        };
+        document.querySelector("#nextevolution").onclick = (event) => {
+            while (document.querySelector("#next").firstChild) {
+                document.querySelector("#next").removeChild(document.querySelector("#next").firstChild);
+            }
+            fetch("detail/NEXTEVO/" + id, {
+                method: "GET"
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    console.log(data);
+                    for (let x = 0; x < data.img.length; x++) {
+                        let tmp = create_card(data.img[x], data.name[x], data.method[x]);
+                        document.querySelector("#next").append(tmp);
+                    }
+                })
+
+        };
+
+        function create_card(img, name, method) {
+            return htmlToElement(`<span class="picContainer justify-content-center">
+            <img src="${img}" >
+            <p class=caption>${name}</p>
+            <p class=caption>${method}</p>
+        </span>`);
+        }
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"

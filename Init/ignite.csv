@@ -1,4 +1,4 @@
-id,name-form,type_1,type_2,data_species,data_height,data_weight,fability,training_catch_rate,training_base_exp,training_growth_rate,breeding_gender_male,breeding_gender_female,stats_hp,stats_attack,stats_defense,stats_sp_atk,stats_sp_def,stats_speed,stats_total,img
+id,name-form,type_1,type_2,data_species,data_height,data_weight,ability,training_catch_rate,training_base_exp,training_growth_rate,breeding_gender_male,breeding_gender_female,stats_hp,stats_attack,stats_defense,stats_sp_atk,stats_sp_def,stats_speed,stats_total,img
 10,Bulbasaur-Bulbasaur,Grass,Poison,Seed Pokémon,0.7,6.9,Overgrow,45,64,Medium Slow,87.5% male,12.5% female,45,49,49,65,65,45,318,https://img.pokemondb.net/artwork/large/bulbasaur.jpg
 20,Ivysaur-Ivysaur,Grass,Poison,Seed Pokémon,1.0,13.0,Overgrow,45,142,Medium Slow,87.5% male,12.5% female,60,62,63,80,80,60,405,https://img.pokemondb.net/artwork/large/ivysaur.jpg
 30,Venusaur-Venusaur,Grass,Poison,Seed Pokémon,2.0,100.0,Overgrow,45,236,Medium Slow,87.5% male,12.5% female,80,82,83,100,100,80,525,https://img.pokemondb.net/artwork/large/venusaur.jpg

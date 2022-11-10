@@ -37,3 +37,6 @@ body{
     margin-top: 70px;
     margin-bottom: 0px;
 }
+.modal-body .picContainer{
+    width: 50%;
+}
