@@ -25,11 +25,6 @@ x = [a, b]
 my_cache.put(1, x)
 # print(my_cache.get(1))
 k = my_cache.get(1)
-print(type(k))
-print(k)
-k.remove('1')
-k.append("3")
-print(k)
 
 # result = my_cache.get(2)
 # print(result)

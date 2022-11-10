@@ -8,8 +8,8 @@ client.connect('433-34.csse.rose-hulman.edu', 10800)
 Ipokedex = client.get_or_create_cache("Ipokedex")
 INameAndId = client.get_or_create_cache("INameAndId")
 
-# INameAndId.remove_all()
-# Ipokedex.remove_all()
+INameAndId.remove_all()
+Ipokedex.remove_all()
 
 db = pd.read_csv('./ignite.csv')
 for tmp in db.iterrows():
