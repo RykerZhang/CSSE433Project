@@ -291,7 +291,6 @@ pokemondb.mainPageController = class {
             card.onclick = (event) => {
               window.location.href = "detail?id=" + pokemon["id"];
             };
-            card.classList.remove("d-none");
             document.querySelector("#main").append(card);
           }
 
