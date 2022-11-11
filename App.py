@@ -25,7 +25,7 @@ app = Flask(__name__)
 igniteDown = False
 
 # MClient is for mongodb
-Mclient = MongoClient("mongodb://433-34.csse.rose-hulman.edu:27017")
+Mclient = MongoClient('mongodb://433-35.csse.rose-hulman.edu:40000,433-36.csse.rose-hulman.edu:40001,433-37.csse.rose-hulman.edu:40002/?replicaSet=myapp')
 db = Mclient['pokemon']
 
 # Iclient is for Ignite.
@@ -40,6 +40,19 @@ Nclient = driver.session()
 #     session.execute_write(
 #         function, param1,param2,...)
 
+
+def checkOpen():
+    re1 = isOpen("433-35.csse.rose-hulman.edu", 40000)
+    re2 = isOpen("433-36.csse.rose-hulman.edu", 40001)
+    arb = isOpen("433-37.csse.rose-hulman.edu", 40002)
+    cnt = 0
+    if re1:
+        cnt += 1
+    if re2:
+        cnt += 1
+    if arb:
+        cnt += 1
+    return cnt
 
 # Apach Ignite part
 # create a attribute number map for storing the sequence of attributes. Key is the attribute name, value is No.
@@ -388,9 +401,19 @@ def pushToIgnite():
 
 
 def pushToMongo():
-    mongo = isOpen("433-34.csse.rose-hulman.edu", 27017)
-    if mongo:
-        Mclient = MongoClient("mongodb://433-34.csse.rose-hulman.edu:27017")
+    # re1 = isOpen("433-35.csse.rose-hulman.edu", 40000)
+    # re2 = isOpen("433-36.csse.rose-hulman.edu", 40001)
+    # arb = isOpen("433-37.csse.rose-hulman.edu", 40002)
+    # cnt = 0
+    # if re1:
+    #     cnt += 1
+    # if re2:
+    #     cnt += 1
+    # if arb:
+    #     cnt += 1
+    # mongo = isOpen("433-34.csse.rose-hulman.edu", 27017)
+    if checkOpen() >= 2:
+        Mclient = MongoClient('mongodb://433-35.csse.rose-hulman.edu:40000,433-36.csse.rose-hulman.edu:40001,433-37.csse.rose-hulman.edu:40002/?replicaSet=myapp')
         db = Mclient['pokemon']
         testCol = db['pokedex']
 
@@ -414,7 +437,8 @@ def pushToMongo():
 
 
 def monitor_host():
-    mongo = isOpen("433-34.csse.rose-hulman.edu", 27017)
+
+    # mongo = isOpen("433-34.csse.rose-hulman.edu", 27017)
     ignite = isOpen("433-34.csse.rose-hulman.edu", 10800)
     neo = isOpen("433-34.csse.rose-hulman.edu", 7474)
     p = ""
@@ -422,7 +446,7 @@ def monitor_host():
         p += "neo4j is running | "
     else:
         p += "neo4j is down | "
-    if mongo:
+    if checkOpen() >= 2:
         p += "mongo is running | "
     else:
         p += "mongo is down | "
@@ -484,7 +508,8 @@ def detailPage():
 
 @app.route('/getall', methods=["GET"])
 def allPokemon():
-    if not isOpen("433-34.csse.rose-hulman.edu", 27017):
+    if not checkOpen() >= 2:
+    # if not isOpen("433-34.csse.rose-hulman.edu", 27017):
         print("down")
         return {"message": "down"}
     cursor = db.pokedex.find()
