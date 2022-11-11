@@ -45,8 +45,11 @@ pokemondb.mainPageController = class {
       if (document.querySelectorAll("#condition")[0].value == "") {
         info = document.querySelectorAll("#condition")[1].value;
       }
-      console.log(info);
       this.search(InfoType, info);
+    };
+    document.querySelector("#sortBtn").onclick = (event) => {
+      var InfoType = document.querySelector("#selectSort").value;
+      this.sort(InfoType);
     };
     document.querySelector("#homeButton").onclick = (event) => {
       window.location.href = "/main";
@@ -243,6 +246,7 @@ pokemondb.mainPageController = class {
       `<li class="list-group-item" id="list${data}">${data}</li>`
     );
   }
+
   search(InfoType, info) {
     var node = document.querySelector("#main");
     while (node.firstChild) {
@@ -269,6 +273,29 @@ pokemondb.mainPageController = class {
           }
         });
     }
+  }
+  sort(infoType) {
+    var node = document.querySelector("#main");
+    while (node.firstChild) {
+      node.removeChild(node.firstChild);
+    }
+    fetch("/Sort/" + infoType, { method: "GET" })
+      .then((respnse) => respnse.json())
+      .then((data) => {
+        if (Object.keys(data).length == 0) {
+          window.alert("No such result.");
+        } else {
+          for (var key in data) {
+            var pokemon = data[key];
+            var card = this.create_card(pokemon);
+            card.onclick = (event) => {
+              window.location.href = "detail?id=" + pokemon["id"];
+            };
+            card.classList.remove("d-none");
+            document.querySelector("#main").append(card);
+          }
+        }
+      });
   }
   delete(info) {
     var finded = false;
