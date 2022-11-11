@@ -545,13 +545,19 @@ def Search(InfoType, info):
         return re
 
 # Sort method
-
-
 @app.route('/Sort/<InfoType>', methods=["GET"])
 # if the result is not found, it will return "No such result". If the result is found, it will return the result of the find_one function.
 def Sort(InfoType):
     print(InfoType)
-    return ""
+    output = db.pokedex.find().sort(InfoType,1)
+    if (output == None):
+        return "No such result. Please search again"
+    else:
+        re = {}
+        for data in output:
+            data.pop("_id")
+            re[data['id']] = data
+        return re
 
 
 # mongodb and ignite update
