@@ -446,16 +446,22 @@
             fetch("/detail/all", { method: "GET" })
                 .then(response => response.json())
                 .then((data) => {
-                    console.log(data);
-                    allId = data['id'];
-                    allName = data['name'];
+                    if (data.message == "down") {
+                        allId = localStorage.getItem('id').split(",");
+                        allName = localStorage.getItem('name').split(",");
+                    } else {
+                        localStorage.setItem('id', data['id']);
+                        localStorage.setItem('name', data['name']);
+                        allId = data['id'];
+                        allName = data['name'];
+                    }
                     while (document.querySelector("#selP").options[1]) {
                         document.querySelector("#selP").options.remove(1);
                     }
                     var tmp = document.querySelector("#selP");
-                    for (let x = 0; x < data.name.length; x++) {
+                    for (let x = 0; x < allName.length; x++) {
                         var option = document.createElement("option");
-                        option.text = data.name[x];
+                        option.text = allName[x];
                         var sel = tmp.options[x + 1];
                         tmp.add(option, sel);
                     }
@@ -474,16 +480,24 @@
             fetch("/detail/all", { method: "GET" })
                 .then(response => response.json())
                 .then((data) => {
-                    console.log(data);
-                    allId = data['id'];
-                    allName = data['name'];
+                    if (data.message == "down") {
+                        console.log("down");
+                        allId = localStorage.getItem('id').split(",").map(Number);
+                        allName = localStorage.getItem('name').split(",");
+                    } else {
+                        localStorage.setItem('id', data['id']);
+                        localStorage.setItem('name', data['name']);
+                        allId = data['id'];
+
+                        allName = data['name'];
+                    }
                     while (document.querySelector("#selN").options[1]) {
                         document.querySelector("#selN").options.remove(1);
                     }
                     var tmp = document.querySelector("#selN");
-                    for (let x = 0; x < data.name.length; x++) {
+                    for (let x = 0; x < allName.length; x++) {
                         var option = document.createElement("option");
-                        option.text = data.name[x];
+                        option.text = allName[x];
                         var sel = tmp.options[x + 1];
                         tmp.add(option, sel);
                     }
@@ -507,10 +521,17 @@
             })
                 .then((response) => response.json())
                 .then((data) => {
+                    var prevNames;
+                    if (data.message == "down") {
+                        prevNames = localStorage.getItem('prevName').split(",");
+                    } else {
+                        localStorage.setItem('prevName', data.name)
+                        prevNames = data.name;
+                    }
                     var tmp = document.querySelector("#seldelP");
-                    for (let x = 0; x < data.name.length; x++) {
+                    for (let x = 0; x < prevNames.length; x++) {
                         var option = document.createElement("option");
-                        option.text = data.name[x];
+                        option.text = prevNames[x];
                         var sel = tmp.options[x + 1];
                         tmp.add(option, sel);
                     }
@@ -520,8 +541,15 @@
             fetch("/detail/all", { method: "GET" })
                 .then(response => response.json())
                 .then((data) => {
-                    allId = data['id'];
-                    allName = data['name'];
+                    if (data.message == "down") {
+                        allId = localStorage.getItem('id').split(",");
+                        allName = localStorage.getItem('name').split(",");
+                    } else {
+                        localStorage.setItem('id', data['id']);
+                        localStorage.setItem('name', data['name']);
+                        allId = data['id'];
+                        allName = data['name'];
+                    }
                     let previd = allId[allName.indexOf(document.querySelector("#seldelP").value)];
                     let nextid = id;
                     fetch("/EVO/DELETE/" + previd + "/" + nextid, { method: "POST" })
@@ -539,10 +567,17 @@
             })
                 .then((response) => response.json())
                 .then((data) => {
+                    var nextNames;
+                    if (data.message == "down") {
+                        nextNames = localStorage.getItem('nextName').split(",");
+                    } else {
+                        localStorage.setItem('nextName', data.name)
+                        nextNames = data.name;
+                    }
                     var tmp = document.querySelector("#seldelN");
-                    for (let x = 0; x < data.name.length; x++) {
+                    for (let x = 0; x < nextNames.length; x++) {
                         var option = document.createElement("option");
-                        option.text = data.name[x];
+                        option.text = nextNames[x];
                         var sel = tmp.options[x + 1];
                         tmp.add(option, sel);
                     }
@@ -552,8 +587,15 @@
             fetch("/detail/all", { method: "GET" })
                 .then(response => response.json())
                 .then((data) => {
-                    allId = data['id'];
-                    allName = data['name'];
+                    if (data.message == "down") {
+                        allId = localStorage.getItem('id').split(",");
+                        allName = localStorage.getItem('name').split(",");
+                    } else {
+                        localStorage.setItem('id', data['id']);
+                        localStorage.setItem('name', data['name']);
+                        allId = data['id'];
+                        allName = data['name'];
+                    }
                     let nextid = allId[allName.indexOf(document.querySelector("#seldelN").value)];
                     let previd = id;
                     fetch("/EVO/DELETE/" + previd + "/" + nextid, { method: "POST" })
@@ -597,7 +639,6 @@
         };
 
         document.querySelector("#recommend").onclick = (event) => {
-            console.log("aaaaa");
             window.location.href = "recommend?id=" + id;
         }
 
@@ -608,6 +649,49 @@
             <p class=caption>${method}</p>
             </span>`);
         }
+
+        fetch("detail/PREVEVO/" + id, {
+            method: "GET"
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                var prevNames;
+                if (data.message == "down") {
+                    prevNames = localStorage.getItem('prevName').split(",");
+                } else {
+                    localStorage.setItem('prevName', data.name)
+                    prevNames = data.name;
+                }
+                fetch("detail/NEXTEVO/" + id, {
+                    method: "GET"
+                })
+                    .then((response) => response.json())
+                    .then((data) => {
+                        var nextNames;
+                        if (data.message == "down") {
+                            nextNames = localStorage.getItem('nextName').split(",");
+                        } else {
+                            localStorage.setItem('nextName', data.name)
+                            nextNames = data.name;
+                        }
+                        fetch("/detail/all", { method: "GET" })
+                            .then(response => response.json())
+                            .then((data) => {
+                                if (data.message == "down") {
+                                    allId = localStorage.getItem('id').split(",");
+                                    allName = localStorage.getItem('name').split(",");
+                                } else {
+                                    localStorage.setItem('id', data['id']);
+                                    localStorage.setItem('name', data['name']);
+                                    allId = data['id'];
+                                    allName = data['name'];
+                                }
+                            })
+                    })
+            })
+
+
+
 
     </script>
 

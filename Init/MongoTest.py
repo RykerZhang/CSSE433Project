@@ -19,9 +19,9 @@ db = client['pokemon']
 # cursor = db.pokedex.find({'name': '1'})
 # print(cursor.min)
 # db.pokedex.create_index('name-form', unique=True)
-# cursor = db.pokedex.find()
+cursor = db.pokedex.find()
 # exec(test)
-# for data in cursor:
-# print(data)
+for data in cursor:
+    print(data)
 # print(data['name'])
 # print(cursor.)
