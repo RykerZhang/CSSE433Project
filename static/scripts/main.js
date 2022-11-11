@@ -115,7 +115,7 @@ pokemondb.mainPageController = class {
             pokemondb.type += pokemon["type_2"] + ",";
             let pokemon = data[key];
             if (!rec) {
-              var card = this.create_card(pokemon);
+              let card = this.create_card(pokemon);
               card.onclick = (event) => {
                 window.location.href = "detail?id=" + pokemon["id"];
               };
@@ -127,7 +127,7 @@ pokemondb.mainPageController = class {
                 rec["type_1"] == pokemon["type_2"] ||
                 rec["type_2"] == pokemon["type_2"])
             ) {
-              var card = this.create_card(pokemon);
+              let card = this.create_card(pokemon);
               card.onclick = (event) => {
                 window.location.href = "detail?id=" + pokemon["id"];
               };
@@ -139,7 +139,7 @@ pokemondb.mainPageController = class {
           pokemondb.type = pokemondb.type.split(",");
           pokemondb.type = new Set(pokemondb.type);
           const ch = document.querySelector("#main").childNodes;
-          for (var t = 1; t <= 48; t++) {
+          for (let t = 1; t <= 48; t++) {
             if (ch[t] != undefined) {
               ch[t].classList.remove("d-none");
             }
@@ -180,7 +180,7 @@ pokemondb.mainPageController = class {
             pokemondb.type += pokemon["type_1"] + ",";
             pokemondb.type += pokemon["type_2"] + ",";
             if (!rec) {
-              var card = this.create_card(pokemon);
+              let card = this.create_card(pokemon);
               card.onclick = (event) => {
                 window.location.href = "detail?id=" + pokemon["id"];
               };
@@ -192,7 +192,7 @@ pokemondb.mainPageController = class {
                 rec["type_1"] == pokemon["type_2"] ||
                 rec["type_2"] == pokemon["type_2"])
             ) {
-              var card = this.create_card(pokemon);
+              let card = this.create_card(pokemon);
               card.onclick = (event) => {
                 window.location.href = "detail?id=" + pokemon["id"];
               };
@@ -262,8 +262,8 @@ pokemondb.mainPageController = class {
             window.alert("No such result.");
           } else {
             for (var key in data) {
-              var pokemon = data[key];
-              var card = this.create_card(pokemon);
+              let pokemon = data[key];
+              let card = this.create_card(pokemon);
               card.onclick = (event) => {
                 window.location.href = "detail?id=" + pokemon["id"];
               };
@@ -286,8 +286,8 @@ pokemondb.mainPageController = class {
           window.alert("No such result.");
         } else {
           for (var key in data) {
-            var pokemon = data[key];
-            var card = this.create_card(pokemon);
+            let pokemon = data[key];
+            let card = this.create_card(pokemon);
             card.onclick = (event) => {
               window.location.href = "detail?id=" + pokemon["id"];
             };

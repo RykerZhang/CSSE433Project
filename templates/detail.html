@@ -455,6 +455,7 @@
                         allId = data['id'];
                         allName = data['name'];
                     }
+                    console.log(allId);
                     while (document.querySelector("#selP").options[1]) {
                         document.querySelector("#selP").options.remove(1);
                     }
@@ -650,45 +651,45 @@
             </span>`);
         }
 
-        fetch("detail/PREVEVO/" + id, {
-            method: "GET"
-        })
-            .then((response) => response.json())
-            .then((data) => {
-                var prevNames;
-                if (data.message == "down") {
-                    prevNames = localStorage.getItem('prevName').split(",");
-                } else {
-                    localStorage.setItem('prevName', data.name)
-                    prevNames = data.name;
-                }
-                fetch("detail/NEXTEVO/" + id, {
-                    method: "GET"
-                })
-                    .then((response) => response.json())
-                    .then((data) => {
-                        var nextNames;
-                        if (data.message == "down") {
-                            nextNames = localStorage.getItem('nextName').split(",");
-                        } else {
-                            localStorage.setItem('nextName', data.name)
-                            nextNames = data.name;
-                        }
-                        fetch("/detail/all", { method: "GET" })
-                            .then(response => response.json())
-                            .then((data) => {
-                                if (data.message == "down") {
-                                    allId = localStorage.getItem('id').split(",");
-                                    allName = localStorage.getItem('name').split(",");
-                                } else {
-                                    localStorage.setItem('id', data['id']);
-                                    localStorage.setItem('name', data['name']);
-                                    allId = data['id'];
-                                    allName = data['name'];
-                                }
-                            })
-                    })
-            })
+        // fetch("detail/PREVEVO/" + id, {
+        //     method: "GET"
+        // })
+        //     .then((response) => response.json())
+        //     .then((data) => {
+        //         var prevNames;
+        //         if (data.message == "down") {
+        //             prevNames = localStorage.getItem('prevName').split(",");
+        //         } else {
+        //             localStorage.setItem('prevName', data.name)
+        //             prevNames = data.name;
+        //         }
+        //         fetch("detail/NEXTEVO/" + id, {
+        //             method: "GET"
+        //         })
+        //             .then((response) => response.json())
+        //             .then((data) => {
+        //                 var nextNames;
+        //                 if (data.message == "down") {
+        //                     nextNames = localStorage.getItem('nextName').split(",");
+        //                 } else {
+        //                     localStorage.setItem('nextName', data.name)
+        //                     nextNames = data.name;
+        //                 }
+        //                 fetch("/detail/all", { method: "GET" })
+        //                     .then(response => response.json())
+        //                     .then((data) => {
+        //                         if (data.message == "down") {
+        //                             allId = localStorage.getItem('id').split(",");
+        //                             allName = localStorage.getItem('name').split(",");
+        //                         } else {
+        //                             localStorage.setItem('id', data['id']);
+        //                             localStorage.setItem('name', data['name']);
+        //                             allId = data['id'];
+        //                             allName = data['name'];
+        //                         }
+        //                     })
+        //             })
+        //     })
 
 
 

@@ -556,7 +556,7 @@ def Search(InfoType, info):
 # if the result is not found, it will return "No such result". If the result is found, it will return the result of the find_one function.
 def Sort(InfoType):
     print(InfoType)
-    output = db.pokedex.find().sort(InfoType, 1)
+    output = db.pokedex.find().sort(InfoType, 1).limit(40)
     re = {}
     for i in output:
         id = i['name-form']
