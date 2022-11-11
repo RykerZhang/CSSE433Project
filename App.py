@@ -80,7 +80,91 @@ def deleteNode(id):
     print(result)
     return "delete success"
 
+def write_to_log_Neo4j(type, id1, id2, way):
+    timestamp = time.time()
+    tp = timestamp
+    data_dict = {}
+    print("test")
+    data_dict = {"type": type, "id1": id1,
+                 "id2": id2, "way": way, "timestamp": timestamp}
+    with open("Neo4jLog/" + str(timestamp) + '.json', 'w', encoding='utf-8') as json_file:
+        json.dump(data_dict, json_file, ensure_ascii=False, indent=4)
+    return timestamp
 
+def read_log_Neo4j(file_name):
+    f = open("Neo4jLog/" + str(file_name), 'r', encoding='utf-8')
+    data = json.load(f)
+    tp = data['type']
+    id1 = data['id1']
+    id2 = data['id2']
+    way = data['way']
+    timestamp = data['timestamp']
+    # print(tp)
+    # print(fields)
+    # print(timestamp)
+    return tp, id1, id2,way, timestamp
+
+def parse_command_Neo4j(db, tp, id1,id2,way):
+    if tp == "Add_EVO":
+        result = db.run("MATCH (low:Pokemon { id : $lowId }) "
+                         "MATCH (high:Pokemon {id : $highId }) "
+                         "CREATE (low)-[r:evolution]->(high) "
+                         "set r.method = $way "
+                         "return count(r)", lowId=id1, highId=id2, way=way)
+        for e in result:
+            print(e[0])
+        print("Relation created")
+        return "Relation created"
+    if tp == "Delete_EVO":
+        result = db.run("MATCH (low:Pokemon { id : $lowId }) "
+                         "MATCH (high:Pokemon {id : $highId }) "
+                         "MATCH (low)-[r:evolution]->(high) "
+                         "DELETE r "
+                         "return count(r)", lowId=id1, highId=id2)
+        print("Relation deleted")
+        return "Relation deleted"
+    if tp == "GetPrev_EVO":
+        evo = db.run("MATCH ((n)-[r]->(m)) "
+                      "WHERE m.id = $id "
+                      "return n,r", id=id1)
+        evoNameArray = []
+        evoIdArray = []
+        evoImgArray = []
+        methodArray = []
+        for e in evo:
+            evoIdArray.append(e[0]["id"])
+            evoNameArray.append(e[0]['name'])
+            evoImgArray.append(e[0]["img"])
+            methodArray.append(e[1]['method'])
+        dict = {}
+        dict["name"] = evoNameArray
+        dict["id"] = evoIdArray
+        dict["img"] = evoImgArray
+        dict['method'] = methodArray
+        print(dict)
+        return dict
+    if tp == "GetNext_EVO":
+        evo = db.run(
+        "MATCH ((n)-[r]->(m)) WHERE n.id = $id return m,r", id=id1)
+        evoNameArray = []
+        evoImgArray = []
+        evoIdArray = []
+        methodArray = []
+
+        for e in evo:
+            evoIdArray.append(e[0]["id"])
+            evoNameArray.append(e[0]['name'])
+            evoImgArray.append(e[0]["img"])
+            methodArray.append(e[1]['method'])
+        dict = {}
+        dict["name"] = evoNameArray
+        dict["id"] = evoIdArray
+        dict["img"] = evoImgArray
+        dict['method'] = methodArray
+        print(dict)
+        return dict
+        
+    
 def write_to_log_Ignite(type, key, value):
     timestamp = time.time()
     tp = timestamp
@@ -235,6 +319,29 @@ def importToIgnite():
         Ipokedex.put(id, data)
 
 
+def pushToNeo4j():
+    neo4j = isOpen("433-34.csse.rose-hulman.edu", 7687)
+    global neo4jDown
+    if neo4j:
+        driver = GraphDatabase.driver('bolt://433-34.csse.rose-hulman.edu:7687', auth=('neo4j', 'neo4j'))
+        Nclient = driver.session()
+        path_list = os.listdir('log/')
+        path_list.sort()
+
+        # read all files in the folder
+        for dir in path_list:
+            with open('Neo4jLog/' + dir) as file:
+                tp, id1, id2,way, timestamp = read_log_Neo4j(dir)
+                cmd = parse_command_Neo4j(Nclient , tp, id1, id2, way)
+                # print(cmd)
+                # exec(cmd)
+                os.remove('Neo4jLog/' + dir)
+                #res = testCol.find({})
+                # testing purposes: print out the data in the database
+                print("New Data after restoring a log:")
+                # for r in res:
+                #     print(r)
+                
 def pushToIgnite():
     ignite = isOpen("433-34.csse.rose-hulman.edu", 10800)
     global igniteDown
@@ -319,6 +426,7 @@ def monitor_host():
     print(p)
     pushToIgnite()
     pushToMongo()
+    pushToNeo4j()
 
     # change first parameter to allow longer period
     threading.Timer(10, monitor_host).start()
@@ -531,25 +639,27 @@ def getCandidates():
 def getNextEvo(id):
     # get name
     id = int(id)
-    evo = Nclient.run(
-        "MATCH ((n)-[r]->(m)) WHERE n.id = $id return m,r", id=id)
-    evoNameArray = []
-    evoImgArray = []
-    evoIdArray = []
-    methodArray = []
+    write_to_log_Neo4j("GetNext_EVO",id, None, None)
+    # evo = Nclient.run(
+    #     "MATCH ((n)-[r]->(m)) WHERE n.id = $id return m,r", id=id)
+    # evoNameArray = []
+    # evoImgArray = []
+    # evoIdArray = []
+    # methodArray = []
 
-    for e in evo:
-        evoIdArray.append(e[0]["id"])
-        evoNameArray.append(e[0]['name'])
-        evoImgArray.append(e[0]["img"])
-        methodArray.append(e[1]['method'])
-    dict = {}
-    dict["name"] = evoNameArray
-    dict["id"] = evoIdArray
-    dict["img"] = evoImgArray
-    dict['method'] = methodArray
-    print(dict)
-    return dict
+    # for e in evo:
+    #     evoIdArray.append(e[0]["id"])
+    #     evoNameArray.append(e[0]['name'])
+    #     evoImgArray.append(e[0]["img"])
+    #     methodArray.append(e[1]['method'])
+    # dict = {}
+    # dict["name"] = evoNameArray
+    # dict["id"] = evoIdArray
+    # dict["img"] = evoImgArray
+    # dict['method'] = methodArray
+    # print(dict)
+    pushToNeo4j()
+    return ""
 
 # get previous Evo
 
@@ -557,25 +667,27 @@ def getNextEvo(id):
 @app.route('/detail/PREVEVO/<id>', methods=["GET"])
 def getPrevEvo(id):
     id = int(id)
-    evo = Nclient.run("MATCH ((n)-[r]->(m)) "
-                      "WHERE m.id = $id "
-                      "return n,r", id=id)
-    evoNameArray = []
-    evoIdArray = []
-    evoImgArray = []
-    methodArray = []
-    for e in evo:
-        evoIdArray.append(e[0]["id"])
-        evoNameArray.append(e[0]['name'])
-        evoImgArray.append(e[0]["img"])
-        methodArray.append(e[1]['method'])
-    dict = {}
-    dict["name"] = evoNameArray
-    dict["id"] = evoIdArray
-    dict["img"] = evoImgArray
-    dict['method'] = methodArray
-    print(dict)
-    return dict
+    write_to_log_Neo4j("GetPrev_EVO",id, None, None)
+    #evo = Nclient.run("MATCH ((n)-[r]->(m)) "
+    #                  "WHERE m.id = $id "
+    #                  "return n,r", id=id)
+    #evoNameArray = []
+    #evoIdArray = []
+    #evoImgArray = []
+    #methodArray = []
+    #for e in evo:
+    #    evoIdArray.append(e[0]["id"])
+    #    evoNameArray.append(e[0]['name'])
+    #    evoImgArray.append(e[0]["img"])
+    #    methodArray.append(e[1]['method'])
+    #dict = {}
+    #dict["name"] = evoNameArray
+    #dict["id"] = evoIdArray
+    #dict["img"] = evoImgArray
+    #dict['method'] = methodArray
+    #print(dict)
+    pushToNeo4j()
+    return ""
 
 # Function haven't been routed yet: (neo4j create node , relation and delete node with repetition check )
 
@@ -584,23 +696,25 @@ def getPrevEvo(id):
 def addEVO(lowId, highId, way):
     lowId = int(lowId)
     highId = int(highId)
+    write_to_log_Neo4j("Add_EVO", lowId, highId, way)
     # check if the relationship exist:
-    oldResult = Nclient.run("MATCH (low:Pokemon { id : $lowId }) "
-                            "MATCH (high:Pokemon {id : $highId }) "
-                            "WHERE (low)-[]->(high) "
-                            "RETURN low", lowId=lowId, highId=highId)
-    for e in oldResult:
-        if (e[0] != None):
-            print("Relation already exists")
-            return "Relation already exists"
-    result = Nclient.run("MATCH (low:Pokemon { id : $lowId }) "
-                         "MATCH (high:Pokemon {id : $highId }) "
-                         "CREATE (low)-[r:evolution]->(high) "
-                         "set r.method = $way "
-                         "return count(r)", lowId=lowId, highId=highId, way=way)
-    for e in result:
-        print(e[0])
-    print("Relation created")
+    #oldResult = Nclient.run("MATCH (low:Pokemon { id : $lowId }) "
+    #                        "MATCH (high:Pokemon {id : $highId }) "
+    #                        "WHERE (low)-[]->(high) "
+    #                        "RETURN low", lowId=lowId, highId=highId)
+    #for e in oldResult:
+    #    if (e[0] != None):
+    #        print("Relation already exists")
+    #        return "Relation already exists"
+    #result = Nclient.run("MATCH (low:Pokemon { id : $lowId }) "
+    #                     "MATCH (high:Pokemon {id : $highId }) "
+    #                     "CREATE (low)-[r:evolution]->(high) "
+    #                     "set r.method = $way "
+    #                     "return count(r)", lowId=lowId, highId=highId, way=way)
+    #for e in result:
+    #   print(e[0])
+    #print("Relation created")
+    pushToNeo4j()
     return "Relation created"
 
 
@@ -609,20 +723,23 @@ def delEvo(lowId, highId):
     lowId = int(lowId)
     highId = int(highId)
     # check if the relationship exist:
-    oldResult = Nclient.run("MATCH (low:Pokemon { id : $lowId }) "
-                            "MATCH (high:Pokemon {id : $highId }) "
-                            "WHERE (low)-[]->(high) "
-                            "RETURN count(low)", lowId=lowId, highId=highId)
-    for e in oldResult:
-        if (e[0] == 0):
-            print("Relation doesn't exists")
-            return "Relation doesn't exists"
-    result = Nclient.run("MATCH (low:Pokemon { id : $lowId }) "
-                         "MATCH (high:Pokemon {id : $highId }) "
-                         "MATCH (low)-[r:evolution]->(high) "
-                         "DELETE r "
-                         "return count(r)", lowId=lowId, highId=highId)
-    print("Relation deleted")
+    #oldResult = Nclient.run("MATCH (low:Pokemon { id : $lowId }) "
+    #                        "MATCH (high:Pokemon {id : $highId }) "
+    #                        "WHERE (low)-[]->(high) "
+    #                        "RETURN count(low)", lowId=lowId, highId=highId)
+    #for e in oldResult:
+    #    if (e[0] == 0):
+    #        print("Relation doesn't exists")
+    #        return "Relation doesn't exists"
+    write_to_log_Neo4j("Delete_EVO", lowId, highId, None)
+
+    #result = Nclient.run("MATCH (low:Pokemon { id : $lowId }) "
+    #                     "MATCH (high:Pokemon {id : $highId }) "
+    #                     "MATCH (low)-[r:evolution]->(high) "
+    #                     "DELETE r "
+    #                     "return count(r)", lowId=lowId, highId=highId)
+    #print("Relation deleted")
+    pushToNeo4j()
     return "Relation deleted"
 
 
