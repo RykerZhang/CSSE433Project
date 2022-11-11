@@ -294,6 +294,37 @@ pokemondb.mainPageController = class {
             card.classList.remove("d-none");
             document.querySelector("#main").append(card);
           }
+
+          const ch = document.querySelector("#main").childNodes;
+          for (var t = 1; t <= 48; t++) {
+            if (ch[t] != undefined) {
+              ch[t].classList.remove("d-none");
+            }
+          }
+          const num = Math.ceil(ch.length / 48);
+          document.querySelector(".list-group-horizontal").innerHTML = "";
+          for (let k = 1; k <= num; k++) {
+            let li = this.create_list(k);
+            li.onclick = (event) => {
+              const ch = document.querySelector("#main").childNodes;
+              for (var tm = 0; tm <= (k - 1) * 48; tm++) {
+                if (ch[tm].classList != undefined) {
+                  ch[tm].classList.add("d-none");
+                }
+              }
+              for (var t = (k - 1) * 48 + 1; t <= k * 48; t++) {
+                if (ch[t] != undefined) {
+                  ch[t].classList.remove("d-none");
+                }
+              }
+              for (var t = k * 48 + 1; t <= ch.length; t++) {
+                if (ch[t] != undefined) {
+                  ch[t].classList.add("d-none");
+                }
+              }
+            };
+            document.querySelector(".list-group-horizontal").append(li);
+          }
         }
       });
   }
