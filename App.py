@@ -556,15 +556,15 @@ def Search(InfoType, info):
 # if the result is not found, it will return "No such result". If the result is found, it will return the result of the find_one function.
 def Sort(InfoType):
     print(InfoType)
-    output = db.pokedex.find().sort(InfoType, 1)
-    if (output == None):
-        return "No such result. Please search again"
-    else:
-        re = {}
-        for data in output:
-            data.pop("_id")
-            re[data['id']] = data
-        return re
+    output = db.pokedex.find().sort(InfoType, 1).limit(40)
+    re = {}
+    for i in output:
+        id = i['name-form']
+        # print(id)
+        i.pop("_id")
+        re[i['id']] = i
+    print(len(re))
+    return re
 
 
 # mongodb and ignite update
